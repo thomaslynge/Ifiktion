@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ifindex version="1.0" xmlns="http://babel.ifarchive.org/protocol/iFiction/">
+    <story>
+        <identification>
+            <ifid>891600B2-49E2-4BB3-9A66-32BF75252180</ifid>
+            <format>glulx</format>
+        </identification>
+        <bibliographic>
+            <title>DanskTest</title>
+            <author>Thomas Lynge</author>
+            <headline>Interaktiv fiktion</headline>
+            <genre>Fiction</genre>
+            <firstpublished>2011</firstpublished>
+            <language>en</language>
+            <group>Inform</group>
+        </bibliographic>
+        <releases>
+            <attached>
+                <release>
+                    <releasedate>2011-09-20</releasedate>
+                    <version>1</version>
+                    <compiler>Inform 7</compiler>
+                    <compilerversion>6G60</compilerversion>
+                </release>
+            </attached>
+        </releases>
+        <colophon>
+            <generator>Inform 7</generator>
+            <generatorversion>6G60</generatorversion>
+            <originated>2011-09-20</originated>
+        </colophon>
+        <glulx>
+            <serial>110920</serial>
+            <release>1</release>
+            <compiler>Inform 7 build 6G60</compiler>
+        </glulx>
+    </story>
+</ifindex>
