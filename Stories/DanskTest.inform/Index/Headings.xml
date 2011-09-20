@@ -1167,7 +1167,7 @@
     <key>166</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
         <key>Line</key><integer>2109</integer>
-        <key>Title</key><string>Book - Swedish Template Layer</string>
+        <key>Title</key><string>Book - Danish Template Layer</string>
         <key>Level</key><integer>2</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
@@ -1559,7 +1559,7 @@
     <key>222</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
         <key>Line</key><integer>4704</integer>
-        <key>Title</key><string>Book - Swedish Basic Help Menu (for use with Basic Help Menu by Emily Short)</string>
+        <key>Title</key><string>Book - Danish Basic Help Menu (for use with Basic Help Menu by Emily Short)</string>
         <key>Level</key><integer>2</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
@@ -1573,35 +1573,35 @@
     <key>224</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
         <key>Line</key><integer>4789</integer>
-        <key>Title</key><string>Book - Swedish Basic Screen Effects (for use with Basic Screen Effects by Emily Short)</string>
+        <key>Title</key><string>Book - Danish Basic Screen Effects (for use with Basic Screen Effects by Emily Short)</string>
         <key>Level</key><integer>2</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>225</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
         <key>Line</key><integer>4798</integer>
-        <key>Title</key><string>Book - Swedish Complex Listing (for use with Complex Listing by Emily Short)</string>
+        <key>Title</key><string>Book - Danish Complex Listing (for use with Complex Listing by Emily Short)</string>
         <key>Level</key><integer>2</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>226</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
         <key>Line</key><integer>4829</integer>
-        <key>Title</key><string>Book - Swedish Locksmith (for use with Locksmith by Emily Short)</string>
+        <key>Title</key><string>Book - Danish Locksmith (for use with Locksmith by Emily Short)</string>
         <key>Level</key><integer>2</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>227</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
         <key>Line</key><integer>5050</integer>
-        <key>Title</key><string>Book - Swedish Menus (for use with Menus by Emily Short)</string>
+        <key>Title</key><string>Book - Danish Menus (for use with Menus by Emily Short)</string>
         <key>Level</key><integer>2</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>228</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
         <key>Line</key><integer>5132</integer>
-        <key>Title</key><string>Book - Swedish Plurality (for use with Plurality by Emily Short)</string>
+        <key>Title</key><string>Book - Danish Plurality (for use with Plurality by Emily Short)</string>
         <key>Level</key><integer>2</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
@@ -1615,7 +1615,7 @@
     <key>230</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
         <key>Line</key><integer>5176</integer>
-        <key>Title</key><string>Book - Swedish Rideable Vehicles (for use with Rideable Vehicles by Graham Nelson)</string>
+        <key>Title</key><string>Book - Danish Rideable Vehicles (for use with Rideable Vehicles by Graham Nelson)</string>
         <key>Level</key><integer>2</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>

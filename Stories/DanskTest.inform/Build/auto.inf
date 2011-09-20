@@ -3410,7 +3410,7 @@ Constant LanguageAnimateGender   = male;
 ! Constant LanguageInanimateGender = ~neuter;    ! --- Common ---
 Constant LanguageInanimateGender = common;       !# Changed from above 
 
-Constant LanguageContractionForms = 1;     !# No alternative contraction forms in Swedish
+Constant LanguageContractionForms = 1;     !# No alternative contraction forms in Danish
 
 [ LanguageContraction text; return 0; ];
 
@@ -3557,13 +3557,13 @@ Global ARE3__TX         = "finns";
 Constant AND__TX        = " og ";
 #ifdef I7_SERIAL_COMMA;
 Constant LISTAND__TX    = " og ";     !# The serial comma option should
-Constant LISTAND2__TX   = " og ";     !#  have no effect in Swedish. 
+Constant LISTAND2__TX   = " og ";     !#  have no effect in Danish. 
 #ifnot;
 Constant LISTAND__TX    = " og ";
 Constant LISTAND2__TX   = " og ";
 #endif; ! I7_SERIAL_COMMA
 
-! Constant WHOM__TX       = "whom ";   !# Swedish doesn't make any distinction
+! Constant WHOM__TX       = "whom ";   !# Danish doesn't make any distinction
 Constant WHICH__TX      = "vilken ";   !# between "which" and "whom".
 Constant WHICH2__TX     = "vilket ";   !# But this relative pronoun inflects,
 Constant WHICH3__TX     = "vilka ";    !# so we need to add two forms.
@@ -5057,7 +5057,7 @@ Global DBLW_no_classes; Global DBLW_no_objs;
             if (c_style & ENGLISH_BIT) {
                 if (c_style & TERSE_BIT) L__M(##ListMiscellany, 19, o);
                 else                     L__M(##ListMiscellany, 20, o);
-!# Swedish makes no distincition between "whom" and "which".
+!# Danish makes no distincition between "whom" and "which".
 !                if (o has animate)       print (string) WHOM__TX;     !# 
 !                else                     print (string) WHICH__TX;    !#
 !# But the word it uses for both is inflected.
@@ -8401,7 +8401,7 @@ Global LR_object = nothing;
 
 [ GetGNAOfObject obj case gender;
 !    if (obj hasnt animate)  case = 6;    !#
-    if (obj hasnt animate)  case = 8;    !# There are 8 animate (and 8 inanimate) gender-number combinations in Swedish (only 6 in English).
+    if (obj hasnt animate)  case = 8;    !# There are 8 animate (and 8 inanimate) gender-number combinations in Danish (only 6 in English).
     if (obj has male)     gender = male;
     if (obj has female)   gender = female;
     if (obj has common)   gender = common;    !# Adding common gender
@@ -10183,17 +10183,17 @@ Array tab_0_4 table $0068 4  TABLE_NOVALUE TABLE_NOVALUE (V26_amusing_a_victorio
 Array T1_locale_priorities table  tab_1_0 tab_1_1;
 Array tab_1_0 table $0869 NULL  TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE;
 Array tab_1_1 table $446a 5  TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE;
-Array T2_swedish_final_question_op table  tab_2_0 tab_2_1 tab_2_2 tab_2_3 tab_2_4;
+Array T2_danish_final_question_opt table  tab_2_0 tab_2_1 tab_2_2 tab_2_3 tab_2_4;
 Array tab_2_0 table $0064 6  (SC_24)  (SC_25)  (SC_26)  (SC_27)  (SC_28) ;
 Array tab_2_1 table $0465 7  (0)  (0)  (1)  (0)  (0) ;
 Array tab_2_2 table $2066 8  (Consult_Grammar_201)  (Consult_Grammar_202)  (Consult_Grammar_203)  (Consult_Grammar_204)  (Consult_Grammar_205) ;
 Array tab_2_3 table $0067 9  (IMMEDIATELY_RESTART_VM_R)  (IMMEDIATELY_RESTORE_SAVED_R)  TABLE_NOVALUE (IMMEDIATELY_QUIT_R)  (IMMEDIATELY_UNDO_R) ;
 Array tab_2_4 table $0068 10  TABLE_NOVALUE TABLE_NOVALUE (V26_amusing_a_victorious_pla)  TABLE_NOVALUE TABLE_NOVALUE;
-Array T3_swedish_substitutions table  tab_3_0 tab_3_1 tab_3_2;
+Array T3_danish_substitutions table  tab_3_0 tab_3_1 tab_3_2;
 Array tab_3_0 table $006b 11  (SC_29)  (SC_30) ;
 Array tab_3_1 table $006c 12  (SC_31)  (SC_32) ;
 Array tab_3_2 table $006d 13  (SC_31)  (SC_32) ;
-Array T4_swedish_suffixes table  tab_4_0 tab_4_1 tab_4_2;
+Array T4_danish_suffixes table  tab_4_0 tab_4_1 tab_4_2;
 Array tab_4_0 table $006b 14  (EMPTY_TEXT_VALUE)  (EMPTY_TEXT_VALUE)  (EMPTY_TEXT_VALUE)  (SC_33)  (EMPTY_TEXT_VALUE)  (EMPTY_TEXT_VALUE)  (EMPTY_TEXT_VALUE)  (EMPTY_TEXT_VALUE)  (EMPTY_TEXT_VALUE)  (SC_34)  (EMPTY_TEXT_VALUE)  (EMPTY_TEXT_VALUE)  (EMPTY_TEXT_VALUE)  (EMPTY_TEXT_VALUE)  (SC_29)  (SC_29)  (SC_35)  (SC_35)  (SC_36)  (SC_36)  (SC_37)  (SC_38)  (SC_38)  (SC_34)  (SC_38)  (SC_38)  (SC_34)  (EMPTY_TEXT_VALUE)  (EMPTY_TEXT_VALUE)  (SC_34)  (SC_34)  (SC_29)  (SC_30)  (SC_29)  (SC_29)  (SC_30)  (SC_35)  (SC_35)  (SC_39)  (SC_36)  (SC_36)  (SC_40)  (SC_41)  (SC_41)  (SC_42)  (SC_43)  (SC_43)  (SC_44) ;
 Array tab_4_1 table $006c 20  (SC_33)  (SC_45)  (SC_29)  (SC_29)  (SC_30)  (SC_34)  (SC_46)  (SC_47)  (SC_48)  (SC_33)  (SC_49)  (SC_50)  (SC_51)  (SC_52)  (SC_52)  (SC_51)  (SC_53)  (SC_54)  (SC_55)  (SC_56)  (SC_56)  (SC_33)  (EMPTY_TEXT_VALUE)  (SC_57)  (SC_57)  (SC_58)  (SC_59)  (SC_60)  (SC_61)  (SC_60)  (SC_46)  (SC_33)  (SC_33)  (SC_46)  (SC_62)  (SC_46)  (SC_63)  (SC_64)  (SC_63)  (SC_65)  (SC_66)  (SC_65)  (SC_66)  (SC_66)  (SC_65)  (SC_67)  (SC_68)  (SC_67) ;
 Array tab_4_2 table $006d 26  (SC_33)  (SC_45)  (SC_29)  (SC_69)  (SC_30)  (SC_34)  (SC_46)  (SC_47)  (SC_48)  (SC_70)  (SC_49)  (SC_50)  (SC_51)  (SC_52)  (SC_71)  (SC_72)  (SC_73)  (SC_74)  (SC_75)  (SC_76)  (SC_77)  (SC_78)  (SC_38)  (SC_79)  (SC_80)  (SC_81)  (SC_82)  (SC_60)  (SC_61)  (SC_83)  (SC_84)  (SC_85)  (SC_86)  (SC_87)  (SC_88)  (SC_89)  (SC_90)  (SC_91)  (SC_92)  (SC_93)  (SC_94)  (SC_95)  (SC_96)  (SC_97)  (SC_98)  (SC_99)  (SC_100)  (SC_101) ;
@@ -10208,19 +10208,19 @@ Array TB_Blanks ->
   ! For table T1_locale_priorities
   $1f  ! Column 1
   
-  ! For table T2_swedish_final_question_op
+  ! For table T2_danish_final_question_opt
   $00  ! Column 0
   $00  ! Column 1
   $00  ! Column 2
   $04  ! Column 3
   $1b  ! Column 4
   
-  ! For table T3_swedish_substitutions
+  ! For table T3_danish_substitutions
   $00  ! Column 0
   $00  ! Column 1
   $00  ! Column 2
   
-  ! For table T4_swedish_suffixes
+  ! For table T4_danish_suffixes
   $00 $00 $00 $00 $00 $00  ! Column 0
   $00 $00 $00 $00 $00 $00  ! Column 1
   $00 $00 $00 $00 $00 $00  ! Column 2
@@ -10243,7 +10243,7 @@ Array TB_Blanks ->
     return UNKNOWN_TY;
 ];
 
-Array TableOfTables --> TheEmptyTable T0_final_question_options  T1_locale_priorities  T2_swedish_final_question_op  T3_swedish_substitutions  T4_swedish_suffixes  0 0;
+Array TableOfTables --> TheEmptyTable T0_final_question_options  T1_locale_priorities  T2_danish_final_question_opt  T3_danish_substitutions  T4_danish_suffixes  0 0;
 
 
 
@@ -10759,11 +10759,11 @@ Array ActionHappened --> 0 0 0 0 0 0;
 ! ----------------------------------------------------------------------------------------------------
 ! Rules in rulebook: When play begins (B5_when_play_begins)
 ! ----------------------------------------------------------------------------------------------------
-! Rule 1/1 ! When play begins ( this is the give parts indexed names in Swedish rule ):
+! Rule 1/1 ! When play begins ( this is the give parts indexed names in Danish rule ):
 ! ----------------------------------------------------------------------------------------------------
 ! No specific request
 ! From "Danish" by Thomas Lynge
-! When play begins ( this is the give parts indexed names in Swedish rule ):
+! When play begins ( this is the give parts indexed names in Danish rule ):
 [ R_740 ;blockv_stack-->(blockv_sp+11) = BlkValueCreate(INDEXED_TEXT_TY,0,INDEXED_TEXT_TY);
     blockv_stack-->(blockv_sp+10) = BlkValueCreate(INDEXED_TEXT_TY,0,INDEXED_TEXT_TY);
     blockv_stack-->(blockv_sp+9) = BlkValueCreate(INDEXED_TEXT_TY,0,INDEXED_TEXT_TY);
@@ -11669,7 +11669,7 @@ self = noun;
 ! ----------------------------------------------------------------------------------------------------
 ! Rules in rulebook: before Handling the final question (B113_before_handling_the_fin)
 ! ----------------------------------------------------------------------------------------------------
-! Rule 1/3 ! This is the Swedish print the final question rule:
+! Rule 1/3 ! This is the Danish print the final question rule:
 !   === which is equally specific with ===
 ! Rule 2/3 ! This is the print the final prompt rule:
 ! --- now the last-placed rules ---
@@ -11677,7 +11677,7 @@ self = noun;
 ! ----------------------------------------------------------------------------------------------------
 ! No specific request
 ! From "Danish" by Thomas Lynge
-! This is the Swedish print the final question rule:
+! This is the Danish print the final question rule:
 [ R_745 
     t_0 ! Local variable e.g. 'named options count' = number
     t_1 ! Local variable e.g. '?-1,-1?' = number
@@ -11721,9 +11721,9 @@ self = noun;
       ! [10: say ~Vill du ~]
       say__p=1;ParaContent();  print (PrintText) SC_108;  .L_Say13; .L_SayX13;
       ! phrase 11
-      ! [11: repeat through the table of swedish final question options begin]
+      ! [11: repeat through the table of danish final question options begin]
        @push ct_0; @push ct_1;
-		for (t_1=T2_swedish_final_question_op,t_2=1,ct_0=t_1,ct_1=t_2:
+		for (t_1=T2_danish_final_question_opt,t_2=1,ct_0=t_1,ct_1=t_2:
 			t_2<=TableRows(t_1):t_2++,ct_0=t_1,ct_1=t_2)
 			if (TableRowIsBlank(ct_0,ct_1)==false)  {
          ! phrase 12
@@ -11796,20 +11796,20 @@ self = noun;
 ! ----------------------------------------------------------------------------------------------------
 ! Rules in rulebook: for Handling the final question (B114_for_handling_the_final_)
 ! ----------------------------------------------------------------------------------------------------
-! Rule 1/1 ! This is the Swedish respond to final question rule:
+! Rule 1/1 ! This is the Danish respond to final question rule:
 ! ----------------------------------------------------------------------------------------------------
 ! No specific request
 ! From "Danish" by Thomas Lynge
-! This is the Swedish respond to final question rule:
+! This is the Danish respond to final question rule:
 [ R_746 
     t_0 ! Local variable e.g. '?-1,-1?' = number
     t_1 ! Local variable e.g. '?-1,-1?' = number
     ct_0 ct_1 ! Used for table searches
     ;
       ! phrase 1
-      ! [1: repeat through the table of swedish final question options begin]
+      ! [1: repeat through the table of danish final question options begin]
        @push ct_0; @push ct_1;
-		for (t_0=T2_swedish_final_question_op,t_1=1,ct_0=t_0,ct_1=t_1:
+		for (t_0=T2_danish_final_question_opt,t_1=1,ct_0=t_0,ct_1=t_1:
 			t_1<=TableRows(t_0):t_1++,ct_0=t_0,ct_1=t_1)
 			if (TableRowIsBlank(ct_0,ct_1)==false)  {
          ! phrase 2
@@ -11920,7 +11920,7 @@ self = noun;
 ! ----------------------------------------------------------------------------------------------------
 ! Rule 1/2 ! For printing the locale description ( this is the interesting locale paragraphs rule ):
 !   === which is equally specific with ===
-! Rule 2/2 ! This is the Swedish you-can-also-see rule:
+! Rule 2/2 ! This is the Danish you-can-also-see rule:
 ! ----------------------------------------------------------------------------------------------------
 ! No specific request
 ! From the Standard Rules
@@ -11958,7 +11958,7 @@ self = noun;
 ];
 ! No specific request
 ! From "Danish" by Thomas Lynge
-! This is the Swedish you-can-also-see rule:
+! This is the Danish you-can-also-see rule:
 [ R_747 
     t_0 ! Local variable e.g. 'domain' = object
     t_1 ! Local variable e.g. 'mentionable count' = number
@@ -12203,7 +12203,7 @@ self = noun;
 !   === which is equally specific with ===
 ! Rule 6/7 ! For printing a locale paragraph about a thing ( called the item ) ( this is the use initial appearance in room descriptions rule ):
 !   === which is equally specific with ===
-! Rule 7/7 ! For printing a locale paragraph about a thing ( called the item ) ( this is the Swedish describe what's on scenery supporters in room descriptions rule ):
+! Rule 7/7 ! For printing a locale paragraph about a thing ( called the item ) ( this is the Danish describe what's on scenery supporters in room descriptions rule ):
 ! ----------------------------------------------------------------------------------------------------
 ! No specific request
 ! From the Standard Rules
@@ -12415,7 +12415,7 @@ self = noun;
 ];
 ! No specific request
 ! From "Danish" by Thomas Lynge
-! For printing a locale paragraph about a thing ( called the item ) ( this is the Swedish describe what's on scenery supporters in room descriptions rule ):
+! For printing a locale paragraph about a thing ( called the item ) ( this is the Danish describe what's on scenery supporters in room descriptions rule ):
 [ R_748 
     t_0 ! Local variable e.g. 'item' = thing
     t_1 ! Local variable e.g. '?-1,-1?' = thing
@@ -14745,7 +14745,7 @@ self = noun;
 ! ----------------------------------------------------------------------------------------------------
 ! Rules in rulebook: carry out Looking (B159_carry_out_looking)
 ! ----------------------------------------------------------------------------------------------------
-! Rule 1/4 ! This is the Swedish room description heading rule:
+! Rule 1/4 ! This is the Danish room description heading rule:
 !   === which is equally specific with ===
 ! Rule 2/4 ! Carry out looking ( this is the room description body text rule ):
 !   === which is equally specific with ===
@@ -14755,7 +14755,7 @@ self = noun;
 ! ----------------------------------------------------------------------------------------------------
 ! No specific request
 ! From "Danish" by Thomas Lynge
-! This is the Swedish room description heading rule:
+! This is the Danish room description heading rule:
 [ R_760 
     t_0 ! Local variable e.g. 'intermediate level' = object
     t_1 ! Local variable e.g. '?-1,-1?' = number
@@ -17678,15 +17678,15 @@ self = noun;
 ! ----------------------------------------------------------------------------------------------------
 
 ! ----------------------------------------------------------------------------------------------------
-! Rules in rulebook: Swedish pre-parsing (B365_swedish_pre_parsing)
+! Rules in rulebook: Danish pre-parsing (B365_danish_pre_parsing)
 ! ----------------------------------------------------------------------------------------------------
-! Rule 1/2 ! A Swedish pre-parsing rule ( this is the disambiguate 'tag på sig' rule ):
+! Rule 1/2 ! A Danish pre-parsing rule ( this is the disambiguate 'tag på sig' rule ):
 !   === which is equally specific with ===
-! Rule 2/2 ! A Swedish pre-parsing rule ( this is the 'tag af mig' rule ):
+! Rule 2/2 ! A Danish pre-parsing rule ( this is the 'tag af mig' rule ):
 ! ----------------------------------------------------------------------------------------------------
 ! No specific request
 ! From "Danish" by Thomas Lynge
-! A Swedish pre-parsing rule ( this is the disambiguate 'tag på sig' rule ):
+! A Danish pre-parsing rule ( this is the disambiguate 'tag på sig' rule ):
 [ R_749 ;blockv_stack-->(blockv_sp+0) = BlkValueCreate(INDEXED_TEXT_TY,0,INDEXED_TEXT_TY);
     blockv_sp = blockv_sp + 1;
     blockv_stack-->(blockv_sp++) = R_SHELL_4(blockv_sp-1);
@@ -17726,7 +17726,7 @@ self = noun;
 ];
 ! No specific request
 ! From "Danish" by Thomas Lynge
-! A Swedish pre-parsing rule ( this is the 'tag af mig' rule ):
+! A Danish pre-parsing rule ( this is the 'tag af mig' rule ):
 [ R_750 ;blockv_stack-->(blockv_sp+0) = BlkValueCreate(INDEXED_TEXT_TY,0,INDEXED_TEXT_TY);
     blockv_sp = blockv_sp + 1;
     blockv_stack-->(blockv_sp++) = R_SHELL_5(blockv_sp-1);
@@ -18079,7 +18079,7 @@ self = noun;
 ! After translating to Informese:
 [ R_744 ;
       ! phrase 1
-      ! [1: anonymously abide by the swedish pre-parsing rules]
+      ! [1: anonymously abide by the danish pre-parsing rules]
        if (temporary_value = ProcessRulebook(365)) {
 		if (RulebookSucceeded()) ActRulebookSucceeds(temporary_value);
 		else ActRulebookFails(temporary_value);
@@ -20659,7 +20659,7 @@ Array TimedEventTimesTable table 0 0;
 
 
 
-Array rulebooks_array --> B0_procedural B1_startup B2_turn_sequence B3_shutdown B4_scene_changing B5_when_play_begins B6_when_play_ends B7_when_scene_begins B8_when_scene_ends B9_every_turn B10_action_processing B11_setting_action_variables B12_specific_action_processi B13_player_s_action_awarenes B14_accessibility B15_reaching_inside B16_reaching_outside B17_visibility B18_persuasion B19_unsuccessful_attempt_by B20_before B21_instead B22_check B23_carry_out B24_after B25_report B26_does_the_player_mean B27_when_entire_game_begins B28_when_entire_game_ends B29_before_printing_the_name B30_for_printing_the_name B31_after_printing_the_name B32_before_printing_the_plur B33_for_printing_the_plural_ B34_after_printing_the_plura B35_before_printing_a_number B36_for_printing_a_number B37_after_printing_a_number B38_before_printing_room_des B39_for_printing_room_descri B40_after_printing_room_desc B41_before_listing_contents B42_for_listing_contents B43_after_listing_contents B44_before_grouping_together B45_for_grouping_together B46_after_grouping_together B47_before_writing_a_paragra B48_for_writing_a_paragraph_ B49_after_writing_a_paragrap B50_before_listing_nondescri B51_for_listing_nondescript_ B52_after_listing_nondescrip B53_before_printing_the_name B54_for_printing_the_name_of B55_after_printing_the_name_ B56_before_printing_the_desc B57_for_printing_the_descrip B58_after_printing_the_descr B59_before_printing_the_anno B60_for_printing_the_announc B61_after_printing_the_annou B62_before_printing_the_anno B63_for_printing_the_announc B64_after_printing_the_annou B65_before_printing_a_refusa B66_for_printing_a_refusal_t B67_after_printing_a_refusal B68_before_constructing_the_ B69_for_constructing_the_sta B70_after_constructing_the_s B71_before_printing_the_bann B72_for_printing_the_banner_ B73_after_printing_the_banne B74_before_reading_a_command B75_for_reading_a_command B76_after_reading_a_command B77_before_deciding_the_scop B78_for_deciding_the_scope B79_after_deciding_the_scope B80_before_deciding_the_conc B81_for_deciding_the_conceal B82_after_deciding_the_conce B83_before_deciding_whether_ B84_for_deciding_whether_all B85_after_deciding_whether_a B86_before_clarifying_the_pa B87_for_clarifying_the_parse B88_after_clarifying_the_par B89_before_asking_which_do_y B90_for_asking_which_do_you_ B91_after_asking_which_do_yo B92_before_printing_a_parser B93_for_printing_a_parser_er B94_after_printing_a_parser_ B95_before_supplying_a_missi B96_for_supplying_a_missing_ B97_after_supplying_a_missin B98_before_supplying_a_missi B99_for_supplying_a_missing_ B100_after_supplying_a_missi B101_before_implicitly_takin B102_for_implicitly_taking B103_after_implicitly_taking B104_before_starting_the_vir B105_for_starting_the_virtua B106_after_starting_the_virt B107_before_amusing_a_victor B108_for_amusing_a_victoriou B109_after_amusing_a_victori B110_before_printing_the_pla B111_for_printing_the_player B112_after_printing_the_play B113_before_handling_the_fin B114_for_handling_the_final_ B115_after_handling_the_fina B116_before_printing_the_loc B117_for_printing_the_locale B118_after_printing_the_loca B119_before_choosing_notable B120_for_choosing_notable_lo B121_after_choosing_notable_ B122_before_printing_a_local B123_for_printing_a_locale_p B124_after_printing_a_locale B125_check_taking_inventory B126_carry_out_taking_invent B127_report_taking_inventory B128_check_taking B129_carry_out_taking B130_report_taking B131_check_removing_it_from B132_carry_out_removing_it_f B133_report_removing_it_from B134_check_dropping B135_carry_out_dropping B136_report_dropping B137_check_putting_it_on B138_carry_out_putting_it_on B139_report_putting_it_on B140_check_inserting_it_into B141_carry_out_inserting_it_ B142_report_inserting_it_int B143_check_eating B144_carry_out_eating B145_report_eating B146_check_going B147_carry_out_going B148_report_going B149_check_entering B150_carry_out_entering B151_report_entering B152_check_exiting B153_carry_out_exiting B154_report_exiting B155_check_getting_off B156_carry_out_getting_off B157_report_getting_off B158_check_looking B159_carry_out_looking B160_report_looking B161_check_examining B162_carry_out_examining B163_report_examining B164_check_looking_under B165_carry_out_looking_under B166_report_looking_under B167_check_searching B168_carry_out_searching B169_report_searching B170_check_consulting_it_abo B171_carry_out_consulting_it B172_report_consulting_it_ab B173_check_locking_it_with B174_carry_out_locking_it_wi B175_report_locking_it_with B176_check_unlocking_it_with B177_carry_out_unlocking_it_ B178_report_unlocking_it_wit B179_check_switching_on B180_carry_out_switching_on B181_report_switching_on B182_check_switching_off B183_carry_out_switching_off B184_report_switching_off B185_check_opening B186_carry_out_opening B187_report_opening B188_check_closing B189_carry_out_closing B190_report_closing B191_check_wearing B192_carry_out_wearing B193_report_wearing B194_check_taking_off B195_carry_out_taking_off B196_report_taking_off B197_check_giving_it_to B198_carry_out_giving_it_to B199_report_giving_it_to B200_check_showing_it_to B201_carry_out_showing_it_to B202_report_showing_it_to B203_check_waking B204_carry_out_waking B205_report_waking B206_check_throwing_it_at B207_carry_out_throwing_it_a B208_report_throwing_it_at B209_check_attacking B210_carry_out_attacking B211_report_attacking B212_check_kissing B213_carry_out_kissing B214_report_kissing B215_check_answering_it_that B216_carry_out_answering_it_ B217_report_answering_it_tha B218_check_telling_it_about B219_carry_out_telling_it_ab B220_report_telling_it_about B221_check_asking_it_about B222_carry_out_asking_it_abo B223_report_asking_it_about B224_check_asking_it_for B225_carry_out_asking_it_for B226_report_asking_it_for B227_check_waiting B228_carry_out_waiting B229_report_waiting B230_check_touching B231_carry_out_touching B232_report_touching B233_check_waving B234_carry_out_waving B235_report_waving B236_check_pulling B237_carry_out_pulling B238_report_pulling B239_check_pushing B240_carry_out_pushing B241_report_pushing B242_check_turning B243_carry_out_turning B244_report_turning B245_check_pushing_it_to B246_carry_out_pushing_it_to B247_report_pushing_it_to B248_check_squeezing B249_carry_out_squeezing B250_report_squeezing B251_check_saying_yes B252_carry_out_saying_yes B253_report_saying_yes B254_check_saying_no B255_carry_out_saying_no B256_report_saying_no B257_check_burning B258_carry_out_burning B259_report_burning B260_check_waking_up B261_carry_out_waking_up B262_report_waking_up B263_check_thinking B264_carry_out_thinking B265_report_thinking B266_check_smelling B267_carry_out_smelling B268_report_smelling B269_check_listening_to B270_carry_out_listening_to B271_report_listening_to B272_check_tasting B273_carry_out_tasting B274_report_tasting B275_check_cutting B276_carry_out_cutting B277_report_cutting B278_check_jumping B279_carry_out_jumping B280_report_jumping B281_check_tying_it_to B282_carry_out_tying_it_to B283_report_tying_it_to B284_check_drinking B285_carry_out_drinking B286_report_drinking B287_check_saying_sorry B288_carry_out_saying_sorry B289_report_saying_sorry B290_check_swearing_obscenel B291_carry_out_swearing_obsc B292_report_swearing_obscene B293_check_swearing_mildly B294_carry_out_swearing_mild B295_report_swearing_mildly B296_check_swinging B297_carry_out_swinging B298_report_swinging B299_check_rubbing B300_carry_out_rubbing B301_report_rubbing B302_check_setting_it_to B303_carry_out_setting_it_to B304_report_setting_it_to B305_check_waving_hands B306_carry_out_waving_hands B307_report_waving_hands B308_check_buying B309_carry_out_buying B310_report_buying B311_check_singing B312_carry_out_singing B313_report_singing B314_check_climbing B315_carry_out_climbing B316_report_climbing B317_check_sleeping B318_carry_out_sleeping B319_report_sleeping B320_check_quitting_the_game B321_carry_out_quitting_the_ B322_report_quitting_the_gam B323_check_saving_the_game B324_carry_out_saving_the_ga B325_report_saving_the_game B326_check_restoring_the_gam B327_carry_out_restoring_the B328_report_restoring_the_ga B329_check_restarting_the_ga B330_carry_out_restarting_th B331_report_restarting_the_g B332_check_verifying_the_sto B333_carry_out_verifying_the B334_report_verifying_the_st B335_check_switching_the_sto B336_carry_out_switching_the B337_report_switching_the_st B338_check_switching_the_sto B339_carry_out_switching_the B340_report_switching_the_st B341_check_requesting_the_st B342_carry_out_requesting_th B343_report_requesting_the_s B344_check_requesting_the_sc B345_carry_out_requesting_th B346_report_requesting_the_s B347_check_preferring_abbrev B348_carry_out_preferring_ab B349_report_preferring_abbre B350_check_preferring_unabbr B351_carry_out_preferring_un B352_report_preferring_unabb B353_check_preferring_someti B354_carry_out_preferring_so B355_report_preferring_somet B356_check_switching_score_n B357_carry_out_switching_sco B358_report_switching_score_ B359_check_switching_score_n B360_carry_out_switching_sco B361_report_switching_score_ B362_check_requesting_the_pr B363_carry_out_requesting_th B364_report_requesting_the_p B365_swedish_pre_parsing B366_post_parsing B367_before_translating_to_i B368_for_translating_to_info B369_after_translating_to_in B370_check_beg_r_objektnamn_ B371_carry_out_beg_r_objektn B372_report_beg_r_objektnamn B373_check_beg_r_objektnamn B374_carry_out_beg_r_objektn B375_report_beg_r_objektnamn 0;
+Array rulebooks_array --> B0_procedural B1_startup B2_turn_sequence B3_shutdown B4_scene_changing B5_when_play_begins B6_when_play_ends B7_when_scene_begins B8_when_scene_ends B9_every_turn B10_action_processing B11_setting_action_variables B12_specific_action_processi B13_player_s_action_awarenes B14_accessibility B15_reaching_inside B16_reaching_outside B17_visibility B18_persuasion B19_unsuccessful_attempt_by B20_before B21_instead B22_check B23_carry_out B24_after B25_report B26_does_the_player_mean B27_when_entire_game_begins B28_when_entire_game_ends B29_before_printing_the_name B30_for_printing_the_name B31_after_printing_the_name B32_before_printing_the_plur B33_for_printing_the_plural_ B34_after_printing_the_plura B35_before_printing_a_number B36_for_printing_a_number B37_after_printing_a_number B38_before_printing_room_des B39_for_printing_room_descri B40_after_printing_room_desc B41_before_listing_contents B42_for_listing_contents B43_after_listing_contents B44_before_grouping_together B45_for_grouping_together B46_after_grouping_together B47_before_writing_a_paragra B48_for_writing_a_paragraph_ B49_after_writing_a_paragrap B50_before_listing_nondescri B51_for_listing_nondescript_ B52_after_listing_nondescrip B53_before_printing_the_name B54_for_printing_the_name_of B55_after_printing_the_name_ B56_before_printing_the_desc B57_for_printing_the_descrip B58_after_printing_the_descr B59_before_printing_the_anno B60_for_printing_the_announc B61_after_printing_the_annou B62_before_printing_the_anno B63_for_printing_the_announc B64_after_printing_the_annou B65_before_printing_a_refusa B66_for_printing_a_refusal_t B67_after_printing_a_refusal B68_before_constructing_the_ B69_for_constructing_the_sta B70_after_constructing_the_s B71_before_printing_the_bann B72_for_printing_the_banner_ B73_after_printing_the_banne B74_before_reading_a_command B75_for_reading_a_command B76_after_reading_a_command B77_before_deciding_the_scop B78_for_deciding_the_scope B79_after_deciding_the_scope B80_before_deciding_the_conc B81_for_deciding_the_conceal B82_after_deciding_the_conce B83_before_deciding_whether_ B84_for_deciding_whether_all B85_after_deciding_whether_a B86_before_clarifying_the_pa B87_for_clarifying_the_parse B88_after_clarifying_the_par B89_before_asking_which_do_y B90_for_asking_which_do_you_ B91_after_asking_which_do_yo B92_before_printing_a_parser B93_for_printing_a_parser_er B94_after_printing_a_parser_ B95_before_supplying_a_missi B96_for_supplying_a_missing_ B97_after_supplying_a_missin B98_before_supplying_a_missi B99_for_supplying_a_missing_ B100_after_supplying_a_missi B101_before_implicitly_takin B102_for_implicitly_taking B103_after_implicitly_taking B104_before_starting_the_vir B105_for_starting_the_virtua B106_after_starting_the_virt B107_before_amusing_a_victor B108_for_amusing_a_victoriou B109_after_amusing_a_victori B110_before_printing_the_pla B111_for_printing_the_player B112_after_printing_the_play B113_before_handling_the_fin B114_for_handling_the_final_ B115_after_handling_the_fina B116_before_printing_the_loc B117_for_printing_the_locale B118_after_printing_the_loca B119_before_choosing_notable B120_for_choosing_notable_lo B121_after_choosing_notable_ B122_before_printing_a_local B123_for_printing_a_locale_p B124_after_printing_a_locale B125_check_taking_inventory B126_carry_out_taking_invent B127_report_taking_inventory B128_check_taking B129_carry_out_taking B130_report_taking B131_check_removing_it_from B132_carry_out_removing_it_f B133_report_removing_it_from B134_check_dropping B135_carry_out_dropping B136_report_dropping B137_check_putting_it_on B138_carry_out_putting_it_on B139_report_putting_it_on B140_check_inserting_it_into B141_carry_out_inserting_it_ B142_report_inserting_it_int B143_check_eating B144_carry_out_eating B145_report_eating B146_check_going B147_carry_out_going B148_report_going B149_check_entering B150_carry_out_entering B151_report_entering B152_check_exiting B153_carry_out_exiting B154_report_exiting B155_check_getting_off B156_carry_out_getting_off B157_report_getting_off B158_check_looking B159_carry_out_looking B160_report_looking B161_check_examining B162_carry_out_examining B163_report_examining B164_check_looking_under B165_carry_out_looking_under B166_report_looking_under B167_check_searching B168_carry_out_searching B169_report_searching B170_check_consulting_it_abo B171_carry_out_consulting_it B172_report_consulting_it_ab B173_check_locking_it_with B174_carry_out_locking_it_wi B175_report_locking_it_with B176_check_unlocking_it_with B177_carry_out_unlocking_it_ B178_report_unlocking_it_wit B179_check_switching_on B180_carry_out_switching_on B181_report_switching_on B182_check_switching_off B183_carry_out_switching_off B184_report_switching_off B185_check_opening B186_carry_out_opening B187_report_opening B188_check_closing B189_carry_out_closing B190_report_closing B191_check_wearing B192_carry_out_wearing B193_report_wearing B194_check_taking_off B195_carry_out_taking_off B196_report_taking_off B197_check_giving_it_to B198_carry_out_giving_it_to B199_report_giving_it_to B200_check_showing_it_to B201_carry_out_showing_it_to B202_report_showing_it_to B203_check_waking B204_carry_out_waking B205_report_waking B206_check_throwing_it_at B207_carry_out_throwing_it_a B208_report_throwing_it_at B209_check_attacking B210_carry_out_attacking B211_report_attacking B212_check_kissing B213_carry_out_kissing B214_report_kissing B215_check_answering_it_that B216_carry_out_answering_it_ B217_report_answering_it_tha B218_check_telling_it_about B219_carry_out_telling_it_ab B220_report_telling_it_about B221_check_asking_it_about B222_carry_out_asking_it_abo B223_report_asking_it_about B224_check_asking_it_for B225_carry_out_asking_it_for B226_report_asking_it_for B227_check_waiting B228_carry_out_waiting B229_report_waiting B230_check_touching B231_carry_out_touching B232_report_touching B233_check_waving B234_carry_out_waving B235_report_waving B236_check_pulling B237_carry_out_pulling B238_report_pulling B239_check_pushing B240_carry_out_pushing B241_report_pushing B242_check_turning B243_carry_out_turning B244_report_turning B245_check_pushing_it_to B246_carry_out_pushing_it_to B247_report_pushing_it_to B248_check_squeezing B249_carry_out_squeezing B250_report_squeezing B251_check_saying_yes B252_carry_out_saying_yes B253_report_saying_yes B254_check_saying_no B255_carry_out_saying_no B256_report_saying_no B257_check_burning B258_carry_out_burning B259_report_burning B260_check_waking_up B261_carry_out_waking_up B262_report_waking_up B263_check_thinking B264_carry_out_thinking B265_report_thinking B266_check_smelling B267_carry_out_smelling B268_report_smelling B269_check_listening_to B270_carry_out_listening_to B271_report_listening_to B272_check_tasting B273_carry_out_tasting B274_report_tasting B275_check_cutting B276_carry_out_cutting B277_report_cutting B278_check_jumping B279_carry_out_jumping B280_report_jumping B281_check_tying_it_to B282_carry_out_tying_it_to B283_report_tying_it_to B284_check_drinking B285_carry_out_drinking B286_report_drinking B287_check_saying_sorry B288_carry_out_saying_sorry B289_report_saying_sorry B290_check_swearing_obscenel B291_carry_out_swearing_obsc B292_report_swearing_obscene B293_check_swearing_mildly B294_carry_out_swearing_mild B295_report_swearing_mildly B296_check_swinging B297_carry_out_swinging B298_report_swinging B299_check_rubbing B300_carry_out_rubbing B301_report_rubbing B302_check_setting_it_to B303_carry_out_setting_it_to B304_report_setting_it_to B305_check_waving_hands B306_carry_out_waving_hands B307_report_waving_hands B308_check_buying B309_carry_out_buying B310_report_buying B311_check_singing B312_carry_out_singing B313_report_singing B314_check_climbing B315_carry_out_climbing B316_report_climbing B317_check_sleeping B318_carry_out_sleeping B319_report_sleeping B320_check_quitting_the_game B321_carry_out_quitting_the_ B322_report_quitting_the_gam B323_check_saving_the_game B324_carry_out_saving_the_ga B325_report_saving_the_game B326_check_restoring_the_gam B327_carry_out_restoring_the B328_report_restoring_the_ga B329_check_restarting_the_ga B330_carry_out_restarting_th B331_report_restarting_the_g B332_check_verifying_the_sto B333_carry_out_verifying_the B334_report_verifying_the_st B335_check_switching_the_sto B336_carry_out_switching_the B337_report_switching_the_st B338_check_switching_the_sto B339_carry_out_switching_the B340_report_switching_the_st B341_check_requesting_the_st B342_carry_out_requesting_th B343_report_requesting_the_s B344_check_requesting_the_sc B345_carry_out_requesting_th B346_report_requesting_the_s B347_check_preferring_abbrev B348_carry_out_preferring_ab B349_report_preferring_abbre B350_check_preferring_unabbr B351_carry_out_preferring_un B352_report_preferring_unabb B353_check_preferring_someti B354_carry_out_preferring_so B355_report_preferring_somet B356_check_switching_score_n B357_carry_out_switching_sco B358_report_switching_score_ B359_check_switching_score_n B360_carry_out_switching_sco B361_report_switching_score_ B362_check_requesting_the_pr B363_carry_out_requesting_th B364_report_requesting_the_p B365_danish_pre_parsing B366_post_parsing B367_before_translating_to_i B368_for_translating_to_info B369_after_translating_to_in B370_check_beg_r_objektnamn_ B371_carry_out_beg_r_objektn B372_report_beg_r_objektnamn B373_check_beg_r_objektnamn B374_carry_out_beg_r_objektn B375_report_beg_r_objektnamn 0;
 
 Constant B0_procedural = EMPTY_RULEBOOK;
 Array B1_startup --> INITIALISE_MEMORY_R VIRTUAL_MACHINE_STARTUP_R SEED_RANDOM_NUMBER_GENERATOR_R UPDATE_CHRONOLOGICAL_RECORDS_R POSITION_PLAYER_IN_MODEL_R R_8 R_9 R_10 R_11 R_12 NULL; ! 10 rule(s)
@@ -21026,7 +21026,7 @@ Array B361_report_switching_score_ --> REP_SWITCH_NOTIFY_OFF_R NULL; ! 1 rule(s)
 Constant B362_check_requesting_the_pr = EMPTY_RULEBOOK;
 Array B363_carry_out_requesting_th --> ANNOUNCE_PRONOUN_MEANINGS_R NULL; ! 1 rule(s)
 Constant B364_report_requesting_the_p = EMPTY_RULEBOOK;
-Array B365_swedish_pre_parsing --> R_749 R_750 NULL; ! 2 rule(s)
+Array B365_danish_pre_parsing --> R_749 R_750 NULL; ! 2 rule(s)
 Array B366_post_parsing --> R_756 R_751 R_757 R_758 R_759 R_755 R_752 R_753 R_754 NULL; ! 9 rule(s)
 Constant B367_before_translating_to_i = EMPTY_RULEBOOK;
 Constant B368_for_translating_to_info = EMPTY_RULEBOOK;
@@ -22753,7 +22753,7 @@ L__M(##Miscellany, 71);
 EndActivity(PRINTING_NAME_OF_DARK_ROOM_ACT); 
 } else { 
 FindVisibilityLevels(); 
-!# In Swedish we want to treat room names as any other names;
+!# In Danish we want to treat room names as any other names;
 !# wherefore we comment out the next line.
 ! if (visibility_ceiling == location) print (name) location; else     !#
 print (The) visibility_ceiling; 
@@ -22928,7 +22928,7 @@ Global short_name_case;
     artform = LanguageArticles
         + 3*WORDSIZE*LanguageContractionForms*(short_name_case + i*LanguageCases);
 
-!# --- The following section doesn't apply to a language like Swedish, where articles have no alternative contraction forms.
+!# --- The following section doesn't apply to a language like Danish, where articles have no alternative contraction forms.
     #Iftrue (LanguageContractionForms == 2);
     if (artform-->acode ~= artform-->(acode+3)) findout = true;
     #Endif; ! LanguageContractionForms
@@ -24940,7 +24940,7 @@ Array RulebookNames -->
     "check Requesting the pronoun meanings rulebook" ! 362
     "carry out Requesting the pronoun meanings rulebook" ! 363
     "report Requesting the pronoun meanings rulebook" ! 364
-    "Swedish pre-parsing rulebook" ! 365
+    "Danish pre-parsing rulebook" ! 365
     "Post-parsing rulebook" ! 366
     "before Translating to Informese rulebook" ! 367
     "for Translating to Informese rulebook" ! 368
@@ -25226,13 +25226,13 @@ Array RulebookNames -->
 		if (R == R_297) { print "block singing rule"; return; } ! 262, case 1
 		if (R == R_298) { print "block climbing rule"; return; } ! 263, case 1
 		if (R == R_299) { print "block sleeping rule"; return; } ! 264, case 1
-		if (R == R_740) { print "give parts indexed names in Swedish rule"; return; } ! 265, case 1
+		if (R == R_740) { print "give parts indexed names in Danish rule"; return; } ! 265, case 1
 		if (R == R_741) { print "replace printed name with indexed name rule"; return; } ! 266, case 1
 		if (R == R_742) { print "post-parse command rule"; return; } ! 267, case 1
-		if (R == R_745) { print "Swedish print the final question rule"; return; } ! 268, case 1
-		if (R == R_746) { print "Swedish respond to final question rule"; return; } ! 269, case 1
-		if (R == R_747) { print "Swedish you-can-also-see rule"; return; } ! 270, case 1
-		if (R == R_748) { print "Swedish describe what's on scenery supporters in room descriptions rule"; return; } ! 271, case 1
+		if (R == R_745) { print "Danish print the final question rule"; return; } ! 268, case 1
+		if (R == R_746) { print "Danish respond to final question rule"; return; } ! 269, case 1
+		if (R == R_747) { print "Danish you-can-also-see rule"; return; } ! 270, case 1
+		if (R == R_748) { print "Danish describe what's on scenery supporters in room descriptions rule"; return; } ! 271, case 1
 		if (R == R_749) { print "disambiguate 'tag på sig' rule"; return; } ! 272, case 1
 		if (R == R_750) { print "'tag af mig' rule"; return; } ! 273, case 1
 		if (R == R_751) { print "understand 'ställ mig på' as entering rather than putting myself on rule"; return; } ! 274, case 1
@@ -25244,7 +25244,7 @@ Array RulebookNames -->
 		if (R == R_757) { print "disambiguate 'Person tag på något' rule"; return; } ! 280, case 1
 		if (R == R_758) { print "don't understand 'Person klä på mig' as 'Person klä på dig' rule"; return; } ! 281, case 1
 		if (R == R_759) { print "don't understand 'Person klä af mig' as 'Person klä af dig' rule"; return; } ! 282, case 1
-		if (R == R_760) { print "Swedish room description heading rule"; return; } ! 283, case 1
+		if (R == R_760) { print "Danish room description heading rule"; return; } ! 283, case 1
 		if (R == LITTLE_USED_DO_NOTHING_R) { print "little-used do nothing rule"; return; } ! 311, case 1
 		if (R == VIRTUAL_MACHINE_STARTUP_R) { print "virtual machine startup rule"; return; } ! 312, case 1
 		if (R == INITIALISE_MEMORY_R) { print "initialise memory rule"; return; } ! 313, case 1
@@ -25390,11 +25390,11 @@ Array RulebookNames -->
 		if (R == REP_SWITCH_NOTIFY_OFF_R) { print "standard report switching score notification off rule"; return; } ! 802, case 1
 		if (R == ANNOUNCE_PRONOUN_MEANINGS_R) { print "announce the pronoun meanings rule"; return; } ! 803, case 1
 		if (R == R_742) { print "post-parse command rule"; return; } ! 804, case 1
-		if (R == R_745) { print "Swedish print the final question rule"; return; } ! 805, case 1
-		if (R == R_746) { print "Swedish respond to final question rule"; return; } ! 806, case 1
-		if (R == R_747) { print "Swedish you-can-also-see rule"; return; } ! 807, case 1
-		if (R == R_748) { print "Swedish describe what's on scenery supporters in room descriptions rule"; return; } ! 808, case 1
-		if (R == R_760) { print "Swedish room description heading rule"; return; } ! 809, case 1
+		if (R == R_745) { print "Danish print the final question rule"; return; } ! 805, case 1
+		if (R == R_746) { print "Danish respond to final question rule"; return; } ! 806, case 1
+		if (R == R_747) { print "Danish you-can-also-see rule"; return; } ! 807, case 1
+		if (R == R_748) { print "Danish describe what's on scenery supporters in room descriptions rule"; return; } ! 808, case 1
+		if (R == R_760) { print "Danish room description heading rule"; return; } ! 809, case 1
 
 		print "(nameless rule at address ", R, ")";
 	}
@@ -26101,9 +26101,9 @@ Array CheckTableEntryIsNonBlank_LU
   TheEmptyTable: print "(the empty table)"; return;
   T0_final_question_options: print "Table of Final Question Options"; return;
   T1_locale_priorities: print "Table of Locale Priorities"; return;
-  T2_swedish_final_question_op: print "Table of Swedish Final Question Options"; return;
-  T3_swedish_substitutions: print "Table of Swedish substitutions"; return;
-  T4_swedish_suffixes: print "Table of Swedish suffixes"; return;
+  T2_danish_final_question_opt: print "Table of Danish Final Question Options"; return;
+  T3_danish_substitutions: print "Table of Danish substitutions"; return;
+  T4_danish_suffixes: print "Table of Danish suffixes"; return;
 
 		default: print "** No such table **";
 	}
@@ -32139,9 +32139,9 @@ Verb meta 'tree'
       ! [1: let obest , best be indexed text]
        t_2 = (blockv_stack-->(I7BASPL+0)); 
       ! phrase 2
-      ! [2: repeat through the table of swedish substitutions begin]
+      ! [2: repeat through the table of danish substitutions begin]
        @push ct_0; @push ct_1;
-		for (t_3=T3_swedish_substitutions,t_4=1,ct_0=t_3,ct_1=t_4:
+		for (t_3=T3_danish_substitutions,t_4=1,ct_0=t_3,ct_1=t_4:
 			t_4<=TableRows(t_3):t_4++,ct_0=t_3,ct_1=t_4)
 			if (TableRowIsBlank(ct_0,ct_1)==false)  {
          ! phrase 3
@@ -32223,9 +32223,9 @@ Verb meta 'tree'
       ! [1: let obest , best be indexed text]
        t_2 = (blockv_stack-->(I7BASPL+0)); 
       ! phrase 2
-      ! [2: repeat through the table of swedish suffixes begin]
+      ! [2: repeat through the table of danish suffixes begin]
        @push ct_0; @push ct_1;
-		for (t_3=T4_swedish_suffixes,t_4=1,ct_0=t_3,ct_1=t_4:
+		for (t_3=T4_danish_suffixes,t_4=1,ct_0=t_3,ct_1=t_4:
 			t_4<=TableRows(t_3):t_4++,ct_0=t_3,ct_1=t_4)
 			if (TableRowIsBlank(ct_0,ct_1)==false)  {
          ! phrase 3

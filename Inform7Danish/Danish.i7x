@@ -14,7 +14,7 @@ Part - Preamble
 Section - Use options
 
 [A/sr0§9 - SR0]
-[Several common Swedish words have variant spellings in current usage (e.g. dig/dej or ska/skall), and a few of them occurs in the present Swedish translation of Inform's library messages. We therefore provide use options that set these words to an author's preferred spellings. Later we shall define grammar tokens for the words in question and have the say-phrases for them check if any relevant use option is set. And, while we're at it, we do the same for a number of words that do not occur in the present translation of the library messages. – For default values we use the spellings not listed as marked in any way in the 13th edition of the Swedish Academy Glossary (SAOL13).]
+[Several common Danish words have variant spellings in current usage (e.g. dig/dej or ska/skall), and a few of them occurs in the present Danish translation of Inform's library messages. We therefore provide use options that set these words to an author's preferred spellings. Later we shall define grammar tokens for the words in question and have the say-phrases for them check if any relevant use option is set. And, while we're at it, we do the same for a number of words that do not occur in the present translation of the library messages. – For default values we use the spellings not listed as marked in any way in the 13th edition of the Danish Academy Glossary (SAOL13).]
 Use dan spelling translates as (- Constant DAN_SPELLING; -). 
 Use dej spelling translates as (- Constant DEJ_SPELLING; -).
 Use dom spelling translates as (- Constant DOM_SPELLING; -).
@@ -42,11 +42,11 @@ Part - The Physical World Model
 Section - Primitive kinds
 
 [A/sr1§13 - SR1/1]
-[In Swedish, inanimate things can be common gender or neuter. Animate things can be male, female, common gender or neuter. So we need to add to the Standard Rules definition of the thing kind.]
+[In Danish, inanimate things can be common gender or neuter. Animate things can be male, female, common gender or neuter. So we need to add to the Standard Rules definition of the thing kind.]
 An object can be neuter or common-gendered. An object is usually not neuter. 
 [Actually the common-gendered property is a mere coy: it simply means "not neuter"; in particular, it is not connected in any way to our new I6 attribute "common", which the present extension defines to give objects the common gender. Still, declaring a thing to be common-gendered will work as expected, since you thereby declare the object to be not neuter and so, as a consequence, it will fall back on the default gender of things, which happens to be the common gender. (Men and women declared as common-gendered will remain male and female respectively, however. And, actually, the I7 property male is related to the old I6 attribute "male" just as I7 common-gendered to I6 'common')]
 
-[In Swedish a few words - mostly names of noble families ("af Chapman", "de la Gardie", "von Wright" etc.) and some compunds with scientific acronyms (like "pH-mätare" (pH meter) are never capitalized, not even when occuring first in a sentence. We override capitalization in the definite species by declaring the word uncapitalisable and checking whether it is so, before printing it.(And we spell "uncapitalisable" with an "s" as an hommage to Graham Nelson.)]
+[In Danish a few words - mostly names of noble families ("af Chapman", "de la Gardie", "von Wright" etc.) and some compunds with scientific acronyms (like "pH-mätare" (pH meter) are never capitalized, not even when occuring first in a sentence. We override capitalization in the definite species by declaring the word uncapitalisable and checking whether it is so, before printing it.(And we spell "uncapitalisable" with an "s" as an hommage to Graham Nelson.)]
 An object can be uncapitalisable. An object is usually not uncapitalisable. 
 
 [We want the game to understand the printed name of an object as that object, since normally the printed name of an object will contain the definite inflection of the object's name. It's probably good if this can be overriden, though.]
@@ -60,12 +60,12 @@ Section - Things
 [A/sr1§22 - SR1/3]
 A thing can be non-count or not non-count. A thing is usually not non-count. 
 
-[I you write source text like "A själ is a kind of thing. A själ is part of every person.", Inform automatically names these parts after their holders: "your själ", "Voldemort's själ", etc. The following code gives them a corresponding "indexed name" in Swedish ("din själ", "Voldemorts själ") that we can print and match input against instead.]
+[I you write source text like "A själ is a kind of thing. A själ is part of every person.", Inform automatically names these parts after their holders: "your själ", "Voldemort's själ", etc. The following code gives them a corresponding "indexed name" in Danish ("din själ", "Voldemorts själ") that we can print and match input against instead.]
 
 A thing has an indexed text called indexed name.
 The indexed name of a thing is usually "".
 
-When play begins (this is the give parts indexed names in Swedish rule):
+When play begins (this is the give parts indexed names in Danish rule):
 	repeat with pars running through things:
 		if pars is part of something (called totum):
 			if word number 1 in the printed name of pars exactly matches the text "your":
@@ -133,7 +133,7 @@ Understand the command "d" as something new.
 
 The printed name of inside is "in". 
 Understand "inåt/in" or "inne/inuti/innanför" as inside. 
-[But "in" means the same in Swedish as in English]
+[But "in" means the same in Danish as in English]
 
 The printed name of outside is "ut". 
 Understand "utåt/ut" or "ute/utanför" as outside. 
@@ -224,22 +224,22 @@ Part - Activities
 Section - Definitions
 
 [A/sr3§9 - SR3/1]
-The Swedish pre-parsing rules are a rulebook.
+The Danish pre-parsing rules are a rulebook.
 Post-parsing is a rulebook.
 Translating to Informese is an activity.
 
 After translating to Informese: now the endophoric reference is the noun.
-After translating to Informese: anonymously abide by the Swedish pre-parsing rules.
+After translating to Informese: anonymously abide by the Danish pre-parsing rules.
 
 
 Section - Final Question
 
 [A/sr3§17 - SR3/2]
-The Swedish print the final question rule is listed instead of the print the final question rule in before handling the final question.
-The Swedish respond to final question rule is listed instead of the standard respond to final question rule in for handling the final question.
+The Danish print the final question rule is listed instead of the print the final question rule in before handling the final question.
+The Danish respond to final question rule is listed instead of the standard respond to final question rule in for handling the final question.
 
 [A/sr3§18 - SR3/2]
-This is the Swedish print the final question rule:
+This is the Danish print the final question rule:
 	let named options count be 0;
 	repeat through the Table of Final Question Options:
 		if the only if victorious entry is false or the story has ended finally:
@@ -248,7 +248,7 @@ This is the Swedish print the final question rule:
 				if there is a final question wording entry, increase named options count by 1;
 	if the named options count is less than 1, abide by the immediately quit rule;
 	say "Vill du ";
-	repeat through the Table of Swedish Final Question Options:
+	repeat through the Table of Danish Final Question Options:
 		if the only if victorious entry is false or the story has ended finally:
 			if there is a final response rule entry
 				or the final response activity entry [activity] is not empty:
@@ -263,8 +263,8 @@ This is the Swedish print the final question rule:
 						say ", ".
 
 [A/sr3§19 - SR3/2]
-This is the Swedish respond to final question rule: 
-	repeat through the Table of Swedish Final Question Options: 
+This is the Danish respond to final question rule: 
+	repeat through the Table of Danish Final Question Options: 
 		if the only if victorious entry is false or the story has ended finally: 
 			if there is a final response rule entry or the final response activity entry [activity] is not empty: 
 				if the player’s command matches the topic entry: 
@@ -277,7 +277,7 @@ This is the Swedish respond to final question rule:
 Section - Final question options
 
 [A/sr3§20 - SR3/3]
-Table of Swedish Final Question Options
+Table of Danish Final Question Options
 final question wording	only if victorious	topic	final response rule	final response activity
 "börja på en NY spelomgång"	false	"ny"	immediately restart the VM rule	--
 "LADDA en sparad spelomgång"	false	"ladda"	immediately restore saved game rule	--
@@ -290,9 +290,9 @@ Section - Locale descriptions
 [lA/sr3 - SR3/4]
 
 [A/sr3§23 - SR3/4]
-The Swedish you-can-also-see rule is listed instead of the you-can-also-see rule in the for printing the locale description rules.
+The Danish you-can-also-see rule is listed instead of the you-can-also-see rule in the for printing the locale description rules.
 
-This is the Swedish you-can-also-see rule:
+This is the Danish you-can-also-see rule:
 	let the domain be the parameter-object;
 	let the mentionable count be 0;
 	repeat with item running through things:
@@ -342,10 +342,10 @@ This is the Swedish you-can-also-see rule:
 	continue the activity.
 
 [A/sr3§25 - SR3/4]
-The Swedish describe what's on scenery supporters in room descriptions rule is listed instead of the describe what's on scenery supporters in room descriptions rule in the for printing a locale paragraph about rules.
+The Danish describe what's on scenery supporters in room descriptions rule is listed instead of the describe what's on scenery supporters in room descriptions rule in the for printing a locale paragraph about rules.
 
 For printing a locale paragraph about a thing (called the item)
-	(this is the Swedish describe what's on scenery supporters in room descriptions rule):
+	(this is the Danish describe what's on scenery supporters in room descriptions rule):
 	if the item is not undescribed and the item is scenery and
 		the item does not enclose the player:
 		if a locale-supportable thing is on the item:
@@ -366,11 +366,11 @@ For printing a locale paragraph about a thing (called the item)
 Part - Actions
 [A/sr4 - SR4]
 
-[The following sections contain rules to prevent the parser from misinterpreting commands due to namespace clashes between Swedish verbs. Seriously wrong library messages threaten to result from the need in Swedish to let "sätt", "ställ" and "lägg" be synonymous for the purpose of putting it on action but not for the purposes of the switching on, switching off and setting it to actions; also, a commands such as "Jätte, ställ mig på hyllan" would be understood as the player asking the giant to enter the shelf rather than asking him to put the player on it. Less serious but still misleading responses would be issued by other actions understood by reflexive verbs. This is where we intercept to prevent those misinterpretations.]
+[The following sections contain rules to prevent the parser from misinterpreting commands due to namespace clashes between Danish verbs. Seriously wrong library messages threaten to result from the need in Danish to let "sätt", "ställ" and "lägg" be synonymous for the purpose of putting it on action but not for the purposes of the switching on, switching off and setting it to actions; also, a commands such as "Jätte, ställ mig på hyllan" would be understood as the player asking the giant to enter the shelf rather than asking him to put the player on it. Less serious but still misleading responses would be issued by other actions understood by reflexive verbs. This is where we intercept to prevent those misinterpretations.]
 
 Section - Pre-parsing rules
 
-A Swedish pre-parsing rule (this is the disambiguate 'tag på sig' rule):
+A Danish pre-parsing rule (this is the disambiguate 'tag på sig' rule):
 	if the player's command matches "tag/tag på dig/dej/mig/mej/sig/sej":
 		say "Jag antar att du vill tag på [dig] [något] (inte bara känna på [dig] själv). Stämmer det?";
 		if player consents:
@@ -378,7 +378,7 @@ A Swedish pre-parsing rule (this is the disambiguate 'tag på sig' rule):
 		otherwise:
 			try touching yourself instead.
 
-A Swedish pre-parsing rule (this is the 'tag af mig' rule):
+A Danish pre-parsing rule (this is the 'tag af mig' rule):
 	if the player's command matches "tag/tag af dig/dej/mig/mej/sig/sej":
 		change the text of the player's command to "tag af";
 		rule fails.
@@ -455,10 +455,10 @@ Post-parsing asking someone (called Teufelsdröckh) to try taking off something 
 
 Section - Standard actions concerning the actor's vision
 
-[It's the room description heading rule that prints the name of the room the player is currently in (unless it's dark or the player is in a closed opaque container etc.). In effect it just prints "[location]", and the author is supposed to have given it a name beginning with a capital letter anyway – giving you "Ktichen" or "Sandy Beach" etc. In Swedish, however, it's idiomatic to use the definite species in that context (you'd rather call a room "Köket" or "Sandstranden" than "Kök" or "Sandstrand"). So we have the Swedish room description heading rule print "[The location]" instead (which by the way is more convenient when we want to print the name of the location elsewhere in the game -- Swedish takes much less kindly to occasional capitalization of words than English).]
+[It's the room description heading rule that prints the name of the room the player is currently in (unless it's dark or the player is in a closed opaque container etc.). In effect it just prints "[location]", and the author is supposed to have given it a name beginning with a capital letter anyway – giving you "Ktichen" or "Sandy Beach" etc. In Danish, however, it's idiomatic to use the definite species in that context (you'd rather call a room "Köket" or "Sandstranden" than "Kök" or "Sandstrand"). So we have the Danish room description heading rule print "[The location]" instead (which by the way is more convenient when we want to print the name of the location elsewhere in the game -- Danish takes much less kindly to occasional capitalization of words than English).]
 
 [A/sr4§45 - SR4/4]
-This is the Swedish room description heading rule:
+This is the Danish room description heading rule:
 	say bold type;
 	if the visibility level count is 0:
 		begin the printing the name of a dark room activity;
@@ -481,12 +481,12 @@ This is the Swedish room description heading rule:
 	say line break;
 	say run paragraph on with special look spacing.
 
-The Swedish room description heading rule is listed instead of the room description heading rule in the carry out looking rulebook.
+The Danish room description heading rule is listed instead of the room description heading rule in the carry out looking rulebook.
 
 
 Section - Grammar
 
-[We keep the English commands for out of world actions: these are either very entrenched (even Swedish players would expect to be able to type "q" to quit) or they are impossible to guess anyway (like "superbrief" or "notify"). We do provide a Swedish set of commands for these actions as well, though. We also keep ingrained abbreviations of English commands ("i", "inv", "l", "x", "y" and "z") with exception of direction (at the very least we need "se" for looking in Swedish -- and while we're at it we shall use "u" for the long word "undersøg" rather than for the much shorter "upp"). For the sake of readibility, however, the English abbreviations that we keep are defined anew together with the Swedish commands.]
+[We keep the English commands for out of world actions: these are either very entrenched (even Danish players would expect to be able to type "q" to quit) or they are impossible to guess anyway (like "superbrief" or "notify"). We do provide a Danish set of commands for these actions as well, though. We also keep ingrained abbreviations of English commands ("i", "inv", "l", "x", "y" and "z") with exception of direction (at the very least we need "se" for looking in Danish -- and while we're at it we shall use "u" for the long word "undersøg" rather than for the much shorter "upp"). For the sake of readibility, however, the English abbreviations that we keep are defined anew together with the Danish commands.]
 
 [lA/sr4§187 - SR4/10 ]
 Understand the commands "take", "carry", "hold", "get" and "pick" as something new.
@@ -540,7 +540,7 @@ Understand the command "notify" as something new.]
 Understand "gå igenom tillhörigheter/utrustning" or "gå igenom min/din/sin/mina/dina/sina utrustning/tillhörigheter" as taking inventory.
 Understand "inventera" or "inventera tillhörigheter/utrustning" as taking inventory.
 Understand the commands "i", "inv", "lista", "tillhörigheter", "tillh", "utrustning" and "utr" as "inventera".
-["Take inventory" is hard to translate well. Fortunately, Fredrik Ramsberg, the translator of Inform 6 into Swedish, has already solved it: "lista tillhörigheter". We understand "inventera" as taking inventory, since players used to English games may try it. And we understand "lista" as a synonym of "inventera" rather than the other way around, since it is more likely that a Swedish author wants to create a new action that responds to the command "lista" than one that responds to the command "inventera".]
+["Take inventory" is hard to translate well. Fortunately, Fredrik Ramsberg, the translator of Inform 6 into Danish, has already solved it: "lista tillhörigheter". We understand "inventera" as taking inventory, since players used to English games may try it. And we understand "lista" as a synonym of "inventera" rather than the other way around, since it is more likely that a Danish author wants to create a new action that responds to the command "lista" than one that responds to the command "inventera".]
 
 Understand "tag [things]" as taking.
 Understand "tag upp/ut/ur [things]" as taking.
@@ -600,7 +600,7 @@ Understand "stå upp från/ifrån [something]" as getting off.
 
 Understand "ligg på/ovanpå/i/inuti [something]" or "ligg uppe/inne/nere på/ovanpå/i [something]" as entering.
 Understand "ligg ned/ner på/ovanpå/i/inuti [something]" or "ligg ned/ner uppe/inne/nere på/ovanpå/i [something]" as entering.
-[Swedish Inform 7 implements a basic "lie down" command.]
+[Danish Inform 7 implements a basic "lie down" command.]
 
 Understand "res dig/dej/mig/mej/sig/sej" or "res dig/dej/mig/mej/sig/sej upp" as exiting.
 Understand "res dig/dej/mig/mej/sig/sej ur/från/ifrån [something]" or "res dig/dej/mig/mej/sig/sej upp ur/från/ifrån [something]" as getting off.
@@ -776,7 +776,7 @@ Understand "sov" as sleeping.
 Understand the command "somna" as "sov".
 
 
-[For player convenience we want the commands for I7 actions out of world to agree with the commands for Group 1 (=meta) action in the already existing Swedish I6 Library. But we also add several alternative ways to phrase these hard-to-guess commands in an attempt to capture wordings a player may possibly try.]
+[For player convenience we want the commands for I7 actions out of world to agree with the commands for Group 1 (=meta) action in the already existing Danish I6 Library. But we also add several alternative ways to phrase these hard-to-guess commands in an attempt to capture wordings a player may possibly try.]
 
 Understand "avsluta" or "avsluta spel/spelet/omgång/omgången/spelomgång/spelomgången" as quitting the game.
 Understand the command "sluta" as "avsluta".
@@ -2106,7 +2106,7 @@ To decide if the indexed name is understood:
 			decide yes.
 
 
-Book  - Swedish Template Layer
+Book  - Danish Template Layer
 
 Chapter - Output
 
@@ -2163,7 +2163,7 @@ Chapter - Definitions
 Section - Powers of Two
 [B/dfnt§5]
 
-[The PowersOfTwo array is used by the Pronoun Handling routine and needs as many entries as there are GNAs in the language: 12 in English, 16 in Swedish.]
+[The PowersOfTwo array is used by the Pronoun Handling routine and needs as many entries as there are GNAs in the language: 12 in English, 16 in Danish.]
 
 Include (-
 Array PowersOfTwo_TB
@@ -2218,7 +2218,7 @@ Chapter - Parser
 Section - Descriptors
 [B/parst§30]
 
-[We need to replace the "Descriptors" section since in it the global variable indef_cases is initialized to a 12-bit array. We need to make it a 16-bit array, since it will later (in the course of deciding what pronouns refer to what object) be matched to the PowersOfTwo array, which in turn we have expanded to sixteen bits to match the sixteen possible GNAs of Swedish.]
+[We need to replace the "Descriptors" section since in it the global variable indef_cases is initialized to a 12-bit array. We need to make it a 16-bit array, since it will later (in the course of deciding what pronouns refer to what object) be matched to the PowersOfTwo array, which in turn we have expanded to sixteen bits to match the sixteen possible GNAs of Danish.]
 
 Include (-
 Constant OTHER_BIT  =   1;     !  These will be used in Adjudicate()
@@ -2323,7 +2323,7 @@ Include (-
 Section - Refers
 [B/parst§53]
 
-[We define a LanguageRefers routine to make sure that the Swedish translation understands the short_name (printed name) of objects, as the author normally will give the definite forms of object names there. This mirrors the standard I6 Refers routine but adds an else block that tries to match the input word (the value of parameter_object) against each word in the printed name of a given object in scope (the value of LR_object), using both the definite and the indefinite forms of the printed name (that's why we we change the indef_mode global). We also match the input word against the words in the "indexed name" given by the present extension to certain objects that Inform automatically gives an English name. The routine relies on I7 phrases that match indexed texts against each other.]
+[We define a LanguageRefers routine to make sure that the Danish translation understands the short_name (printed name) of objects, as the author normally will give the definite forms of object names there. This mirrors the standard I6 Refers routine but adds an else block that tries to match the input word (the value of parameter_object) against each word in the printed name of a given object in scope (the value of LR_object), using both the definite and the indefinite forms of the printed name (that's why we we change the indef_mode global). We also match the input word against the words in the "indexed name" given by the present extension to certain objects that Inform automatically gives an English name. The routine relies on I7 phrases that match indexed texts against each other.]
 
 Include (-
 Global LR_object = nothing;
@@ -2430,7 +2430,7 @@ Include (-
 Section - Gender
 [B/parst§57]
 
-[The GetGNAOFObject codes the gender/number/animation combination of an object (see the Inform Designer's Manual, 4th edition). It needs to be adjusted to accomodate all four Swedish genders.
+[The GetGNAOFObject codes the gender/number/animation combination of an object (see the Inform Designer's Manual, 4th edition). It needs to be adjusted to accomodate all four Danish genders.
 (The Gender section of the Parser Template also includes a GetGender routine to decide whether persons are male or female. That routine seems unused but, for the sake of completeness, we include it here together with a similar one to decide whether things are common gender or neuter.)]
 
 Include (-
@@ -2446,7 +2446,7 @@ Include (-
 
 [ GetGNAOfObject obj case gender;
 !    if (obj hasnt animate)  case = 6;    !#
-    if (obj hasnt animate)  case = 8;    !# There are 8 animate (and 8 inanimate) gender–number combinations in Swedish (only 6 in English).
+    if (obj hasnt animate)  case = 8;    !# There are 8 animate (and 8 inanimate) gender–number combinations in Danish (only 6 in English).
     if (obj has male)     gender = male;
     if (obj has female)   gender = female;
     if (obj has common)   gender = common;    !# Adding common gender
@@ -2471,7 +2471,7 @@ Chapter - ListWriter
 Section - Write After Entry
 [B/lwt§18]
 
-[In English relative pronouns distinguish between people and non-people but do not inflect with gender or number; in Swedish the contrary is true. We therefore need to replace the use here of the two Short Texts constants WHOM__TX and WHICH__TX with three custom Swedish ones (WHICH__TX, WHICH2__TX and WHICH3__TX).]
+[In English relative pronouns distinguish between people and non-people but do not inflect with gender or number; in Danish the contrary is true. We therefore need to replace the use here of the two Short Texts constants WHOM__TX and WHICH__TX with three custom Danish ones (WHICH__TX, WHICH2__TX and WHICH3__TX).]
 
 Include (-
 [ WriteAfterEntry o depth
@@ -2540,7 +2540,7 @@ Include (-
             if (c_style & ENGLISH_BIT) {
                 if (c_style & TERSE_BIT) L__M(##ListMiscellany, 19, o);
                 else                     L__M(##ListMiscellany, 20, o);
-!# Swedish makes no distincition between "whom" and "which".
+!# Danish makes no distincition between "whom" and "which".
 !                if (o has animate)       print (string) WHOM__TX;     !# 
 !                else                     print (string) WHICH__TX;    !#
 !# But the word it uses for both is inflected.
@@ -2796,7 +2796,7 @@ Array LanguageDescriptors table
 Section - Numbers
 [B/langt§4]
 
-[The idomatic use of number words in Swedish are subject to several quirks (as described in Språkrådets "Svenska språkregler", 3d edition), which the following version of LanguageNumber is designed to respect.]
+[The idomatic use of number words in Danish are subject to several quirks (as described in Språkrådets "Svenska språkregler", 3d edition), which the following version of LanguageNumber is designed to respect.]
 
 Include (- 
 Array LanguageNumbers table
@@ -2930,18 +2930,18 @@ Include (-
 Section - Articles
 [B/langt§8]
 
-[Swedish doesn't use the definite article with nouns; instead, Swedish nouns inflect, marking definite species by suffix (those suffixes being remnants of Old Norse postpositive definite articles, though). Agreeing adjectives inflect, too; but, in addition, they do take the definite article. So, 'a grue', 'the grue', 'a gruesome grue', 'the gruesome grue' is in Swedish 'en gruv', 'gruven', 'en gruvlig gruv', 'den gruvliga gruven'.
+[Danish doesn't use the definite article with nouns; instead, Danish nouns inflect, marking definite species by suffix (those suffixes being remnants of Old Norse postpositive definite articles, though). Agreeing adjectives inflect, too; but, in addition, they do take the definite article. So, 'a grue', 'the grue', 'a gruesome grue', 'the gruesome grue' is in Danish 'en gruv', 'gruven', 'en gruvlig gruv', 'den gruvliga gruven'.
 
 So, we need some way to ensure that definite articles are printed is not printed unless a noun phrase begins with an adjective. We also have to handle the inflections of nouns and adjectives in the definite species. We do this by require users to spell out the definite form of noun phrases manually, as text substitutions to the printed names of objects. This includes specifying the relevant definite article ('den', 'det' or 'de'). Therefore, we leave the entries for definite articles in the LanguageArticles array empty.]
 
-[Since we will never need to look up definite articles in the array, we leave the entries empty. On the other hand we need to extend it from 12 to 16 entries because of the extra common gender in Swedish.]
+[Since we will never need to look up definite articles in the array, we leave the entries empty. On the other hand we need to extend it from 12 to 16 entries because of the extra common gender in Danish.]
 
 Include (-
 Constant LanguageAnimateGender   = male;
 ! Constant LanguageInanimateGender = ~neuter;    ! --- Common ---
 Constant LanguageInanimateGender = common;       !# Changed from above 
 
-Constant LanguageContractionForms = 1;     !# No alternative contraction forms in Swedish
+Constant LanguageContractionForms = 1;     !# No alternative contraction forms in Danish
 
 [ LanguageContraction text; return 0; ];
 
@@ -3103,13 +3103,13 @@ Global ARE3__TX         = "finns";
 Constant AND__TX        = " og ";
 #ifdef I7_SERIAL_COMMA;
 Constant LISTAND__TX    = " og ";     !# The serial comma option should
-Constant LISTAND2__TX   = " og ";     !#  have no effect in Swedish. 
+Constant LISTAND2__TX   = " og ";     !#  have no effect in Danish. 
 #ifnot;
 Constant LISTAND__TX    = " og ";
 Constant LISTAND2__TX   = " og ";
 #endif; ! I7_SERIAL_COMMA
 
-! Constant WHOM__TX       = "whom ";   !# Swedish doesn't make any distinction
+! Constant WHOM__TX       = "whom ";   !# Danish doesn't make any distinction
 Constant WHICH__TX      = "vilken ";   !# between "which" and "whom".
 Constant WHICH2__TX     = "vilket ";   !# But this relative pronoun inflects,
 Constant WHICH3__TX     = "vilka ";    !# so we need to add two forms.
@@ -3859,7 +3859,7 @@ L__M(##Miscellany, 71);
 EndActivity(PRINTING_NAME_OF_DARK_ROOM_ACT); 
 } else { 
 FindVisibilityLevels(); 
-!# In Swedish we want to treat room names as any other names;
+!# In Danish we want to treat room names as any other names;
 !# wherefore we comment out the next line.
 ! if (visibility_ceiling == location) print (name) location; else     !#
 print (The) visibility_ceiling; 
@@ -3952,7 +3952,7 @@ Global caps_mode = false;
 Section - Object Names II
 [B/print§17]
 
-[Another change to accommodate the four Swedish genders. 
+[Another change to accommodate the four Danish genders. 
 (The I6 routine PrefaceByArticle prints the definite and indefinite articles separately, before calling the PSN__ routine, which prints the name of the object by calling the standard name printing rule).]
 
 Include (-
@@ -3979,7 +3979,7 @@ Global short_name_case;
     artform = LanguageArticles
         + 3*WORDSIZE*LanguageContractionForms*(short_name_case + i*LanguageCases);
 
-!# --- The following section doesn't apply to a language like Swedish, where articles have no alternative contraction forms.
+!# --- The following section doesn't apply to a language like Danish, where articles have no alternative contraction forms.
     #Iftrue (LanguageContractionForms == 2);
     if (artform-->acode ~= artform-->(acode+3)) findout = true;
     #Endif; ! LanguageContractionForms
@@ -4578,7 +4578,7 @@ To decide which indexed text is final phrase:
 	
 To decide which indexed text is the result of (förstnämnda - indexed text) and (sistnämnda - indexed text):
 	let obest, best be indexed text;
-	repeat through the table of Swedish substitutions:
+	repeat through the table of Danish substitutions:
 		let the obest be the obestämd entry;
 		let the best be the bestämd entry;
 		if förstnämnda exactly matches the text "[best]" and sistnämnda exactly matches the text "[obest]":
@@ -4589,7 +4589,7 @@ To decide which indexed text is the result of (förstnämnda - indexed text) and
 
 To decide which indexed text is the token of (förstnämnda - indexed text) and (sistnämnda - indexed text):
 	let obest, best be indexed text;
-	repeat through the table of Swedish suffixes:
+	repeat through the table of Danish suffixes:
 		let the obest be the obestämd entry;
 		let the best be the bestämd entry;
 		if förstnämnda exactly matches the text "[best]" and sistnämnda exactly matches the text "[obest]":
@@ -4605,13 +4605,13 @@ To decide whether words don't match:
 
 Section - Tables
 
-Table of Swedish substitutions
+Table of Danish substitutions
 obestämd	bestämd	resultat
 "en"	"den"	"den"
 "et"	"det"	"det"
 
 
-Table of Swedish suffixes
+Table of Danish suffixes
 obestämd	bestämd	resultat
 ""	"a"	"a"
 ""	"n"	"n"
@@ -4701,7 +4701,7 @@ To decide which indexed text is inserted (snippet - indexed text) at word (index
 
 Volume - Localization of Built-In Extensions
 
-Book - Swedish Basic Help Menu (for use with Basic Help Menu by Emily Short)
+Book - Danish Basic Help Menu (for use with Basic Help Menu by Emily Short)
 
 Chapter - Basic Help Menu (in place of Basic Help Menu by Emily Short)
 
@@ -4786,7 +4786,7 @@ Carry out asking for help (this is the help request rule):
 The story genre is "text"
 
 
-Book - Swedish Basic Screen Effects (for use with Basic Screen Effects by Emily Short)
+Book - Danish Basic Screen Effects (for use with Basic Screen Effects by Emily Short)
 
 To pause the/-- game: 
 	say "[paragraph break]Tryck MELLANSLAG för att fortsätta.";
@@ -4795,7 +4795,7 @@ To pause the/-- game:
 [The SPACE key = VAGNRETUR, BLANKSTEG eller UNIT SEPARATOR]
 
 
-Book - Swedish Complex Listing (for use with Complex Listing by Emily Short)
+Book - Danish Complex Listing (for use with Complex Listing by Emily Short)
 
 To say tabled verb:
 	[if the number of filled rows in the Table of Scored listing is greater than 1, say "är ";
@@ -4826,10 +4826,10 @@ fragmentary	". "	". "	". "	"[A current listed object]"	"[The current listed obje
 enumerated	"; "	"; "	"; "	"([current enumeration]) [a current listed object]"	"([current enumeration]) [the current listed object]"
 
 
-Book - Swedish Locksmith (for use with Locksmith by Emily Short)
+Book - Danish Locksmith (for use with Locksmith by Emily Short)
 
-The Swedish opening doors before entering rule is listed instead of the opening doors before entering rule in the before rulebook.
-Before going through a closed door (called the blocking door) (this is the Swedish opening doors before entering rule):
+The Danish opening doors before entering rule is listed instead of the opening doors before entering rule in the before rulebook.
+Before going through a closed door (called the blocking door) (this is the Danish opening doors before entering rule):
 	if sequential action option is active:
 		try opening the blocking door;
 	otherwise:
@@ -4837,8 +4837,8 @@ Before going through a closed door (called the blocking door) (this is the Swedi
 		silently try opening the blocking door;
 	if the blocking door is closed, stop the action.
 
-The Swedish closing doors before locking rule is listed instead of the closing doors before locking rule in the before rulebook.
-Before locking an open thing (called the door ajar) with something (this is the Swedish closing doors before locking rule):
+The Danish closing doors before locking rule is listed instead of the closing doors before locking rule in the before rulebook.
+Before locking an open thing (called the door ajar) with something (this is the Danish closing doors before locking rule):
 	if sequential action option is active:
 		try closing the door ajar;
 	otherwise:
@@ -4846,8 +4846,8 @@ Before locking an open thing (called the door ajar) with something (this is the 
 		silently try closing the door ajar;
 	if the door ajar is open, stop the action.
 	
-The Swedish closing doors before locking keylessly rule is listed instead of the closing doors before locking keylessly rule in the before rulebook.
-Before locking keylessly an open thing (called the door ajar) (this is the Swedish closing doors before locking keylessly rule):
+The Danish closing doors before locking keylessly rule is listed instead of the closing doors before locking keylessly rule in the before rulebook.
+Before locking keylessly an open thing (called the door ajar) (this is the Danish closing doors before locking keylessly rule):
 	if sequential action option is active:
 		try closing the door ajar;
 	otherwise:
@@ -4855,8 +4855,8 @@ Before locking keylessly an open thing (called the door ajar) (this is the Swedi
 		silently try closing the door ajar;
 	if the door ajar is open, stop the action.
 
-The Swedish unlocking before opening rule is listed instead of the unlocking before opening rule in the before rulebook.
-Before opening a locked thing (called the sealed chest) (this is the Swedish unlocking before opening rule): 
+The Danish unlocking before opening rule is listed instead of the unlocking before opening rule in the before rulebook.
+Before opening a locked thing (called the sealed chest) (this is the Danish unlocking before opening rule): 
 	if sequential action option is active:
 		try unlocking keylessly the sealed chest;
 	otherwise:
@@ -4865,16 +4865,16 @@ Before opening a locked thing (called the sealed chest) (this is the Swedish unl
 	if the sealed chest is locked, stop the action.
 
 
-This is the Swedish need a matching key rule:
+This is the Danish need a matching key rule:
 	if the noun provides the property matching key:
 		let the item be the matching key of the noun;
 		if the person asked encloses the item:
 			now the second noun is the item;
-			abide by the Swedish must have accessible the second noun rule;
+			abide by the Danish must have accessible the second noun rule;
 		otherwise:
 			if the item is a passkey and the item unbolts the noun and the item is visible:
 				now the second noun is the item;
-				abide by the Swedish must have accessible the second noun rule;
+				abide by the Danish must have accessible the second noun rule;
 			otherwise:
 				if the player is the person asked, say "[key-refusal for noun]";
 				stop the action;
@@ -4882,8 +4882,8 @@ This is the Swedish need a matching key rule:
 		if the player is the person asked, say "[key-refusal for noun]";
 		stop the action.
 
-The Swedish standard printing key lack rule is listed instead of the standard printing key lack rule in the for refusing keys rulebook.
-Rule for refusing keys of something (called locked-thing) (this is the Swedish standard printing key lack rule):
+The Danish standard printing key lack rule is listed instead of the standard printing key lack rule in the for refusing keys rulebook.
+Rule for refusing keys of something (called locked-thing) (this is the Danish standard printing key lack rule):
 	say "Du har ingen nyckel som passar [the locked-thing]."
 
 
@@ -4891,13 +4891,13 @@ Understand the command "lås" as something new. Understand "lås upp [something]
 
 Understand the commands "öppna" and "packa" as something new. Understand "öppna [something]" or "packa upp [something]" as opening. Understand "öppna [something] med [something]" as unlocking it with. Understand "öppna [a locked lockable thing] med [something]" as unlocking it with. Understand "öppna [a lockable thing] med [something]" as unlocking it with.
 
-The Swedish must be able to reach the key for unlocking rule is listed instead of the must be able to reach the key rule in the check unlocking it with rulebook.
-Check unlocking it with (this is the Swedish must be able to reach the key for unlocking rule):
-	abide by the Swedish must have accessible the second noun rule.
+The Danish must be able to reach the key for unlocking rule is listed instead of the must be able to reach the key rule in the check unlocking it with rulebook.
+Check unlocking it with (this is the Danish must be able to reach the key for unlocking rule):
+	abide by the Danish must have accessible the second noun rule.
 
-The Swedish right second rule is listed instead of the right second rule in the check unlocking it with rulebook.
+The Danish right second rule is listed instead of the right second rule in the check unlocking it with rulebook.
 
-This is the Swedish right second rule:
+This is the Danish right second rule:
 	if the noun provides the property matching key:
 		if the second noun is not the matching key of the noun, say "[The second noun] passar inte [the noun]." instead;
 	otherwise:
@@ -4906,70 +4906,70 @@ This is the Swedish right second rule:
 
 Understand "lås upp [something]" as unlocking keylessly. Understand "lås upp [a locked lockable thing]" as unlocking keylessly. Understand "lås upp [a lockable thing]" as unlocking keylessly.
 
-The Swedish check keylessly unlocking rule is listed instead of the check keylessly unlocking rule in the check unlocking keylessly rulebook.
-Check unlocking keylessly (this is the Swedish check keylessly unlocking rule):
+The Danish check keylessly unlocking rule is listed instead of the check keylessly unlocking rule in the check unlocking keylessly rulebook.
+Check unlocking keylessly (this is the Danish check keylessly unlocking rule):
 	abide by the can't unlock without a lock rule;
 	abide by the can't unlock what's already unlocked rule;
-	abide by the Swedish need a matching key rule.
+	abide by the Danish need a matching key rule.
 
-The Swedish standard keylessly unlocking rule is listed instead of the standard keylessly unlocking rule in the carry out unlocking keylessly rulebook.
+The Danish standard keylessly unlocking rule is listed instead of the standard keylessly unlocking rule in the carry out unlocking keylessly rulebook.
 Carry out unlocking keylessly (this is the standard keylessly unlocking rule):
 	if sequential action option is active, do nothing; otherwise say "(med [the matching key of the noun])[command clarification break]";
 	try unlocking the noun with the matching key of the noun.
 
-The Swedish check someone else keylessly unlocking rule is listed in the check someone else keylessly unlocking rule in the check someone trying unlocking keylessly rulebook.
-Check someone trying unlocking keylessly (this is the Swedish check someone else keylessly unlocking rule):	 
+The Danish check someone else keylessly unlocking rule is listed in the check someone else keylessly unlocking rule in the check someone trying unlocking keylessly rulebook.
+Check someone trying unlocking keylessly (this is the Danish check someone else keylessly unlocking rule):	 
 	abide by the can't unlock without a lock rule;
 	abide by the can't unlock what's already unlocked rule;
-	abide by the Swedish need a matching key rule.
+	abide by the Danish need a matching key rule.
 
 
 [Understand the command "lock" as something new.] [We already did that!!!] Understand "lås [something] med [something]" as locking it with. Understand "lås [an unlocked lockable thing] med [something]" as locking it with. Understand "lås [a lockable thing] med [something]" as locking it with.
 
-Check locking it with (this is the Swedish must be able to reach the key for locking rule):
-	abide by the Swedish must have accessible the second noun rule.
-The Swedish must be able to reach the key for locking rule is listed first in the check locking it with rulebook.
+Check locking it with (this is the Danish must be able to reach the key for locking rule):
+	abide by the Danish must have accessible the second noun rule.
+The Danish must be able to reach the key for locking rule is listed first in the check locking it with rulebook.
 
 
 Understand "lås [something]" as locking keylessly.  Understand "lås [an unlocked lockable thing]" as locking keylessly. Understand "lås [a lockable thing]" as locking keylessly.
 
-The Swedish check keylessly locking rule is listed instead of the check keylessly locking rule in the check locking keylessly rulebook.
-Check locking keylessly (this is the Swedish check keylessly locking rule):
+The Danish check keylessly locking rule is listed instead of the check keylessly locking rule in the check locking keylessly rulebook.
+Check locking keylessly (this is the Danish check keylessly locking rule):
 	abide by the can't lock without a lock rule;
 	abide by the can't lock what's already locked rule;
 	abide by the can't lock what's open rule;
-	abide by the Swedish need a matching key rule.
+	abide by the Danish need a matching key rule.
 
-The Swedish standard keylessly locking rule is listed instead of the standard keylessly locking rule in the carry out locking keylessly rulebook.
-Carry out locking keylessly (this is the Swedish standard keylessly locking rule):
+The Danish standard keylessly locking rule is listed instead of the standard keylessly locking rule in the carry out locking keylessly rulebook.
+Carry out locking keylessly (this is the Danish standard keylessly locking rule):
 	if sequential action option is active, do nothing; otherwise say "(med [the matching key of the noun])[command clarification break]";
 	try locking the noun with the matching key of the noun.
 
-The Swedish check someone keylessly locking rule is listed instead of the check someone keylessly locking rule in the check someone trying locking keylessly rulebook.
-Check someone trying locking keylessly (this is the Swedish check someone keylessly locking rule):
+The Danish check someone keylessly locking rule is listed instead of the check someone keylessly locking rule in the check someone trying locking keylessly rulebook.
+Check someone trying locking keylessly (this is the Danish check someone keylessly locking rule):
 	abide by the can't lock without a lock rule;
 	abide by the can't lock what's already locked rule;
 	abide by the can't lock what's open rule;
-	abide by the Swedish need a matching key rule.
+	abide by the Danish need a matching key rule.
 	
 
-The Swedish identify passkeys in inventory rule is listed instead of the identify passkeys in inventory rule in the after rulebook.
-After printing the name of an identified passkey (called the item) while taking inventory (this is the Swedish identify passkeys in inventory rule):
+The Danish identify passkeys in inventory rule is listed instead of the identify passkeys in inventory rule in the after rulebook.
+After printing the name of an identified passkey (called the item) while taking inventory (this is the Danish identify passkeys in inventory rule):
 	say " (som går till [the list of things unbolted by the item])";
 	
-The Swedish passkey description rule is listed instead of the passkey description rule in the after rulebook.
+The Danish passkey description rule is listed instead of the passkey description rule in the after rulebook.
 After examining an identified passkey (this is the passkey description rule):
 	say "[The noun] går till [the list of things unbolted by the noun]."
 
 
-The Swedish limiting keychains rule is listed instead of the limiting keychains rule in the instead rulebook.
-Instead of putting something which is not a passkey on a keychain (this is the Swedish limiting keychains rule):
+The Danish limiting keychains rule is listed instead of the limiting keychains rule in the instead rulebook.
+Instead of putting something which is not a passkey on a keychain (this is the Danish limiting keychains rule):
 	say "[The noun] är inte [någon] nyckel."
 
 Understand "sätt [passkey] på [keychain]" or "häng [passkey] på [keychain]" as putting it on.
 
 
-This is the Swedish noun autotaking rule:
+This is the Danish noun autotaking rule:
 	if sequential action option is active:
 		if the player is the person asked:
 			try taking the noun;
@@ -4982,7 +4982,7 @@ This is the Swedish noun autotaking rule:
 		otherwise:
 			try the person asked trying taking the noun.
 	
-This is the Swedish second noun autotaking rule:
+This is the Danish second noun autotaking rule:
 	if sequential action option is active:
 		if the player is the person asked:
 			try taking the second noun;
@@ -4995,51 +4995,51 @@ This is the Swedish second noun autotaking rule:
 		otherwise:
 			try the person asked trying taking the second noun.
 
-[------ The must hold the noun rule and the must hold the second noun rule are not used by this extension. However, there are other extensions that call them, so we define special phrases to redirect such calls to the Swedish must hold the noun rule and the Swedish must hold the second noun rule, respectively ------]
-This is the Swedish must hold the noun rule:
-	if the person asked does not have the noun, follow the Swedish noun autotaking rule;
+[------ The must hold the noun rule and the must hold the second noun rule are not used by this extension. However, there are other extensions that call them, so we define special phrases to redirect such calls to the Danish must hold the noun rule and the Danish must hold the second noun rule, respectively ------]
+This is the Danish must hold the noun rule:
+	if the person asked does not have the noun, follow the Danish noun autotaking rule;
 	if the person asked does not have the noun, stop the action; 
 	make no decision.
 
-This is the Swedish must hold the second noun rule:
-	if the person asked does not have the second noun, follow the Swedish second noun autotaking rule;
+This is the Danish must hold the second noun rule:
+	if the person asked does not have the second noun, follow the Danish second noun autotaking rule;
 	if the person asked does not have the second noun, stop the action;
 	make no decision.
 
 To consider the must hold the noun rule:
-	consider the Swedish must hold the noun rule.
+	consider the Danish must hold the noun rule.
 To follow the must hold the noun rule:
-	follow the Swedish must hold the noun rule.
+	follow the Danish must hold the noun rule.
 To abide by the must hold the noun rule:
-	abide by the Swedish must hold the noun rule.
+	abide by the Danish must hold the noun rule.
 To anonymously abide by the must hold the noun rule:
-	anonymously abide by the Swedish must hold the noun rule.
+	anonymously abide by the Danish must hold the noun rule.
 
 To consider the must hold the second noun rule:
-	consider the Swedish must hold the second noun rule.
+	consider the Danish must hold the second noun rule.
 To follow the must hold the second noun rule:
-	follow the Swedish must hold the second noun rule.
+	follow the Danish must hold the second noun rule.
 To abide by the must hold the second noun rule:
-	abide by the Swedish must hold the second noun rule.
+	abide by the Danish must hold the second noun rule.
 To anonymously abide by the must hold the second noun rule:
-	anonymously abide by the Swedish must hold the second noun rule.
+	anonymously abide by the Danish must hold the second noun rule.
 [------ ------]
 	
-This is the Swedish must have accessible the noun rule:
+This is the Danish must have accessible the noun rule:
 	if the noun is not key-accessible:
 		if the noun is on a keychain (called the containing keychain), now the noun is the containing keychain;
-		follow the Swedish noun autotaking rule;
+		follow the Danish noun autotaking rule;
 	if the noun is not key-accessible:
 		if the player is the person asked,
 			say "Så länge du inte håller i [the noun], kan du ingenting göra.";
 		stop the action;
 	make no decision.
 
-This is the Swedish must have accessible the second noun rule:
+This is the Danish must have accessible the second noun rule:
 	if the second noun is not key-accessible:
 		if the second noun is on a keychain (called the containing keychain),
 			now the second noun is the containing keychain;
-		follow the Swedish second noun autotaking rule;
+		follow the Danish second noun autotaking rule;
 	if the second noun is not key-accessible:
 		if the player is the person asked,
 			say "Så länge du inte håller i [the second noun], kan du ingenting göra.";
@@ -5047,7 +5047,7 @@ This is the Swedish must have accessible the second noun rule:
 	make no decision.
 
 
-Book - Swedish Menus (for use with Menus by Emily Short)
+Book - Danish Menus (for use with Menus by Emily Short)
 
 [
 Table of Menu Commands
@@ -5129,7 +5129,7 @@ To say hints from (hint booklet - table-name):
 	say "Tryck MELLANSLAG för att återgå till menyn[if __index < number of rows in hint booklet] eller L för en ny ledtråd[end if]."
 
 
-Book - Swedish Plurality (for use with Plurality by Emily Short)
+Book - Danish Plurality (for use with Plurality by Emily Short)
 
 Section - Enumeration (in place of Section 4 - Enumeration in Plurality by Emily Short)
     
@@ -5173,7 +5173,7 @@ To have the parser notice (o - an object):
 	otherwise set pronouns from o.
 
 
-Book - Swedish Rideable Vehicles (for use with Rideable Vehicles by Graham Nelson)
+Book - Danish Rideable Vehicles (for use with Rideable Vehicles by Graham Nelson)
 
 Check an actor mounting (this is the can't mount when mounted on an animal rule): 
 	if the actor is carried by a rideable animal (called the steed):
@@ -5239,9 +5239,9 @@ Danish ends here.
 
 Chapter: Sammanfattning (Läs mig först!)
 
-Extensionen Swedish låter dig i huvudsak använda en rad ändelser för att böja svenska substantiv og adjektiv. En kort sammanfattning af den viktigaste funktionaliteten följer här.
+Extensionen Danish låter dig i huvudsak använda en rad ändelser för att böja svenska substantiv og adjektiv. En kort sammanfattning af den viktigaste funktionaliteten följer här.
 
-När du anger et "printed name" för någonting, gör du det på et sätt som tillåter Swedish att lista ut både dess obestämda og dess bestämda form:
+När du anger et "printed name" för någonting, gör du det på et sätt som tillåter Danish att lista ut både dess obestämda og dess bestämda form:
 
 (et badkar / badkarET)
 	The printed name of the badkar is "badkar[et]". 
@@ -5261,22 +5261,22 @@ Objekt antas normalt vara reale (den-ord); vill du att et objekt ska vara neutru
 	A badkar is an enterable container in the badrum. The badkar is neuter. The printed name of the badkar is "badkar[et]".
 	The akvarium is an open unopenable transparent neuter container. The printed name of the akvarium is "akvari[um-et]".
 
-För en mer ingående redogörelse og hanteringen af diverse specialfall, se nedan. (För de riktigt fina detaljerna, se de fylliga kommentarerna i källtexten till Swedish.)
+För en mer ingående redogörelse og hanteringen af diverse specialfall, se nedan. (För de riktigt fina detaljerna, se de fylliga kommentarerna i källtexten till Danish.)
 
 OBS! 
 
-Swedish bör inkluderas EFTER de inbyggda extensioner (Built-In Extensions) som du eventuellt inkluderar i ditt spel/din berättelse.
+Danish bör inkluderas EFTER de inbyggda extensioner (Built-In Extensions) som du eventuellt inkluderar i ditt spel/din berättelse.
 
 
 Chapter: Om
 
-Den följande dokumentationen för Swedish förutsätter grundläggande bekantskap med Inform 7.För hur man programmerar i Inform 7 i allmänhet hänvisas till den inbyggda dokumentationen (d.v.s. "Writing with Inform" og "The Recipe Book") samt till "The Rules Chart", Jim Aikins "Inform 7 Handbook", Ron Newcombs "Inform 7 for Programmers" og Jeff Nymans "Descriptions and Locales", som alla finns att ladda ner från Informs hemsida -- i likhet med de oumbärliga Appendix A (Standard Rules) og B (I6 Templates), d.v.s. de program på Inform 7 respektive Inform 6 som utgör stommen og kärnan i Inform 7 og som denna extension är en översättning af de relevanta delarna af.
+Den följande dokumentationen för Danish förutsätter grundläggande bekantskap med Inform 7.För hur man programmerar i Inform 7 i allmänhet hänvisas till den inbyggda dokumentationen (d.v.s. "Writing with Inform" og "The Recipe Book") samt till "The Rules Chart", Jim Aikins "Inform 7 Handbook", Ron Newcombs "Inform 7 for Programmers" og Jeff Nymans "Descriptions and Locales", som alla finns att ladda ner från Informs hemsida -- i likhet med de oumbärliga Appendix A (Standard Rules) og B (I6 Templates), d.v.s. de program på Inform 7 respektive Inform 6 som utgör stommen og kärnan i Inform 7 og som denna extension är en översättning af de relevanta delarna af.
 
 För övrigt är Mark-Oliver Reisers "Inform 7 Cheat Sheet" bra att ha till hands medan man skriver (sök på nätet -- i juli 2011 fanns den här: <http://user.cs.tu-berlin.de/~moreiser/inform/>). Dessutom har Aaron A. Reed gett ut en bok i ämnet: "Writing Interactive Fiction with Inform 7" (köp af Amazon eller beställ till närmsta folkbibliotek). og så har vi forumet på intfiction.org att fråga ut.
 
-Föredrar du et mer traditionellt programmeringsspråk rekommenderas varmt "Swedish Inform", som är Fredrik Ramsbergs översättning af Inform 6-biblioteket till svenska (här: <http://microheaven.com/svenska/skriva.shtml>; eller här: <http://www.ifarchive.org/indexes/if-archiveXinfocomXcompilersXinform6XlibraryXtranslations.html>).
+Föredrar du et mer traditionellt programmeringsspråk rekommenderas varmt "Danish Inform", som är Fredrik Ramsbergs översättning af Inform 6-biblioteket till svenska (här: <http://microheaven.com/svenska/skriva.shtml>; eller här: <http://www.ifarchive.org/indexes/if-archiveXinfocomXcompilersXinform6XlibraryXtranslations.html>).
 
-Version 1 af Swedish fungerar med Inform 7 builds 6E59, 6E72, 6F95 og 6G60. 
+Version 1 af Danish fungerar med Inform 7 builds 6E59, 6E72, 6F95 og 6G60. 
 
 Räkna med att du inte kommer att kunna kompilera dina spel till z5.
 
@@ -5300,19 +5300,19 @@ OBS!
 Detta gäller INTE namnet på själva filen med källtexten. För dess del får man hålla sig till ASCII-tecken. Den bör få et namn utan å, ä eller ö. et spel som heter "Kråkön" bör alltså sparas i en fil med namnet "kraakoen.inform" eller dylikt.
 
 
-Chapter: Swedish ihop med andra extensioner
+Chapter: Danish ihop med andra extensioner
 
-Swedish översätter alla de så kallade "Built-In Extensions" (inbyggda extensioner) som kommer med programmet Inform. 
+Danish översätter alla de så kallade "Built-In Extensions" (inbyggda extensioner) som kommer med programmet Inform. 
 
 För att använda dig af "Rideable Vehicles", "Locksmith", "Basic Help Menu" eller någon af de andra inbyggda extensionerna, behöver du därför inte ladda ner särskilda svenska versioner af dessa. Det räcker att skriva "Include Locksmith by Emily Short" etc., precis som du skulle ha gjort om du skrivit i engelska Inform.
 
 OBS!
 
-i) För att källtexten i Swedish ska kunna göra de ändringar i de inbyggda extensoinerna som krävs för översättningen, måste du inkludera alla inbyggda extensioner du vill använda INNAN du inkluderar Swedish. Skriv alltså FÖRST "Include Locksmith by Emily Short" o.s.v. og SEDAN "Include Swedish by Felix Larsson".
+i) För att källtexten i Danish ska kunna göra de ändringar i de inbyggda extensoinerna som krävs för översättningen, måste du inkludera alla inbyggda extensioner du vill använda INNAN du inkluderar Danish. Skriv alltså FÖRST "Include Locksmith by Emily Short" o.s.v. og SEDAN "Include Danish by Felix Larsson".
 
-ii) Det finns två skäl till att använda Emily Shorts "Plurality" även på svenska: dels för att hantera det Short kallar ”ambiguous plurals”, d.v.s. objekt som kan vara både singularis og pluralis, exempelvis et par strumpor (som spelaren/läsaren kan vilja kalla både "det" eller "dem") eller en skock får (som spelaren/läsaren kan vilja kalla både "den" eller "dem"), dels för att utnyttja den extra kontroll som extensionen ger över vad pronomina syftar på i spelet. Men Swedish behåller bara denna funktionalitet og avlägsnar all övrig funktionalitet ur "Plurality".
+ii) Det finns två skäl till att använda Emily Shorts "Plurality" även på svenska: dels för att hantera det Short kallar ”ambiguous plurals”, d.v.s. objekt som kan vara både singularis og pluralis, exempelvis et par strumpor (som spelaren/läsaren kan vilja kalla både "det" eller "dem") eller en skock får (som spelaren/läsaren kan vilja kalla både "den" eller "dem"), dels för att utnyttja den extra kontroll som extensionen ger över vad pronomina syftar på i spelet. Men Danish behåller bara denna funktionalitet og avlägsnar all övrig funktionalitet ur "Plurality".
 
-iii) Swedish innehåller bara översättningar af Informs INBYGGDA extensioner (the Built-In Extensions). Övriga extensioner till Inform kräver separata översättningar i de fall de inte kan användas rakt af. Det är inte säkert att andra extensioner än de inbyggda bör eller behöver inkluderas före Swedish.
+iii) Danish innehåller bara översättningar af Informs INBYGGDA extensioner (the Built-In Extensions). Övriga extensioner till Inform kräver separata översättningar i de fall de inte kan användas rakt af. Det är inte säkert att andra extensioner än de inbyggda bör eller behöver inkluderas före Danish.
 
 
 Chapter: Genus og den obestämda artikeln
@@ -5321,7 +5321,7 @@ På svenska heter den obestämda artikeln antingen "en" eller "et". Det beror p�
 
 Inform lägger i många sammanhang automatiskt till den obestämda artikeln när den skriver ut namnet på något, men Inform kan inte automatiskt lista ut om artikeln ska vara "en" eller "et". Det måste du som författare tala om för spelet.
 
-Med Swedish antar Inform att saker är reale (på engelska "common-gendered") og ger dem den obestämda artikeln "en", såvida inte författaren uttryckligen anger något annat.
+Med Danish antar Inform att saker är reale (på engelska "common-gendered") og ger dem den obestämda artikeln "en", såvida inte författaren uttryckligen anger något annat.
 
 För att göra et föremål som du skapar till neutrum, så att det automatiskt får den obestämda artikeln "et" og så att spelare kan syfta på det med pronominet "det" (som i >SLÄPP DET), måste du tala om för Inform att föremålet är neutrum (på engelska "neuter"). Det kan du göra antingen samtidigt som du skapar föremålet eller i efterhand:
 	The svärd is a neuter in vapenförrådet.
@@ -5346,7 +5346,7 @@ Den bestämda artikeln fungerar annorlunda. Se nedan.
 
 OBS!
 
-i) Med Swedish kan även rum ("rooms") og regioner ("regions") vara antingen neutrum ("neuter") eller reale ("common-gendered").
+i) Med Danish kan även rum ("rooms") og regioner ("regions") vara antingen neutrum ("neuter") eller reale ("common-gendered").
 
 ii) Om du ger föremålen i spelet alternativa "printed names" där de olika namnen har olika genus – säg att du vill kalla något för "et fågelfä" innan spelaren har tittat på den i sin tubkikare og "en kråka" därefter –, se till att du också (om möjligt) ändrar föremålets genus samtidigt som dess namn.
 
@@ -5357,7 +5357,7 @@ Section: Att ange bestämd og obestämd form i "printed name"
 
 Att bilda bestämd form af ord på svenska är en krånglig historia: i engelska lägger man helt enkelt till et "the" framför frasen som ska stå i bestämd form; på svenska däremot böjs substantiv i bestämd form med ändelser og på olika sätt beroende på om substantivet är neutrum eller ej, om det är i pluralis eller singularis og vilken s.k. deklination det tillhör (dessutom kommer stavning og uttal till og komplicerar det hela ännu mer), medan adjektiv däremot får svag böjning som bara tar hänsyn till om huvudordet är maskulinum eller ej, og till sist ska en fras i bestämd form ändå ha en bestämda artikel (antingen "den", "det" eller "de"), men bara om frasen börjar med et adjektiv snarare än et substantiv.
 
-Summan af kardemumman är att du måste tala om för Inform vad saker og ting ("objects") som du skapar heter i både bestämd og obestämd form. Du anger detta i objektets "printed name". När du använder Swedish, bör du alltså alltid ge alla saker ("things") i spelet et "printed name". (Med undantag förstås för sådana ting som af någon anledning inte behöver både bestämd og obestämd form: t.ex. egennamn som "Nisse" eller sådant som "din vänstra gummistövel". ) 
+Summan af kardemumman är att du måste tala om för Inform vad saker og ting ("objects") som du skapar heter i både bestämd og obestämd form. Du anger detta i objektets "printed name". När du använder Danish, bör du alltså alltid ge alla saker ("things") i spelet et "printed name". (Med undantag förstås för sådana ting som af någon anledning inte behöver både bestämd og obestämd form: t.ex. egennamn som "Nisse" eller sådant som "din vänstra gummistövel". ) 
 
 I nödfall är det alltid möjligt att skilja mellan bestämd og obestämd form af et "printed name" genom att använda sig af villkorsatser af formen: "if definite <bestämd form> otherwise <obestämd form> end if" (alternativt "if indefinite <obestämd form> otherwise <bestämd form> end if").
 	A svärd is in drakens håla. The printed name of the svärd is "[if definite]det urgamla, alvsmidda svärdet[otherwise]urgammalt, alvsmitt svärd".
@@ -5369,12 +5369,12 @@ Normalt finns det dock betydligt enklare sätt! Se nästa avsnitt.
 
 OBS!
 
-Du måste ange vilken BESTÄMD artikel föremålet har (om det har någon alls – varken Sankt Göran eller draken har någon), men du får INTE ange någon OBESTÄMD artikel i dess "printed name". (Swedish väljer automatiskt obestämd artikel -- "en", "et" eller "några/nåra". Vid behov ändras detta som i engelska Inform -- se Writing with Inform avsnittet Articles and Proper Names).
+Du måste ange vilken BESTÄMD artikel föremålet har (om det har någon alls – varken Sankt Göran eller draken har någon), men du får INTE ange någon OBESTÄMD artikel i dess "printed name". (Danish väljer automatiskt obestämd artikel -- "en", "et" eller "några/nåra". Vid behov ändras detta som i engelska Inform -- se Writing with Inform avsnittet Articles and Proper Names).
 
 
 Section: Say-fraser för bestämd artikel og för ändelser i bestämd form
 
-För att underlätta för användaren definierar extensionen Swedish en uppsjö "say-phrases" som är tänkta att användas i det här sammanhanget. I stället för 
+För att underlätta för användaren definierar extensionen Danish en uppsjö "say-phrases" som är tänkta att användas i det här sammanhanget. I stället för 
 	The printed name of the skön jungfru is "[if definite]den sköna jungfrun[otherwise]skön jungfru". 
 
 räcker det därför att skriva
@@ -5412,7 +5412,7 @@ Fler exempel på samma sak:
 
 (og mer exakt igen: "[det ]tom[t-ma] akvari[um-et]" definieras som "[if definite]det [end if]tom[if definite]ma[otherwise]t[end if] akvari[if definite]et[otherwise]um[end if]".)
 
-Swedish definierar "say-phrases" för praktiskt taget alla böjningar af svenska ord i bestämd form (till og med "li[ten-lla]" og "li[tet-lla]"!).
+Danish definierar "say-phrases" för praktiskt taget alla böjningar af svenska ord i bestämd form (till og med "li[ten-lla]" og "li[tet-lla]"!).
 
 
 Section: Hjälpreda för att bestämma textsubstitutionen
@@ -5461,7 +5461,7 @@ leder till:
 leder till:
 	Du får inte upp den låsta den egyptiska sarkofagen.
 
-Lösningen i Swedish är att använda say-frasen "[<objektet> without definite article]".
+Lösningen i Danish är att använda say-frasen "[<objektet> without definite article]".
 
 	"Du får inte upp de[n-t-] låst[--a] [the noun without definite article]" 
 
@@ -5475,7 +5475,7 @@ Antag nu att spelaren undersöker något som heter "[den ]röd[a] strumpa[n]". V
 
 Vad vi skulle vilja ha är "Det är ju din röda strumpa", där substantivet står i obestämd form men adjektivet i bestämd! Eller, rättare sagt, där substantivet står i obestämd form og adjektivet har så kallad svag böjning (vilket svenska adjektiv får i bestämd form). Men Informs parser skiljer inte mellan adjektiv og substantiv.
 
-Lösningen i Swedish är att använda say-frasen "[<object> weakly inflected]". ("Weakly inflected" är tänkt att översätta 'med svag böjning'.)
+Lösningen i Danish är att använda say-frasen "[<object> weakly inflected]". ("Weakly inflected" är tänkt att översätta 'med svag böjning'.)
 
 	After examining something not held by the player, say "Men titta! Det är ju di[n-tt-na] [noun weakly inflected], som varit borta så länge." 
 
@@ -5487,7 +5487,7 @@ et problem återstår nu. Vi vill att detta ska fungera smidigt för textsubstit
 	> undersøg ÄPPLEN
 	"Men titta! Det är ju dina förgiftade äpplena som varit borta så länge."
 
-Det problemet löser Swedish genom att införa en särskild textsubstitution "[-a]", som bara ska användas efter et substantiv som slutar på -n i pluralis som exempelvis "äpplen[-a]", "kilon[-a]", "grässtrån[-a]". Ge äpplena namnet "[de ]förgiftade äpplen[-a]", så hanterar "[<objekt> weakly inflected]" det hela rätt.
+Det problemet löser Danish genom att införa en särskild textsubstitution "[-a]", som bara ska användas efter et substantiv som slutar på -n i pluralis som exempelvis "äpplen[-a]", "kilon[-a]", "grässtrån[-a]". Ge äpplena namnet "[de ]förgiftade äpplen[-a]", så hanterar "[<objekt> weakly inflected]" det hela rätt.
 	> undersøg ÄPPLEN
 	"Men titta! Det är ju dina förgiftade äpplen som varit borta så länge."
 
@@ -5496,7 +5496,7 @@ Chapter: Bestämd og obestämd form i input
 
 I den svenska översättningen af Inform 7 behöver nästan varje objekt et "printed name" som anger den bestämda formen af objektets namn. Det vore därför bekvämt om den svenska översättningen af Inform 7 (till skillnad från det engelska originalet) automatiskt tolkade orden i et objekts "printed name" som namn på objektet.
 
-Swedish åstadkommer detta genom att ge objekt ("objects") en särskild tvåvärd egenskap: et objekt kan vara antingen "understood by its printed name" eller "not understood by its printed name". Defaultvärdet är att et objekt är "understood by its proper name".
+Danish åstadkommer detta genom att ge objekt ("objects") en särskild tvåvärd egenskap: et objekt kan vara antingen "understood by its printed name" eller "not understood by its printed name". Defaultvärdet är att et objekt är "understood by its proper name".
 
 Antag att du i vanlig ordning ger et objekt et "printed name":
 	A Panthera leo is a neuter animal in savannen.
@@ -5569,7 +5569,7 @@ Men återigen finns det normalt sett enklare sätt. Se nästa avsnitt!
 
 Section. Say-fraser för stark böjning af adjektiv, particip og pronomen
 
-För att underlätta för användaren definierar extensionen Swedish en uppsjö "say-phrases" som är tänkta att användas i det här sammanhanget. I stället för 
+För att underlätta för användaren definierar extensionen Danish en uppsjö "say-phrases" som är tänkta att användas i det här sammanhanget. I stället för 
 	Report taking something: say "[if the noun is plural-named]Tagna[otherwise if the noun is neuter]Taget[otherwise]Tagen[end if]."
 
 räcker det därför att skriva
@@ -5585,7 +5585,7 @@ FÖRST anges alltså hur adjektivet etc. böjs i reale (en tag-en sak); SEDAN f�
 	"Di[n-tt-na for stolen thing] [stolen thing weakly inflected] har blivit stul[en-et-na for the stolen thing]."
 	"De[nna-tta-ssa for the found thing] [the found thing without definite article] har varit försvunn[en-et-a for the found thing] hur länge som helst."
 
-Swedish definierar "say-phrases" för praktiskt taget alla starka böjningar af svenska adjektiv etc. i reale, neutrum og pluralis (till og med "li[ten-tet-lla]"!).
+Danish definierar "say-phrases" för praktiskt taget alla starka böjningar af svenska adjektiv etc. i reale, neutrum og pluralis (till og med "li[ten-tet-lla]"!).
 
 OBS!
 
@@ -5596,9 +5596,9 @@ ii) Det spelar ingen som helst roll ifall du använder bestämd, obestämd eller
 
 Section: Say-fraser för böjningen af adjektiv, particip og pronomen med underförstått huvudord
 
-Det blir fort tröttsamt att för varje adjektiv skriva ut vilket dess huvudord är. Swedish låter dig därför hoppa över detta i många sammanhang.
+Det blir fort tröttsamt att för varje adjektiv skriva ut vilket dess huvudord är. Danish låter dig därför hoppa över detta i många sammanhang.
 
-Om du redan angett att et adjektiv ska böjas efter et bestämt objekt, behöver du inte sedan tala om att nästa adjektiv ska böjas efter samma objekt. Swedish minns vilket det senaste huvudordet var og förutsätter att det även fortsättningsvis är huvudordet för alla adjektiv som inte ingår i något "printed name", fram till dess du som författare anger et nytt huvudord eller spelaren/läsaren skriver et nytt kommando og därmed påbörjar et nytt drag. (Mer exakt: Objektet som adjektiven böjs efter sparas i den globala variabeln "endophoric reference".)
+Om du redan angett att et adjektiv ska böjas efter et bestämt objekt, behöver du inte sedan tala om att nästa adjektiv ska böjas efter samma objekt. Danish minns vilket det senaste huvudordet var og förutsätter att det även fortsättningsvis är huvudordet för alla adjektiv som inte ingår i något "printed name", fram till dess du som författare anger et nytt huvudord eller spelaren/läsaren skriver et nytt kommando og därmed påbörjar et nytt drag. (Mer exakt: Objektet som adjektiven böjs efter sparas i den globala variabeln "endophoric reference".)
 
 I stället för
 	"Di[n-tt-na for stolen thing] kära [stolen thing weakly inflected] har blivit stul[en-et-na for the stolen thing]."
@@ -5608,7 +5608,7 @@ kan man alltså att skriva
 	"Di[n-tt-na for stolen thing] kära [stolen thing weakly inflected] har blivit stul[en-et-na]."
 	"De[nna-tta-ssa for the found thing] borttappade [the found thing without definite article] har varit försvunn[en-et-a] hur länge som helst."
 
-Det vanligaste är förmodligen att det är ackusativobjektet ("the noun") som är huvudord. Om du som författare inte anger något annat kommer därför Swedish att förutsätta att et adjektiv ska böjas efter det objekt som är "the noun" i det kommando som spelaren senast gav. (Mer exakt: Variabeln "endophoric reference" sätts till "the noun" strax efter att Inform läst in et nytt kommando från spelaren.)
+Det vanligaste är förmodligen att det är ackusativobjektet ("the noun") som är huvudord. Om du som författare inte anger något annat kommer därför Danish att förutsätta att et adjektiv ska böjas efter det objekt som är "the noun" i det kommando som spelaren senast gav. (Mer exakt: Variabeln "endophoric reference" sätts till "the noun" strax efter att Inform läst in et nytt kommando från spelaren.)
 
 Om huvudordet alltså är "the noun", behöver du därför inte över huvud taget ange det. I stället för
 	"Di[n-tt-na for noun] [noun weakly inflected] har blivit stul[en-et-na]."
@@ -5657,7 +5657,7 @@ Hittills har det bara varit tal om s.k. stark böjning af adjektiv etc; det är 
 
 Vid vissa tillfällen behöver vi dock i stället använda s.k. svag böjning af adjektiven, og den svaga böjningen gör bara skillnad på maskulinum og femininum (han-ord og hon-ord). (Detta är samma tillfällen då det finns anledning att använda sig af say-fraserna "[<föremålet> without definite article]" eller "[<föremål> weakly inflected]".)
 
-Antag att spelaren kan försöka reta upp olika varelser ("persons") i spelet og att vi vill kunna säga både "Du lyckas inte reta upp den kolugnA sjuksköterskan", "Du lyckas inte reta upp det kolugnA statsrådet", "Du lyckas inte reta upp de kolugnA AIK-supportrarna" og "Du lyckas inte reta upp den kolugnE trapistmunken". I Swedish gör vi det med say-frasen "[a-e for <objekt>]":
+Antag att spelaren kan försöka reta upp olika varelser ("persons") i spelet og att vi vill kunna säga både "Du lyckas inte reta upp den kolugnA sjuksköterskan", "Du lyckas inte reta upp det kolugnA statsrådet", "Du lyckas inte reta upp de kolugnA AIK-supportrarna" og "Du lyckas inte reta upp den kolugnE trapistmunken". I Danish gör vi det med say-frasen "[a-e for <objekt>]":
 	Check provoking someone: say "Du lyckas inte reta upp [den-det for the noun] kolugn[a-e] [the noun without definite article]."
 
 og som vanligt, om huvudordet är "the noun", behöver det inte anges:
@@ -5672,26 +5672,26 @@ ii) Förväxla inte "[-a]" (pluraländelsen i bestämd form som i "kalhyggen-a")
 [
 Chapter: Say-fraser för personliga og possessiva pronomen 
 
-I vissa fall vill man kunna referera med et personligt pronomen till et variabelt objekt som man inte vet någonting om på förhand, inte om det är singulärt eller pluralt, inte om det är neutrum, reale, femininum eller maskulinum, inte om det är identiskt med spelfiguren eller ej. Swedish definierar textsubstitutioner även för detta ändamål. 
+I vissa fall vill man kunna referera med et personligt pronomen till et variabelt objekt som man inte vet någonting om på förhand, inte om det är singulärt eller pluralt, inte om det är neutrum, reale, femininum eller maskulinum, inte om det är identiskt med spelfiguren eller ej. Danish definierar textsubstitutioner även för detta ändamål. 
 
 (Eller är åtminstone tänkt att göra det till slut)
 ]
  
 Chapter: Egennamn og förkortningar med liten begynnelsebokstav
 
-Några få ord, i första hand egennamn og vetenskapliga förkortningar som "af Chapman", "von Linné", "bin Ladin", ”el-Alamein”, "pH", "kg" stavas med liten bokstav i början även om de skulle inleda en mening. I Swedish anger man detta genom att tala om att et objekt är "uncapitalisable":
+Några få ord, i första hand egennamn og vetenskapliga förkortningar som "af Chapman", "von Linné", "bin Ladin", ”el-Alamein”, "pH", "kg" stavas med liten bokstav i början även om de skulle inleda en mening. I Danish anger man detta genom att tala om att et objekt är "uncapitalisable":
 	von Anka is a man in Pengabingen. von Anka is uncapitalisable.
 
 OBS!
 
-Swedish använder formen "uncapitalisable" med S (inte med z) –som et slags hyllning till Informs skapare, Graham Nelson, som genomgående skriver "-ise" i stället för "-ize".
+Danish använder formen "uncapitalisable" med S (inte med z) –som et slags hyllning till Informs skapare, Graham Nelson, som genomgående skriver "-ise" i stället för "-ize".
 
 
 Chapter: Namn på rum
 
 I engelska Inform är det kutym att man skriver namnen på rummen med stor bokstav: "The Lab is a room" eller "Kitchen is a room", og spelet skriver sedan ut namnet på rummet man kommer till utan bestämd eller obestämd artikel, men behåller stor bokstav för namnet på rummet var det än skrivs ut. Detta går dåligt ihop med svenska skrivregler. 
 
-Swedish förutsätter därför att namn på rum behandlas som namn på vilka föremål som helst. Det finns alltså möjlighet att stava namn på rum med liten bokstav, om man vill skriva ut rummets namn med hjälp af textsubstitutionen "[location]" under spelets gång.
+Danish förutsätter därför att namn på rum behandlas som namn på vilka föremål som helst. Det finns alltså möjlighet att stava namn på rum med liten bokstav, om man vill skriva ut rummets namn med hjälp af textsubstitutionen "[location]" under spelets gång.
 	The köket is a neuter room. The printed name of köket is "kök[et]"
 	The balsal is a room. The printed name of the balsal is "[den ]stor[a] balsal[en]".
 	Kungsgatan is a room.
@@ -5716,7 +5716,7 @@ För att Inform ska hålla ordning på det här måste du tala om för spelet de
 	"Den senaste månaden har vi avverkat [a random number between 0 and 32000 in words counting neuters] träd."
 	"Jaha, du ska tydligen bo i rum [a random number between 17 and 170 in words counting nothing]."
 
-Om du inte anger annat kommer Swedish att förutsätta att du räknar något og att det du räknar är reale ("counting common gender").
+Om du inte anger annat kommer Danish att förutsätta att du räknar något og att det du räknar är reale ("counting common gender").
 
 OBS!
 
@@ -5728,7 +5728,7 @@ Section: Pluralböjningar
 Efter att ha sagt et tal (vare sig i ord eller siffror) behöver man kunna skilja på singularis- og pluralisformen af det man räknar.
 	"Den senaste året har vi producerat [a random number between 0 and 32000 in words counting neuters] [if the number-just-said is 1]kalhygge[otherwise]kalhyggen[end if]."
 
-För att underlätta för författaren definierar Swedish say-fraser även för pluralböjningar. Lägg till ändelsen inom klammer i analogi med hur Swedish hanterar andra böjningar.
+För att underlätta för författaren definierar Danish say-fraser även för pluralböjningar. Lägg till ändelsen inom klammer i analogi med hur Danish hanterar andra böjningar.
 	"Nu har du fått ihop [the number of nötter in the gömställe] nöt[ter] i gömstället inför vintern."
 	"Du märker genast att det finns åtminstone [the number of secret police in the location in words counting common gender] civilklädd[a] polis[er] i rummet."
 	"I rummet lokaliserar du genast [the number of secret police in the location minus one in words counting common gender] kolleg[a-er]."
@@ -5737,7 +5737,7 @@ Vi får problem med pluralformen af ord som "äpple" og "kalhygge". Det går int
 	"Den senaste året har vi producerat [a random number between 0 and 32000 in words counting neuters] kalhygge[-n]."
 
 
-Swedish definierar de flesta pluraländelser som förekommer i svenska. Även de omljud som förekommer är definierade. Det går till exempel att skriva:
+Danish definierar de flesta pluraländelser som förekommer i svenska. Även de omljud som förekommer är definierade. Det går till exempel att skriva:
 	"Det återstår nu [the number of companions counting common gender] tapp[er-ert-ra for companions] m[a-ä]n i din trupp."
 	"Fader Abraham, fader Abraham, [x in words counting common gender] s[o-ö]n[er] hade Abraham."
 	"I bokhyllan hittar du [the number of interesting böcker in the bokhylla in words] interessanta b[o-ö][k-cker]." 
@@ -5745,7 +5745,7 @@ Swedish definierar de flesta pluraländelser som förekommer i svenska. Även de
 
 OBS!
 
-De enda oregelbundna pluralformer som Swedish definierar är "[far-fäder]", "[liten-små]" og "[litet-små]". I andra fall blir du tvungen att skriva saker i stil med:
+De enda oregelbundna pluralformer som Danish definierar är "[far-fäder]", "[liten-små]" og "[litet-små]". I andra fall blir du tvungen att skriva saker i stil med:
 	"en tunnelbana med [a random number between 1 and 12 in words] [if the number-just-said is 1]butler[otherwise]statligt subventionerade kammartjänare[end if]"
 
 
@@ -5753,7 +5753,7 @@ Chapter - Klockslag, tidsrymder og antal
 
 Spel där spelaren behöver ange et klockslag eller en tidsrymd i sina kommandon är inte så vanliga, men Inform har stöd för detta, og för en författare kan det vara bra att veta vilka format för att ange klockslag og tidsrymder på svenska som Inform tillåter spelaren att använda.
 
-Svaret är att Swedish är tänkt att förstå de flesta sätt att uttrycka tid.
+Svaret är att Danish är tänkt att förstå de flesta sätt att uttrycka tid.
 
 Klockslag kan bland annat uttryckas på följande vis:
 	"17.23"
@@ -5785,13 +5785,13 @@ Tidsrymder kan bland annat uttryckas på följande vis:
 	"en og en halv timma"
 	(et cetera)
 
-För detta ändamål har även Informs förståelse af tal skrivna med bokstäver utökats. Swedish förstår tal skrivna med bokstäver från et till sextio. 
+För detta ändamål har även Informs förståelse af tal skrivna med bokstäver utökats. Danish förstår tal skrivna med bokstäver från et till sextio. 
 
 OBS!
 
-i) I vanliga fall tolkar Inform en punkt i spelarens kommando som slut på kommandot, men Swedish gör et undantag när det gäller just klockslag. I det sammanhanget antar Swedish att det rör sig om et skiljetecken mellan timmar og minuter.
+i) I vanliga fall tolkar Inform en punkt i spelarens kommando som slut på kommandot, men Danish gör et undantag när det gäller just klockslag. I det sammanhanget antar Danish att det rör sig om et skiljetecken mellan timmar og minuter.
 
-Det är bara i inmatningen från spelaren som Swedish förstår att en punkt skiljer timmar från minuter! I källtexten, när du skriver spelet, måste du använda kolon og am/pm. SPELAREN kan alltså skriva "vänta till 12.30", men FÖRFATTAREN måste skriva t.ex. "now the time of day is 12:30 PM". 
+Det är bara i inmatningen från spelaren som Danish förstår att en punkt skiljer timmar från minuter! I källtexten, när du skriver spelet, måste du använda kolon og am/pm. SPELAREN kan alltså skriva "vänta till 12.30", men FÖRFATTAREN måste skriva t.ex. "now the time of day is 12:30 PM". 
 
 ii) Ordet "noll" förstår Inform bara i klockslag. I andra fall förstår Inform visserligen siffran "0" men inte ordet "noll".
 
@@ -5804,7 +5804,7 @@ Det finns alternativa stavningar af et antal vanliga svenska ord: dig/dej; de/do
 
 Författaren kan genom "use options" välja hur extensionen ska stava följande ord: mig, dig, sig (mej, dej, sej); de, dem (dom); gett (givit); lade (la); lite (litet); ned, nedför, nedåt (ner, nerför, neråt); någon, något, några, någonsin, någonstans, någonting, någonvart (nån, nåt, nåra, nånsin, nånstans, nånting, nånvart); sade (sa); sedan (sen); ska (skall); sådan, sådant, sådana (sån, sånt, såna); säga, säg, säger (säja, säj, säjer); varandra (varann).
 
-Det förvalda stavningen af alla dessa ord är de som INTE står inom parantes ovan. Om författaren inte använder någon use option kommer Swedish alltså att skriva "dig", "dem", "någon", "ned", "ska" o.s.v. (De förvalda stavningarna är de som anges som huvudvarianten af respektive ord i 13:e upplagan af Svenska Akademiens Ordlista.)
+Det förvalda stavningen af alla dessa ord är de som INTE står inom parantes ovan. Om författaren inte använder någon use option kommer Danish alltså att skriva "dig", "dem", "någon", "ned", "ska" o.s.v. (De förvalda stavningarna är de som anges som huvudvarianten af respektive ord i 13:e upplagan af Svenska Akademiens Ordlista.)
 
 Följande use options med följande effekter på stavningen är tillgängliga:
 	"Use dan spelling" ändrar dagen, dagar till dan, dar.
@@ -5834,12 +5834,12 @@ Stavningsalternativen "ned/ner" har här inte klassats som vare sig formell elle
 
 Section: Textsubstitutioner som påverkas af use options.
 
-För alla dessa ord finns textsubstitutioner som påverkas af ovanstående use options. Exempel på sådana textsubstitutioner är "[mig]", "[dig]", "[sig]", "[någon]", "[något]", "[några]", "[någonstans]", "[ned]", "[nedför]", "[de]", "[dem]" o.s.v. Dessa är egentligen bara användbara, om du skulle skriva en extension till Swedish. Men i sådana fall kan du alltså skriva t.ex.
+För alla dessa ord finns textsubstitutioner som påverkas af ovanstående use options. Exempel på sådana textsubstitutioner är "[mig]", "[dig]", "[sig]", "[någon]", "[något]", "[några]", "[någonstans]", "[ned]", "[nedför]", "[de]", "[dem]" o.s.v. Dessa är egentligen bara användbara, om du skulle skriva en extension till Danish. Men i sådana fall kan du alltså skriva t.ex.
 	Report looking while in the void: say "Du ser [dig] omkring men ser ingenting [någonstans]."
 
 Användaren af din extension kan därefter anpassa stavningen af denna textsträng med hjälp af use options.
 
-Somliga af textsubstitutionerna finns med stor begynnelsebokstav. Så medan "[några]" ger resultatet "några" eller "nåra", så ger "[Några]" resultatet "Några" eller "Nåra". För en lista på vilka textsubstitutioner som skiljer mellan stor og liten begynnelsebokstav, se kapitlet nedan med listan över alla say-fraser som Swedish definierar.
+Somliga af textsubstitutionerna finns med stor begynnelsebokstav. Så medan "[några]" ger resultatet "några" eller "nåra", så ger "[Några]" resultatet "Några" eller "Nåra". För en lista på vilka textsubstitutioner som skiljer mellan stor og liten begynnelsebokstav, se kapitlet nedan med listan över alla say-fraser som Danish definierar.
 
 OBS!
 
@@ -5850,9 +5850,9 @@ ii) Skilj på "[de-dom]" og "[de]"! Båda resulterar i stavningen "dom", om anv�
 
 Section: Speciella say-fraser för böjningen af vissa pronomen
 
-Förutom de vanliga "adjektiviska" böjningarna af pronomen definierar Swedish några specialfall. I synnerhet gäller detta pronomen som i en eller annan böjningsform kan stavas på alternativa sätt.
+Förutom de vanliga "adjektiviska" böjningarna af pronomen definierar Danish några specialfall. I synnerhet gäller detta pronomen som i en eller annan böjningsform kan stavas på alternativa sätt.
 
-Skriver man "de[n-t-]" og "de[n-t-m]" kan resultaten bara bli "den", "det" eller "de" respektive "den", "det" eller "dem"; skriver man "d[en-et-om]" kan resultaten bara bli "den", "det" eller "dom". Men ibland kan man vilja överlåta till en annan användare att välja stavningsalternativ med hjälp af en "use option" som "use dom spelling". Därför definierar Swedish även textsubstitutionerna "[den-t-]" og "[den-t-m]" som resultar i "den", "det", "de" eller "dom" respektive "den", "det", "dem" eller "dom", beroende på om författaren väljer "use dom spelling" eller ej. 
+Skriver man "de[n-t-]" og "de[n-t-m]" kan resultaten bara bli "den", "det" eller "de" respektive "den", "det" eller "dem"; skriver man "d[en-et-om]" kan resultaten bara bli "den", "det" eller "dom". Men ibland kan man vilja överlåta till en annan användare att välja stavningsalternativ med hjälp af en "use option" som "use dom spelling". Därför definierar Danish även textsubstitutionerna "[den-t-]" og "[den-t-m]" som resultar i "den", "det", "de" eller "dom" respektive "den", "det", "dem" eller "dom", beroende på om författaren väljer "use dom spelling" eller ej. 
 
 Motsvarande gäller för textsubstitutionerna "[sådan-t-a]" og "[någon-ot-ra]", som kan resultera i antingen "sådan/sådant/sådana" eller "sån/sånt/såna" respektive "någon/något/några" eller "nån/nåt/nåra".
 
@@ -5864,11 +5864,11 @@ Naturligtvis finns samtliga dessa även på formen "[den-t- for the noun]", "[De
 
 OBS!
 
-Swedish definierar dessutom (redundant) fraserna "[den-det-de]", "[Den-Det-De]", "[den-det-dem]" og "[Den-Det-Dem]". Dessa är inget annat än varianter af  "[den-t-]" o.s.v. 
+Danish definierar dessutom (redundant) fraserna "[den-det-de]", "[Den-Det-De]", "[den-det-dem]" og "[Den-Det-Dem]". Dessa är inget annat än varianter af  "[den-t-]" o.s.v. 
 
 Chapter: Lista över say-fraser
 
-Här följer en komplett lista över alla say-fraser og textsubstitutioner som Swedish definierar. (Saknar du någon böjningsform så rapportera det gärna till <felix.larsson.IF@gmail.com>.)
+Här följer en komplett lista över alla say-fraser og textsubstitutioner som Danish definierar. (Saknar du någon böjningsform så rapportera det gärna till <felix.larsson.IF@gmail.com>.)
 
 Ord inom vinkelparentes ("<>") ersätts med et värde af angivet slag; snedstreck ("/") betecknar alternativa ordalydelser; två bindestreck ("--") före eller efter snedstreck betecknar att et ord helt kan utelämnas : "[<antal> in words counting common gender/genders>]" betyder alltså att du som författare kan inleda frasen med vilka siffror eller konstanter eller variabler som helst som anger et antal og avsluta den med antingen "gender" eller "genders"; medan "[<objektet> without the/-- definite article]" betyder att du kan inleda frasen med vilka namn, konstanter eller variabler som helst som anger et bestämt objekt og att det inte spelar någon roll om du skriver et "the" eller inte. 
 
@@ -6161,11 +6161,11 @@ Section: Alternativa stavningar
 	"[varandra]" (varandra eller varann)
 
 
-Example: * En alldaglig historia - En demonstration af de vanligaste textsubstitutionerna i Swedish (med en grunka som byter namn).
+Example: * En alldaglig historia - En demonstration af de vanligaste textsubstitutionerna i Danish (med en grunka som byter namn).
 
 	*: "En alldaglig historia" 
 
-	Include Swedish by Felix Larsson.
+	Include Danish by Felix Larsson.
 
 	På väg hem is a room. "Du vandrar den vanliga, trygga vägen hem från jobbet."
 	
@@ -6180,11 +6180,11 @@ Example: * En alldaglig historia - En demonstration af de vanligaste textsubstit
 	Test me with "x grej / x mojängen / tag den mystiska / x den mystiska mojängen / släpp grejen / x den vanliga / x mojäng". 
 
 
-Example: ** Borta på vinden - En demonstration af lite obskyrare textsubstitutioner i Swedish (og exempel på olika stavningar i spelarkommandon).
+Example: ** Borta på vinden - En demonstration af lite obskyrare textsubstitutioner i Danish (og exempel på olika stavningar i spelarkommandon).
 
 	*: "Borta på vinden" 
 
-	Include Swedish by Felix Larsson.
+	Include Danish by Felix Larsson.
 
 	The vinden is a room. "Vinden är full af bråte. Bland [a random number between 0 and 32000 in words counting common gender] saker og [a random number between 0 and 32000 in words counting neuters] ting ligger här till exempel:"
 	
@@ -6213,7 +6213,7 @@ Example: **** Den mörka manteln - Roger Firths "The Cloak of Darkness" i övers
 
 	*: "Den mörka manteln" 
 
-	Include Swedish by Felix Larsson.
+	Include Danish by Felix Larsson.
 
 	The story headline is "et grundläggande IF-exempel".
 	The maximum score is 2.
