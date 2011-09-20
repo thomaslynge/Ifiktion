@@ -3279,7 +3279,7 @@ Array LanguageDescriptors table
     'det'         $$0001000000010000    DEFART_PK       NULL
     'de'          $$0000111100001111    DEFART_PK       NULL
     'en'          $$1110000011100000    INDEFART_PK     NULL
-    'ett'         $$0001000000010000    INDEFART_PK     NULL
+    'et'         $$0001000000010000    INDEFART_PK     NULL
     'några'       $$0000111100001111    INDEFART_PK     NULL
     'tänd'        $$1110000011100000    light           NULL
     'tänt'        $$0001000000010000    light           NULL
@@ -3297,7 +3297,7 @@ Array LanguageDescriptors table
     'slocknade'   $$1111111111111111    (-light)        NULL;
  
 Array LanguageNumbers table
-    'en' 1 'ett' 1 'två' 2 'tre' 3 'fyra' 4 'fem' 5
+    'en' 1 'et' 1 'två' 2 'tre' 3 'fyra' 4 'fem' 5
     'sex' 6 'sju' 7 'åtta' 8 'nio' 9 'tio' 10
     'elva' 11 'tolv' 12 'tretton' 13 'fjorton' 14 'femton' 15
     'sexton' 16 'sjutton' 17 'arton' 18 'nitton' 19 'tjugo' 20
@@ -3350,12 +3350,12 @@ Array LanguageNumbers table
     if (n == 0) rfalse; 
     switch (n) {
       1:    if (k == true) { 
-                 if (f == true) print "ett"; else print "et"; 
+                 if (f == true) print "et"; else print "et"; 
             }
             else { 
-                 if (nq == false || h == true) { print "ett"; }
+                 if (nq == false || h == true) { print "et"; }
                  else { 
-                      if (p == false && neutrum == true) { print "ett"; }
+                      if (p == false && neutrum == true) { print "et"; }
                       else { print "en"; }          
                  }             
             }                 
@@ -3419,14 +3419,14 @@ Constant LanguageContractionForms = 1;     !# No alternative contraction forms i
  !   Contraction form 0:     
  !   Cdef Def Indef     
       ""  ""  "en "        ! Articles 0 (common gender) --- We leave the definite
-      ""  ""  "ett "       ! Articles 1 (neuter)            article entries empty,
+      ""  ""  "et "       ! Articles 1 (neuter)            article entries empty,
       ""  ""  "nåra ";     ! Articles 2 (plural)            as explained above ---
 #ifnot; 
  Array LanguageArticles -->
  !   Contraction form 0:     
  !   Cdef Def Indef     
       ""  ""  "en "        ! Articles 0 (common gender) --- We leave the definite
-      ""  ""  "ett "       ! Articles 1 (neuter)            article entries empty,
+      ""  ""  "et "       ! Articles 1 (neuter)            article entries empty,
       ""  ""  "några ";    ! Articles 2 (plural)            as explained above ---
  #endif; 
 
@@ -3784,7 +3784,7 @@ Constant COMMA__TX      = ", ";
         1:  style bold; print "Mörker"; style roman; 
             print ", "; style underline; print "subs."; style roman;
             "  Avsaknad av för synsinnets funktion erforderligt ljus.";   !# Unused?
-        2:  "Du ser inget särskilt med ", (the) x1, ".";
+        2:  "Du ser ikke noget specielt ved ", (the) x1, ".";
         3:  print (The) x1, " är för tillfället ";
             if (x1 has on) "på."; else "av.";
         4:  print (The) actor, " tittar på ", (the) x1, ".^";
@@ -3806,7 +3806,7 @@ Constant COMMA__TX      = ", ";
   GetOff:   print "Men du befinner "; dig(); " ju inte på ", (the) x1, " för tillfället.";
   Give: switch (n) {
         1:  "Du håller inte i ", (the) x1, " än.";
-        2:  "Du bollar ett tag med ", (the) x1, " men har inte mycket för det.";
+        2:  "Du bollar et tag med ", (the) x1, " men har inte mycket för det.";
         3:  print (The) x1, " verkar inte så angeläg"; Inflect("en", "et", "na", x1); " om det.";
         4:  print "Det går nog inte att få ", (the) x1, " att ta emot "; naagot(); " alls.";
         5:  "Du ger ", (the) x1, " till ", (the) second, ".";
@@ -3958,7 +3958,7 @@ Constant COMMA__TX      = ", ";
             #Ifnot; ! TARGET_GLULX
         7:  "[Du kan inte ~ångra~ fler drag nu.]";
             #Endif; ! TARGET_
-        8:  "Var god välj ett av svaralternativen ovan.";
+        8:  "Var god välj et av svaralternativen ovan.";
         9:  "Der er nu bælgmørkt her!";
         10: "Ursäkta?";
         11: print "[Det går inte att ~ångra~ "; naagot(); " du inte ens gjort!]";
@@ -3966,13 +3966,13 @@ Constant COMMA__TX      = ", ";
         13: "[Förra draget är nu återtaget.]";
         14: "Tyvärr går inte det att rätta.";
         15: "Ingen orsak.";
-        16: "Man kan bara rätta ett enda ord med ett ~Oj~.";
-        17: "Det är kolmörkt, och du ser inte ett skvatt.";
+        16: "Man kan bara rätta et enda ord med et ~Oj~.";
+        17: "Det är kolmörkt, och du ser inte et skvatt.";
         18: print dig();
         19: "Lika snygg som vanligt.";    !# Unused?
         20: "Vill du upprepa en instruktion som ~Groda, hoppa~, skriver du bara ~igen~, inte ~groda, igen~.";
         21: "Det är väl inget att göra om.";
-        22: "Du kan inte inleda med ett kommatecken.";
+        22: "Du kan inte inleda med et kommatecken.";
         23: print "Du vill visst prata med "; naagon(); ", men jag förstår inte vem.";
         24: "Det går inte att tala med ", (the) x1, ".";
         25: print "Vill du prata med "; naagon(); ", skriv bara namn, kommatecken och vad du vill ha sagt: ~Watson, elementärt~ (inte t.ex. ~Watson min vän, elementärt~).";
@@ -3983,7 +3983,7 @@ Constant COMMA__TX      = ", ";
         30: "Inget sådant föremål syns till.";
         31: "You seem to have said too little!";    !# unused?
         32: "You aren't holding that!";    !# Unused?
-        33: "Det går bara att använda ett enda direkt eller indirekt objekt med det verbet.";
+        33: "Det går bara att använda et enda direkt eller indirekt objekt med det verbet.";
         34: "You can only use multiple objects once on a line.";    !# Unused?
         35: "Jag förstod inte vad ~", (address) pronoun_word, "~ syftar på.";
         36: "You excepted something not included anyway!";    !# Unused?
@@ -4004,7 +4004,7 @@ Constant COMMA__TX      = ", ";
         44: "Ingenting är tillgängligt!";
         45: print "Menar du ";
         46: print "Menar du ";
-        47: "Tyvärr måste du bestämma dig för ett enda av alternativen i det här läget. Vilket tar du?";
+        47: "Tyvärr måste du bestämma dig för et enda av alternativen i det här läget. Vilket tar du?";
         48: print "Vem ville du ";
             if (actor ~= player) print "att ", (the) actor, " skulle ";
             PrintCommand(); print "?^";
@@ -4022,13 +4022,13 @@ Constant COMMA__TX      = ", ";
         56: print ".^";
         57: print "?^";
         58: print (The) actor, " kan inte göra det.^";
-        59: "Du måste ange ett direkt objekt.";
+        59: "Du måste ange et direkt objekt.";
         60: "Du må ikke anvende et direkte objekt med dette udsagnsord.";
-        61: "Objektet för handlingen måste vara ett föremål.";
-        62: "Objektet för handlingen får inte vara ett föremål.";
-        63: "Du måste ange ett föremål som indirekt objekt för handlingen.";
-        64: "Du får inte ange ett föremål som indirekt objekt för handlingen.";
-        65: "Du måste ange ett indirekt objekt.";
+        61: "Objektet för handlingen måste vara et föremål.";
+        62: "Objektet för handlingen får inte vara et föremål.";
+        63: "Du måste ange et föremål som indirekt objekt för handlingen.";
+        64: "Du får inte ange et föremål som indirekt objekt för handlingen.";
+        65: "Du måste ange et indirekt objekt.";
         66: "Du må ikke anvende et indirekte objekt med dette udsagnsord.";
         67: print "Du måste ange "; naagot(); " mer konkret än en riktning.";
         68: print "(", (The) actor, " måste ta ", (the) x1, " först)^";
@@ -4073,7 +4073,7 @@ Constant COMMA__TX      = ", ";
     }
 ! Push: see Pull
   PushDir: switch (n) {
-        1:  print "Det går inte att skjuta ", (the) x1, " från ett ställe till ett annat.^";
+        1:  print "Det går inte att skjuta ", (the) x1, " från et ställe till et annat.^";
         2:  "Jag förstod inte åt vilket håll du menade. Var snäll att ange en riktning.";
         3:  "Inte åt det hållet, vet du vad.";
     }
@@ -4186,7 +4186,7 @@ Constant COMMA__TX      = ", ";
         2:  "Det händer inget.";
         3:  print (The) actor, " klämmer på ", (the) x1, ".^";
     }
-  Strong:   print "Ett "; saadan();"t språk anstår inte en äkta äventyrare.";
+  Strong:   print "et "; saadan();"t språk anstår inte en äkta äventyrare.";
   Swing:    "Det finns inget som passar att ", (string) verb_word, " her.";
   SwitchOff: switch (n) {
         1:  "Det går varken att stänga av eller sätta på ", (denellerdem) x1, ".";
@@ -4223,7 +4223,7 @@ Constant COMMA__TX      = ", ";
         }
   Taste:    "Det smakar ingenting oväntat.";
   Tell: switch (n) {
-        1:  print "Du talar för "; dig(); " själv ett tag.";
+        1:  print "Du talar för "; dig(); " själv et tag.";
         2:  "Upplysningarna väcker ingen uppståndelse.";
         }
   Think:    "Vilken bra idé.";
@@ -4531,7 +4531,7 @@ Global lightflag = false;
 ];
 
 
-Constant REQUISITION_STACK_SIZE = 3*16;
+Constant REQUISITION_STACK_SIZE = 3*17;
 Array requisition_stack --> REQUISITION_STACK_SIZE;
 Global requisition_stack_pointer = 0;
 
@@ -10065,7 +10065,7 @@ Object selfobj ""
     with IK2_Count 0
     with IK2_Link I89_b_nk
     with IK8_Count 0
-    with IK8_Link nothing
+    with IK8_Link I91_gammel_dame
     with KD_Count 8
     with name 'yourself' 
     with action_bitmap 0 0 0 0 0 0 
@@ -10108,9 +10108,24 @@ Object -> I90_tempeltr_ ""
     with list_together 0
     has mark_as_thing
     with IK2_Count 2
-    with IK2_Link nothing
+    with IK2_Link I91_gammel_dame
     with KD_Count 2
     with name 'tempeltræ' 
+    with action_bitmap 0 0 0 0 0 0 
+;
+
+Object -> I91_gammel_dame ""
+    class K8_person
+    with short_name "gammel dame"
+    with vector 0
+    with list_together 0
+    has mark_as_thing
+    with IK2_Count 3
+    with IK2_Link nothing
+    with IK8_Count 1
+    with IK8_Link nothing
+    with KD_Count 8
+    with name 'gammel' 'dame' 
     with action_bitmap 0 0 0 0 0 0 
 ;
 
@@ -10165,8 +10180,8 @@ Array tab_0_2 table $2066 2  (Consult_Grammar_195)  (Consult_Grammar_196)  (Cons
 Array tab_0_3 table $0067 3  (IMMEDIATELY_RESTART_VM_R)  (IMMEDIATELY_RESTORE_SAVED_R)  TABLE_NOVALUE (IMMEDIATELY_QUIT_R)  (IMMEDIATELY_UNDO_R) ;
 Array tab_0_4 table $0068 4  TABLE_NOVALUE TABLE_NOVALUE (V26_amusing_a_victorious_pla)  TABLE_NOVALUE TABLE_NOVALUE;
 Array T1_locale_priorities table  tab_1_0 tab_1_1;
-Array tab_1_0 table $0869 NULL  TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE;
-Array tab_1_1 table $446a 5  TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE;
+Array tab_1_0 table $0869 NULL  TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE;
+Array tab_1_1 table $446a 5  TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE;
 Array T2_swedish_final_question_op table  tab_2_0 tab_2_1 tab_2_2 tab_2_3 tab_2_4;
 Array tab_2_0 table $0064 6  (SC_24)  (SC_25)  (SC_26)  (SC_27)  (SC_28) ;
 Array tab_2_1 table $0465 7  (0)  (0)  (1)  (0)  (0) ;
@@ -10178,9 +10193,9 @@ Array tab_3_0 table $006b 11  (SC_29)  (SC_30) ;
 Array tab_3_1 table $006c 12  (SC_31)  (SC_32) ;
 Array tab_3_2 table $006d 13  (SC_31)  (SC_32) ;
 Array T4_swedish_suffixes table  tab_4_0 tab_4_1 tab_4_2;
-Array tab_4_0 table $006b 14  (EMPTY_TEXT_VALUE)  (EMPTY_TEXT_VALUE)  (EMPTY_TEXT_VALUE)  (SC_33)  (EMPTY_TEXT_VALUE)  (EMPTY_TEXT_VALUE)  (EMPTY_TEXT_VALUE)  (EMPTY_TEXT_VALUE)  (EMPTY_TEXT_VALUE)  (SC_34)  (EMPTY_TEXT_VALUE)  (EMPTY_TEXT_VALUE)  (EMPTY_TEXT_VALUE)  (EMPTY_TEXT_VALUE)  (SC_29)  (SC_29)  (SC_35)  (SC_35)  (SC_36)  (SC_36)  (SC_37)  (SC_38)  (SC_38)  (SC_34)  (SC_38)  (SC_38)  (SC_34)  (EMPTY_TEXT_VALUE)  (EMPTY_TEXT_VALUE)  (SC_34)  (SC_34)  (SC_29)  (SC_39)  (SC_29)  (SC_29)  (SC_39)  (SC_35)  (SC_35)  (SC_40)  (SC_36)  (SC_36)  (SC_41)  (SC_42)  (SC_42)  (SC_43)  (SC_44)  (SC_44)  (SC_45) ;
-Array tab_4_1 table $006c 20  (SC_33)  (SC_46)  (SC_29)  (SC_29)  (SC_39)  (SC_34)  (SC_47)  (SC_48)  (SC_49)  (SC_33)  (SC_50)  (SC_51)  (SC_52)  (SC_53)  (SC_53)  (SC_52)  (SC_54)  (SC_55)  (SC_56)  (SC_57)  (SC_57)  (SC_33)  (EMPTY_TEXT_VALUE)  (SC_58)  (SC_58)  (SC_59)  (SC_60)  (SC_61)  (SC_62)  (SC_61)  (SC_47)  (SC_33)  (SC_33)  (SC_47)  (SC_63)  (SC_47)  (SC_64)  (SC_65)  (SC_64)  (SC_66)  (SC_67)  (SC_66)  (SC_67)  (SC_67)  (SC_66)  (SC_68)  (SC_69)  (SC_68) ;
-Array tab_4_2 table $006d 26  (SC_33)  (SC_46)  (SC_29)  (SC_70)  (SC_39)  (SC_34)  (SC_47)  (SC_48)  (SC_49)  (SC_71)  (SC_50)  (SC_51)  (SC_52)  (SC_53)  (SC_72)  (SC_73)  (SC_74)  (SC_75)  (SC_76)  (SC_77)  (SC_78)  (SC_79)  (SC_38)  (SC_80)  (SC_81)  (SC_82)  (SC_83)  (SC_61)  (SC_62)  (SC_84)  (SC_85)  (SC_86)  (SC_87)  (SC_88)  (SC_89)  (SC_90)  (SC_91)  (SC_92)  (SC_93)  (SC_94)  (SC_95)  (SC_96)  (SC_97)  (SC_98)  (SC_99)  (SC_100)  (SC_101)  (SC_102) ;
+Array tab_4_0 table $006b 14  (EMPTY_TEXT_VALUE)  (EMPTY_TEXT_VALUE)  (EMPTY_TEXT_VALUE)  (SC_33)  (EMPTY_TEXT_VALUE)  (EMPTY_TEXT_VALUE)  (EMPTY_TEXT_VALUE)  (EMPTY_TEXT_VALUE)  (EMPTY_TEXT_VALUE)  (SC_34)  (EMPTY_TEXT_VALUE)  (EMPTY_TEXT_VALUE)  (EMPTY_TEXT_VALUE)  (EMPTY_TEXT_VALUE)  (SC_29)  (SC_29)  (SC_35)  (SC_35)  (SC_36)  (SC_36)  (SC_37)  (SC_38)  (SC_38)  (SC_34)  (SC_38)  (SC_38)  (SC_34)  (EMPTY_TEXT_VALUE)  (EMPTY_TEXT_VALUE)  (SC_34)  (SC_34)  (SC_29)  (SC_30)  (SC_29)  (SC_29)  (SC_30)  (SC_35)  (SC_35)  (SC_39)  (SC_36)  (SC_36)  (SC_40)  (SC_41)  (SC_41)  (SC_42)  (SC_43)  (SC_43)  (SC_44) ;
+Array tab_4_1 table $006c 20  (SC_33)  (SC_45)  (SC_29)  (SC_29)  (SC_30)  (SC_34)  (SC_46)  (SC_47)  (SC_48)  (SC_33)  (SC_49)  (SC_50)  (SC_51)  (SC_52)  (SC_52)  (SC_51)  (SC_53)  (SC_54)  (SC_55)  (SC_56)  (SC_56)  (SC_33)  (EMPTY_TEXT_VALUE)  (SC_57)  (SC_57)  (SC_58)  (SC_59)  (SC_60)  (SC_61)  (SC_60)  (SC_46)  (SC_33)  (SC_33)  (SC_46)  (SC_62)  (SC_46)  (SC_63)  (SC_64)  (SC_63)  (SC_65)  (SC_66)  (SC_65)  (SC_66)  (SC_66)  (SC_65)  (SC_67)  (SC_68)  (SC_67) ;
+Array tab_4_2 table $006d 26  (SC_33)  (SC_45)  (SC_29)  (SC_69)  (SC_30)  (SC_34)  (SC_46)  (SC_47)  (SC_48)  (SC_70)  (SC_49)  (SC_50)  (SC_51)  (SC_52)  (SC_71)  (SC_72)  (SC_73)  (SC_74)  (SC_75)  (SC_76)  (SC_77)  (SC_78)  (SC_38)  (SC_79)  (SC_80)  (SC_81)  (SC_82)  (SC_60)  (SC_61)  (SC_83)  (SC_84)  (SC_85)  (SC_86)  (SC_87)  (SC_88)  (SC_89)  (SC_90)  (SC_91)  (SC_92)  (SC_93)  (SC_94)  (SC_95)  (SC_96)  (SC_97)  (SC_98)  (SC_99)  (SC_100)  (SC_101) ;
 Array TB_Blanks -> 
   ! For table T0_final_question_options
   $00  ! Column 0
@@ -10190,7 +10205,7 @@ Array TB_Blanks ->
   $1b  ! Column 4
   
   ! For table T1_locale_priorities
-  $0f  ! Column 1
+  $1f  ! Column 1
   
   ! For table T2_swedish_final_question_op
   $00  ! Column 0
@@ -10790,7 +10805,7 @@ Array ActionHappened --> 0 0 0 0 0 0;
           if ((((t_0.component_parent) ofclass K2_thing) && (t_2=((t_0.component_parent)), true)))  {
             ! phrase 3
             ! [3: if word number 1 in the printed name of pars exactly matches the text ~your~ begin]
-             if (( IT_Replace_RE(CHR_BLOB, IT_GetBlob((blockv_stack-->(I7BASPL+0)), BlkValueCast((blockv_stack-->(I7BASPL+1)),INDEXED_TEXT_TY,TEXT_TY,GProperty(9, t_0,short_name)), 1, WORD_BLOB) ,BlkValueCast((blockv_stack-->(I7BASPL+2)),INDEXED_TEXT_TY,TEXT_TY,SC_103),0,0,1) ))  {
+             if (( IT_Replace_RE(CHR_BLOB, IT_GetBlob((blockv_stack-->(I7BASPL+0)), BlkValueCast((blockv_stack-->(I7BASPL+1)),INDEXED_TEXT_TY,TEXT_TY,GProperty(9, t_0,short_name)), 1, WORD_BLOB) ,BlkValueCast((blockv_stack-->(I7BASPL+2)),INDEXED_TEXT_TY,TEXT_TY,SC_102),0,0,1) ))  {
                ! phrase 4
                ! [4: now the indexed name of pars is the printed name of pars]
                 BlkValueCast(GProperty(9, t_0,p14_indexed_name), INDEXED_TEXT_TY, TEXT_TY, GProperty(9, t_0,short_name)); 
@@ -10809,7 +10824,7 @@ Array ActionHappened --> 0 0 0 0 0 0;
                 BlkValueCast(GProperty(9, t_0,p14_indexed_name), INDEXED_TEXT_TY, TEXT_TY, GProperty(9, t_0,short_name)); 
                ! phrase 9
                ! [9: if ~[totum]~ matches the regular expression ~s$|x$|z$~ begin]
-                if (( IT_Replace_RE(REGEXP_BLOB,BlkValueCast((blockv_stack-->(I7BASPL+6)),INDEXED_TEXT_TY,TEXT_TY,((LocalParking-->0=t_0)*0+(LocalParking-->1=t_1)*0+(LocalParking-->2=t_2)*0+text_routine_6)),BlkValueCast((blockv_stack-->(I7BASPL+7)),INDEXED_TEXT_TY,TEXT_TY,SC_104),0,0) ))  {
+                if (( IT_Replace_RE(REGEXP_BLOB,BlkValueCast((blockv_stack-->(I7BASPL+6)),INDEXED_TEXT_TY,TEXT_TY,((LocalParking-->0=t_0)*0+(LocalParking-->1=t_1)*0+(LocalParking-->2=t_2)*0+text_routine_6)),BlkValueCast((blockv_stack-->(I7BASPL+7)),INDEXED_TEXT_TY,TEXT_TY,SC_103),0,0) ))  {
                   ! phrase 10
                   ! [10: replace the text ~[totum][']s~ in the indexed name of pars with ~[totum]~]
                    IT_Replace_RE(CHR_BLOB, GProperty(9, t_0,p14_indexed_name), BlkValueCast((blockv_stack-->(I7BASPL+8)),INDEXED_TEXT_TY,TEXT_TY,((LocalParking-->0=t_0)*0+(LocalParking-->1=t_1)*0+(LocalParking-->2=t_2)*0+text_routine_7)),
@@ -10897,7 +10912,7 @@ Array ActionHappened --> 0 0 0 0 0 0;
 [ R_20 ;
       ! phrase 1
       ! [1: if the current item from the multiple object list is not nothing , say ~[current item from the multiple object list]: [run paragraph on]~]
-       if (((~~((multiple_object_item == nothing))))) { say__p=1;ParaContent();  print (PrintShortName) multiple_object_item; ParaContent();  print (PrintText) SC_105; ParaContent();  RunParagraphOn();  .L_Say2; .L_SayX2;  }
+       if (((~~((multiple_object_item == nothing))))) { say__p=1;ParaContent();  print (PrintShortName) multiple_object_item; ParaContent();  print (PrintText) SC_104; ParaContent();  RunParagraphOn();  .L_Say2; .L_SayX2;  }
    rfalse;
 ];
 ! No specific request
@@ -11298,7 +11313,7 @@ self = noun;
              BlkValueCopy(t_0, (PHR_1023_r11 ((blockv_stack-->(I7BASPL+1))))); 
             ! phrase 13
             ! [13: if output is ~.~ begin]
-             if (((BlkValueCompare(t_0, BlkValueCast((blockv_stack-->(I7BASPL+2)), INDEXED_TEXT_TY, TEXT_TY, SC_106))==0)))  {
+             if (((BlkValueCompare(t_0, BlkValueCast((blockv_stack-->(I7BASPL+2)), INDEXED_TEXT_TY, TEXT_TY, SC_105))==0)))  {
                ! phrase 14
                ! [14: say errkonstigböjning]
                say__p=1;ParaContent(); (PHR_1015_r12 ()); .L_Say6; .L_SayX6;
@@ -11454,7 +11469,7 @@ self = noun;
    if (debug_rules) DB_Rule(R_60, 60);
       ! phrase 1
       ! [1: say ~[listing group size in words] ~]
-      say__p=1;ParaContent();  print (number) say__n=(listing_size); ParaContent();  print (PrintText) SC_107;  .L_Say12; .L_SayX12;
+      say__p=1;ParaContent();  print (number) say__n=(listing_size); ParaContent();  print (PrintText) SC_106;  .L_Say12; .L_SayX12;
       ! phrase 2
       ! [2: carry out the printing the plural name activity with the item]
        CarryOutActivity(V1_printing_the_plural_name_, t_0); 
@@ -11508,7 +11523,7 @@ self = noun;
           else {  BlkValueCast((Global_Vars-->12), INDEXED_TEXT_TY, SNIPPET_TY, players_command);   }
          ! phrase 4
          ! [4: change the text of the player's command to ~l~]
-          SetPlayersCommand(BlkValueCast((blockv_stack-->(I7BASPL+0)),INDEXED_TEXT_TY,TEXT_TY,SC_108)); 
+          SetPlayersCommand(BlkValueCast((blockv_stack-->(I7BASPL+0)),INDEXED_TEXT_TY,TEXT_TY,SC_107)); 
          ! phrase 5
          ! [5: end if]
          }
@@ -11703,7 +11718,7 @@ self = noun;
        if (((t_0 < 1))) {  if (ProcessRulebook(IMMEDIATELY_QUIT_R)) rtrue;   }
       ! phrase 10
       ! [10: say ~Vill du ~]
-      say__p=1;ParaContent();  print (PrintText) SC_109;  .L_Say13; .L_SayX13;
+      say__p=1;ParaContent();  print (PrintText) SC_108;  .L_Say13; .L_SayX13;
       ! phrase 11
       ! [11: repeat through the table of swedish final question options begin]
        @push ct_0; @push ct_1;
@@ -11730,20 +11745,20 @@ self = noun;
                    if (((t_0 == 0)))  {
                      ! phrase 18
                      ! [18: say ~?[line break]~]
-                     say__p=1;ParaContent();  print (PrintText) SC_110; ParaContent();  new_line;  .L_Say15; .L_SayX15;
+                     say__p=1;ParaContent();  print (PrintText) SC_109; ParaContent();  new_line;  .L_Say15; .L_SayX15;
                      ! phrase 19
                      ! [19: otherwise if the named options count is 1]
                       } else if (((t_0 == 1))) { 
                      ! phrase 20
                      ! [20: say ~ eller ~]
-                     say__p=1;ParaContent();  print (PrintText) SC_111;  .L_Say16; .L_SayX16;
+                     say__p=1;ParaContent();  print (PrintText) SC_110;  .L_Say16; .L_SayX16;
                      ! phrase 21
                      ! [21: otherwise]
                      } else {
 
                      ! phrase 22
                      ! [22: say ~, ~]
-                     say__p=1;ParaContent();  print (PrintText) SC_112;  .L_Say17; .L_SayX17;
+                     say__p=1;ParaContent();  print (PrintText) SC_111;  .L_Say17; .L_SayX17;
                      ! phrase 23
                      ! [23: end if]
                      }
@@ -11772,7 +11787,7 @@ self = noun;
 [ R_68 ;
       ! phrase 1
       ! [1: say ~> [run paragraph on]~]
-      say__p=1;ParaContent();  print (PrintText) SC_113; ParaContent();  RunParagraphOn();  .L_Say18; .L_SayX18;
+      say__p=1;ParaContent();  print (PrintText) SC_112; ParaContent();  RunParagraphOn();  .L_Say18; .L_SayX18;
    rfalse;
 ];
 ! ----------------------------------------------------------------------------------------------------
@@ -12025,29 +12040,29 @@ self = noun;
                 if (((t_0 ofclass K1_room)))  {
                   ! phrase 22
                   ! [22: if the domain is the location , say ~Du ser ~]
-                   if (((t_0 == real_location))) { say__p=1;ParaContent();  print (PrintText) SC_114;  .L_Say19; .L_SayX19;  }
+                   if (((t_0 == real_location))) { say__p=1;ParaContent();  print (PrintText) SC_113;  .L_Say19; .L_SayX19;  }
                   ! phrase 23
                   ! [23: otherwise say ~I [the domain] ser du ~]
-                   else { say__p=1;ParaContent();  print (PrintText) SC_115; ParaContent();  print (the) t_0; ParaContent();  print (PrintText) SC_116;  .L_Say20; .L_SayX20;  }
+                   else { say__p=1;ParaContent();  print (PrintText) SC_114; ParaContent();  print (the) t_0; ParaContent();  print (PrintText) SC_115;  .L_Say20; .L_SayX20;  }
                   ! phrase 24
                   ! [24: otherwise if the domain is a supporter]
                    } else if (((t_0 ofclass K6_supporter))) { 
                   ! phrase 25
                   ! [25: say ~På [the domain] ser du ~]
-                  say__p=1;ParaContent();  print (PrintText) SC_117; ParaContent();  print (the) t_0; ParaContent();  print (PrintText) SC_116;  .L_Say21; .L_SayX21;
+                  say__p=1;ParaContent();  print (PrintText) SC_116; ParaContent();  print (the) t_0; ParaContent();  print (PrintText) SC_115;  .L_Say21; .L_SayX21;
                   ! phrase 26
                   ! [26: otherwise if the domain is an animal]
                    } else if (((t_0 ofclass K12_animal))) { 
                   ! phrase 27
                   ! [27: say ~På [the domain] ser du ~]
-                  say__p=1;ParaContent();  print (PrintText) SC_117; ParaContent();  print (the) t_0; ParaContent();  print (PrintText) SC_116;  .L_Say22; .L_SayX22;
+                  say__p=1;ParaContent();  print (PrintText) SC_116; ParaContent();  print (the) t_0; ParaContent();  print (PrintText) SC_115;  .L_Say22; .L_SayX22;
                   ! phrase 28
                   ! [28: otherwise]
                   } else {
 
                   ! phrase 29
                   ! [29: say ~I [the domain] ser du ~]
-                  say__p=1;ParaContent();  print (PrintText) SC_115; ParaContent();  print (the) t_0; ParaContent();  print (PrintText) SC_116;  .L_Say23; .L_SayX23;
+                  say__p=1;ParaContent();  print (PrintText) SC_114; ParaContent();  print (the) t_0; ParaContent();  print (PrintText) SC_115;  .L_Say23; .L_SayX23;
                   ! phrase 30
                   ! [30: end if]
                   }
@@ -12056,7 +12071,7 @@ self = noun;
                ! [31: say ~[if the locale paragraph count is greater than 0]dessutom [end if]~]
                say__p=1;
 	if (~~(((((Global_Vars-->8) > 0))))) jump L_Say24;
-		ParaContent();  print (PrintText) SC_118; 
+		ParaContent();  print (PrintText) SC_117; 
 	.L_Say24; .L_SayX24;
 		 .L_Say25; .L_SayX25;
                ! phrase 32
@@ -12104,10 +12119,10 @@ self = noun;
 		@pull subst__v;  .L_Say26; .L_SayX26;  }
                ! phrase 44
                ! [44: if the domain is the location , say ~ her~]
-                if (((t_0 == real_location))) { say__p=1;ParaContent();  print (PrintText) SC_119;  .L_Say27; .L_SayX27;  }
+                if (((t_0 == real_location))) { say__p=1;ParaContent();  print (PrintText) SC_118;  .L_Say27; .L_SayX27;  }
                ! phrase 45
                ! [45: say ~.[paragraph break]~]
-               say__p=1;ParaContent();  print (PrintText) SC_106; ParaContent();  DivideParagraphPoint(); new_line;  .L_Say28; .L_SayX28;
+               say__p=1;ParaContent();  print (PrintText) SC_105; ParaContent();  DivideParagraphPoint(); new_line;  .L_Say28; .L_SayX28;
                ! phrase 46
                ! [46: unfilter list recursion]
                 list_filter_routine = 0; 
@@ -12367,13 +12382,13 @@ self = noun;
 
                ! phrase 13
                ! [13: say ~On [the item] ~]
-               say__p=1;ParaContent();  print (PrintText) SC_120; ParaContent();  print (the) t_0; ParaContent();  print (PrintText) SC_107;  .L_Say33; .L_SayX33;
+               say__p=1;ParaContent();  print (PrintText) SC_119; ParaContent();  print (the) t_0; ParaContent();  print (PrintText) SC_106;  .L_Say33; .L_SayX33;
                ! phrase 14
                ! [14: list the contents of the item , as a sentence , including contents , giving brief inventory information , tersely , not listing concealed items , prefacing with is/are , listing marked items only]
                 WriteListFrom(child(t_0), 3800); 
                ! phrase 15
                ! [15: say ~.[paragraph break]~]
-               say__p=1;ParaContent();  print (PrintText) SC_106; ParaContent();  DivideParagraphPoint(); new_line;  .L_Say34; .L_SayX34;
+               say__p=1;ParaContent();  print (PrintText) SC_105; ParaContent();  DivideParagraphPoint(); new_line;  .L_Say34; .L_SayX34;
                ! phrase 16
                ! [16: end if]
                }
@@ -12441,13 +12456,13 @@ self = noun;
              (Global_Vars-->8) = (Global_Vars-->8) + 1; 
             ! phrase 11
             ! [11: say ~På [the item] finns ~]
-            say__p=1;ParaContent();  print (PrintText) SC_117; ParaContent();  print (the) t_0; ParaContent();  print (PrintText) SC_121;  .L_Say35; .L_SayX35;
+            say__p=1;ParaContent();  print (PrintText) SC_116; ParaContent();  print (the) t_0; ParaContent();  print (PrintText) SC_120;  .L_Say35; .L_SayX35;
             ! phrase 12
             ! [12: list the contents of the item , as a sentence , including contents , giving brief inventory information , tersely , not listing concealed items , listing marked items only]
              WriteListFrom(child(t_0), 2776); 
             ! phrase 13
             ! [13: say ~.[paragraph break]~]
-            say__p=1;ParaContent();  print (PrintText) SC_106; ParaContent();  DivideParagraphPoint(); new_line;  .L_Say36; .L_SayX36;
+            say__p=1;ParaContent();  print (PrintText) SC_105; ParaContent();  DivideParagraphPoint(); new_line;  .L_Say36; .L_SayX36;
             ! phrase 14
             ! [14: end if]
             }
@@ -12497,7 +12512,7 @@ self = noun;
        GL__M(##Inv,2,noun); 
       ! phrase 2
       ! [2: say ~:[line break]~]
-      say__p=1;ParaContent();  print (PrintText) SC_122; ParaContent();  new_line;  .L_Say37; .L_SayX37;
+      say__p=1;ParaContent();  print (PrintText) SC_121; ParaContent();  new_line;  .L_Say37; .L_SayX37;
       ! phrase 3
       ! [3: list the contents of the player , with newlines , indented , including contents , giving inventory information , with extra indentation]
        WriteListFrom(child(player), 8215); 
@@ -14093,7 +14108,7 @@ self = noun;
           if (((~~(((MStack-->MstVO(20007,3)) == nothing)))))  {
             ! phrase 49
             ! [49: say ~ ~]
-            say__p=1;ParaContent();  print (PrintText) SC_107;  .L_Say38; .L_SayX38;
+            say__p=1;ParaContent();  print (PrintText) SC_106;  .L_Say38; .L_SayX38;
             ! phrase 50
             ! [50: if the vehicle gone by is a supporter , issue actor-based library message going action number 20 for the vehicle gone by]
              if ((((MStack-->MstVO(20007,3)) ofclass K6_supporter))) {  AGL__M(##Go,20,(MStack-->MstVO(20007,3)));   }
@@ -14148,7 +14163,7 @@ self = noun;
              AGL__M(##Go,26,noun); 
             ! phrase 66
             ! [66: say ~.~]
-            say__p=1;ParaContent();  print (PrintText) SC_106;  new_line; .L_Say39; .L_SayX39;
+            say__p=1;ParaContent();  print (PrintText) SC_105;  new_line; .L_Say39; .L_SayX39;
             ! phrase 67
             ! [67: try looking]
              TryAction(0, player, ##Look, 0, 0);; 
@@ -14161,7 +14176,7 @@ self = noun;
 
          ! phrase 70
          ! [70: say ~.~]
-         say__p=1;ParaContent();  print (PrintText) SC_106;  new_line; .L_Say40; .L_SayX40;
+         say__p=1;ParaContent();  print (PrintText) SC_105;  new_line; .L_Say40; .L_SayX40;
          ! phrase 71
          ! [71: end if]
          }
@@ -14767,7 +14782,7 @@ self = noun;
 
          ! phrase 7
          ! [7: say ~[The visibility ceiling]~]
-         say__p=1;ParaContent(); (Resolver_5((MStack-->MstVO(20011,3)),"source", 470)); .L_Say42; .L_SayX42;
+         say__p=1;ParaContent(); (Resolver_5((MStack-->MstVO(20011,3)),"source", 471)); .L_Say42; .L_SayX42;
          ! phrase 8
          ! [8: end if]
          }
@@ -17684,13 +17699,13 @@ self = noun;
        if (( (SnippetMatches(players_command, Consult_Grammar_205)) ))  {
          ! phrase 2
          ! [2: say ~Jag antar att du vill ta på [dig] [något] (inte bara känna på [dig] själv). Stämmer det?~]
-         say__p=1;ParaContent();  print (PrintText) SC_123; ParaContent(); (PHR_962_r19 ());ParaContent();  print (PrintText) SC_107; ParaContent(); (PHR_983_r20 ());ParaContent();  print (PrintText) SC_124; ParaContent(); (PHR_962_r19 ());ParaContent();  print (PrintText) SC_125;  new_line; .L_Say47; .L_SayX47;
+         say__p=1;ParaContent();  print (PrintText) SC_122; ParaContent(); (PHR_962_r19 ());ParaContent();  print (PrintText) SC_106; ParaContent(); (PHR_983_r20 ());ParaContent();  print (PrintText) SC_123; ParaContent(); (PHR_962_r19 ());ParaContent();  print (PrintText) SC_124;  new_line; .L_Say47; .L_SayX47;
          ! phrase 3
          ! [3: if player consents begin]
           if (( YesOrNo() ))  {
             ! phrase 4
             ! [4: change the text of the player's command to ~klä på mig~]
-             SetPlayersCommand(BlkValueCast((blockv_stack-->(I7BASPL+0)),INDEXED_TEXT_TY,TEXT_TY,SC_126)); 
+             SetPlayersCommand(BlkValueCast((blockv_stack-->(I7BASPL+0)),INDEXED_TEXT_TY,TEXT_TY,SC_125)); 
             ! phrase 5
             ! [5: otherwise]
             } else {
@@ -17724,7 +17739,7 @@ self = noun;
        if (( (SnippetMatches(players_command, Consult_Grammar_206)) ))  {
          ! phrase 2
          ! [2: change the text of the player's command to ~ta av~]
-          SetPlayersCommand(BlkValueCast((blockv_stack-->(I7BASPL+0)),INDEXED_TEXT_TY,TEXT_TY,SC_127)); 
+          SetPlayersCommand(BlkValueCast((blockv_stack-->(I7BASPL+0)),INDEXED_TEXT_TY,TEXT_TY,SC_126)); 
          ! phrase 3
          ! [3: rule fails]
           RulebookFails(); rtrue; 
@@ -17772,19 +17787,19 @@ self = noun;
           if ((((Adj_48_t1_v9(noun)))))  {
             ! phrase 3
             ! [3: say ~Jag antar att du vill ta på [dig] [the noun] (inte bara känna på [if the noun is plural-named][dem][otherwise if the noun is female and the noun is a person]henne[otherwise if the noun is male and the noun is a person]honom[otherwise if the noun is neuter]det[otherwise]den[end if]). Stämmer det?~]
-            say__p=1;ParaContent();  print (PrintText) SC_123; ParaContent(); (PHR_962_r19 ());ParaContent();  print (PrintText) SC_107; ParaContent();  print (the) noun; ParaContent();  print (PrintText) SC_124; 
+            say__p=1;ParaContent();  print (PrintText) SC_122; ParaContent(); (PHR_962_r19 ());ParaContent();  print (PrintText) SC_106; ParaContent();  print (the) noun; ParaContent();  print (PrintText) SC_123; 
 	if (~~(((((Adj_31_t1_v9(noun))))))) jump L_Say48;
 		ParaContent(); (PHR_968_r21 ());ParaContent(); 
 	jump L_SayX48; .L_Say48; if (~~((((((Adj_67_t1_v9(noun))))) && (((noun ofclass K8_person)))))) jump L_Say49;
-		ParaContent();  print (PrintText) SC_128; ParaContent(); 
+		ParaContent();  print (PrintText) SC_127; ParaContent(); 
 	jump L_SayX48; .L_Say49; if (~~((((((Adj_68_t1_v9(noun))))) && (((noun ofclass K8_person)))))) jump L_Say50;
-		ParaContent();  print (PrintText) SC_129; ParaContent(); 
+		ParaContent();  print (PrintText) SC_128; ParaContent(); 
 	jump L_SayX48; .L_Say50; if (~~(((((Adj_69_t1_v9(noun))))))) jump L_Say51;
 		ParaContent();  print (PrintText) SC_32; 
 	jump L_SayX48; .L_Say51;
 		ParaContent();  print (PrintText) SC_31; 
 	.L_Say52; .L_SayX48;
-		ParaContent();  print (PrintText) SC_130;  new_line; .L_Say53; .L_SayX49;
+		ParaContent();  print (PrintText) SC_129;  new_line; .L_Say53; .L_SayX49;
             ! phrase 4
             ! [4: if player consents begin]
              if (( YesOrNo() ))  {
@@ -17851,19 +17866,19 @@ self = noun;
           if (( (matched_text=SnippetIncludes(Consult_Grammar_209,players_command)) ))  {
             ! phrase 3
             ! [3: say ~Jag antar att du vill att [the actor] [ska] ta på [sig] [the noun] (inte bara känna på [if the noun is plural-named][dem][otherwise if the noun is female and the noun is a person]henne[otherwise if the noun is male and the noun is a person]honom[otherwise if the noun is neuter]det[otherwise]den[end if]). Stämmer det?~]
-            say__p=1;ParaContent();  print (PrintText) SC_131; ParaContent();  print (the) actor; ParaContent();  print (PrintText) SC_107; ParaContent(); (PHR_994_r22 ());ParaContent();  print (PrintText) SC_132; ParaContent(); (PHR_963_r23 ());ParaContent();  print (PrintText) SC_107; ParaContent();  print (the) noun; ParaContent();  print (PrintText) SC_124; 
+            say__p=1;ParaContent();  print (PrintText) SC_130; ParaContent();  print (the) actor; ParaContent();  print (PrintText) SC_106; ParaContent(); (PHR_994_r22 ());ParaContent();  print (PrintText) SC_131; ParaContent(); (PHR_963_r23 ());ParaContent();  print (PrintText) SC_106; ParaContent();  print (the) noun; ParaContent();  print (PrintText) SC_123; 
 	if (~~(((((Adj_31_t1_v9(noun))))))) jump L_Say54;
 		ParaContent(); (PHR_968_r21 ());ParaContent(); 
 	jump L_SayX50; .L_Say54; if (~~((((((Adj_67_t1_v9(noun))))) && (((noun ofclass K8_person)))))) jump L_Say55;
-		ParaContent();  print (PrintText) SC_128; ParaContent(); 
+		ParaContent();  print (PrintText) SC_127; ParaContent(); 
 	jump L_SayX50; .L_Say55; if (~~((((((Adj_68_t1_v9(noun))))) && (((noun ofclass K8_person)))))) jump L_Say56;
-		ParaContent();  print (PrintText) SC_129; ParaContent(); 
+		ParaContent();  print (PrintText) SC_128; ParaContent(); 
 	jump L_SayX50; .L_Say56; if (~~(((((Adj_69_t1_v9(noun))))))) jump L_Say57;
 		ParaContent();  print (PrintText) SC_32; 
 	jump L_SayX50; .L_Say57;
 		ParaContent();  print (PrintText) SC_31; 
 	.L_Say58; .L_SayX50;
-		ParaContent();  print (PrintText) SC_130;  new_line; .L_Say59; .L_SayX51;
+		ParaContent();  print (PrintText) SC_129;  new_line; .L_Say59; .L_SayX51;
             ! phrase 4
             ! [4: if player consents begin]
              if (( YesOrNo() ))  {
@@ -18201,7 +18216,7 @@ self = noun;
        if (((t_0 < 1))) {  if (ProcessRulebook(IMMEDIATELY_QUIT_R)) rtrue;   }
       ! phrase 10
       ! [10: say ~Would you like to ~]
-      say__p=1;ParaContent();  print (PrintText) SC_133;  .L_Say62; .L_SayX54;
+      say__p=1;ParaContent();  print (PrintText) SC_132;  .L_Say62; .L_SayX54;
       ! phrase 11
       ! [11: repeat through the table of final question options begin]
        @push ct_0; @push ct_1;
@@ -18228,23 +18243,23 @@ self = noun;
                    if (((t_0 == 0)))  {
                      ! phrase 18
                      ! [18: say ~?[line break]~]
-                     say__p=1;ParaContent();  print (PrintText) SC_110; ParaContent();  new_line;  .L_Say64; .L_SayX56;
+                     say__p=1;ParaContent();  print (PrintText) SC_109; ParaContent();  new_line;  .L_Say64; .L_SayX56;
                      ! phrase 19
                      ! [19: otherwise if the named options count is 1]
                       } else if (((t_0 == 1))) { 
                      ! phrase 20
                      ! [20: if the serial comma option is active , say ~,~]
-                      if ((((Adj_22_t1_v15(5))))) { say__p=1;ParaContent();  print (PrintText) SC_134;  .L_Say65; .L_SayX57;  }
+                      if ((((Adj_22_t1_v15(5))))) { say__p=1;ParaContent();  print (PrintText) SC_133;  .L_Say65; .L_SayX57;  }
                      ! phrase 21
                      ! [21: say ~ or ~]
-                     say__p=1;ParaContent();  print (PrintText) SC_135;  .L_Say66; .L_SayX58;
+                     say__p=1;ParaContent();  print (PrintText) SC_134;  .L_Say66; .L_SayX58;
                      ! phrase 22
                      ! [22: otherwise]
                      } else {
 
                      ! phrase 23
                      ! [23: say ~, ~]
-                     say__p=1;ParaContent();  print (PrintText) SC_112;  .L_Say67; .L_SayX59;
+                     say__p=1;ParaContent();  print (PrintText) SC_111;  .L_Say67; .L_SayX59;
                      ! phrase 24
                      ! [24: end if]
                      }
@@ -18405,40 +18420,40 @@ self = noun;
                 if (((t_0 ofclass K1_room)))  {
                   ! phrase 22
                   ! [22: if the domain is the location , say ~You ~]
-                   if (((t_0 == real_location))) { say__p=1;ParaContent();  print (PrintText) SC_136;  .L_Say68; .L_SayX60;  }
+                   if (((t_0 == real_location))) { say__p=1;ParaContent();  print (PrintText) SC_135;  .L_Say68; .L_SayX60;  }
                   ! phrase 23
                   ! [23: otherwise say ~In [the domain] you ~]
-                   else { say__p=1;ParaContent();  print (PrintText) SC_137; ParaContent();  print (the) t_0; ParaContent();  print (PrintText) SC_138;  .L_Say69; .L_SayX61;  }
+                   else { say__p=1;ParaContent();  print (PrintText) SC_136; ParaContent();  print (the) t_0; ParaContent();  print (PrintText) SC_137;  .L_Say69; .L_SayX61;  }
                   ! phrase 24
                   ! [24: otherwise if the domain is a supporter]
                    } else if (((t_0 ofclass K6_supporter))) { 
                   ! phrase 25
                   ! [25: say ~On [the domain] you ~]
-                  say__p=1;ParaContent();  print (PrintText) SC_120; ParaContent();  print (the) t_0; ParaContent();  print (PrintText) SC_138;  .L_Say70; .L_SayX62;
+                  say__p=1;ParaContent();  print (PrintText) SC_119; ParaContent();  print (the) t_0; ParaContent();  print (PrintText) SC_137;  .L_Say70; .L_SayX62;
                   ! phrase 26
                   ! [26: otherwise if the domain is an animal]
                    } else if (((t_0 ofclass K12_animal))) { 
                   ! phrase 27
                   ! [27: say ~On [the domain] you ~]
-                  say__p=1;ParaContent();  print (PrintText) SC_120; ParaContent();  print (the) t_0; ParaContent();  print (PrintText) SC_138;  .L_Say71; .L_SayX63;
+                  say__p=1;ParaContent();  print (PrintText) SC_119; ParaContent();  print (the) t_0; ParaContent();  print (PrintText) SC_137;  .L_Say71; .L_SayX63;
                   ! phrase 28
                   ! [28: otherwise]
                   } else {
 
                   ! phrase 29
                   ! [29: say ~In [the domain] you ~]
-                  say__p=1;ParaContent();  print (PrintText) SC_137; ParaContent();  print (the) t_0; ParaContent();  print (PrintText) SC_138;  .L_Say72; .L_SayX64;
+                  say__p=1;ParaContent();  print (PrintText) SC_136; ParaContent();  print (the) t_0; ParaContent();  print (PrintText) SC_137;  .L_Say72; .L_SayX64;
                   ! phrase 30
                   ! [30: end if]
                   }
 
                ! phrase 31
                ! [31: say ~can [if the locale paragraph count is greater than 0]also [end if]see ~]
-               say__p=1;ParaContent();  print (PrintText) SC_139; 
+               say__p=1;ParaContent();  print (PrintText) SC_138; 
 	if (~~(((((Global_Vars-->8) > 0))))) jump L_Say73;
-		ParaContent();  print (PrintText) SC_140; 
+		ParaContent();  print (PrintText) SC_139; 
 	.L_Say73; .L_SayX65;
-		ParaContent();  print (PrintText) SC_141;  .L_Say74; .L_SayX66;
+		ParaContent();  print (PrintText) SC_140;  .L_Say74; .L_SayX66;
                ! phrase 32
                ! [32: let the common holder be nothing]
                 t_2 = nothing; 
@@ -18484,10 +18499,10 @@ self = noun;
 		@pull subst__v;  .L_Say75; .L_SayX67;  }
                ! phrase 44
                ! [44: if the domain is the location , say ~ here~]
-                if (((t_0 == real_location))) { say__p=1;ParaContent();  print (PrintText) SC_142;  .L_Say76; .L_SayX68;  }
+                if (((t_0 == real_location))) { say__p=1;ParaContent();  print (PrintText) SC_141;  .L_Say76; .L_SayX68;  }
                ! phrase 45
                ! [45: say ~.[paragraph break]~]
-               say__p=1;ParaContent();  print (PrintText) SC_106; ParaContent();  DivideParagraphPoint(); new_line;  .L_Say77; .L_SayX69;
+               say__p=1;ParaContent();  print (PrintText) SC_105; ParaContent();  DivideParagraphPoint(); new_line;  .L_Say77; .L_SayX69;
                ! phrase 46
                ! [46: unfilter list recursion]
                 list_filter_routine = 0; 
@@ -18556,13 +18571,13 @@ self = noun;
              (Global_Vars-->8) = (Global_Vars-->8) + 1; 
             ! phrase 11
             ! [11: say ~On [the item] ~]
-            say__p=1;ParaContent();  print (PrintText) SC_120; ParaContent();  print (the) t_0; ParaContent();  print (PrintText) SC_107;  .L_Say78; .L_SayX70;
+            say__p=1;ParaContent();  print (PrintText) SC_119; ParaContent();  print (the) t_0; ParaContent();  print (PrintText) SC_106;  .L_Say78; .L_SayX70;
             ! phrase 12
             ! [12: list the contents of the item , as a sentence , including contents , giving brief inventory information , tersely , not listing concealed items , prefacing with is/are , listing marked items only]
              WriteListFrom(child(t_0), 3800); 
             ! phrase 13
             ! [13: say ~.[paragraph break]~]
-            say__p=1;ParaContent();  print (PrintText) SC_106; ParaContent();  DivideParagraphPoint(); new_line;  .L_Say79; .L_SayX71;
+            say__p=1;ParaContent();  print (PrintText) SC_105; ParaContent();  DivideParagraphPoint(); new_line;  .L_Say79; .L_SayX71;
             ! phrase 14
             ! [14: end if]
             }
@@ -23783,7 +23798,7 @@ Array FWMatrix --> NUM_ROOMS*NUM_ROOMS;
 ];
 #ENDIF;
 
-Constant MAX_ROUTE_LENGTH = 16 + 32;
+Constant MAX_ROUTE_LENGTH = 17 + 32;
 
 [ RelationRouteTo relation from to count  handler;
 	if (count) {
@@ -26871,7 +26886,7 @@ Array CheckTableEntryIsNonBlank_LU
   !# "å[unicode 140]tta minuter (i/över halv elva på kvällen)" etc.
   else mn = I7_ExtendedTryNumber(wn-1); 
   if (NextWordStopped() ~= 'minut' or 'minuter') wn--; 
-  !# "kvart (i/över ett)" etc.
+  !# "kvart (i/över et)" etc.
   if (first_word == 'kvart') mn = QUARTER_HOUR;
   !# "halv två" etc.
   if (first_word == 'halv') { offhour = HALF_HOUR; mn = 0; jump Halv_timme; }
@@ -26884,7 +26899,7 @@ Array CheckTableEntryIsNonBlank_LU
           if (NextWordStopped() == 'halv') offhour = HALF_HOUR; 
       'över': 
           if (NextWordStopped() == 'halv') offhour = HALF_HOUR; 
-      !# "(klockan) ett" etc.
+      !# "(klockan) et" etc.
       -1: 
           hr = mn; mn = 0; 
           parsed_number = HoursMinsWordToTime(hr, mn, second_word); 
@@ -27840,7 +27855,7 @@ Verb meta 'tree'
 [ PHR_1012_r6 ;
       ! phrase 1
       ! [1: say ~Skriv nu dess obestämda form ('en röd lykta').[line break]~]
-      say__p=1;ParaContent();  print (PrintText) SC_143; ParaContent();  new_line;  .L_Say86; .L_SayX78;
+      say__p=1;ParaContent();  print (PrintText) SC_142; ParaContent();  new_line;  .L_Say86; .L_SayX78;
    rfalse;
 ];
 ! Request 7: phrase nothing -> nothing
@@ -27966,20 +27981,20 @@ Verb meta 'tree'
       ! [14: repeat with x running from 1 to n begin]
        for (t_4=1: t_4<=t_3: t_4++)  {
          ! phrase 15
-         ! [15: if word number x in förstainput is ~det~ and word number x in andrainput is not ~ett~ begin]
+         ! [15: if word number x in förstainput is ~det~ and word number x in andrainput is not ~et~ begin]
           if ((((BlkValueCompare( IT_GetBlob((blockv_stack-->(I7BASPL+18)), (Global_Vars-->11), t_4, WORD_BLOB) , BlkValueCast((blockv_stack-->(I7BASPL+17)), INDEXED_TEXT_TY, TEXT_TY, SC_32))==0))) && (((~~((BlkValueCompare( IT_GetBlob((blockv_stack-->(I7BASPL+20)), (Global_Vars-->12), t_4, WORD_BLOB) , BlkValueCast((blockv_stack-->(I7BASPL+19)), INDEXED_TEXT_TY, TEXT_TY, SC_30))==0))))))  {
             ! phrase 16
-            ! [16: let andrain be inserted ~ett~ at word x of andrain]
+            ! [16: let andrain be inserted ~et~ at word x of andrain]
              BlkValueCopy(t_2, (PHR_1030_r271 ((blockv_stack-->(I7BASPL+21)),BlkValueCast((blockv_stack-->(I7BASPL+22)),INDEXED_TEXT_TY,TEXT_TY,SC_30),t_4,BlkValueCopy((blockv_stack-->(I7BASPL+23)), t_2)))); 
             ! phrase 17
             ! [17: end if]
             }
 
          ! phrase 18
-         ! [18: if word number x in andrainput is ~det~ and word number x in förstainput is not ~ett~ begin]
+         ! [18: if word number x in andrainput is ~det~ and word number x in förstainput is not ~et~ begin]
           if ((((BlkValueCompare( IT_GetBlob((blockv_stack-->(I7BASPL+25)), (Global_Vars-->12), t_4, WORD_BLOB) , BlkValueCast((blockv_stack-->(I7BASPL+24)), INDEXED_TEXT_TY, TEXT_TY, SC_32))==0))) && (((~~((BlkValueCompare( IT_GetBlob((blockv_stack-->(I7BASPL+27)), (Global_Vars-->11), t_4, WORD_BLOB) , BlkValueCast((blockv_stack-->(I7BASPL+26)), INDEXED_TEXT_TY, TEXT_TY, SC_30))==0))))))  {
             ! phrase 19
-            ! [19: let förstain be inserted ~ett~ at word x of förstain]
+            ! [19: let förstain be inserted ~et~ at word x of förstain]
              BlkValueCopy(t_1, (PHR_1030_r271 ((blockv_stack-->(I7BASPL+28)),BlkValueCast((blockv_stack-->(I7BASPL+29)),INDEXED_TEXT_TY,TEXT_TY,SC_30),t_4,BlkValueCopy((blockv_stack-->(I7BASPL+30)), t_1)))); 
             ! phrase 20
             ! [20: end if]
@@ -28003,7 +28018,7 @@ Verb meta 'tree'
 [ PHR_1013_r8 ;
       ! phrase 1
       ! [1: say ~Beklagar, du tycks inte ha skrivit in någon text.~]
-      say__p=1;ParaContent();  print (PrintText) SC_144;  new_line; .L_Say87; .L_SayX79;
+      say__p=1;ParaContent();  print (PrintText) SC_143;  new_line; .L_Say87; .L_SayX79;
    rfalse;
 ];
 ! Request 9: phrase nothing -> nothing
@@ -28024,7 +28039,7 @@ Verb meta 'tree'
 [ PHR_1014_r10 ;
       ! phrase 1
       ! [1: say ~Beklagar, programmet stödjer inte meningar med olika antal ord.~]
-      say__p=1;ParaContent();  print (PrintText) SC_145;  new_line; .L_Say88; .L_SayX80;
+      say__p=1;ParaContent();  print (PrintText) SC_144;  new_line; .L_Say88; .L_SayX80;
    rfalse;
 ];
 ! Request 11: phrase nothing -> indexed text
@@ -28146,7 +28161,7 @@ Verb meta 'tree'
 
                ! phrase 18
                ! [18: decide on ~.~]
-                return BlkValueCast((blockv_stack-->(I7BASPL+21)),INDEXED_TEXT_TY,TEXT_TY,SC_106); 
+                return BlkValueCast((blockv_stack-->(I7BASPL+21)),INDEXED_TEXT_TY,TEXT_TY,SC_105); 
                ! phrase 19
                ! [19: end unless]
                }
@@ -28173,7 +28188,7 @@ Verb meta 'tree'
 [ PHR_1015_r12 ;
       ! phrase 1
       ! [1: say ~Beklagar, antingen böjdes ord i dessa meningar på sätt som inte förekommer inom svenskan, eller så är programmet sönder.~]
-      say__p=1;ParaContent();  print (PrintText) SC_146;  new_line; .L_Say89; .L_SayX81;
+      say__p=1;ParaContent();  print (PrintText) SC_145;  new_line; .L_Say89; .L_SayX81;
    rfalse;
 ];
 ! Request 13: phrase nothing -> nothing
@@ -28182,16 +28197,16 @@ Verb meta 'tree'
 [ PHR_1016_r13 ;
       ! phrase 1
       ! [1: say ~Förslag: The printed name of ~]
-      say__p=1;ParaContent();  print (PrintText) SC_147;  .L_Say90; .L_SayX82;
+      say__p=1;ParaContent();  print (PrintText) SC_146;  .L_Say90; .L_SayX82;
       ! phrase 2
       ! [2: if avsettobjekt is not nothing , say ~[italic type][avsettObjekt][roman type]~]
        if (((~~(((Global_Vars-->16) == nothing))))) { say__p=1;ParaContent();  style underline; ParaContent();  print (PrintShortName) (Global_Vars-->16); ParaContent();  style roman;  .L_Say91; .L_SayX83;  }
       ! phrase 3
       ! [3: otherwise say ~<[italic type]objektet[roman type]>~]
-       else { say__p=1;ParaContent();  print (PrintText) SC_148; ParaContent();  style underline; ParaContent();  print (PrintText) SC_149; ParaContent();  style roman; ParaContent();  print (PrintText) SC_18;  .L_Say92; .L_SayX84;  }
+       else { say__p=1;ParaContent();  print (PrintText) SC_147; ParaContent();  style underline; ParaContent();  print (PrintText) SC_148; ParaContent();  style roman; ParaContent();  print (PrintText) SC_18;  .L_Say92; .L_SayX84;  }
       ! phrase 4
       ! [4: say ~ is '~]
-      say__p=1;ParaContent();  print (PrintText) SC_150;  .L_Say93; .L_SayX85;
+      say__p=1;ParaContent();  print (PrintText) SC_149;  .L_Say93; .L_SayX85;
    rfalse;
 ];
 ! Request 14: phrase nothing -> nothing
@@ -28200,7 +28215,7 @@ Verb meta 'tree'
 [ PHR_1017_r14 ;
       ! phrase 1
       ! [1: say ~'.~]
-      say__p=1;ParaContent();  print (PrintText) SC_151;  new_line; .L_Say94; .L_SayX86;
+      say__p=1;ParaContent();  print (PrintText) SC_150;  new_line; .L_Say94; .L_SayX86;
    rfalse;
 ];
 ! Request 15: phrase nothing -> nothing
@@ -28305,10 +28320,10 @@ Verb meta 'tree'
 [ PHR_962_r19 ;
       ! phrase 1
       ! [1: if the dej spelling option is active or the informal spelling option is active , say ~dej~]
-       if (((((Adj_22_t1_v15(23))))) || ((((Adj_22_t1_v15(38)))))) { say__p=1;ParaContent();  print (PrintText) SC_152;  .L_Say96; .L_SayX88;  }
+       if (((((Adj_22_t1_v15(23))))) || ((((Adj_22_t1_v15(38)))))) { say__p=1;ParaContent();  print (PrintText) SC_151;  .L_Say96; .L_SayX88;  }
       ! phrase 2
       ! [2: otherwise say ~dig~]
-       else { say__p=1;ParaContent();  print (PrintText) SC_153;  .L_Say97; .L_SayX89;  }
+       else { say__p=1;ParaContent();  print (PrintText) SC_152;  .L_Say97; .L_SayX89;  }
    rfalse;
 ];
 ! Request 20: phrase nothing -> nothing
@@ -28317,10 +28332,10 @@ Verb meta 'tree'
 [ PHR_983_r20 ;
       ! phrase 1
       ! [1: if the nån spelling option is active or the informal spelling option is active , say ~nåt~]
-       if (((((Adj_22_t1_v15(30))))) || ((((Adj_22_t1_v15(38)))))) { say__p=1;ParaContent();  print (PrintText) SC_154;  .L_Say98; .L_SayX90;  }
+       if (((((Adj_22_t1_v15(30))))) || ((((Adj_22_t1_v15(38)))))) { say__p=1;ParaContent();  print (PrintText) SC_153;  .L_Say98; .L_SayX90;  }
       ! phrase 2
       ! [2: otherwise say ~något~]
-       else { say__p=1;ParaContent();  print (PrintText) SC_155;  .L_Say99; .L_SayX91;  }
+       else { say__p=1;ParaContent();  print (PrintText) SC_154;  .L_Say99; .L_SayX91;  }
    rfalse;
 ];
 ! Request 21: phrase nothing -> nothing
@@ -28329,10 +28344,10 @@ Verb meta 'tree'
 [ PHR_968_r21 ;
       ! phrase 1
       ! [1: if the dom spelling option is active or the informal spelling option is active , say ~dom~]
-       if (((((Adj_22_t1_v15(24))))) || ((((Adj_22_t1_v15(38)))))) { say__p=1;ParaContent();  print (PrintText) SC_156;  .L_Say100; .L_SayX92;  }
+       if (((((Adj_22_t1_v15(24))))) || ((((Adj_22_t1_v15(38)))))) { say__p=1;ParaContent();  print (PrintText) SC_155;  .L_Say100; .L_SayX92;  }
       ! phrase 2
       ! [2: otherwise say ~dem~]
-       else { say__p=1;ParaContent();  print (PrintText) SC_157;  .L_Say101; .L_SayX93;  }
+       else { say__p=1;ParaContent();  print (PrintText) SC_156;  .L_Say101; .L_SayX93;  }
    rfalse;
 ];
 ! Request 22: phrase nothing -> nothing
@@ -28341,10 +28356,10 @@ Verb meta 'tree'
 [ PHR_994_r22 ;
       ! phrase 1
       ! [1: if the skall spelling option is active or the formal spelling option is active , say ~skall~]
-       if (((((Adj_22_t1_v15(33))))) || ((((Adj_22_t1_v15(37)))))) { say__p=1;ParaContent();  print (PrintText) SC_158;  .L_Say102; .L_SayX94;  }
+       if (((((Adj_22_t1_v15(33))))) || ((((Adj_22_t1_v15(37)))))) { say__p=1;ParaContent();  print (PrintText) SC_157;  .L_Say102; .L_SayX94;  }
       ! phrase 2
       ! [2: otherwise say ~ska~]
-       else { say__p=1;ParaContent();  print (PrintText) SC_159;  .L_Say103; .L_SayX95;  }
+       else { say__p=1;ParaContent();  print (PrintText) SC_158;  .L_Say103; .L_SayX95;  }
    rfalse;
 ];
 ! Request 23: phrase nothing -> nothing
@@ -28353,10 +28368,10 @@ Verb meta 'tree'
 [ PHR_963_r23 ;
       ! phrase 1
       ! [1: if the dej spelling option is active or the informal spelling option is active , say ~sej~]
-       if (((((Adj_22_t1_v15(23))))) || ((((Adj_22_t1_v15(38)))))) { say__p=1;ParaContent();  print (PrintText) SC_160;  .L_Say104; .L_SayX96;  }
+       if (((((Adj_22_t1_v15(23))))) || ((((Adj_22_t1_v15(38)))))) { say__p=1;ParaContent();  print (PrintText) SC_159;  .L_Say104; .L_SayX96;  }
       ! phrase 2
       ! [2: otherwise say ~sig~]
-       else { say__p=1;ParaContent();  print (PrintText) SC_161;  .L_Say105; .L_SayX97;  }
+       else { say__p=1;ParaContent();  print (PrintText) SC_160;  .L_Say105; .L_SayX97;  }
    rfalse;
 ];
 ! Request 24: phrase nothing -> nothing
@@ -28365,7 +28380,7 @@ Verb meta 'tree'
 [ PHR_1011_r24 ;
       ! phrase 1
       ! [1: say ~Skriv namnet i bestämd form ('den röda lyktan').[line break]~]
-      say__p=1;ParaContent();  print (PrintText) SC_162; ParaContent();  new_line;  .L_Say106; .L_SayX98;
+      say__p=1;ParaContent();  print (PrintText) SC_161; ParaContent();  new_line;  .L_Say106; .L_SayX98;
    rfalse;
 ];
 ! Request 25: phrase nothing -> nothing
@@ -28501,7 +28516,7 @@ Verb meta 'tree'
        else { say__p=1;ParaContent(); (PHR_761_r28 (t_0)); .L_Say114; .L_SayX106;  }
       ! phrase 3
       ! [3: if the printed name of items is ~öre~ or the printed name of items is ~år~ , say quantum in words counting nothing]
-       if ((((GProperty(OBJECT_TY, t_1,short_name) == SC_163))) || (((GProperty(OBJECT_TY, t_1,short_name) == SC_164)))) { say__p=1;ParaContent(); (PHR_765_r32 (t_0)); .L_Say115; .L_SayX107;  }
+       if ((((GProperty(OBJECT_TY, t_1,short_name) == SC_162))) || (((GProperty(OBJECT_TY, t_1,short_name) == SC_163)))) { say__p=1;ParaContent(); (PHR_765_r32 (t_0)); .L_Say115; .L_SayX107;  }
    rfalse;
 ];
 ! Request 35: phrase nothing -> nothing
@@ -28510,7 +28525,7 @@ Verb meta 'tree'
 [ PHR_768_r35 ;
       ! phrase 1
       ! [1: if the number-just-said is not 1 , say ~or~]
-       if (((~~((say__n == 1))))) { say__p=1;ParaContent();  print (PrintText) SC_165;  .L_Say116; .L_SayX108;  }
+       if (((~~((say__n == 1))))) { say__p=1;ParaContent();  print (PrintText) SC_164;  .L_Say116; .L_SayX108;  }
    rfalse;
 ];
 ! Request 36: phrase nothing -> nothing
@@ -28519,7 +28534,7 @@ Verb meta 'tree'
 [ PHR_769_r36 ;
       ! phrase 1
       ! [1: if the number-just-said is not 1 , say ~or~]
-       if (((~~((say__n == 1))))) { say__p=1;ParaContent();  print (PrintText) SC_165;  .L_Say117; .L_SayX109;  }
+       if (((~~((say__n == 1))))) { say__p=1;ParaContent();  print (PrintText) SC_164;  .L_Say117; .L_SayX109;  }
       ! phrase 2
       ! [2: otherwise say ~a~]
        else { say__p=1;ParaContent();  print (PrintText) SC_33;  .L_Say118; .L_SayX110;  }
@@ -28531,7 +28546,7 @@ Verb meta 'tree'
 [ PHR_770_r37 ;
       ! phrase 1
       ! [1: if the number-just-said is not 1 , say ~ar~]
-       if (((~~((say__n == 1))))) { say__p=1;ParaContent();  print (PrintText) SC_166;  .L_Say119; .L_SayX111;  }
+       if (((~~((say__n == 1))))) { say__p=1;ParaContent();  print (PrintText) SC_165;  .L_Say119; .L_SayX111;  }
    rfalse;
 ];
 ! Request 38: phrase nothing -> nothing
@@ -28540,10 +28555,10 @@ Verb meta 'tree'
 [ PHR_771_r38 ;
       ! phrase 1
       ! [1: if the number-just-said is not 1 , say ~ar~]
-       if (((~~((say__n == 1))))) { say__p=1;ParaContent();  print (PrintText) SC_166;  .L_Say120; .L_SayX112;  }
+       if (((~~((say__n == 1))))) { say__p=1;ParaContent();  print (PrintText) SC_165;  .L_Say120; .L_SayX112;  }
       ! phrase 2
       ! [2: otherwise say ~e~]
-       else { say__p=1;ParaContent();  print (PrintText) SC_49;  .L_Say121; .L_SayX113;  }
+       else { say__p=1;ParaContent();  print (PrintText) SC_48;  .L_Say121; .L_SayX113;  }
    rfalse;
 ];
 ! Request 39: phrase nothing -> nothing
@@ -28573,7 +28588,7 @@ Verb meta 'tree'
 [ PHR_774_r41 ;
       ! phrase 1
       ! [1: if the number-just-said is not 1 , say ~r~]
-       if (((~~((say__n == 1))))) { say__p=1;ParaContent();  print (PrintText) SC_167;  .L_Say125; .L_SayX117;  }
+       if (((~~((say__n == 1))))) { say__p=1;ParaContent();  print (PrintText) SC_166;  .L_Say125; .L_SayX117;  }
    rfalse;
 ];
 ! Request 42: phrase nothing -> nothing
@@ -28582,7 +28597,7 @@ Verb meta 'tree'
 [ PHR_775_r42 ;
       ! phrase 1
       ! [1: if the number-just-said is not 1 , say ~n~]
-       if (((~~((say__n == 1))))) { say__p=1;ParaContent();  print (PrintText) SC_46;  .L_Say126; .L_SayX118;  }
+       if (((~~((say__n == 1))))) { say__p=1;ParaContent();  print (PrintText) SC_45;  .L_Say126; .L_SayX118;  }
    rfalse;
 ];
 ! Request 43: phrase nothing -> nothing
@@ -28591,7 +28606,7 @@ Verb meta 'tree'
 [ PHR_776_r43 ;
       ! phrase 1
       ! [1: if the number-just-said is not 1 , say ~on~]
-       if (((~~((say__n == 1))))) { say__p=1;ParaContent();  print (PrintText) SC_168;  .L_Say127; .L_SayX119;  }
+       if (((~~((say__n == 1))))) { say__p=1;ParaContent();  print (PrintText) SC_167;  .L_Say127; .L_SayX119;  }
       ! phrase 2
       ! [2: otherwise say ~a~]
        else { say__p=1;ParaContent();  print (PrintText) SC_33;  .L_Say128; .L_SayX120;  }
@@ -28606,7 +28621,7 @@ Verb meta 'tree'
        if (((~~((say__n == 1))))) { say__p=1;ParaContent();  print (PrintText) SC_35;  .L_Say129; .L_SayX121;  }
       ! phrase 2
       ! [2: otherwise say ~um~]
-       else { say__p=1;ParaContent();  print (PrintText) SC_169;  .L_Say130; .L_SayX122;  }
+       else { say__p=1;ParaContent();  print (PrintText) SC_168;  .L_Say130; .L_SayX122;  }
    rfalse;
 ];
 ! Request 45: phrase nothing -> nothing
@@ -28618,7 +28633,7 @@ Verb meta 'tree'
        if (((~~((say__n == 1))))) { say__p=1;ParaContent();  print (PrintText) SC_33;  .L_Say131; .L_SayX123;  }
       ! phrase 2
       ! [2: otherwise say ~um~]
-       else { say__p=1;ParaContent();  print (PrintText) SC_169;  .L_Say132; .L_SayX124;  }
+       else { say__p=1;ParaContent();  print (PrintText) SC_168;  .L_Say132; .L_SayX124;  }
    rfalse;
 ];
 ! Request 46: phrase nothing -> nothing
@@ -28627,7 +28642,7 @@ Verb meta 'tree'
 [ PHR_779_r46 ;
       ! phrase 1
       ! [1: if the number-just-said is not 1 , say ~ina~]
-       if (((~~((say__n == 1))))) { say__p=1;ParaContent();  print (PrintText) SC_170;  .L_Say133; .L_SayX125;  }
+       if (((~~((say__n == 1))))) { say__p=1;ParaContent();  print (PrintText) SC_169;  .L_Say133; .L_SayX125;  }
       ! phrase 2
       ! [2: otherwise say ~en~]
        else { say__p=1;ParaContent();  print (PrintText) SC_29;  .L_Say134; .L_SayX126;  }
@@ -28639,10 +28654,10 @@ Verb meta 'tree'
 [ PHR_780_r47 ;
       ! phrase 1
       ! [1: if the number-just-said is not 1 , say ~ia~]
-       if (((~~((say__n == 1))))) { say__p=1;ParaContent();  print (PrintText) SC_171;  .L_Say135; .L_SayX127;  }
+       if (((~~((say__n == 1))))) { say__p=1;ParaContent();  print (PrintText) SC_170;  .L_Say135; .L_SayX127;  }
       ! phrase 2
       ! [2: otherwise say ~e~]
-       else { say__p=1;ParaContent();  print (PrintText) SC_49;  .L_Say136; .L_SayX128;  }
+       else { say__p=1;ParaContent();  print (PrintText) SC_48;  .L_Say136; .L_SayX128;  }
    rfalse;
 ];
 ! Request 48: phrase nothing -> nothing
@@ -28651,7 +28666,7 @@ Verb meta 'tree'
 [ PHR_781_r48 ;
       ! phrase 1
       ! [1: if the number-just-said is not 1 , say ~ta~]
-       if (((~~((say__n == 1))))) { say__p=1;ParaContent();  print (PrintText) SC_172;  .L_Say137; .L_SayX129;  }
+       if (((~~((say__n == 1))))) { say__p=1;ParaContent();  print (PrintText) SC_171;  .L_Say137; .L_SayX129;  }
    rfalse;
 ];
 ! Request 49: phrase nothing -> nothing
@@ -28660,7 +28675,7 @@ Verb meta 'tree'
 [ PHR_782_r49 ;
       ! phrase 1
       ! [1: if the number-just-said is not 1 , say ~ä~]
-       if (((~~((say__n == 1))))) { say__p=1;ParaContent();  print (PrintText) SC_173;  .L_Say138; .L_SayX130;  }
+       if (((~~((say__n == 1))))) { say__p=1;ParaContent();  print (PrintText) SC_172;  .L_Say138; .L_SayX130;  }
       ! phrase 2
       ! [2: otherwise say ~a~]
        else { say__p=1;ParaContent();  print (PrintText) SC_33;  .L_Say139; .L_SayX131;  }
@@ -28672,10 +28687,10 @@ Verb meta 'tree'
 [ PHR_783_r50 ;
       ! phrase 1
       ! [1: if the number-just-said is not 1 , say ~ö~]
-       if (((~~((say__n == 1))))) { say__p=1;ParaContent();  print (PrintText) SC_174;  .L_Say140; .L_SayX132;  }
+       if (((~~((say__n == 1))))) { say__p=1;ParaContent();  print (PrintText) SC_173;  .L_Say140; .L_SayX132;  }
       ! phrase 2
       ! [2: otherwise say ~o~]
-       else { say__p=1;ParaContent();  print (PrintText) SC_175;  .L_Say141; .L_SayX133;  }
+       else { say__p=1;ParaContent();  print (PrintText) SC_174;  .L_Say141; .L_SayX133;  }
    rfalse;
 ];
 ! Request 51: phrase nothing -> nothing
@@ -28684,10 +28699,10 @@ Verb meta 'tree'
 [ PHR_784_r51 ;
       ! phrase 1
       ! [1: if the number-just-said is not 1 , say ~ö~]
-       if (((~~((say__n == 1))))) { say__p=1;ParaContent();  print (PrintText) SC_174;  .L_Say142; .L_SayX134;  }
+       if (((~~((say__n == 1))))) { say__p=1;ParaContent();  print (PrintText) SC_173;  .L_Say142; .L_SayX134;  }
       ! phrase 2
       ! [2: otherwise say ~u~]
-       else { say__p=1;ParaContent();  print (PrintText) SC_176;  .L_Say143; .L_SayX135;  }
+       else { say__p=1;ParaContent();  print (PrintText) SC_175;  .L_Say143; .L_SayX135;  }
    rfalse;
 ];
 ! Request 52: phrase nothing -> nothing
@@ -28696,10 +28711,10 @@ Verb meta 'tree'
 [ PHR_785_r52 ;
       ! phrase 1
       ! [1: if the number-just-said is not 1 , say ~ä~]
-       if (((~~((say__n == 1))))) { say__p=1;ParaContent();  print (PrintText) SC_173;  .L_Say144; .L_SayX136;  }
+       if (((~~((say__n == 1))))) { say__p=1;ParaContent();  print (PrintText) SC_172;  .L_Say144; .L_SayX136;  }
       ! phrase 2
       ! [2: otherwise say ~å~]
-       else { say__p=1;ParaContent();  print (PrintText) SC_177;  .L_Say145; .L_SayX137;  }
+       else { say__p=1;ParaContent();  print (PrintText) SC_176;  .L_Say145; .L_SayX137;  }
    rfalse;
 ];
 ! Request 53: phrase nothing -> nothing
@@ -28708,7 +28723,7 @@ Verb meta 'tree'
 [ PHR_786_r53 ;
       ! phrase 1
       ! [1: if the number-just-said is not 1 , say ~ror~]
-       if (((~~((say__n == 1))))) { say__p=1;ParaContent();  print (PrintText) SC_178;  .L_Say146; .L_SayX138;  }
+       if (((~~((say__n == 1))))) { say__p=1;ParaContent();  print (PrintText) SC_177;  .L_Say146; .L_SayX138;  }
       ! phrase 2
       ! [2: otherwise say ~er~]
        else { say__p=1;ParaContent();  print (PrintText) SC_35;  .L_Say147; .L_SayX139;  }
@@ -28720,7 +28735,7 @@ Verb meta 'tree'
 [ PHR_787_r54 ;
       ! phrase 1
       ! [1: if the number-just-said is not 1 , say ~mar~]
-       if (((~~((say__n == 1))))) { say__p=1;ParaContent();  print (PrintText) SC_179;  .L_Say148; .L_SayX140;  }
+       if (((~~((say__n == 1))))) { say__p=1;ParaContent();  print (PrintText) SC_178;  .L_Say148; .L_SayX140;  }
    rfalse;
 ];
 ! Request 55: phrase nothing -> nothing
@@ -28729,7 +28744,7 @@ Verb meta 'tree'
 [ PHR_788_r55 ;
       ! phrase 1
       ! [1: if the number-just-said is not 1 , say ~nar~]
-       if (((~~((say__n == 1))))) { say__p=1;ParaContent();  print (PrintText) SC_180;  .L_Say149; .L_SayX141;  }
+       if (((~~((say__n == 1))))) { say__p=1;ParaContent();  print (PrintText) SC_179;  .L_Say149; .L_SayX141;  }
    rfalse;
 ];
 ! Request 56: phrase nothing -> nothing
@@ -28738,7 +28753,7 @@ Verb meta 'tree'
 [ PHR_789_r56 ;
       ! phrase 1
       ! [1: if the number-just-said is not 1 , say ~nar~]
-       if (((~~((say__n == 1))))) { say__p=1;ParaContent();  print (PrintText) SC_180;  .L_Say150; .L_SayX142;  }
+       if (((~~((say__n == 1))))) { say__p=1;ParaContent();  print (PrintText) SC_179;  .L_Say150; .L_SayX142;  }
       ! phrase 2
       ! [2: otherwise say ~en~]
        else { say__p=1;ParaContent();  print (PrintText) SC_29;  .L_Say151; .L_SayX143;  }
@@ -28750,10 +28765,10 @@ Verb meta 'tree'
 [ PHR_790_r57 ;
       ! phrase 1
       ! [1: if the number-just-said is not 1 , say ~nar~]
-       if (((~~((say__n == 1))))) { say__p=1;ParaContent();  print (PrintText) SC_180;  .L_Say152; .L_SayX144;  }
+       if (((~~((say__n == 1))))) { say__p=1;ParaContent();  print (PrintText) SC_179;  .L_Say152; .L_SayX144;  }
       ! phrase 2
       ! [2: otherwise say ~on~]
-       else { say__p=1;ParaContent();  print (PrintText) SC_168;  .L_Say153; .L_SayX145;  }
+       else { say__p=1;ParaContent();  print (PrintText) SC_167;  .L_Say153; .L_SayX145;  }
    rfalse;
 ];
 ! Request 58: phrase nothing -> nothing
@@ -28762,10 +28777,10 @@ Verb meta 'tree'
 [ PHR_791_r58 ;
       ! phrase 1
       ! [1: if the number-just-said is not 1 , say ~nar~]
-       if (((~~((say__n == 1))))) { say__p=1;ParaContent();  print (PrintText) SC_180;  .L_Say154; .L_SayX146;  }
+       if (((~~((say__n == 1))))) { say__p=1;ParaContent();  print (PrintText) SC_179;  .L_Say154; .L_SayX146;  }
       ! phrase 2
       ! [2: otherwise say ~ron~]
-       else { say__p=1;ParaContent();  print (PrintText) SC_181;  .L_Say155; .L_SayX147;  }
+       else { say__p=1;ParaContent();  print (PrintText) SC_180;  .L_Say155; .L_SayX147;  }
    rfalse;
 ];
 ! Request 59: phrase nothing -> nothing
@@ -28774,10 +28789,10 @@ Verb meta 'tree'
 [ PHR_792_r59 ;
       ! phrase 1
       ! [1: if the number-just-said is not 1 , say ~rar~]
-       if (((~~((say__n == 1))))) { say__p=1;ParaContent();  print (PrintText) SC_182;  .L_Say156; .L_SayX148;  }
+       if (((~~((say__n == 1))))) { say__p=1;ParaContent();  print (PrintText) SC_181;  .L_Say156; .L_SayX148;  }
       ! phrase 2
       ! [2: otherwise say ~mar~]
-       else { say__p=1;ParaContent();  print (PrintText) SC_179;  .L_Say157; .L_SayX149;  }
+       else { say__p=1;ParaContent();  print (PrintText) SC_178;  .L_Say157; .L_SayX149;  }
    rfalse;
 ];
 ! Request 60: phrase nothing -> nothing
@@ -28786,7 +28801,7 @@ Verb meta 'tree'
 [ PHR_793_r60 ;
       ! phrase 1
       ! [1: if the number-just-said is not 1 , say ~rar~]
-       if (((~~((say__n == 1))))) { say__p=1;ParaContent();  print (PrintText) SC_182;  .L_Say158; .L_SayX150;  }
+       if (((~~((say__n == 1))))) { say__p=1;ParaContent();  print (PrintText) SC_181;  .L_Say158; .L_SayX150;  }
       ! phrase 2
       ! [2: otherwise say ~er~]
        else { say__p=1;ParaContent();  print (PrintText) SC_35;  .L_Say159; .L_SayX151;  }
@@ -28798,7 +28813,7 @@ Verb meta 'tree'
 [ PHR_794_r61 ;
       ! phrase 1
       ! [1: if the number-just-said is not 1 , say ~lar~]
-       if (((~~((say__n == 1))))) { say__p=1;ParaContent();  print (PrintText) SC_183;  .L_Say160; .L_SayX152;  }
+       if (((~~((say__n == 1))))) { say__p=1;ParaContent();  print (PrintText) SC_182;  .L_Say160; .L_SayX152;  }
       ! phrase 2
       ! [2: otherwise say ~el~]
        else { say__p=1;ParaContent();  print (PrintText) SC_36;  .L_Say161; .L_SayX153;  }
@@ -28810,7 +28825,7 @@ Verb meta 'tree'
 [ PHR_795_r62 ;
       ! phrase 1
       ! [1: if the number-just-said is not 1 , say ~lar~]
-       if (((~~((say__n == 1))))) { say__p=1;ParaContent();  print (PrintText) SC_183;  .L_Say162; .L_SayX154;  }
+       if (((~~((say__n == 1))))) { say__p=1;ParaContent();  print (PrintText) SC_182;  .L_Say162; .L_SayX154;  }
       ! phrase 2
       ! [2: otherwise say ~mel~]
        else { say__p=1;ParaContent();  print (PrintText) SC_37;  .L_Say163; .L_SayX155;  }
@@ -28822,10 +28837,10 @@ Verb meta 'tree'
 [ PHR_796_r63 ;
       ! phrase 1
       ! [1: if the number-just-said is not 1 , say ~cker~]
-       if (((~~((say__n == 1))))) { say__p=1;ParaContent();  print (PrintText) SC_184;  .L_Say164; .L_SayX156;  }
+       if (((~~((say__n == 1))))) { say__p=1;ParaContent();  print (PrintText) SC_183;  .L_Say164; .L_SayX156;  }
       ! phrase 2
       ! [2: otherwise say ~k~]
-       else { say__p=1;ParaContent();  print (PrintText) SC_185;  .L_Say165; .L_SayX157;  }
+       else { say__p=1;ParaContent();  print (PrintText) SC_184;  .L_Say165; .L_SayX157;  }
    rfalse;
 ];
 ! Request 64: phrase nothing -> nothing
@@ -28834,7 +28849,7 @@ Verb meta 'tree'
 [ PHR_797_r64 ;
       ! phrase 1
       ! [1: if the number-just-said is not 1 , say ~mer~]
-       if (((~~((say__n == 1))))) { say__p=1;ParaContent();  print (PrintText) SC_186;  .L_Say166; .L_SayX158;  }
+       if (((~~((say__n == 1))))) { say__p=1;ParaContent();  print (PrintText) SC_185;  .L_Say166; .L_SayX158;  }
    rfalse;
 ];
 ! Request 65: phrase nothing -> nothing
@@ -28843,7 +28858,7 @@ Verb meta 'tree'
 [ PHR_798_r65 ;
       ! phrase 1
       ! [1: if the number-just-said is not 1 , say ~ner~]
-       if (((~~((say__n == 1))))) { say__p=1;ParaContent();  print (PrintText) SC_187;  .L_Say167; .L_SayX159;  }
+       if (((~~((say__n == 1))))) { say__p=1;ParaContent();  print (PrintText) SC_186;  .L_Say167; .L_SayX159;  }
    rfalse;
 ];
 ! Request 66: phrase nothing -> nothing
@@ -28852,7 +28867,7 @@ Verb meta 'tree'
 [ PHR_799_r66 ;
       ! phrase 1
       ! [1: if the number-just-said is not 1 , say ~ter~]
-       if (((~~((say__n == 1))))) { say__p=1;ParaContent();  print (PrintText) SC_188;  .L_Say168; .L_SayX160;  }
+       if (((~~((say__n == 1))))) { say__p=1;ParaContent();  print (PrintText) SC_187;  .L_Say168; .L_SayX160;  }
    rfalse;
 ];
 ! Request 67: phrase nothing -> nothing
@@ -28861,7 +28876,7 @@ Verb meta 'tree'
 [ PHR_800_r67 ;
       ! phrase 1
       ! [1: if the number-just-said is not 1 , say ~ler~]
-       if (((~~((say__n == 1))))) { say__p=1;ParaContent();  print (PrintText) SC_189;  .L_Say169; .L_SayX161;  }
+       if (((~~((say__n == 1))))) { say__p=1;ParaContent();  print (PrintText) SC_188;  .L_Say169; .L_SayX161;  }
       ! phrase 2
       ! [2: otherwise say ~el~]
        else { say__p=1;ParaContent();  print (PrintText) SC_36;  .L_Say170; .L_SayX162;  }
@@ -28873,7 +28888,7 @@ Verb meta 'tree'
 [ PHR_801_r68 ;
       ! phrase 1
       ! [1: if the number-just-said is not 1 , say ~ner~]
-       if (((~~((say__n == 1))))) { say__p=1;ParaContent();  print (PrintText) SC_187;  .L_Say171; .L_SayX163;  }
+       if (((~~((say__n == 1))))) { say__p=1;ParaContent();  print (PrintText) SC_186;  .L_Say171; .L_SayX163;  }
       ! phrase 2
       ! [2: otherwise say ~en~]
        else { say__p=1;ParaContent();  print (PrintText) SC_29;  .L_Say172; .L_SayX164;  }
@@ -28885,7 +28900,7 @@ Verb meta 'tree'
 [ PHR_802_r69 ;
       ! phrase 1
       ! [1: if the number-just-said is not 1 , say ~rer~]
-       if (((~~((say__n == 1))))) { say__p=1;ParaContent();  print (PrintText) SC_190;  .L_Say173; .L_SayX165;  }
+       if (((~~((say__n == 1))))) { say__p=1;ParaContent();  print (PrintText) SC_189;  .L_Say173; .L_SayX165;  }
       ! phrase 2
       ! [2: otherwise say ~er~]
        else { say__p=1;ParaContent();  print (PrintText) SC_35;  .L_Say174; .L_SayX166;  }
@@ -28897,7 +28912,7 @@ Verb meta 'tree'
 [ PHR_803_r70 ;
       ! phrase 1
       ! [1: if the number-just-said is not 1 , say ~s~]
-       if (((~~((say__n == 1))))) { say__p=1;ParaContent();  print (PrintText) SC_191;  .L_Say175; .L_SayX167;  }
+       if (((~~((say__n == 1))))) { say__p=1;ParaContent();  print (PrintText) SC_190;  .L_Say175; .L_SayX167;  }
    rfalse;
 ];
 ! Request 71: phrase nothing -> nothing
@@ -28906,10 +28921,10 @@ Verb meta 'tree'
 [ PHR_804_r71 ;
       ! phrase 1
       ! [1: if the number-just-said is not 1 , say ~fäder~]
-       if (((~~((say__n == 1))))) { say__p=1;ParaContent();  print (PrintText) SC_192;  .L_Say176; .L_SayX168;  }
+       if (((~~((say__n == 1))))) { say__p=1;ParaContent();  print (PrintText) SC_191;  .L_Say176; .L_SayX168;  }
       ! phrase 2
       ! [2: otherwise say ~far~]
-       else { say__p=1;ParaContent();  print (PrintText) SC_193;  .L_Say177; .L_SayX169;  }
+       else { say__p=1;ParaContent();  print (PrintText) SC_192;  .L_Say177; .L_SayX169;  }
    rfalse;
 ];
 ! Request 72: phrase nothing -> nothing
@@ -28918,10 +28933,10 @@ Verb meta 'tree'
 [ PHR_805_r72 ;
       ! phrase 1
       ! [1: if the number-just-said is not 1 , say ~små~]
-       if (((~~((say__n == 1))))) { say__p=1;ParaContent();  print (PrintText) SC_194;  .L_Say178; .L_SayX170;  }
+       if (((~~((say__n == 1))))) { say__p=1;ParaContent();  print (PrintText) SC_193;  .L_Say178; .L_SayX170;  }
       ! phrase 2
       ! [2: otherwise say ~liten~]
-       else { say__p=1;ParaContent();  print (PrintText) SC_195;  .L_Say179; .L_SayX171;  }
+       else { say__p=1;ParaContent();  print (PrintText) SC_194;  .L_Say179; .L_SayX171;  }
    rfalse;
 ];
 ! Request 73: phrase nothing -> nothing
@@ -28930,10 +28945,10 @@ Verb meta 'tree'
 [ PHR_806_r73 ;
       ! phrase 1
       ! [1: if the number-just-said is not 1 , say ~små~]
-       if (((~~((say__n == 1))))) { say__p=1;ParaContent();  print (PrintText) SC_194;  .L_Say180; .L_SayX172;  }
+       if (((~~((say__n == 1))))) { say__p=1;ParaContent();  print (PrintText) SC_193;  .L_Say180; .L_SayX172;  }
       ! phrase 2
       ! [2: otherwise say ~litet~]
-       else { say__p=1;ParaContent();  print (PrintText) SC_196;  .L_Say181; .L_SayX173;  }
+       else { say__p=1;ParaContent();  print (PrintText) SC_195;  .L_Say181; .L_SayX173;  }
    rfalse;
 ];
 ! Request 74: phrase object -> nothing
@@ -29022,7 +29037,7 @@ Verb meta 'tree'
 [ PHR_814_r80 ;
       ! phrase 1
       ! [1: if the indefinite mode is false and excise article is false , say ~den ~]
-       if (((((indef_mode && true) == (0 && true)))) && ((((exc_art && true) == (0 && true))))) { say__p=1;ParaContent();  print (PrintText) SC_197;  .L_Say186; .L_SayX178;  }
+       if (((((indef_mode && true) == (0 && true)))) && ((((exc_art && true) == (0 && true))))) { say__p=1;ParaContent();  print (PrintText) SC_196;  .L_Say186; .L_SayX178;  }
    rfalse;
 ];
 ! Request 81: phrase nothing -> nothing
@@ -29031,7 +29046,7 @@ Verb meta 'tree'
 [ PHR_815_r81 ;
       ! phrase 1
       ! [1: if the indefinite mode is false and excise article is false , say ~det ~]
-       if (((((indef_mode && true) == (0 && true)))) && ((((exc_art && true) == (0 && true))))) { say__p=1;ParaContent();  print (PrintText) SC_198;  .L_Say187; .L_SayX179;  }
+       if (((((indef_mode && true) == (0 && true)))) && ((((exc_art && true) == (0 && true))))) { say__p=1;ParaContent();  print (PrintText) SC_197;  .L_Say187; .L_SayX179;  }
    rfalse;
 ];
 ! Request 82: phrase nothing -> nothing
@@ -29043,10 +29058,10 @@ Verb meta 'tree'
        if (((((indef_mode && true) == (0 && true)))) && ((((exc_art && true) == (0 && true)))))  {
          ! phrase 2
          ! [2: if the dom spelling option is active or the informal spelling option is active , say ~dom ~]
-          if (((((Adj_22_t1_v15(24))))) || ((((Adj_22_t1_v15(38)))))) { say__p=1;ParaContent();  print (PrintText) SC_199;  .L_Say188; .L_SayX180;  }
+          if (((((Adj_22_t1_v15(24))))) || ((((Adj_22_t1_v15(38)))))) { say__p=1;ParaContent();  print (PrintText) SC_198;  .L_Say188; .L_SayX180;  }
          ! phrase 3
          ! [3: otherwise say ~de ~]
-          else { say__p=1;ParaContent();  print (PrintText) SC_200;  .L_Say189; .L_SayX181;  }
+          else { say__p=1;ParaContent();  print (PrintText) SC_199;  .L_Say189; .L_SayX181;  }
          ! phrase 4
          ! [4: end if]
          }
@@ -29068,7 +29083,7 @@ Verb meta 'tree'
 [ PHR_818_r84 ;
       ! phrase 1
       ! [1: if the indefinite mode is false , say ~n~]
-       if ((((indef_mode && true) == (0 && true)))) { say__p=1;ParaContent();  print (PrintText) SC_46;  .L_Say191; .L_SayX183;  }
+       if ((((indef_mode && true) == (0 && true)))) { say__p=1;ParaContent();  print (PrintText) SC_45;  .L_Say191; .L_SayX183;  }
    rfalse;
 ];
 ! Request 85: phrase nothing -> nothing
@@ -29089,7 +29104,7 @@ Verb meta 'tree'
 [ PHR_820_r86 ;
       ! phrase 1
       ! [1: if the indefinite mode is false , say ~et~]
-       if ((((indef_mode && true) == (0 && true)))) { say__p=1;ParaContent();  print (PrintText) SC_39;  .L_Say194; .L_SayX186;  }
+       if ((((indef_mode && true) == (0 && true)))) { say__p=1;ParaContent();  print (PrintText) SC_30;  .L_Say194; .L_SayX186;  }
    rfalse;
 ];
 ! Request 87: phrase nothing -> nothing
@@ -29107,7 +29122,7 @@ Verb meta 'tree'
 [ PHR_822_r88 ;
       ! phrase 1
       ! [1: if the indefinite mode is false , say ~na~]
-       if ((((indef_mode && true) == (0 && true)))) { say__p=1;ParaContent();  print (PrintText) SC_47;  .L_Say196; .L_SayX188;  }
+       if ((((indef_mode && true) == (0 && true)))) { say__p=1;ParaContent();  print (PrintText) SC_46;  .L_Say196; .L_SayX188;  }
    rfalse;
 ];
 ! Request 89: phrase nothing -> nothing
@@ -29116,7 +29131,7 @@ Verb meta 'tree'
 [ PHR_823_r89 ;
       ! phrase 1
       ! [1: if the indefinite mode is false , say ~ena~]
-       if ((((indef_mode && true) == (0 && true)))) { say__p=1;ParaContent();  print (PrintText) SC_48;  .L_Say197; .L_SayX189;  }
+       if ((((indef_mode && true) == (0 && true)))) { say__p=1;ParaContent();  print (PrintText) SC_47;  .L_Say197; .L_SayX189;  }
    rfalse;
 ];
 ! Request 90: phrase nothing -> nothing
@@ -29143,7 +29158,7 @@ Verb meta 'tree'
 [ PHR_826_r92 ;
       ! phrase 1
       ! [1: if the indefinite mode is false or the weak inflection is true , say ~e~]
-       if (((((indef_mode && true) == (0 && true)))) || (((((Global_Vars-->9) && true) == (1 && true))))) { say__p=1;ParaContent();  print (PrintText) SC_49;  .L_Say200; .L_SayX192;  }
+       if (((((indef_mode && true) == (0 && true)))) || (((((Global_Vars-->9) && true) == (1 && true))))) { say__p=1;ParaContent();  print (PrintText) SC_48;  .L_Say200; .L_SayX192;  }
    rfalse;
 ];
 ! Request 93: phrase nothing -> nothing
@@ -29164,7 +29179,7 @@ Verb meta 'tree'
 [ PHR_828_r94 ;
       ! phrase 1
       ! [1: if the indefinite mode is false , say ~men~]
-       if ((((indef_mode && true) == (0 && true)))) { say__p=1;ParaContent();  print (PrintText) SC_50;  .L_Say203; .L_SayX195;  }
+       if ((((indef_mode && true) == (0 && true)))) { say__p=1;ParaContent();  print (PrintText) SC_49;  .L_Say203; .L_SayX195;  }
    rfalse;
 ];
 ! Request 95: phrase nothing -> nothing
@@ -29173,7 +29188,7 @@ Verb meta 'tree'
 [ PHR_829_r95 ;
       ! phrase 1
       ! [1: if the indefinite mode is false , say ~met~]
-       if ((((indef_mode && true) == (0 && true)))) { say__p=1;ParaContent();  print (PrintText) SC_51;  .L_Say204; .L_SayX196;  }
+       if ((((indef_mode && true) == (0 && true)))) { say__p=1;ParaContent();  print (PrintText) SC_50;  .L_Say204; .L_SayX196;  }
    rfalse;
 ];
 ! Request 96: phrase nothing -> nothing
@@ -29182,7 +29197,7 @@ Verb meta 'tree'
 [ PHR_830_r96 ;
       ! phrase 1
       ! [1: if the indefinite mode is false , say ~nen~]
-       if ((((indef_mode && true) == (0 && true)))) { say__p=1;ParaContent();  print (PrintText) SC_52;  .L_Say205; .L_SayX197;  }
+       if ((((indef_mode && true) == (0 && true)))) { say__p=1;ParaContent();  print (PrintText) SC_51;  .L_Say205; .L_SayX197;  }
    rfalse;
 ];
 ! Request 97: phrase nothing -> nothing
@@ -29191,7 +29206,7 @@ Verb meta 'tree'
 [ PHR_831_r97 ;
       ! phrase 1
       ! [1: if the indefinite mode is false , say ~net~]
-       if ((((indef_mode && true) == (0 && true)))) { say__p=1;ParaContent();  print (PrintText) SC_53;  .L_Say206; .L_SayX198;  }
+       if ((((indef_mode && true) == (0 && true)))) { say__p=1;ParaContent();  print (PrintText) SC_52;  .L_Say206; .L_SayX198;  }
    rfalse;
 ];
 ! Request 98: phrase nothing -> nothing
@@ -29200,7 +29215,7 @@ Verb meta 'tree'
 [ PHR_832_r98 ;
       ! phrase 1
       ! [1: if the indefinite mode is false , say ~net~]
-       if ((((indef_mode && true) == (0 && true)))) { say__p=1;ParaContent();  print (PrintText) SC_53;  .L_Say207; .L_SayX199;  }
+       if ((((indef_mode && true) == (0 && true)))) { say__p=1;ParaContent();  print (PrintText) SC_52;  .L_Say207; .L_SayX199;  }
       ! phrase 2
       ! [2: otherwise say ~en~]
        else { say__p=1;ParaContent();  print (PrintText) SC_29;  .L_Say208; .L_SayX200;  }
@@ -29212,7 +29227,7 @@ Verb meta 'tree'
 [ PHR_833_r99 ;
       ! phrase 1
       ! [1: if the indefinite mode is false , say ~nen~]
-       if ((((indef_mode && true) == (0 && true)))) { say__p=1;ParaContent();  print (PrintText) SC_52;  .L_Say209; .L_SayX201;  }
+       if ((((indef_mode && true) == (0 && true)))) { say__p=1;ParaContent();  print (PrintText) SC_51;  .L_Say209; .L_SayX201;  }
       ! phrase 2
       ! [2: otherwise say ~en~]
        else { say__p=1;ParaContent();  print (PrintText) SC_29;  .L_Say210; .L_SayX202;  }
@@ -29224,7 +29239,7 @@ Verb meta 'tree'
 [ PHR_834_r100 ;
       ! phrase 1
       ! [1: if the indefinite mode is false , say ~ret~]
-       if ((((indef_mode && true) == (0 && true)))) { say__p=1;ParaContent();  print (PrintText) SC_54;  .L_Say211; .L_SayX203;  }
+       if ((((indef_mode && true) == (0 && true)))) { say__p=1;ParaContent();  print (PrintText) SC_53;  .L_Say211; .L_SayX203;  }
       ! phrase 2
       ! [2: otherwise say ~er~]
        else { say__p=1;ParaContent();  print (PrintText) SC_35;  .L_Say212; .L_SayX204;  }
@@ -29236,7 +29251,7 @@ Verb meta 'tree'
 [ PHR_835_r101 ;
       ! phrase 1
       ! [1: if the indefinite mode is false , say ~ren~]
-       if ((((indef_mode && true) == (0 && true)))) { say__p=1;ParaContent();  print (PrintText) SC_55;  .L_Say213; .L_SayX205;  }
+       if ((((indef_mode && true) == (0 && true)))) { say__p=1;ParaContent();  print (PrintText) SC_54;  .L_Say213; .L_SayX205;  }
       ! phrase 2
       ! [2: otherwise say ~er~]
        else { say__p=1;ParaContent();  print (PrintText) SC_35;  .L_Say214; .L_SayX206;  }
@@ -29248,7 +29263,7 @@ Verb meta 'tree'
 [ PHR_836_r102 ;
       ! phrase 1
       ! [1: if the indefinite mode is false , say ~let~]
-       if ((((indef_mode && true) == (0 && true)))) { say__p=1;ParaContent();  print (PrintText) SC_56;  .L_Say215; .L_SayX207;  }
+       if ((((indef_mode && true) == (0 && true)))) { say__p=1;ParaContent();  print (PrintText) SC_55;  .L_Say215; .L_SayX207;  }
       ! phrase 2
       ! [2: otherwise say ~el~]
        else { say__p=1;ParaContent();  print (PrintText) SC_36;  .L_Say216; .L_SayX208;  }
@@ -29260,7 +29275,7 @@ Verb meta 'tree'
 [ PHR_837_r103 ;
       ! phrase 1
       ! [1: if the indefinite mode is false , say ~len~]
-       if ((((indef_mode && true) == (0 && true)))) { say__p=1;ParaContent();  print (PrintText) SC_57;  .L_Say217; .L_SayX209;  }
+       if ((((indef_mode && true) == (0 && true)))) { say__p=1;ParaContent();  print (PrintText) SC_56;  .L_Say217; .L_SayX209;  }
       ! phrase 2
       ! [2: otherwise say ~el~]
        else { say__p=1;ParaContent();  print (PrintText) SC_36;  .L_Say218; .L_SayX210;  }
@@ -29272,7 +29287,7 @@ Verb meta 'tree'
 [ PHR_838_r104 ;
       ! phrase 1
       ! [1: if the indefinite mode is false , say ~len~]
-       if ((((indef_mode && true) == (0 && true)))) { say__p=1;ParaContent();  print (PrintText) SC_57;  .L_Say219; .L_SayX211;  }
+       if ((((indef_mode && true) == (0 && true)))) { say__p=1;ParaContent();  print (PrintText) SC_56;  .L_Say219; .L_SayX211;  }
       ! phrase 2
       ! [2: otherwise say ~mel~]
        else { say__p=1;ParaContent();  print (PrintText) SC_37;  .L_Say220; .L_SayX212;  }
@@ -29305,7 +29320,7 @@ Verb meta 'tree'
 [ PHR_841_r107 ;
       ! phrase 1
       ! [1: if the indefinite mode is false or the weak inflection is true , say ~da~]
-       if (((((indef_mode && true) == (0 && true)))) || (((((Global_Vars-->9) && true) == (1 && true))))) { say__p=1;ParaContent();  print (PrintText) SC_58;  .L_Say224; .L_SayX216;  }
+       if (((((indef_mode && true) == (0 && true)))) || (((((Global_Vars-->9) && true) == (1 && true))))) { say__p=1;ParaContent();  print (PrintText) SC_57;  .L_Say224; .L_SayX216;  }
       ! phrase 2
       ! [2: otherwise say ~t~]
        else { say__p=1;ParaContent();  print (PrintText) SC_34;  .L_Say225; .L_SayX217;  }
@@ -29317,7 +29332,7 @@ Verb meta 'tree'
 [ PHR_842_r108 ;
       ! phrase 1
       ! [1: if the indefinite mode is false or the weak inflection is true , say ~da~]
-       if (((((indef_mode && true) == (0 && true)))) || (((((Global_Vars-->9) && true) == (1 && true))))) { say__p=1;ParaContent();  print (PrintText) SC_58;  .L_Say226; .L_SayX218;  }
+       if (((((indef_mode && true) == (0 && true)))) || (((((Global_Vars-->9) && true) == (1 && true))))) { say__p=1;ParaContent();  print (PrintText) SC_57;  .L_Say226; .L_SayX218;  }
       ! phrase 2
       ! [2: otherwise say ~tt~]
        else { say__p=1;ParaContent();  print (PrintText) SC_38;  .L_Say227; .L_SayX219;  }
@@ -29329,7 +29344,7 @@ Verb meta 'tree'
 [ PHR_843_r109 ;
       ! phrase 1
       ! [1: if the indefinite mode is false or the weak inflection is true , say ~dda~]
-       if (((((indef_mode && true) == (0 && true)))) || (((((Global_Vars-->9) && true) == (1 && true))))) { say__p=1;ParaContent();  print (PrintText) SC_59;  .L_Say228; .L_SayX220;  }
+       if (((((indef_mode && true) == (0 && true)))) || (((((Global_Vars-->9) && true) == (1 && true))))) { say__p=1;ParaContent();  print (PrintText) SC_58;  .L_Say228; .L_SayX220;  }
       ! phrase 2
       ! [2: otherwise say ~tt~]
        else { say__p=1;ParaContent();  print (PrintText) SC_38;  .L_Say229; .L_SayX221;  }
@@ -29341,7 +29356,7 @@ Verb meta 'tree'
 [ PHR_844_r110 ;
       ! phrase 1
       ! [1: if the indefinite mode is false or the weak inflection is true , say ~de~]
-       if (((((indef_mode && true) == (0 && true)))) || (((((Global_Vars-->9) && true) == (1 && true))))) { say__p=1;ParaContent();  print (PrintText) SC_60;  .L_Say230; .L_SayX222;  }
+       if (((((indef_mode && true) == (0 && true)))) || (((((Global_Vars-->9) && true) == (1 && true))))) { say__p=1;ParaContent();  print (PrintText) SC_59;  .L_Say230; .L_SayX222;  }
       ! phrase 2
       ! [2: otherwise say ~t~]
        else { say__p=1;ParaContent();  print (PrintText) SC_34;  .L_Say231; .L_SayX223;  }
@@ -29353,7 +29368,7 @@ Verb meta 'tree'
 [ PHR_845_r111 ;
       ! phrase 1
       ! [1: if the indefinite mode is false or the weak inflection is true , say ~ma~]
-       if (((((indef_mode && true) == (0 && true)))) || (((((Global_Vars-->9) && true) == (1 && true))))) { say__p=1;ParaContent();  print (PrintText) SC_61;  .L_Say232; .L_SayX224;  }
+       if (((((indef_mode && true) == (0 && true)))) || (((((Global_Vars-->9) && true) == (1 && true))))) { say__p=1;ParaContent();  print (PrintText) SC_60;  .L_Say232; .L_SayX224;  }
    rfalse;
 ];
 ! Request 112: phrase nothing -> nothing
@@ -29362,7 +29377,7 @@ Verb meta 'tree'
 [ PHR_846_r112 ;
       ! phrase 1
       ! [1: if the indefinite mode is false or the weak inflection is true , say ~me~]
-       if (((((indef_mode && true) == (0 && true)))) || (((((Global_Vars-->9) && true) == (1 && true))))) { say__p=1;ParaContent();  print (PrintText) SC_62;  .L_Say233; .L_SayX225;  }
+       if (((((indef_mode && true) == (0 && true)))) || (((((Global_Vars-->9) && true) == (1 && true))))) { say__p=1;ParaContent();  print (PrintText) SC_61;  .L_Say233; .L_SayX225;  }
    rfalse;
 ];
 ! Request 113: phrase nothing -> nothing
@@ -29371,7 +29386,7 @@ Verb meta 'tree'
 [ PHR_847_r113 ;
       ! phrase 1
       ! [1: if the indefinite mode is false or the weak inflection is true , say ~ma~]
-       if (((((indef_mode && true) == (0 && true)))) || (((((Global_Vars-->9) && true) == (1 && true))))) { say__p=1;ParaContent();  print (PrintText) SC_61;  .L_Say234; .L_SayX226;  }
+       if (((((indef_mode && true) == (0 && true)))) || (((((Global_Vars-->9) && true) == (1 && true))))) { say__p=1;ParaContent();  print (PrintText) SC_60;  .L_Say234; .L_SayX226;  }
       ! phrase 2
       ! [2: otherwise say ~t~]
        else { say__p=1;ParaContent();  print (PrintText) SC_34;  .L_Say235; .L_SayX227;  }
@@ -29383,7 +29398,7 @@ Verb meta 'tree'
 [ PHR_848_r114 ;
       ! phrase 1
       ! [1: if the indefinite mode is false or the weak inflection is true , say ~na~]
-       if (((((indef_mode && true) == (0 && true)))) || (((((Global_Vars-->9) && true) == (1 && true))))) { say__p=1;ParaContent();  print (PrintText) SC_47;  .L_Say236; .L_SayX228;  }
+       if (((((indef_mode && true) == (0 && true)))) || (((((Global_Vars-->9) && true) == (1 && true))))) { say__p=1;ParaContent();  print (PrintText) SC_46;  .L_Say236; .L_SayX228;  }
       ! phrase 2
       ! [2: otherwise say ~t~]
        else { say__p=1;ParaContent();  print (PrintText) SC_34;  .L_Say237; .L_SayX229;  }
@@ -29410,7 +29425,7 @@ Verb meta 'tree'
        if (((((indef_mode && true) == (0 && true)))) || (((((Global_Vars-->9) && true) == (1 && true))))) { say__p=1;ParaContent();  print (PrintText) SC_33;  .L_Say240; .L_SayX232;  }
       ! phrase 2
       ! [2: otherwise say ~et~]
-       else { say__p=1;ParaContent();  print (PrintText) SC_39;  .L_Say241; .L_SayX233;  }
+       else { say__p=1;ParaContent();  print (PrintText) SC_30;  .L_Say241; .L_SayX233;  }
    rfalse;
 ];
 ! Request 117: phrase nothing -> nothing
@@ -29419,7 +29434,7 @@ Verb meta 'tree'
 [ PHR_851_r117 ;
       ! phrase 1
       ! [1: if the indefinite mode is false or the weak inflection is true , say ~na~]
-       if (((((indef_mode && true) == (0 && true)))) || (((((Global_Vars-->9) && true) == (1 && true))))) { say__p=1;ParaContent();  print (PrintText) SC_47;  .L_Say242; .L_SayX234;  }
+       if (((((indef_mode && true) == (0 && true)))) || (((((Global_Vars-->9) && true) == (1 && true))))) { say__p=1;ParaContent();  print (PrintText) SC_46;  .L_Say242; .L_SayX234;  }
       ! phrase 2
       ! [2: otherwise say ~en~]
        else { say__p=1;ParaContent();  print (PrintText) SC_29;  .L_Say243; .L_SayX235;  }
@@ -29431,7 +29446,7 @@ Verb meta 'tree'
 [ PHR_852_r118 ;
       ! phrase 1
       ! [1: if the indefinite mode is false or the weak inflection is true , say ~ne~]
-       if (((((indef_mode && true) == (0 && true)))) || (((((Global_Vars-->9) && true) == (1 && true))))) { say__p=1;ParaContent();  print (PrintText) SC_63;  .L_Say244; .L_SayX236;  }
+       if (((((indef_mode && true) == (0 && true)))) || (((((Global_Vars-->9) && true) == (1 && true))))) { say__p=1;ParaContent();  print (PrintText) SC_62;  .L_Say244; .L_SayX236;  }
       ! phrase 2
       ! [2: otherwise say ~en~]
        else { say__p=1;ParaContent();  print (PrintText) SC_29;  .L_Say245; .L_SayX237;  }
@@ -29443,10 +29458,10 @@ Verb meta 'tree'
 [ PHR_853_r119 ;
       ! phrase 1
       ! [1: if the indefinite mode is false or the weak inflection is true , say ~na~]
-       if (((((indef_mode && true) == (0 && true)))) || (((((Global_Vars-->9) && true) == (1 && true))))) { say__p=1;ParaContent();  print (PrintText) SC_47;  .L_Say246; .L_SayX238;  }
+       if (((((indef_mode && true) == (0 && true)))) || (((((Global_Vars-->9) && true) == (1 && true))))) { say__p=1;ParaContent();  print (PrintText) SC_46;  .L_Say246; .L_SayX238;  }
       ! phrase 2
       ! [2: otherwise say ~et~]
-       else { say__p=1;ParaContent();  print (PrintText) SC_39;  .L_Say247; .L_SayX239;  }
+       else { say__p=1;ParaContent();  print (PrintText) SC_30;  .L_Say247; .L_SayX239;  }
    rfalse;
 ];
 ! Request 120: phrase nothing -> nothing
@@ -29455,7 +29470,7 @@ Verb meta 'tree'
 [ PHR_854_r120 ;
       ! phrase 1
       ! [1: if the indefinite mode is false or the weak inflection is true , say ~ra~]
-       if (((((indef_mode && true) == (0 && true)))) || (((((Global_Vars-->9) && true) == (1 && true))))) { say__p=1;ParaContent();  print (PrintText) SC_64;  .L_Say248; .L_SayX240;  }
+       if (((((indef_mode && true) == (0 && true)))) || (((((Global_Vars-->9) && true) == (1 && true))))) { say__p=1;ParaContent();  print (PrintText) SC_63;  .L_Say248; .L_SayX240;  }
       ! phrase 2
       ! [2: otherwise say ~er~]
        else { say__p=1;ParaContent();  print (PrintText) SC_35;  .L_Say249; .L_SayX241;  }
@@ -29467,7 +29482,7 @@ Verb meta 'tree'
 [ PHR_855_r121 ;
       ! phrase 1
       ! [1: if the indefinite mode is false or the weak inflection is true , say ~re~]
-       if (((((indef_mode && true) == (0 && true)))) || (((((Global_Vars-->9) && true) == (1 && true))))) { say__p=1;ParaContent();  print (PrintText) SC_65;  .L_Say250; .L_SayX242;  }
+       if (((((indef_mode && true) == (0 && true)))) || (((((Global_Vars-->9) && true) == (1 && true))))) { say__p=1;ParaContent();  print (PrintText) SC_64;  .L_Say250; .L_SayX242;  }
       ! phrase 2
       ! [2: otherwise say ~er~]
        else { say__p=1;ParaContent();  print (PrintText) SC_35;  .L_Say251; .L_SayX243;  }
@@ -29479,10 +29494,10 @@ Verb meta 'tree'
 [ PHR_856_r122 ;
       ! phrase 1
       ! [1: if the indefinite mode is false or the weak inflection is true , say ~ra~]
-       if (((((indef_mode && true) == (0 && true)))) || (((((Global_Vars-->9) && true) == (1 && true))))) { say__p=1;ParaContent();  print (PrintText) SC_64;  .L_Say252; .L_SayX244;  }
+       if (((((indef_mode && true) == (0 && true)))) || (((((Global_Vars-->9) && true) == (1 && true))))) { say__p=1;ParaContent();  print (PrintText) SC_63;  .L_Say252; .L_SayX244;  }
       ! phrase 2
       ! [2: otherwise say ~ert~]
-       else { say__p=1;ParaContent();  print (PrintText) SC_40;  .L_Say253; .L_SayX245;  }
+       else { say__p=1;ParaContent();  print (PrintText) SC_39;  .L_Say253; .L_SayX245;  }
    rfalse;
 ];
 ! Request 123: phrase nothing -> nothing
@@ -29491,7 +29506,7 @@ Verb meta 'tree'
 [ PHR_857_r123 ;
       ! phrase 1
       ! [1: if the indefinite mode is false or the weak inflection is true , say ~la~]
-       if (((((indef_mode && true) == (0 && true)))) || (((((Global_Vars-->9) && true) == (1 && true))))) { say__p=1;ParaContent();  print (PrintText) SC_66;  .L_Say254; .L_SayX246;  }
+       if (((((indef_mode && true) == (0 && true)))) || (((((Global_Vars-->9) && true) == (1 && true))))) { say__p=1;ParaContent();  print (PrintText) SC_65;  .L_Say254; .L_SayX246;  }
       ! phrase 2
       ! [2: otherwise say ~el~]
        else { say__p=1;ParaContent();  print (PrintText) SC_36;  .L_Say255; .L_SayX247;  }
@@ -29503,7 +29518,7 @@ Verb meta 'tree'
 [ PHR_858_r124 ;
       ! phrase 1
       ! [1: if the indefinite mode is false or the weak inflection is true , say ~le~]
-       if (((((indef_mode && true) == (0 && true)))) || (((((Global_Vars-->9) && true) == (1 && true))))) { say__p=1;ParaContent();  print (PrintText) SC_67;  .L_Say256; .L_SayX248;  }
+       if (((((indef_mode && true) == (0 && true)))) || (((((Global_Vars-->9) && true) == (1 && true))))) { say__p=1;ParaContent();  print (PrintText) SC_66;  .L_Say256; .L_SayX248;  }
       ! phrase 2
       ! [2: otherwise say ~el~]
        else { say__p=1;ParaContent();  print (PrintText) SC_36;  .L_Say257; .L_SayX249;  }
@@ -29515,10 +29530,10 @@ Verb meta 'tree'
 [ PHR_859_r125 ;
       ! phrase 1
       ! [1: if the indefinite mode is false or the weak inflection is true , say ~la~]
-       if (((((indef_mode && true) == (0 && true)))) || (((((Global_Vars-->9) && true) == (1 && true))))) { say__p=1;ParaContent();  print (PrintText) SC_66;  .L_Say258; .L_SayX250;  }
+       if (((((indef_mode && true) == (0 && true)))) || (((((Global_Vars-->9) && true) == (1 && true))))) { say__p=1;ParaContent();  print (PrintText) SC_65;  .L_Say258; .L_SayX250;  }
       ! phrase 2
       ! [2: otherwise say ~elt~]
-       else { say__p=1;ParaContent();  print (PrintText) SC_41;  .L_Say259; .L_SayX251;  }
+       else { say__p=1;ParaContent();  print (PrintText) SC_40;  .L_Say259; .L_SayX251;  }
    rfalse;
 ];
 ! Request 126: phrase nothing -> nothing
@@ -29527,10 +29542,10 @@ Verb meta 'tree'
 [ PHR_860_r126 ;
       ! phrase 1
       ! [1: if the indefinite mode is false or the weak inflection is true , say ~la~]
-       if (((((indef_mode && true) == (0 && true)))) || (((((Global_Vars-->9) && true) == (1 && true))))) { say__p=1;ParaContent();  print (PrintText) SC_66;  .L_Say260; .L_SayX252;  }
+       if (((((indef_mode && true) == (0 && true)))) || (((((Global_Vars-->9) && true) == (1 && true))))) { say__p=1;ParaContent();  print (PrintText) SC_65;  .L_Say260; .L_SayX252;  }
       ! phrase 2
       ! [2: otherwise say ~mal~]
-       else { say__p=1;ParaContent();  print (PrintText) SC_42;  .L_Say261; .L_SayX253;  }
+       else { say__p=1;ParaContent();  print (PrintText) SC_41;  .L_Say261; .L_SayX253;  }
    rfalse;
 ];
 ! Request 127: phrase nothing -> nothing
@@ -29539,10 +29554,10 @@ Verb meta 'tree'
 [ PHR_861_r127 ;
       ! phrase 1
       ! [1: if the indefinite mode is false or the weak inflection is true , say ~le~]
-       if (((((indef_mode && true) == (0 && true)))) || (((((Global_Vars-->9) && true) == (1 && true))))) { say__p=1;ParaContent();  print (PrintText) SC_67;  .L_Say262; .L_SayX254;  }
+       if (((((indef_mode && true) == (0 && true)))) || (((((Global_Vars-->9) && true) == (1 && true))))) { say__p=1;ParaContent();  print (PrintText) SC_66;  .L_Say262; .L_SayX254;  }
       ! phrase 2
       ! [2: otherwise say ~mal~]
-       else { say__p=1;ParaContent();  print (PrintText) SC_42;  .L_Say263; .L_SayX255;  }
+       else { say__p=1;ParaContent();  print (PrintText) SC_41;  .L_Say263; .L_SayX255;  }
    rfalse;
 ];
 ! Request 128: phrase nothing -> nothing
@@ -29551,10 +29566,10 @@ Verb meta 'tree'
 [ PHR_862_r128 ;
       ! phrase 1
       ! [1: if the indefinite mode is false or the weak inflection is true , say ~la~]
-       if (((((indef_mode && true) == (0 && true)))) || (((((Global_Vars-->9) && true) == (1 && true))))) { say__p=1;ParaContent();  print (PrintText) SC_66;  .L_Say264; .L_SayX256;  }
+       if (((((indef_mode && true) == (0 && true)))) || (((((Global_Vars-->9) && true) == (1 && true))))) { say__p=1;ParaContent();  print (PrintText) SC_65;  .L_Say264; .L_SayX256;  }
       ! phrase 2
       ! [2: otherwise say ~malt~]
-       else { say__p=1;ParaContent();  print (PrintText) SC_43;  .L_Say265; .L_SayX257;  }
+       else { say__p=1;ParaContent();  print (PrintText) SC_42;  .L_Say265; .L_SayX257;  }
    rfalse;
 ];
 ! Request 129: phrase nothing -> nothing
@@ -29563,10 +29578,10 @@ Verb meta 'tree'
 [ PHR_863_r129 ;
       ! phrase 1
       ! [1: if the indefinite mode is false or the weak inflection is true , say ~lla~]
-       if (((((indef_mode && true) == (0 && true)))) || (((((Global_Vars-->9) && true) == (1 && true))))) { say__p=1;ParaContent();  print (PrintText) SC_68;  .L_Say266; .L_SayX258;  }
+       if (((((indef_mode && true) == (0 && true)))) || (((((Global_Vars-->9) && true) == (1 && true))))) { say__p=1;ParaContent();  print (PrintText) SC_67;  .L_Say266; .L_SayX258;  }
       ! phrase 2
       ! [2: otherwise say ~ten~]
-       else { say__p=1;ParaContent();  print (PrintText) SC_44;  .L_Say267; .L_SayX259;  }
+       else { say__p=1;ParaContent();  print (PrintText) SC_43;  .L_Say267; .L_SayX259;  }
    rfalse;
 ];
 ! Request 130: phrase nothing -> nothing
@@ -29575,10 +29590,10 @@ Verb meta 'tree'
 [ PHR_864_r130 ;
       ! phrase 1
       ! [1: if the indefinite mode is false or the weak inflection is true , say ~lle~]
-       if (((((indef_mode && true) == (0 && true)))) || (((((Global_Vars-->9) && true) == (1 && true))))) { say__p=1;ParaContent();  print (PrintText) SC_69;  .L_Say268; .L_SayX260;  }
+       if (((((indef_mode && true) == (0 && true)))) || (((((Global_Vars-->9) && true) == (1 && true))))) { say__p=1;ParaContent();  print (PrintText) SC_68;  .L_Say268; .L_SayX260;  }
       ! phrase 2
       ! [2: otherwise say ~ten~]
-       else { say__p=1;ParaContent();  print (PrintText) SC_44;  .L_Say269; .L_SayX261;  }
+       else { say__p=1;ParaContent();  print (PrintText) SC_43;  .L_Say269; .L_SayX261;  }
    rfalse;
 ];
 ! Request 131: phrase nothing -> nothing
@@ -29587,10 +29602,10 @@ Verb meta 'tree'
 [ PHR_865_r131 ;
       ! phrase 1
       ! [1: if the indefinite mode is false or the weak inflection is true , say ~lla~]
-       if (((((indef_mode && true) == (0 && true)))) || (((((Global_Vars-->9) && true) == (1 && true))))) { say__p=1;ParaContent();  print (PrintText) SC_68;  .L_Say270; .L_SayX262;  }
+       if (((((indef_mode && true) == (0 && true)))) || (((((Global_Vars-->9) && true) == (1 && true))))) { say__p=1;ParaContent();  print (PrintText) SC_67;  .L_Say270; .L_SayX262;  }
       ! phrase 2
       ! [2: otherwise say ~tet~]
-       else { say__p=1;ParaContent();  print (PrintText) SC_45;  .L_Say271; .L_SayX263;  }
+       else { say__p=1;ParaContent();  print (PrintText) SC_44;  .L_Say271; .L_SayX263;  }
    rfalse;
 ];
 ! Request 132: phrase nothing -> nothing
@@ -29599,10 +29614,10 @@ Verb meta 'tree'
 [ PHR_866_r132 ;
       ! phrase 1
       ! [1: if the indefinite mode is false or the weak inflection is true , say ~lilla~]
-       if (((((indef_mode && true) == (0 && true)))) || (((((Global_Vars-->9) && true) == (1 && true))))) { say__p=1;ParaContent();  print (PrintText) SC_201;  .L_Say272; .L_SayX264;  }
+       if (((((indef_mode && true) == (0 && true)))) || (((((Global_Vars-->9) && true) == (1 && true))))) { say__p=1;ParaContent();  print (PrintText) SC_200;  .L_Say272; .L_SayX264;  }
       ! phrase 2
       ! [2: otherwise say ~liten~]
-       else { say__p=1;ParaContent();  print (PrintText) SC_195;  .L_Say273; .L_SayX265;  }
+       else { say__p=1;ParaContent();  print (PrintText) SC_194;  .L_Say273; .L_SayX265;  }
    rfalse;
 ];
 ! Request 133: phrase nothing -> nothing
@@ -29611,10 +29626,10 @@ Verb meta 'tree'
 [ PHR_867_r133 ;
       ! phrase 1
       ! [1: if the indefinite mode is false or the weak inflection is true , say ~lille~]
-       if (((((indef_mode && true) == (0 && true)))) || (((((Global_Vars-->9) && true) == (1 && true))))) { say__p=1;ParaContent();  print (PrintText) SC_202;  .L_Say274; .L_SayX266;  }
+       if (((((indef_mode && true) == (0 && true)))) || (((((Global_Vars-->9) && true) == (1 && true))))) { say__p=1;ParaContent();  print (PrintText) SC_201;  .L_Say274; .L_SayX266;  }
       ! phrase 2
       ! [2: otherwise say ~liten~]
-       else { say__p=1;ParaContent();  print (PrintText) SC_195;  .L_Say275; .L_SayX267;  }
+       else { say__p=1;ParaContent();  print (PrintText) SC_194;  .L_Say275; .L_SayX267;  }
    rfalse;
 ];
 ! Request 134: phrase nothing -> nothing
@@ -29623,10 +29638,10 @@ Verb meta 'tree'
 [ PHR_868_r134 ;
       ! phrase 1
       ! [1: if the indefinite mode is false or the weak inflection is true , say ~lilla~]
-       if (((((indef_mode && true) == (0 && true)))) || (((((Global_Vars-->9) && true) == (1 && true))))) { say__p=1;ParaContent();  print (PrintText) SC_201;  .L_Say276; .L_SayX268;  }
+       if (((((indef_mode && true) == (0 && true)))) || (((((Global_Vars-->9) && true) == (1 && true))))) { say__p=1;ParaContent();  print (PrintText) SC_200;  .L_Say276; .L_SayX268;  }
       ! phrase 2
       ! [2: otherwise say ~litet~]
-       else { say__p=1;ParaContent();  print (PrintText) SC_196;  .L_Say277; .L_SayX269;  }
+       else { say__p=1;ParaContent();  print (PrintText) SC_195;  .L_Say277; .L_SayX269;  }
    rfalse;
 ];
 ! Request 135: phrase object -> nothing
@@ -29679,7 +29694,7 @@ Verb meta 'tree'
        if ((((Adj_31_t1_v9(t_0)))))  {
          ! phrase 3
          ! [3: say ~ma~]
-         say__p=1;ParaContent();  print (PrintText) SC_61;  .L_Say281; .L_SayX273;
+         say__p=1;ParaContent();  print (PrintText) SC_60;  .L_Say281; .L_SayX273;
          ! phrase 4
          ! [4: otherwise if the item is neuter]
           } else if ((((Adj_69_t1_v9(t_0))))) { 
@@ -29781,7 +29796,7 @@ Verb meta 'tree'
        if ((((Adj_31_t1_v9(t_0)))))  {
          ! phrase 3
          ! [3: say ~da~]
-         say__p=1;ParaContent();  print (PrintText) SC_58;  .L_Say289; .L_SayX281;
+         say__p=1;ParaContent();  print (PrintText) SC_57;  .L_Say289; .L_SayX281;
          ! phrase 4
          ! [4: otherwise if the item is neuter]
           } else if ((((Adj_69_t1_v9(t_0))))) { 
@@ -29794,7 +29809,7 @@ Verb meta 'tree'
 
          ! phrase 7
          ! [7: say ~d~]
-         say__p=1;ParaContent();  print (PrintText) SC_203;  .L_Say291; .L_SayX283;
+         say__p=1;ParaContent();  print (PrintText) SC_202;  .L_Say291; .L_SayX283;
          ! phrase 8
          ! [8: end if]
          }
@@ -29824,7 +29839,7 @@ Verb meta 'tree'
        if ((((Adj_31_t1_v9(t_0)))))  {
          ! phrase 3
          ! [3: say ~da~]
-         say__p=1;ParaContent();  print (PrintText) SC_58;  .L_Say293; .L_SayX285;
+         say__p=1;ParaContent();  print (PrintText) SC_57;  .L_Say293; .L_SayX285;
          ! phrase 4
          ! [4: otherwise if the item is neuter]
           } else if ((((Adj_69_t1_v9(t_0))))) { 
@@ -29837,7 +29852,7 @@ Verb meta 'tree'
 
          ! phrase 7
          ! [7: say ~d~]
-         say__p=1;ParaContent();  print (PrintText) SC_203;  .L_Say295; .L_SayX287;
+         say__p=1;ParaContent();  print (PrintText) SC_202;  .L_Say295; .L_SayX287;
          ! phrase 8
          ! [8: end if]
          }
@@ -29867,7 +29882,7 @@ Verb meta 'tree'
        if ((((Adj_31_t1_v9(t_0)))))  {
          ! phrase 3
          ! [3: say ~dda~]
-         say__p=1;ParaContent();  print (PrintText) SC_59;  .L_Say297; .L_SayX289;
+         say__p=1;ParaContent();  print (PrintText) SC_58;  .L_Say297; .L_SayX289;
          ! phrase 4
          ! [4: otherwise if the item is neuter]
           } else if ((((Adj_69_t1_v9(t_0))))) { 
@@ -29880,7 +29895,7 @@ Verb meta 'tree'
 
          ! phrase 7
          ! [7: say ~dd~]
-         say__p=1;ParaContent();  print (PrintText) SC_204;  .L_Say299; .L_SayX291;
+         say__p=1;ParaContent();  print (PrintText) SC_203;  .L_Say299; .L_SayX291;
          ! phrase 8
          ! [8: end if]
          }
@@ -29940,7 +29955,7 @@ Verb meta 'tree'
        if ((((Adj_31_t1_v9(t_0)))))  {
          ! phrase 3
          ! [3: say ~na~]
-         say__p=1;ParaContent();  print (PrintText) SC_47;  .L_Say303; .L_SayX295;
+         say__p=1;ParaContent();  print (PrintText) SC_46;  .L_Say303; .L_SayX295;
          ! phrase 4
          ! [4: otherwise if the item is neuter]
           } else if ((((Adj_69_t1_v9(t_0))))) { 
@@ -29953,7 +29968,7 @@ Verb meta 'tree'
 
          ! phrase 7
          ! [7: say ~n~]
-         say__p=1;ParaContent();  print (PrintText) SC_46;  .L_Say305; .L_SayX297;
+         say__p=1;ParaContent();  print (PrintText) SC_45;  .L_Say305; .L_SayX297;
          ! phrase 8
          ! [8: end if]
          }
@@ -29983,13 +29998,13 @@ Verb meta 'tree'
        if ((((Adj_31_t1_v9(t_0)))))  {
          ! phrase 3
          ! [3: say ~na~]
-         say__p=1;ParaContent();  print (PrintText) SC_47;  .L_Say307; .L_SayX299;
+         say__p=1;ParaContent();  print (PrintText) SC_46;  .L_Say307; .L_SayX299;
          ! phrase 4
          ! [4: otherwise if the item is neuter]
           } else if ((((Adj_69_t1_v9(t_0))))) { 
          ! phrase 5
          ! [5: say ~et~]
-         say__p=1;ParaContent();  print (PrintText) SC_39;  .L_Say308; .L_SayX300;
+         say__p=1;ParaContent();  print (PrintText) SC_30;  .L_Say308; .L_SayX300;
          ! phrase 6
          ! [6: otherwise]
          } else {
@@ -30032,7 +30047,7 @@ Verb meta 'tree'
           } else if ((((Adj_69_t1_v9(t_0))))) { 
          ! phrase 5
          ! [5: say ~et~]
-         say__p=1;ParaContent();  print (PrintText) SC_39;  .L_Say312; .L_SayX304;
+         say__p=1;ParaContent();  print (PrintText) SC_30;  .L_Say312; .L_SayX304;
          ! phrase 6
          ! [6: otherwise]
          } else {
@@ -30069,20 +30084,20 @@ Verb meta 'tree'
        if ((((Adj_31_t1_v9(t_0)))))  {
          ! phrase 3
          ! [3: say ~lla~]
-         say__p=1;ParaContent();  print (PrintText) SC_68;  .L_Say315; .L_SayX307;
+         say__p=1;ParaContent();  print (PrintText) SC_67;  .L_Say315; .L_SayX307;
          ! phrase 4
          ! [4: otherwise if the item is neuter]
           } else if ((((Adj_69_t1_v9(t_0))))) { 
          ! phrase 5
          ! [5: say ~tet~]
-         say__p=1;ParaContent();  print (PrintText) SC_45;  .L_Say316; .L_SayX308;
+         say__p=1;ParaContent();  print (PrintText) SC_44;  .L_Say316; .L_SayX308;
          ! phrase 6
          ! [6: otherwise]
          } else {
 
          ! phrase 7
          ! [7: say ~ten~]
-         say__p=1;ParaContent();  print (PrintText) SC_44;  .L_Say317; .L_SayX309;
+         say__p=1;ParaContent();  print (PrintText) SC_43;  .L_Say317; .L_SayX309;
          ! phrase 8
          ! [8: end if]
          }
@@ -30112,20 +30127,20 @@ Verb meta 'tree'
        if ((((Adj_31_t1_v9(t_0)))))  {
          ! phrase 3
          ! [3: say ~lilla~]
-         say__p=1;ParaContent();  print (PrintText) SC_201;  .L_Say319; .L_SayX311;
+         say__p=1;ParaContent();  print (PrintText) SC_200;  .L_Say319; .L_SayX311;
          ! phrase 4
          ! [4: otherwise if the item is neuter]
           } else if ((((Adj_69_t1_v9(t_0))))) { 
          ! phrase 5
          ! [5: say ~litet~]
-         say__p=1;ParaContent();  print (PrintText) SC_196;  .L_Say320; .L_SayX312;
+         say__p=1;ParaContent();  print (PrintText) SC_195;  .L_Say320; .L_SayX312;
          ! phrase 6
          ! [6: otherwise]
          } else {
 
          ! phrase 7
          ! [7: say ~liten~]
-         say__p=1;ParaContent();  print (PrintText) SC_195;  .L_Say321; .L_SayX313;
+         say__p=1;ParaContent();  print (PrintText) SC_194;  .L_Say321; .L_SayX313;
          ! phrase 8
          ! [8: end if]
          }
@@ -30155,20 +30170,20 @@ Verb meta 'tree'
        if ((((Adj_31_t1_v9(t_0)))))  {
          ! phrase 3
          ! [3: say ~små~]
-         say__p=1;ParaContent();  print (PrintText) SC_194;  .L_Say323; .L_SayX315;
+         say__p=1;ParaContent();  print (PrintText) SC_193;  .L_Say323; .L_SayX315;
          ! phrase 4
          ! [4: otherwise if the item is neuter]
           } else if ((((Adj_69_t1_v9(t_0))))) { 
          ! phrase 5
          ! [5: say ~litet~]
-         say__p=1;ParaContent();  print (PrintText) SC_196;  .L_Say324; .L_SayX316;
+         say__p=1;ParaContent();  print (PrintText) SC_195;  .L_Say324; .L_SayX316;
          ! phrase 6
          ! [6: otherwise]
          } else {
 
          ! phrase 7
          ! [7: say ~liten~]
-         say__p=1;ParaContent();  print (PrintText) SC_195;  .L_Say325; .L_SayX317;
+         say__p=1;ParaContent();  print (PrintText) SC_194;  .L_Say325; .L_SayX317;
          ! phrase 8
          ! [8: end if]
          }
@@ -30198,13 +30213,13 @@ Verb meta 'tree'
        if ((((Adj_31_t1_v9(t_0)))))  {
          ! phrase 3
          ! [3: say ~ra~]
-         say__p=1;ParaContent();  print (PrintText) SC_64;  .L_Say327; .L_SayX319;
+         say__p=1;ParaContent();  print (PrintText) SC_63;  .L_Say327; .L_SayX319;
          ! phrase 4
          ! [4: otherwise if the item is neuter]
           } else if ((((Adj_69_t1_v9(t_0))))) { 
          ! phrase 5
          ! [5: say ~ert~]
-         say__p=1;ParaContent();  print (PrintText) SC_40;  .L_Say328; .L_SayX320;
+         say__p=1;ParaContent();  print (PrintText) SC_39;  .L_Say328; .L_SayX320;
          ! phrase 6
          ! [6: otherwise]
          } else {
@@ -30241,13 +30256,13 @@ Verb meta 'tree'
        if ((((Adj_31_t1_v9(t_0)))))  {
          ! phrase 3
          ! [3: say ~la~]
-         say__p=1;ParaContent();  print (PrintText) SC_66;  .L_Say331; .L_SayX323;
+         say__p=1;ParaContent();  print (PrintText) SC_65;  .L_Say331; .L_SayX323;
          ! phrase 4
          ! [4: otherwise if the item is neuter]
           } else if ((((Adj_69_t1_v9(t_0))))) { 
          ! phrase 5
          ! [5: say ~elt~]
-         say__p=1;ParaContent();  print (PrintText) SC_41;  .L_Say332; .L_SayX324;
+         say__p=1;ParaContent();  print (PrintText) SC_40;  .L_Say332; .L_SayX324;
          ! phrase 6
          ! [6: otherwise]
          } else {
@@ -30284,20 +30299,20 @@ Verb meta 'tree'
        if ((((Adj_31_t1_v9(t_0)))))  {
          ! phrase 3
          ! [3: say ~la~]
-         say__p=1;ParaContent();  print (PrintText) SC_66;  .L_Say335; .L_SayX327;
+         say__p=1;ParaContent();  print (PrintText) SC_65;  .L_Say335; .L_SayX327;
          ! phrase 4
          ! [4: otherwise if the item is neuter]
           } else if ((((Adj_69_t1_v9(t_0))))) { 
          ! phrase 5
          ! [5: say ~malt~]
-         say__p=1;ParaContent();  print (PrintText) SC_43;  .L_Say336; .L_SayX328;
+         say__p=1;ParaContent();  print (PrintText) SC_42;  .L_Say336; .L_SayX328;
          ! phrase 6
          ! [6: otherwise]
          } else {
 
          ! phrase 7
          ! [7: say ~mal~]
-         say__p=1;ParaContent();  print (PrintText) SC_42;  .L_Say337; .L_SayX329;
+         say__p=1;ParaContent();  print (PrintText) SC_41;  .L_Say337; .L_SayX329;
          ! phrase 8
          ! [8: end if]
          }
@@ -30327,7 +30342,7 @@ Verb meta 'tree'
        if ((((Adj_31_t1_v9(t_0)))))  {
          ! phrase 3
          ! [3: say ~de~]
-         say__p=1;ParaContent();  print (PrintText) SC_60;  .L_Say339; .L_SayX331;
+         say__p=1;ParaContent();  print (PrintText) SC_59;  .L_Say339; .L_SayX331;
          ! phrase 4
          ! [4: otherwise if the item is neuter]
           } else if ((((Adj_69_t1_v9(t_0))))) { 
@@ -30340,7 +30355,7 @@ Verb meta 'tree'
 
          ! phrase 7
          ! [7: say ~d~]
-         say__p=1;ParaContent();  print (PrintText) SC_203;  .L_Say341; .L_SayX333;
+         say__p=1;ParaContent();  print (PrintText) SC_202;  .L_Say341; .L_SayX333;
          ! phrase 8
          ! [8: end if]
          }
@@ -30367,7 +30382,7 @@ Verb meta 'tree'
        (Global_Vars-->10) = t_0; 
       ! phrase 2
       ! [2: if the item is male and the item is not plural-named , say ~e~]
-       if (((((Adj_68_t1_v9(t_0))))) && (((~~(((Adj_31_t1_v9(t_0)))))))) { say__p=1;ParaContent();  print (PrintText) SC_49;  .L_Say343; .L_SayX335;  }
+       if (((((Adj_68_t1_v9(t_0))))) && (((~~(((Adj_31_t1_v9(t_0)))))))) { say__p=1;ParaContent();  print (PrintText) SC_48;  .L_Say343; .L_SayX335;  }
       ! phrase 3
       ! [3: otherwise say ~a~]
        else { say__p=1;ParaContent();  print (PrintText) SC_33;  .L_Say344; .L_SayX336;  }
@@ -30396,7 +30411,7 @@ Verb meta 'tree'
        if ((((Adj_31_t1_v9(t_0)))))  {
          ! phrase 3
          ! [3: say ~na~]
-         say__p=1;ParaContent();  print (PrintText) SC_47;  .L_Say346; .L_SayX338;
+         say__p=1;ParaContent();  print (PrintText) SC_46;  .L_Say346; .L_SayX338;
          ! phrase 4
          ! [4: otherwise if the item is neuter]
           } else if ((((Adj_69_t1_v9(t_0))))) { 
@@ -30409,7 +30424,7 @@ Verb meta 'tree'
 
          ! phrase 7
          ! [7: say ~n~]
-         say__p=1;ParaContent();  print (PrintText) SC_46;  .L_Say348; .L_SayX340;
+         say__p=1;ParaContent();  print (PrintText) SC_45;  .L_Say348; .L_SayX340;
          ! phrase 8
          ! [8: end if]
          }
@@ -30445,14 +30460,14 @@ Verb meta 'tree'
           } else if ((((Adj_69_t1_v9(t_0))))) { 
          ! phrase 5
          ! [5: say ~at~]
-         say__p=1;ParaContent();  print (PrintText) SC_205;  .L_Say351; .L_SayX343;
+         say__p=1;ParaContent();  print (PrintText) SC_204;  .L_Say351; .L_SayX343;
          ! phrase 6
          ! [6: otherwise]
          } else {
 
          ! phrase 7
          ! [7: say ~an~]
-         say__p=1;ParaContent();  print (PrintText) SC_206;  .L_Say352; .L_SayX344;
+         say__p=1;ParaContent();  print (PrintText) SC_205;  .L_Say352; .L_SayX344;
          ! phrase 8
          ! [8: end if]
          }
@@ -30482,20 +30497,20 @@ Verb meta 'tree'
        if ((((Adj_31_t1_v9(t_0)))))  {
          ! phrase 3
          ! [3: say ~dra~]
-         say__p=1;ParaContent();  print (PrintText) SC_207;  .L_Say354; .L_SayX346;
+         say__p=1;ParaContent();  print (PrintText) SC_206;  .L_Say354; .L_SayX346;
          ! phrase 4
          ! [4: otherwise if the item is neuter]
           } else if ((((Adj_69_t1_v9(t_0))))) { 
          ! phrase 5
          ! [5: say ~nat~]
-         say__p=1;ParaContent();  print (PrintText) SC_208;  .L_Say355; .L_SayX347;
+         say__p=1;ParaContent();  print (PrintText) SC_207;  .L_Say355; .L_SayX347;
          ! phrase 6
          ! [6: otherwise]
          } else {
 
          ! phrase 7
          ! [7: say ~nan~]
-         say__p=1;ParaContent();  print (PrintText) SC_209;  .L_Say356; .L_SayX348;
+         say__p=1;ParaContent();  print (PrintText) SC_208;  .L_Say356; .L_SayX348;
          ! phrase 8
          ! [8: end if]
          }
@@ -30538,7 +30553,7 @@ Verb meta 'tree'
 
          ! phrase 7
          ! [7: say ~n~]
-         say__p=1;ParaContent();  print (PrintText) SC_46;  .L_Say360; .L_SayX352;
+         say__p=1;ParaContent();  print (PrintText) SC_45;  .L_Say360; .L_SayX352;
          ! phrase 8
          ! [8: end if]
          }
@@ -30568,7 +30583,7 @@ Verb meta 'tree'
        if ((((Adj_31_t1_v9(t_0)))))  {
          ! phrase 3
          ! [3: say ~m~]
-         say__p=1;ParaContent();  print (PrintText) SC_210;  .L_Say362; .L_SayX354;
+         say__p=1;ParaContent();  print (PrintText) SC_209;  .L_Say362; .L_SayX354;
          ! phrase 4
          ! [4: otherwise if the item is neuter]
           } else if ((((Adj_69_t1_v9(t_0))))) { 
@@ -30581,7 +30596,7 @@ Verb meta 'tree'
 
          ! phrase 7
          ! [7: say ~n~]
-         say__p=1;ParaContent();  print (PrintText) SC_46;  .L_Say364; .L_SayX356;
+         say__p=1;ParaContent();  print (PrintText) SC_45;  .L_Say364; .L_SayX356;
          ! phrase 8
          ! [8: end if]
          }
@@ -30611,13 +30626,13 @@ Verb meta 'tree'
        if ((((Adj_31_t1_v9(t_0)))))  {
          ! phrase 3
          ! [3: say ~om~]
-         say__p=1;ParaContent();  print (PrintText) SC_211;  .L_Say366; .L_SayX358;
+         say__p=1;ParaContent();  print (PrintText) SC_210;  .L_Say366; .L_SayX358;
          ! phrase 4
          ! [4: otherwise if the item is neuter]
           } else if ((((Adj_69_t1_v9(t_0))))) { 
          ! phrase 5
          ! [5: say ~et~]
-         say__p=1;ParaContent();  print (PrintText) SC_39;  .L_Say367; .L_SayX359;
+         say__p=1;ParaContent();  print (PrintText) SC_30;  .L_Say367; .L_SayX359;
          ! phrase 6
          ! [6: otherwise]
          } else {
@@ -30703,14 +30718,14 @@ Verb meta 'tree'
           } else if ((((Adj_69_t1_v9(t_0))))) { 
          ! phrase 5
          ! [5: say ~Det~]
-         say__p=1;ParaContent();  print (PrintText) SC_212;  .L_Say375; .L_SayX367;
+         say__p=1;ParaContent();  print (PrintText) SC_211;  .L_Say375; .L_SayX367;
          ! phrase 6
          ! [6: otherwise]
          } else {
 
          ! phrase 7
          ! [7: say ~Den~]
-         say__p=1;ParaContent();  print (PrintText) SC_213;  .L_Say376; .L_SayX368;
+         say__p=1;ParaContent();  print (PrintText) SC_212;  .L_Say376; .L_SayX368;
          ! phrase 8
          ! [8: end if]
          }
@@ -30789,14 +30804,14 @@ Verb meta 'tree'
           } else if ((((Adj_69_t1_v9(t_0))))) { 
          ! phrase 5
          ! [5: say ~Det~]
-         say__p=1;ParaContent();  print (PrintText) SC_212;  .L_Say383; .L_SayX375;
+         say__p=1;ParaContent();  print (PrintText) SC_211;  .L_Say383; .L_SayX375;
          ! phrase 6
          ! [6: otherwise]
          } else {
 
          ! phrase 7
          ! [7: say ~Den~]
-         say__p=1;ParaContent();  print (PrintText) SC_213;  .L_Say384; .L_SayX376;
+         say__p=1;ParaContent();  print (PrintText) SC_212;  .L_Say384; .L_SayX376;
          ! phrase 8
          ! [8: end if]
          }
@@ -30875,14 +30890,14 @@ Verb meta 'tree'
           } else if ((((Adj_69_t1_v9(t_0))))) { 
          ! phrase 5
          ! [5: say ~Det~]
-         say__p=1;ParaContent();  print (PrintText) SC_212;  .L_Say391; .L_SayX383;
+         say__p=1;ParaContent();  print (PrintText) SC_211;  .L_Say391; .L_SayX383;
          ! phrase 6
          ! [6: otherwise]
          } else {
 
          ! phrase 7
          ! [7: say ~Den~]
-         say__p=1;ParaContent();  print (PrintText) SC_213;  .L_Say392; .L_SayX384;
+         say__p=1;ParaContent();  print (PrintText) SC_212;  .L_Say392; .L_SayX384;
          ! phrase 8
          ! [8: end if]
          }
@@ -30961,14 +30976,14 @@ Verb meta 'tree'
           } else if ((((Adj_69_t1_v9(t_0))))) { 
          ! phrase 5
          ! [5: say ~Det~]
-         say__p=1;ParaContent();  print (PrintText) SC_212;  .L_Say399; .L_SayX391;
+         say__p=1;ParaContent();  print (PrintText) SC_211;  .L_Say399; .L_SayX391;
          ! phrase 6
          ! [6: otherwise]
          } else {
 
          ! phrase 7
          ! [7: say ~Den~]
-         say__p=1;ParaContent();  print (PrintText) SC_213;  .L_Say400; .L_SayX392;
+         say__p=1;ParaContent();  print (PrintText) SC_212;  .L_Say400; .L_SayX392;
          ! phrase 8
          ! [8: end if]
          }
@@ -30998,26 +31013,26 @@ Verb meta 'tree'
        if ((((Adj_31_t1_v9(t_0)))))  {
          ! phrase 3
          ! [3: say ~ssa~]
-         say__p=1;ParaContent();  print (PrintText) SC_214;  .L_Say402; .L_SayX394;
+         say__p=1;ParaContent();  print (PrintText) SC_213;  .L_Say402; .L_SayX394;
          ! phrase 4
          ! [4: otherwise if the item is neuter]
           } else if ((((Adj_69_t1_v9(t_0))))) { 
          ! phrase 5
          ! [5: say ~tta~]
-         say__p=1;ParaContent();  print (PrintText) SC_215;  .L_Say403; .L_SayX395;
+         say__p=1;ParaContent();  print (PrintText) SC_214;  .L_Say403; .L_SayX395;
          ! phrase 6
          ! [6: otherwise if the item is male]
           } else if ((((Adj_68_t1_v9(t_0))))) { 
          ! phrase 7
          ! [7: say ~nne~]
-         say__p=1;ParaContent();  print (PrintText) SC_216;  .L_Say404; .L_SayX396;
+         say__p=1;ParaContent();  print (PrintText) SC_215;  .L_Say404; .L_SayX396;
          ! phrase 8
          ! [8: otherwise]
          } else {
 
          ! phrase 9
          ! [9: say ~nna~]
-         say__p=1;ParaContent();  print (PrintText) SC_217;  .L_Say405; .L_SayX397;
+         say__p=1;ParaContent();  print (PrintText) SC_216;  .L_Say405; .L_SayX397;
          ! phrase 10
          ! [10: end if]
          }
@@ -31044,10 +31059,10 @@ Verb meta 'tree'
        (Global_Vars-->10) = t_0; 
       ! phrase 2
       ! [2: if the sån spelling option is active , say ~sån~]
-       if ((((Adj_22_t1_v15(34))))) { say__p=1;ParaContent();  print (PrintText) SC_218;  .L_Say407; .L_SayX399;  }
+       if ((((Adj_22_t1_v15(34))))) { say__p=1;ParaContent();  print (PrintText) SC_217;  .L_Say407; .L_SayX399;  }
       ! phrase 3
       ! [3: otherwise say ~sådan~]
-       else { say__p=1;ParaContent();  print (PrintText) SC_219;  .L_Say408; .L_SayX400;  }
+       else { say__p=1;ParaContent();  print (PrintText) SC_218;  .L_Say408; .L_SayX400;  }
       ! phrase 4
       ! [4: say -t-a for the item]
       say__p=1;ParaContent(); (PHR_869_r135 (t_0)); .L_Say409; .L_SayX401;
@@ -31073,10 +31088,10 @@ Verb meta 'tree'
        (Global_Vars-->10) = t_0; 
       ! phrase 2
       ! [2: if the sån spelling option is active , say ~Sån~]
-       if ((((Adj_22_t1_v15(34))))) { say__p=1;ParaContent();  print (PrintText) SC_220;  .L_Say411; .L_SayX403;  }
+       if ((((Adj_22_t1_v15(34))))) { say__p=1;ParaContent();  print (PrintText) SC_219;  .L_Say411; .L_SayX403;  }
       ! phrase 3
       ! [3: otherwise say ~Sådan~]
-       else { say__p=1;ParaContent();  print (PrintText) SC_221;  .L_Say412; .L_SayX404;  }
+       else { say__p=1;ParaContent();  print (PrintText) SC_220;  .L_Say412; .L_SayX404;  }
       ! phrase 4
       ! [4: say -t-a for the item]
       say__p=1;ParaContent(); (PHR_869_r135 (t_0)); .L_Say413; .L_SayX405;
@@ -31105,20 +31120,20 @@ Verb meta 'tree'
        if ((((Adj_31_t1_v9(t_0)))))  {
          ! phrase 3
          ! [3: say ~ra~]
-         say__p=1;ParaContent();  print (PrintText) SC_64;  .L_Say415; .L_SayX407;
+         say__p=1;ParaContent();  print (PrintText) SC_63;  .L_Say415; .L_SayX407;
          ! phrase 4
          ! [4: otherwise if the item is neuter]
           } else if ((((Adj_69_t1_v9(t_0))))) { 
          ! phrase 5
          ! [5: say ~ot~]
-         say__p=1;ParaContent();  print (PrintText) SC_222;  .L_Say416; .L_SayX408;
+         say__p=1;ParaContent();  print (PrintText) SC_221;  .L_Say416; .L_SayX408;
          ! phrase 6
          ! [6: otherwise]
          } else {
 
          ! phrase 7
          ! [7: say ~on~]
-         say__p=1;ParaContent();  print (PrintText) SC_168;  .L_Say417; .L_SayX409;
+         say__p=1;ParaContent();  print (PrintText) SC_167;  .L_Say417; .L_SayX409;
          ! phrase 8
          ! [8: end if]
          }
@@ -31148,7 +31163,7 @@ Verb meta 'tree'
        if ((((Adj_31_t1_v9(t_0)))))  {
          ! phrase 3
          ! [3: say ~ra~]
-         say__p=1;ParaContent();  print (PrintText) SC_64;  .L_Say419; .L_SayX411;
+         say__p=1;ParaContent();  print (PrintText) SC_63;  .L_Say419; .L_SayX411;
          ! phrase 4
          ! [4: otherwise if the item is neuter]
           } else if ((((Adj_69_t1_v9(t_0))))) { 
@@ -31161,7 +31176,7 @@ Verb meta 'tree'
 
          ! phrase 7
          ! [7: say ~n~]
-         say__p=1;ParaContent();  print (PrintText) SC_46;  .L_Say421; .L_SayX413;
+         say__p=1;ParaContent();  print (PrintText) SC_45;  .L_Say421; .L_SayX413;
          ! phrase 8
          ! [8: end if]
          }
@@ -31188,7 +31203,7 @@ Verb meta 'tree'
        (Global_Vars-->10) = t_0; 
       ! phrase 2
       ! [2: say ~nå~]
-      say__p=1;ParaContent();  print (PrintText) SC_223;  .L_Say423; .L_SayX415;
+      say__p=1;ParaContent();  print (PrintText) SC_222;  .L_Say423; .L_SayX415;
       ! phrase 3
       ! [3: if the nån spelling option is active begin]
        if ((((Adj_22_t1_v15(30)))))  {
@@ -31197,7 +31212,7 @@ Verb meta 'tree'
           if ((((Adj_31_t1_v9(noun)))))  {
             ! phrase 5
             ! [5: say ~ra~]
-            say__p=1;ParaContent();  print (PrintText) SC_64;  .L_Say424; .L_SayX416;
+            say__p=1;ParaContent();  print (PrintText) SC_63;  .L_Say424; .L_SayX416;
             ! phrase 6
             ! [6: otherwise if the item is neuter]
              } else if ((((Adj_69_t1_v9(t_0))))) { 
@@ -31210,7 +31225,7 @@ Verb meta 'tree'
 
             ! phrase 9
             ! [9: say ~n~]
-            say__p=1;ParaContent();  print (PrintText) SC_46;  .L_Say426; .L_SayX418;
+            say__p=1;ParaContent();  print (PrintText) SC_45;  .L_Say426; .L_SayX418;
             ! phrase 10
             ! [10: end if]
             }
@@ -31224,20 +31239,20 @@ Verb meta 'tree'
           if ((((Adj_31_t1_v9(t_0)))))  {
             ! phrase 13
             ! [13: say ~gra~]
-            say__p=1;ParaContent();  print (PrintText) SC_224;  .L_Say427; .L_SayX419;
+            say__p=1;ParaContent();  print (PrintText) SC_223;  .L_Say427; .L_SayX419;
             ! phrase 14
             ! [14: otherwise if the item is neuter]
              } else if ((((Adj_69_t1_v9(t_0))))) { 
             ! phrase 15
             ! [15: say ~got~]
-            say__p=1;ParaContent();  print (PrintText) SC_225;  .L_Say428; .L_SayX420;
+            say__p=1;ParaContent();  print (PrintText) SC_224;  .L_Say428; .L_SayX420;
             ! phrase 16
             ! [16: otherwise]
             } else {
 
             ! phrase 17
             ! [17: say ~gon~]
-            say__p=1;ParaContent();  print (PrintText) SC_226;  .L_Say429; .L_SayX421;
+            say__p=1;ParaContent();  print (PrintText) SC_225;  .L_Say429; .L_SayX421;
             ! phrase 18
             ! [18: end if]
             }
@@ -31268,7 +31283,7 @@ Verb meta 'tree'
        (Global_Vars-->10) = t_0; 
       ! phrase 2
       ! [2: say ~Nå~]
-      say__p=1;ParaContent();  print (PrintText) SC_227;  .L_Say431; .L_SayX423;
+      say__p=1;ParaContent();  print (PrintText) SC_226;  .L_Say431; .L_SayX423;
       ! phrase 3
       ! [3: if the nån spelling option is active begin]
        if ((((Adj_22_t1_v15(30)))))  {
@@ -31277,7 +31292,7 @@ Verb meta 'tree'
           if ((((Adj_31_t1_v9(t_0)))))  {
             ! phrase 5
             ! [5: say ~ra~]
-            say__p=1;ParaContent();  print (PrintText) SC_64;  .L_Say432; .L_SayX424;
+            say__p=1;ParaContent();  print (PrintText) SC_63;  .L_Say432; .L_SayX424;
             ! phrase 6
             ! [6: otherwise if the item is neuter]
              } else if ((((Adj_69_t1_v9(t_0))))) { 
@@ -31290,7 +31305,7 @@ Verb meta 'tree'
 
             ! phrase 9
             ! [9: say ~n~]
-            say__p=1;ParaContent();  print (PrintText) SC_46;  .L_Say434; .L_SayX426;
+            say__p=1;ParaContent();  print (PrintText) SC_45;  .L_Say434; .L_SayX426;
             ! phrase 10
             ! [10: end if]
             }
@@ -31304,20 +31319,20 @@ Verb meta 'tree'
           if ((((Adj_31_t1_v9(t_0)))))  {
             ! phrase 13
             ! [13: say ~gra~]
-            say__p=1;ParaContent();  print (PrintText) SC_224;  .L_Say435; .L_SayX427;
+            say__p=1;ParaContent();  print (PrintText) SC_223;  .L_Say435; .L_SayX427;
             ! phrase 14
             ! [14: otherwise if the item is neuter]
              } else if ((((Adj_69_t1_v9(t_0))))) { 
             ! phrase 15
             ! [15: say ~got~]
-            say__p=1;ParaContent();  print (PrintText) SC_225;  .L_Say436; .L_SayX428;
+            say__p=1;ParaContent();  print (PrintText) SC_224;  .L_Say436; .L_SayX428;
             ! phrase 16
             ! [16: otherwise]
             } else {
 
             ! phrase 17
             ! [17: say ~gon~]
-            say__p=1;ParaContent();  print (PrintText) SC_226;  .L_Say437; .L_SayX429;
+            say__p=1;ParaContent();  print (PrintText) SC_225;  .L_Say437; .L_SayX429;
             ! phrase 18
             ! [18: end if]
             }
@@ -31400,14 +31415,14 @@ Verb meta 'tree'
           } else if ((((Adj_69_t1_v9(t_0))))) { 
          ! phrase 5
          ! [5: say ~Det~]
-         say__p=1;ParaContent();  print (PrintText) SC_212;  .L_Say444; .L_SayX436;
+         say__p=1;ParaContent();  print (PrintText) SC_211;  .L_Say444; .L_SayX436;
          ! phrase 6
          ! [6: otherwise]
          } else {
 
          ! phrase 7
          ! [7: say ~Den~]
-         say__p=1;ParaContent();  print (PrintText) SC_213;  .L_Say445; .L_SayX437;
+         say__p=1;ParaContent();  print (PrintText) SC_212;  .L_Say445; .L_SayX437;
          ! phrase 8
          ! [8: end if]
          }
@@ -31425,7 +31440,7 @@ Verb meta 'tree'
 ];
 ! Request 219: phrase object -> nothing
 ! From "Danish" by Thomas Lynge
-! To say en-ett for ( item - an object ):
+! To say en-et for ( item - an object ):
 [ PHR_953_r219 
     t_0 ! Call parameter 'item' = object
     ;
@@ -31451,7 +31466,7 @@ Verb meta 'tree'
             ! [7: otherwise if the item is neuter]
              } else if ((((Adj_69_t1_v9(t_0))))) { 
             ! phrase 8
-            ! [8: say ~ett~]
+            ! [8: say ~et~]
             say__p=1;ParaContent();  print (PrintText) SC_30;  .L_Say449; .L_SayX441;
             ! phrase 9
             ! [9: otherwise]
@@ -31472,16 +31487,16 @@ Verb meta 'tree'
 ];
 ! Request 220: phrase nothing -> nothing
 ! From "Danish" by Thomas Lynge
-! To say en-ett:
+! To say en-et:
 [ PHR_954_r220 ;
       ! phrase 1
-      ! [1: say en-ett for the endophoric reference]
+      ! [1: say en-et for the endophoric reference]
       say__p=1;ParaContent(); (PHR_953_r219 ((Global_Vars-->10))); .L_Say451; .L_SayX443;
    rfalse;
 ];
 ! Request 221: phrase object -> nothing
 ! From "Danish" by Thomas Lynge
-! To say En-Ett for ( item - an object ):
+! To say En-et for ( item - an object ):
 [ PHR_955_r221 
     t_0 ! Call parameter 'item' = object
     ;blockv_stack-->(blockv_sp+1) = BlkValueCreate(INDEXED_TEXT_TY,0,INDEXED_TEXT_TY);
@@ -31517,15 +31532,15 @@ Verb meta 'tree'
          ! [6: otherwise if the item is neuter]
           } else if ((((Adj_69_t1_v9(t_0))))) { 
          ! phrase 7
-         ! [7: say ~Ett~]
-         say__p=1;ParaContent();  print (PrintText) SC_228;  .L_Say454; .L_SayX446;
+         ! [7: say ~et~]
+         say__p=1;ParaContent();  print (PrintText) SC_30;  .L_Say454; .L_SayX446;
          ! phrase 8
          ! [8: otherwise]
          } else {
 
          ! phrase 9
          ! [9: say ~En~]
-         say__p=1;ParaContent();  print (PrintText) SC_229;  .L_Say455; .L_SayX447;
+         say__p=1;ParaContent();  print (PrintText) SC_227;  .L_Say455; .L_SayX447;
          ! phrase 10
          ! [10: end if]
          }
@@ -31534,10 +31549,10 @@ Verb meta 'tree'
 ];
 ! Request 222: phrase nothing -> nothing
 ! From "Danish" by Thomas Lynge
-! To say En-Ett:
+! To say En-et:
 [ PHR_956_r222 ;
       ! phrase 1
-      ! [1: say en-ett for the endophoric reference]
+      ! [1: say en-et for the endophoric reference]
       say__p=1;ParaContent(); (PHR_955_r221 ((Global_Vars-->10))); .L_Say456; .L_SayX448;
    rfalse;
 ];
@@ -31568,7 +31583,7 @@ Verb meta 'tree'
 
          ! phrase 7
          ! [7: say ~n~]
-         say__p=1;ParaContent();  print (PrintText) SC_46;  .L_Say459; .L_SayX451;
+         say__p=1;ParaContent();  print (PrintText) SC_45;  .L_Say459; .L_SayX451;
          ! phrase 8
          ! [8: end if]
          }
@@ -31590,10 +31605,10 @@ Verb meta 'tree'
 [ PHR_959_r225 ;
       ! phrase 1
       ! [1: if the dan spelling option is active or the informal spelling option is active , say ~dan~]
-       if (((((Adj_22_t1_v15(22))))) || ((((Adj_22_t1_v15(38)))))) { say__p=1;ParaContent();  print (PrintText) SC_230;  .L_Say461; .L_SayX453;  }
+       if (((((Adj_22_t1_v15(22))))) || ((((Adj_22_t1_v15(38)))))) { say__p=1;ParaContent();  print (PrintText) SC_228;  .L_Say461; .L_SayX453;  }
       ! phrase 2
       ! [2: otherwise say ~dagen~]
-       else { say__p=1;ParaContent();  print (PrintText) SC_231;  .L_Say462; .L_SayX454;  }
+       else { say__p=1;ParaContent();  print (PrintText) SC_229;  .L_Say462; .L_SayX454;  }
    rfalse;
 ];
 ! Request 226: phrase nothing -> nothing
@@ -31602,10 +31617,10 @@ Verb meta 'tree'
 [ PHR_960_r226 ;
       ! phrase 1
       ! [1: if the dan spelling option is active or the informal spelling option is active , say ~dar~]
-       if (((((Adj_22_t1_v15(22))))) || ((((Adj_22_t1_v15(38)))))) { say__p=1;ParaContent();  print (PrintText) SC_232;  .L_Say463; .L_SayX455;  }
+       if (((((Adj_22_t1_v15(22))))) || ((((Adj_22_t1_v15(38)))))) { say__p=1;ParaContent();  print (PrintText) SC_230;  .L_Say463; .L_SayX455;  }
       ! phrase 2
       ! [2: otherwise say ~dagar~]
-       else { say__p=1;ParaContent();  print (PrintText) SC_233;  .L_Say464; .L_SayX456;  }
+       else { say__p=1;ParaContent();  print (PrintText) SC_231;  .L_Say464; .L_SayX456;  }
    rfalse;
 ];
 ! Request 227: phrase nothing -> nothing
@@ -31614,10 +31629,10 @@ Verb meta 'tree'
 [ PHR_961_r227 ;
       ! phrase 1
       ! [1: if the dej spelling option is active or the informal spelling option is active , say ~mej~]
-       if (((((Adj_22_t1_v15(23))))) || ((((Adj_22_t1_v15(38)))))) { say__p=1;ParaContent();  print (PrintText) SC_234;  .L_Say465; .L_SayX457;  }
+       if (((((Adj_22_t1_v15(23))))) || ((((Adj_22_t1_v15(38)))))) { say__p=1;ParaContent();  print (PrintText) SC_232;  .L_Say465; .L_SayX457;  }
       ! phrase 2
       ! [2: otherwise say ~mig~]
-       else { say__p=1;ParaContent();  print (PrintText) SC_235;  .L_Say466; .L_SayX458;  }
+       else { say__p=1;ParaContent();  print (PrintText) SC_233;  .L_Say466; .L_SayX458;  }
    rfalse;
 ];
 ! Request 228: phrase nothing -> nothing
@@ -31626,10 +31641,10 @@ Verb meta 'tree'
 [ PHR_964_r228 ;
       ! phrase 1
       ! [1: if the dej spelling option is active or the informal spelling option is active , say ~Mej~]
-       if (((((Adj_22_t1_v15(23))))) || ((((Adj_22_t1_v15(38)))))) { say__p=1;ParaContent();  print (PrintText) SC_236;  .L_Say467; .L_SayX459;  }
+       if (((((Adj_22_t1_v15(23))))) || ((((Adj_22_t1_v15(38)))))) { say__p=1;ParaContent();  print (PrintText) SC_234;  .L_Say467; .L_SayX459;  }
       ! phrase 2
       ! [2: otherwise say ~Mig~]
-       else { say__p=1;ParaContent();  print (PrintText) SC_237;  .L_Say468; .L_SayX460;  }
+       else { say__p=1;ParaContent();  print (PrintText) SC_235;  .L_Say468; .L_SayX460;  }
    rfalse;
 ];
 ! Request 229: phrase nothing -> nothing
@@ -31638,10 +31653,10 @@ Verb meta 'tree'
 [ PHR_965_r229 ;
       ! phrase 1
       ! [1: if the dej spelling option is active or the informal spelling option is active , say ~Dej~]
-       if (((((Adj_22_t1_v15(23))))) || ((((Adj_22_t1_v15(38)))))) { say__p=1;ParaContent();  print (PrintText) SC_238;  .L_Say469; .L_SayX461;  }
+       if (((((Adj_22_t1_v15(23))))) || ((((Adj_22_t1_v15(38)))))) { say__p=1;ParaContent();  print (PrintText) SC_236;  .L_Say469; .L_SayX461;  }
       ! phrase 2
       ! [2: otherwise say ~Dig~]
-       else { say__p=1;ParaContent();  print (PrintText) SC_239;  .L_Say470; .L_SayX462;  }
+       else { say__p=1;ParaContent();  print (PrintText) SC_237;  .L_Say470; .L_SayX462;  }
    rfalse;
 ];
 ! Request 230: phrase nothing -> nothing
@@ -31650,10 +31665,10 @@ Verb meta 'tree'
 [ PHR_966_r230 ;
       ! phrase 1
       ! [1: if the dej spelling option is active or the informal spelling option is active , say ~Sej~]
-       if (((((Adj_22_t1_v15(23))))) || ((((Adj_22_t1_v15(38)))))) { say__p=1;ParaContent();  print (PrintText) SC_240;  .L_Say471; .L_SayX463;  }
+       if (((((Adj_22_t1_v15(23))))) || ((((Adj_22_t1_v15(38)))))) { say__p=1;ParaContent();  print (PrintText) SC_238;  .L_Say471; .L_SayX463;  }
       ! phrase 2
       ! [2: otherwise say ~Sig~]
-       else { say__p=1;ParaContent();  print (PrintText) SC_241;  .L_Say472; .L_SayX464;  }
+       else { say__p=1;ParaContent();  print (PrintText) SC_239;  .L_Say472; .L_SayX464;  }
    rfalse;
 ];
 ! Request 231: phrase nothing -> nothing
@@ -31662,10 +31677,10 @@ Verb meta 'tree'
 [ PHR_967_r231 ;
       ! phrase 1
       ! [1: if the dom spelling option is active or the informal spelling option is active , say ~dom~]
-       if (((((Adj_22_t1_v15(24))))) || ((((Adj_22_t1_v15(38)))))) { say__p=1;ParaContent();  print (PrintText) SC_156;  .L_Say473; .L_SayX465;  }
+       if (((((Adj_22_t1_v15(24))))) || ((((Adj_22_t1_v15(38)))))) { say__p=1;ParaContent();  print (PrintText) SC_155;  .L_Say473; .L_SayX465;  }
       ! phrase 2
       ! [2: otherwise say ~de~]
-       else { say__p=1;ParaContent();  print (PrintText) SC_60;  .L_Say474; .L_SayX466;  }
+       else { say__p=1;ParaContent();  print (PrintText) SC_59;  .L_Say474; .L_SayX466;  }
    rfalse;
 ];
 ! Request 232: phrase nothing -> nothing
@@ -31674,10 +31689,10 @@ Verb meta 'tree'
 [ PHR_969_r232 ;
       ! phrase 1
       ! [1: if the dom spelling option is active or the informal spelling option is active , say ~Dom~]
-       if (((((Adj_22_t1_v15(24))))) || ((((Adj_22_t1_v15(38)))))) { say__p=1;ParaContent();  print (PrintText) SC_242;  .L_Say475; .L_SayX467;  }
+       if (((((Adj_22_t1_v15(24))))) || ((((Adj_22_t1_v15(38)))))) { say__p=1;ParaContent();  print (PrintText) SC_240;  .L_Say475; .L_SayX467;  }
       ! phrase 2
       ! [2: otherwise say ~De~]
-       else { say__p=1;ParaContent();  print (PrintText) SC_243;  .L_Say476; .L_SayX468;  }
+       else { say__p=1;ParaContent();  print (PrintText) SC_241;  .L_Say476; .L_SayX468;  }
    rfalse;
 ];
 ! Request 233: phrase nothing -> nothing
@@ -31686,10 +31701,10 @@ Verb meta 'tree'
 [ PHR_970_r233 ;
       ! phrase 1
       ! [1: if the dom spelling option is active or the informal spelling option is active , say ~Dom~]
-       if (((((Adj_22_t1_v15(24))))) || ((((Adj_22_t1_v15(38)))))) { say__p=1;ParaContent();  print (PrintText) SC_242;  .L_Say477; .L_SayX469;  }
+       if (((((Adj_22_t1_v15(24))))) || ((((Adj_22_t1_v15(38)))))) { say__p=1;ParaContent();  print (PrintText) SC_240;  .L_Say477; .L_SayX469;  }
       ! phrase 2
       ! [2: otherwise say ~Dem~]
-       else { say__p=1;ParaContent();  print (PrintText) SC_244;  .L_Say478; .L_SayX470;  }
+       else { say__p=1;ParaContent();  print (PrintText) SC_242;  .L_Say478; .L_SayX470;  }
    rfalse;
 ];
 ! Request 234: phrase nothing -> nothing
@@ -31698,10 +31713,10 @@ Verb meta 'tree'
 [ PHR_971_r234 ;
       ! phrase 1
       ! [1: if the givit spelling option is active or the formal spelling option is active , say ~givit~]
-       if (((((Adj_22_t1_v15(25))))) || ((((Adj_22_t1_v15(37)))))) { say__p=1;ParaContent();  print (PrintText) SC_245;  .L_Say479; .L_SayX471;  }
+       if (((((Adj_22_t1_v15(25))))) || ((((Adj_22_t1_v15(37)))))) { say__p=1;ParaContent();  print (PrintText) SC_243;  .L_Say479; .L_SayX471;  }
       ! phrase 2
       ! [2: otherwise say ~gett~]
-       else { say__p=1;ParaContent();  print (PrintText) SC_246;  .L_Say480; .L_SayX472;  }
+       else { say__p=1;ParaContent();  print (PrintText) SC_244;  .L_Say480; .L_SayX472;  }
    rfalse;
 ];
 ! Request 235: phrase nothing -> nothing
@@ -31710,10 +31725,10 @@ Verb meta 'tree'
 [ PHR_972_r235 ;
       ! phrase 1
       ! [1: if the la spelling option is active or the informal spelling option is active , say ~la~]
-       if (((((Adj_22_t1_v15(26))))) || ((((Adj_22_t1_v15(38)))))) { say__p=1;ParaContent();  print (PrintText) SC_66;  .L_Say481; .L_SayX473;  }
+       if (((((Adj_22_t1_v15(26))))) || ((((Adj_22_t1_v15(38)))))) { say__p=1;ParaContent();  print (PrintText) SC_65;  .L_Say481; .L_SayX473;  }
       ! phrase 2
       ! [2: otherwise say ~lade~]
-       else { say__p=1;ParaContent();  print (PrintText) SC_247;  .L_Say482; .L_SayX474;  }
+       else { say__p=1;ParaContent();  print (PrintText) SC_245;  .L_Say482; .L_SayX474;  }
    rfalse;
 ];
 ! Request 236: phrase nothing -> nothing
@@ -31722,10 +31737,10 @@ Verb meta 'tree'
 [ PHR_973_r236 ;
       ! phrase 1
       ! [1: if the litet spelling option is active or the formal spelling option is active , say ~litet~]
-       if (((((Adj_22_t1_v15(27))))) || ((((Adj_22_t1_v15(37)))))) { say__p=1;ParaContent();  print (PrintText) SC_196;  .L_Say483; .L_SayX475;  }
+       if (((((Adj_22_t1_v15(27))))) || ((((Adj_22_t1_v15(37)))))) { say__p=1;ParaContent();  print (PrintText) SC_195;  .L_Say483; .L_SayX475;  }
       ! phrase 2
       ! [2: otherwise say ~lite~]
-       else { say__p=1;ParaContent();  print (PrintText) SC_248;  .L_Say484; .L_SayX476;  }
+       else { say__p=1;ParaContent();  print (PrintText) SC_246;  .L_Say484; .L_SayX476;  }
    rfalse;
 ];
 ! Request 237: phrase nothing -> nothing
@@ -31734,10 +31749,10 @@ Verb meta 'tree'
 [ PHR_974_r237 ;
       ! phrase 1
       ! [1: if the litet spelling option is active or the formal spelling option is active , say ~Litet~]
-       if (((((Adj_22_t1_v15(27))))) || ((((Adj_22_t1_v15(37)))))) { say__p=1;ParaContent();  print (PrintText) SC_249;  .L_Say485; .L_SayX477;  }
+       if (((((Adj_22_t1_v15(27))))) || ((((Adj_22_t1_v15(37)))))) { say__p=1;ParaContent();  print (PrintText) SC_247;  .L_Say485; .L_SayX477;  }
       ! phrase 2
       ! [2: otherwise say ~Lite~]
-       else { say__p=1;ParaContent();  print (PrintText) SC_250;  .L_Say486; .L_SayX478;  }
+       else { say__p=1;ParaContent();  print (PrintText) SC_248;  .L_Say486; .L_SayX478;  }
    rfalse;
 ];
 ! Request 238: phrase nothing -> nothing
@@ -31746,10 +31761,10 @@ Verb meta 'tree'
 [ PHR_975_r238 ;
       ! phrase 1
       ! [1: if the morron spelling option is active or the informal spelling option is active , say ~morron~]
-       if (((((Adj_22_t1_v15(28))))) || ((((Adj_22_t1_v15(38)))))) { say__p=1;ParaContent();  print (PrintText) SC_251;  .L_Say487; .L_SayX479;  }
+       if (((((Adj_22_t1_v15(28))))) || ((((Adj_22_t1_v15(38)))))) { say__p=1;ParaContent();  print (PrintText) SC_249;  .L_Say487; .L_SayX479;  }
       ! phrase 2
       ! [2: otherwise say ~morgon~]
-       else { say__p=1;ParaContent();  print (PrintText) SC_252;  .L_Say488; .L_SayX480;  }
+       else { say__p=1;ParaContent();  print (PrintText) SC_250;  .L_Say488; .L_SayX480;  }
    rfalse;
 ];
 ! Request 239: phrase nothing -> nothing
@@ -31758,10 +31773,10 @@ Verb meta 'tree'
 [ PHR_976_r239 ;
       ! phrase 1
       ! [1: if the morron spelling option is active or the informal spelling option is active , say ~morronen~]
-       if (((((Adj_22_t1_v15(28))))) || ((((Adj_22_t1_v15(38)))))) { say__p=1;ParaContent();  print (PrintText) SC_253;  .L_Say489; .L_SayX481;  }
+       if (((((Adj_22_t1_v15(28))))) || ((((Adj_22_t1_v15(38)))))) { say__p=1;ParaContent();  print (PrintText) SC_251;  .L_Say489; .L_SayX481;  }
       ! phrase 2
       ! [2: otherwise say ~morgonen~]
-       else { say__p=1;ParaContent();  print (PrintText) SC_254;  .L_Say490; .L_SayX482;  }
+       else { say__p=1;ParaContent();  print (PrintText) SC_252;  .L_Say490; .L_SayX482;  }
    rfalse;
 ];
 ! Request 240: phrase nothing -> nothing
@@ -31770,10 +31785,10 @@ Verb meta 'tree'
 [ PHR_977_r240 ;
       ! phrase 1
       ! [1: if the morron spelling option is active or the informal spelling option is active , say ~mornar~]
-       if (((((Adj_22_t1_v15(28))))) || ((((Adj_22_t1_v15(38)))))) { say__p=1;ParaContent();  print (PrintText) SC_255;  .L_Say491; .L_SayX483;  }
+       if (((((Adj_22_t1_v15(28))))) || ((((Adj_22_t1_v15(38)))))) { say__p=1;ParaContent();  print (PrintText) SC_253;  .L_Say491; .L_SayX483;  }
       ! phrase 2
       ! [2: otherwise say ~morgnar~]
-       else { say__p=1;ParaContent();  print (PrintText) SC_256;  .L_Say492; .L_SayX484;  }
+       else { say__p=1;ParaContent();  print (PrintText) SC_254;  .L_Say492; .L_SayX484;  }
    rfalse;
 ];
 ! Request 241: phrase nothing -> nothing
@@ -31782,10 +31797,10 @@ Verb meta 'tree'
 [ PHR_978_r241 ;
       ! phrase 1
       ! [1: if the ner spelling option is active , say ~ner~]
-       if ((((Adj_22_t1_v15(29))))) { say__p=1;ParaContent();  print (PrintText) SC_187;  .L_Say493; .L_SayX485;  }
+       if ((((Adj_22_t1_v15(29))))) { say__p=1;ParaContent();  print (PrintText) SC_186;  .L_Say493; .L_SayX485;  }
       ! phrase 2
       ! [2: otherwise say ~ned~]
-       else { say__p=1;ParaContent();  print (PrintText) SC_257;  .L_Say494; .L_SayX486;  }
+       else { say__p=1;ParaContent();  print (PrintText) SC_255;  .L_Say494; .L_SayX486;  }
    rfalse;
 ];
 ! Request 242: phrase nothing -> nothing
@@ -31794,10 +31809,10 @@ Verb meta 'tree'
 [ PHR_979_r242 ;
       ! phrase 1
       ! [1: if the ner spelling option is active , say ~Ner~]
-       if ((((Adj_22_t1_v15(29))))) { say__p=1;ParaContent();  print (PrintText) SC_258;  .L_Say495; .L_SayX487;  }
+       if ((((Adj_22_t1_v15(29))))) { say__p=1;ParaContent();  print (PrintText) SC_256;  .L_Say495; .L_SayX487;  }
       ! phrase 2
       ! [2: otherwise say ~Ned~]
-       else { say__p=1;ParaContent();  print (PrintText) SC_259;  .L_Say496; .L_SayX488;  }
+       else { say__p=1;ParaContent();  print (PrintText) SC_257;  .L_Say496; .L_SayX488;  }
    rfalse;
 ];
 ! Request 243: phrase nothing -> nothing
@@ -31806,10 +31821,10 @@ Verb meta 'tree'
 [ PHR_980_r243 ;
       ! phrase 1
       ! [1: if the ner spelling option is active , say ~nerför~]
-       if ((((Adj_22_t1_v15(29))))) { say__p=1;ParaContent();  print (PrintText) SC_260;  .L_Say497; .L_SayX489;  }
+       if ((((Adj_22_t1_v15(29))))) { say__p=1;ParaContent();  print (PrintText) SC_258;  .L_Say497; .L_SayX489;  }
       ! phrase 2
       ! [2: otherwise say ~nedför~]
-       else { say__p=1;ParaContent();  print (PrintText) SC_261;  .L_Say498; .L_SayX490;  }
+       else { say__p=1;ParaContent();  print (PrintText) SC_259;  .L_Say498; .L_SayX490;  }
    rfalse;
 ];
 ! Request 244: phrase nothing -> nothing
@@ -31818,10 +31833,10 @@ Verb meta 'tree'
 [ PHR_981_r244 ;
       ! phrase 1
       ! [1: if the ner spelling option is active , say ~neråt~]
-       if ((((Adj_22_t1_v15(29))))) { say__p=1;ParaContent();  print (PrintText) SC_262;  .L_Say499; .L_SayX491;  }
+       if ((((Adj_22_t1_v15(29))))) { say__p=1;ParaContent();  print (PrintText) SC_260;  .L_Say499; .L_SayX491;  }
       ! phrase 2
       ! [2: otherwise say ~nedåt~]
-       else { say__p=1;ParaContent();  print (PrintText) SC_263;  .L_Say500; .L_SayX492;  }
+       else { say__p=1;ParaContent();  print (PrintText) SC_261;  .L_Say500; .L_SayX492;  }
    rfalse;
 ];
 ! Request 245: phrase nothing -> nothing
@@ -31830,10 +31845,10 @@ Verb meta 'tree'
 [ PHR_982_r245 ;
       ! phrase 1
       ! [1: if the nån spelling option is active or the informal spelling option is active , say ~nån~]
-       if (((((Adj_22_t1_v15(30))))) || ((((Adj_22_t1_v15(38)))))) { say__p=1;ParaContent();  print (PrintText) SC_264;  .L_Say501; .L_SayX493;  }
+       if (((((Adj_22_t1_v15(30))))) || ((((Adj_22_t1_v15(38)))))) { say__p=1;ParaContent();  print (PrintText) SC_262;  .L_Say501; .L_SayX493;  }
       ! phrase 2
       ! [2: otherwise say ~någon~]
-       else { say__p=1;ParaContent();  print (PrintText) SC_265;  .L_Say502; .L_SayX494;  }
+       else { say__p=1;ParaContent();  print (PrintText) SC_263;  .L_Say502; .L_SayX494;  }
    rfalse;
 ];
 ! Request 246: phrase nothing -> nothing
@@ -31842,10 +31857,10 @@ Verb meta 'tree'
 [ PHR_984_r246 ;
       ! phrase 1
       ! [1: if the nån spelling option is active or the informal spelling option is active , say ~nåra~]
-       if (((((Adj_22_t1_v15(30))))) || ((((Adj_22_t1_v15(38)))))) { say__p=1;ParaContent();  print (PrintText) SC_266;  .L_Say503; .L_SayX495;  }
+       if (((((Adj_22_t1_v15(30))))) || ((((Adj_22_t1_v15(38)))))) { say__p=1;ParaContent();  print (PrintText) SC_264;  .L_Say503; .L_SayX495;  }
       ! phrase 2
       ! [2: otherwise say ~några~]
-       else { say__p=1;ParaContent();  print (PrintText) SC_267;  .L_Say504; .L_SayX496;  }
+       else { say__p=1;ParaContent();  print (PrintText) SC_265;  .L_Say504; .L_SayX496;  }
    rfalse;
 ];
 ! Request 247: phrase nothing -> nothing
@@ -31854,10 +31869,10 @@ Verb meta 'tree'
 [ PHR_985_r247 ;
       ! phrase 1
       ! [1: if the nån spelling option is active or the informal spelling option is active , say ~Nån~]
-       if (((((Adj_22_t1_v15(30))))) || ((((Adj_22_t1_v15(38)))))) { say__p=1;ParaContent();  print (PrintText) SC_268;  .L_Say505; .L_SayX497;  }
+       if (((((Adj_22_t1_v15(30))))) || ((((Adj_22_t1_v15(38)))))) { say__p=1;ParaContent();  print (PrintText) SC_266;  .L_Say505; .L_SayX497;  }
       ! phrase 2
       ! [2: otherwise say ~Någon~]
-       else { say__p=1;ParaContent();  print (PrintText) SC_269;  .L_Say506; .L_SayX498;  }
+       else { say__p=1;ParaContent();  print (PrintText) SC_267;  .L_Say506; .L_SayX498;  }
    rfalse;
 ];
 ! Request 248: phrase nothing -> nothing
@@ -31866,10 +31881,10 @@ Verb meta 'tree'
 [ PHR_986_r248 ;
       ! phrase 1
       ! [1: if the nån spelling option is active or the informal spelling option is active , say ~Nåt~]
-       if (((((Adj_22_t1_v15(30))))) || ((((Adj_22_t1_v15(38)))))) { say__p=1;ParaContent();  print (PrintText) SC_270;  .L_Say507; .L_SayX499;  }
+       if (((((Adj_22_t1_v15(30))))) || ((((Adj_22_t1_v15(38)))))) { say__p=1;ParaContent();  print (PrintText) SC_268;  .L_Say507; .L_SayX499;  }
       ! phrase 2
       ! [2: otherwise say ~Något~]
-       else { say__p=1;ParaContent();  print (PrintText) SC_271;  .L_Say508; .L_SayX500;  }
+       else { say__p=1;ParaContent();  print (PrintText) SC_269;  .L_Say508; .L_SayX500;  }
    rfalse;
 ];
 ! Request 249: phrase nothing -> nothing
@@ -31878,10 +31893,10 @@ Verb meta 'tree'
 [ PHR_987_r249 ;
       ! phrase 1
       ! [1: if the nån spelling option is active or the informal spelling option is active , say ~Nåra~]
-       if (((((Adj_22_t1_v15(30))))) || ((((Adj_22_t1_v15(38)))))) { say__p=1;ParaContent();  print (PrintText) SC_272;  .L_Say509; .L_SayX501;  }
+       if (((((Adj_22_t1_v15(30))))) || ((((Adj_22_t1_v15(38)))))) { say__p=1;ParaContent();  print (PrintText) SC_270;  .L_Say509; .L_SayX501;  }
       ! phrase 2
       ! [2: otherwise say ~Några~]
-       else { say__p=1;ParaContent();  print (PrintText) SC_273;  .L_Say510; .L_SayX502;  }
+       else { say__p=1;ParaContent();  print (PrintText) SC_271;  .L_Say510; .L_SayX502;  }
    rfalse;
 ];
 ! Request 250: phrase nothing -> nothing
@@ -31890,10 +31905,10 @@ Verb meta 'tree'
 [ PHR_988_r250 ;
       ! phrase 1
       ! [1: if the nån spelling option is active or the informal spelling option is active , say ~nånsin~]
-       if (((((Adj_22_t1_v15(30))))) || ((((Adj_22_t1_v15(38)))))) { say__p=1;ParaContent();  print (PrintText) SC_274;  .L_Say511; .L_SayX503;  }
+       if (((((Adj_22_t1_v15(30))))) || ((((Adj_22_t1_v15(38)))))) { say__p=1;ParaContent();  print (PrintText) SC_272;  .L_Say511; .L_SayX503;  }
       ! phrase 2
       ! [2: otherwise say ~någonsin~]
-       else { say__p=1;ParaContent();  print (PrintText) SC_275;  .L_Say512; .L_SayX504;  }
+       else { say__p=1;ParaContent();  print (PrintText) SC_273;  .L_Say512; .L_SayX504;  }
    rfalse;
 ];
 ! Request 251: phrase nothing -> nothing
@@ -31902,10 +31917,10 @@ Verb meta 'tree'
 [ PHR_989_r251 ;
       ! phrase 1
       ! [1: if the nån spelling option is active or the informal spelling option is active , say ~nånstans~]
-       if (((((Adj_22_t1_v15(30))))) || ((((Adj_22_t1_v15(38)))))) { say__p=1;ParaContent();  print (PrintText) SC_276;  .L_Say513; .L_SayX505;  }
+       if (((((Adj_22_t1_v15(30))))) || ((((Adj_22_t1_v15(38)))))) { say__p=1;ParaContent();  print (PrintText) SC_274;  .L_Say513; .L_SayX505;  }
       ! phrase 2
       ! [2: otherwise say ~någonstans~]
-       else { say__p=1;ParaContent();  print (PrintText) SC_277;  .L_Say514; .L_SayX506;  }
+       else { say__p=1;ParaContent();  print (PrintText) SC_275;  .L_Say514; .L_SayX506;  }
    rfalse;
 ];
 ! Request 252: phrase nothing -> nothing
@@ -31914,10 +31929,10 @@ Verb meta 'tree'
 [ PHR_990_r252 ;
       ! phrase 1
       ! [1: if the nån spelling option is active or the informal spelling option is active , say ~nånting~]
-       if (((((Adj_22_t1_v15(30))))) || ((((Adj_22_t1_v15(38)))))) { say__p=1;ParaContent();  print (PrintText) SC_278;  .L_Say515; .L_SayX507;  }
+       if (((((Adj_22_t1_v15(30))))) || ((((Adj_22_t1_v15(38)))))) { say__p=1;ParaContent();  print (PrintText) SC_276;  .L_Say515; .L_SayX507;  }
       ! phrase 2
       ! [2: otherwise say ~någonting~]
-       else { say__p=1;ParaContent();  print (PrintText) SC_279;  .L_Say516; .L_SayX508;  }
+       else { say__p=1;ParaContent();  print (PrintText) SC_277;  .L_Say516; .L_SayX508;  }
    rfalse;
 ];
 ! Request 253: phrase nothing -> nothing
@@ -31926,10 +31941,10 @@ Verb meta 'tree'
 [ PHR_991_r253 ;
       ! phrase 1
       ! [1: if the nån spelling option is active or the informal spelling option is active , say ~nånvart~]
-       if (((((Adj_22_t1_v15(30))))) || ((((Adj_22_t1_v15(38)))))) { say__p=1;ParaContent();  print (PrintText) SC_280;  .L_Say517; .L_SayX509;  }
+       if (((((Adj_22_t1_v15(30))))) || ((((Adj_22_t1_v15(38)))))) { say__p=1;ParaContent();  print (PrintText) SC_278;  .L_Say517; .L_SayX509;  }
       ! phrase 2
       ! [2: otherwise say ~någonvart~]
-       else { say__p=1;ParaContent();  print (PrintText) SC_281;  .L_Say518; .L_SayX510;  }
+       else { say__p=1;ParaContent();  print (PrintText) SC_279;  .L_Say518; .L_SayX510;  }
    rfalse;
 ];
 ! Request 254: phrase nothing -> nothing
@@ -31938,10 +31953,10 @@ Verb meta 'tree'
 [ PHR_992_r254 ;
       ! phrase 1
       ! [1: if the sen spelling option is active or the informal spelling option is active , say ~sen~]
-       if (((((Adj_22_t1_v15(32))))) || ((((Adj_22_t1_v15(38)))))) { say__p=1;ParaContent();  print (PrintText) SC_282;  .L_Say519; .L_SayX511;  }
+       if (((((Adj_22_t1_v15(32))))) || ((((Adj_22_t1_v15(38)))))) { say__p=1;ParaContent();  print (PrintText) SC_280;  .L_Say519; .L_SayX511;  }
       ! phrase 2
       ! [2: otherwise say ~sedan~]
-       else { say__p=1;ParaContent();  print (PrintText) SC_283;  .L_Say520; .L_SayX512;  }
+       else { say__p=1;ParaContent();  print (PrintText) SC_281;  .L_Say520; .L_SayX512;  }
    rfalse;
 ];
 ! Request 255: phrase nothing -> nothing
@@ -31950,10 +31965,10 @@ Verb meta 'tree'
 [ PHR_993_r255 ;
       ! phrase 1
       ! [1: if the sen spelling option is active or the informal spelling option is active , say ~Sen~]
-       if (((((Adj_22_t1_v15(32))))) || ((((Adj_22_t1_v15(38)))))) { say__p=1;ParaContent();  print (PrintText) SC_284;  .L_Say521; .L_SayX513;  }
+       if (((((Adj_22_t1_v15(32))))) || ((((Adj_22_t1_v15(38)))))) { say__p=1;ParaContent();  print (PrintText) SC_282;  .L_Say521; .L_SayX513;  }
       ! phrase 2
       ! [2: otherwise say ~Sedan~]
-       else { say__p=1;ParaContent();  print (PrintText) SC_285;  .L_Say522; .L_SayX514;  }
+       else { say__p=1;ParaContent();  print (PrintText) SC_283;  .L_Say522; .L_SayX514;  }
    rfalse;
 ];
 ! Request 256: phrase nothing -> nothing
@@ -31962,10 +31977,10 @@ Verb meta 'tree'
 [ PHR_995_r256 ;
       ! phrase 1
       ! [1: if the sån spelling option is active or the informal spelling option is active , say ~sån~]
-       if (((((Adj_22_t1_v15(34))))) || ((((Adj_22_t1_v15(38)))))) { say__p=1;ParaContent();  print (PrintText) SC_218;  .L_Say523; .L_SayX515;  }
+       if (((((Adj_22_t1_v15(34))))) || ((((Adj_22_t1_v15(38)))))) { say__p=1;ParaContent();  print (PrintText) SC_217;  .L_Say523; .L_SayX515;  }
       ! phrase 2
       ! [2: otherwise say ~sådan~]
-       else { say__p=1;ParaContent();  print (PrintText) SC_219;  .L_Say524; .L_SayX516;  }
+       else { say__p=1;ParaContent();  print (PrintText) SC_218;  .L_Say524; .L_SayX516;  }
    rfalse;
 ];
 ! Request 257: phrase nothing -> nothing
@@ -31974,10 +31989,10 @@ Verb meta 'tree'
 [ PHR_996_r257 ;
       ! phrase 1
       ! [1: if the sån spelling option is active or the informal spelling option is active , say ~Sån~]
-       if (((((Adj_22_t1_v15(34))))) || ((((Adj_22_t1_v15(38)))))) { say__p=1;ParaContent();  print (PrintText) SC_220;  .L_Say525; .L_SayX517;  }
+       if (((((Adj_22_t1_v15(34))))) || ((((Adj_22_t1_v15(38)))))) { say__p=1;ParaContent();  print (PrintText) SC_219;  .L_Say525; .L_SayX517;  }
       ! phrase 2
       ! [2: otherwise say ~Sådan~]
-       else { say__p=1;ParaContent();  print (PrintText) SC_221;  .L_Say526; .L_SayX518;  }
+       else { say__p=1;ParaContent();  print (PrintText) SC_220;  .L_Say526; .L_SayX518;  }
    rfalse;
 ];
 ! Request 258: phrase nothing -> nothing
@@ -31986,10 +32001,10 @@ Verb meta 'tree'
 [ PHR_997_r258 ;
       ! phrase 1
       ! [1: if the sån spelling option is active or the informal spelling option is active , say ~sånt~]
-       if (((((Adj_22_t1_v15(34))))) || ((((Adj_22_t1_v15(38)))))) { say__p=1;ParaContent();  print (PrintText) SC_286;  .L_Say527; .L_SayX519;  }
+       if (((((Adj_22_t1_v15(34))))) || ((((Adj_22_t1_v15(38)))))) { say__p=1;ParaContent();  print (PrintText) SC_284;  .L_Say527; .L_SayX519;  }
       ! phrase 2
       ! [2: otherwise say ~sådant~]
-       else { say__p=1;ParaContent();  print (PrintText) SC_287;  .L_Say528; .L_SayX520;  }
+       else { say__p=1;ParaContent();  print (PrintText) SC_285;  .L_Say528; .L_SayX520;  }
    rfalse;
 ];
 ! Request 259: phrase nothing -> nothing
@@ -31998,10 +32013,10 @@ Verb meta 'tree'
 [ PHR_998_r259 ;
       ! phrase 1
       ! [1: if the sån spelling option is active or the informal spelling option is active , say ~såna~]
-       if (((((Adj_22_t1_v15(34))))) || ((((Adj_22_t1_v15(38)))))) { say__p=1;ParaContent();  print (PrintText) SC_288;  .L_Say529; .L_SayX521;  }
+       if (((((Adj_22_t1_v15(34))))) || ((((Adj_22_t1_v15(38)))))) { say__p=1;ParaContent();  print (PrintText) SC_286;  .L_Say529; .L_SayX521;  }
       ! phrase 2
       ! [2: otherwise say ~sådana~]
-       else { say__p=1;ParaContent();  print (PrintText) SC_289;  .L_Say530; .L_SayX522;  }
+       else { say__p=1;ParaContent();  print (PrintText) SC_287;  .L_Say530; .L_SayX522;  }
    rfalse;
 ];
 ! Request 260: phrase nothing -> nothing
@@ -32010,10 +32025,10 @@ Verb meta 'tree'
 [ PHR_999_r260 ;
       ! phrase 1
       ! [1: if the säja spelling option is active or the informal spelling option is active , say ~säja~]
-       if (((((Adj_22_t1_v15(35))))) || ((((Adj_22_t1_v15(38)))))) { say__p=1;ParaContent();  print (PrintText) SC_290;  .L_Say531; .L_SayX523;  }
+       if (((((Adj_22_t1_v15(35))))) || ((((Adj_22_t1_v15(38)))))) { say__p=1;ParaContent();  print (PrintText) SC_288;  .L_Say531; .L_SayX523;  }
       ! phrase 2
       ! [2: otherwise say ~säga~]
-       else { say__p=1;ParaContent();  print (PrintText) SC_291;  .L_Say532; .L_SayX524;  }
+       else { say__p=1;ParaContent();  print (PrintText) SC_289;  .L_Say532; .L_SayX524;  }
    rfalse;
 ];
 ! Request 261: phrase nothing -> nothing
@@ -32022,10 +32037,10 @@ Verb meta 'tree'
 [ PHR_1000_r261 ;
       ! phrase 1
       ! [1: if the säja spelling option is active or the informal spelling option is active , say ~säj~]
-       if (((((Adj_22_t1_v15(35))))) || ((((Adj_22_t1_v15(38)))))) { say__p=1;ParaContent();  print (PrintText) SC_292;  .L_Say533; .L_SayX525;  }
+       if (((((Adj_22_t1_v15(35))))) || ((((Adj_22_t1_v15(38)))))) { say__p=1;ParaContent();  print (PrintText) SC_290;  .L_Say533; .L_SayX525;  }
       ! phrase 2
       ! [2: otherwise say ~säg~]
-       else { say__p=1;ParaContent();  print (PrintText) SC_293;  .L_Say534; .L_SayX526;  }
+       else { say__p=1;ParaContent();  print (PrintText) SC_291;  .L_Say534; .L_SayX526;  }
    rfalse;
 ];
 ! Request 262: phrase nothing -> nothing
@@ -32034,10 +32049,10 @@ Verb meta 'tree'
 [ PHR_1001_r262 ;
       ! phrase 1
       ! [1: if the säja spelling option is active or the informal spelling option is active , say ~säjer~]
-       if (((((Adj_22_t1_v15(35))))) || ((((Adj_22_t1_v15(38)))))) { say__p=1;ParaContent();  print (PrintText) SC_294;  .L_Say535; .L_SayX527;  }
+       if (((((Adj_22_t1_v15(35))))) || ((((Adj_22_t1_v15(38)))))) { say__p=1;ParaContent();  print (PrintText) SC_292;  .L_Say535; .L_SayX527;  }
       ! phrase 2
       ! [2: otherwise say ~säger~]
-       else { say__p=1;ParaContent();  print (PrintText) SC_295;  .L_Say536; .L_SayX528;  }
+       else { say__p=1;ParaContent();  print (PrintText) SC_293;  .L_Say536; .L_SayX528;  }
    rfalse;
 ];
 ! Request 263: phrase nothing -> nothing
@@ -32046,10 +32061,10 @@ Verb meta 'tree'
 [ PHR_1002_r263 ;
       ! phrase 1
       ! [1: if the sa spelling option is active or the säja spelling option is active or the informal spelling option is active , say ~sa~]
-       if (((((Adj_22_t1_v15(31))))) || (((((Adj_22_t1_v15(35))))) || ((((Adj_22_t1_v15(38))))))) { say__p=1;ParaContent();  print (PrintText) SC_296;  .L_Say537; .L_SayX529;  }
+       if (((((Adj_22_t1_v15(31))))) || (((((Adj_22_t1_v15(35))))) || ((((Adj_22_t1_v15(38))))))) { say__p=1;ParaContent();  print (PrintText) SC_294;  .L_Say537; .L_SayX529;  }
       ! phrase 2
       ! [2: otherwise say ~sade~]
-       else { say__p=1;ParaContent();  print (PrintText) SC_297;  .L_Say538; .L_SayX530;  }
+       else { say__p=1;ParaContent();  print (PrintText) SC_295;  .L_Say538; .L_SayX530;  }
    rfalse;
 ];
 ! Request 264: phrase nothing -> nothing
@@ -32058,10 +32073,10 @@ Verb meta 'tree'
 [ PHR_1003_r264 ;
       ! phrase 1
       ! [1: if the varann spelling option is active or the informal spelling option is active , say ~varann~]
-       if (((((Adj_22_t1_v15(36))))) || ((((Adj_22_t1_v15(38)))))) { say__p=1;ParaContent();  print (PrintText) SC_298;  .L_Say539; .L_SayX531;  }
+       if (((((Adj_22_t1_v15(36))))) || ((((Adj_22_t1_v15(38)))))) { say__p=1;ParaContent();  print (PrintText) SC_296;  .L_Say539; .L_SayX531;  }
       ! phrase 2
       ! [2: otherwise say ~varandra~]
-       else { say__p=1;ParaContent();  print (PrintText) SC_299;  .L_Say540; .L_SayX532;  }
+       else { say__p=1;ParaContent();  print (PrintText) SC_297;  .L_Say540; .L_SayX532;  }
    rfalse;
 ];
 ! Request 265: phrase (number, number) -> number
@@ -32482,9 +32497,9 @@ Verb meta 'tree'
 [ text_routine_0;
 say__p=1;
 	if (~~(((((Adj_22_t1_v15(29))))))) jump L_Say541;
-		ParaContent();  print (PrintText) SC_187; 
+		ParaContent();  print (PrintText) SC_186; 
 	jump L_SayX533; .L_Say541;
-		ParaContent();  print (PrintText) SC_257;  .L_Say542; .L_SayX533;
+		ParaContent();  print (PrintText) SC_255;  .L_Say542; .L_SayX533;
     rtrue;
 ];
 
@@ -32494,12 +32509,12 @@ say__p=1;ParaContent(); (PHR_962_r19 ()); .L_Say543; .L_SayX534;
 ];
 
 [ text_routine_2;
-say__p=1;ParaContent();  print (PrintText) SC_300; ParaContent(); (PHR_817_r83 ()); .L_Say544; .L_SayX535;
+say__p=1;ParaContent();  print (PrintText) SC_298; ParaContent(); (PHR_817_r83 ()); .L_Say544; .L_SayX535;
     rtrue;
 ];
 
 [ text_routine_3;
-say__p=1;ParaContent();  print (PrintText) SC_301; ParaContent(); (PHR_820_r86 ()); .L_Say545; .L_SayX536;
+say__p=1;ParaContent();  print (PrintText) SC_299; ParaContent(); (PHR_820_r86 ()); .L_Say545; .L_SayX536;
     rtrue;
 ];
 
@@ -32511,7 +32526,7 @@ say__p=1;ParaContent();  print (PrintText) SC_301; ParaContent(); (PHR_820_r86 (
 t_0=LocalParking-->0;
 t_1=LocalParking-->1;
 t_2=LocalParking-->2;
-    say__p=1;ParaContent();  print (PrintText) SC_302; ParaContent(); (PHR_907_r173 (t_0)); .L_Say546; .L_SayX537;
+    say__p=1;ParaContent();  print (PrintText) SC_300; ParaContent(); (PHR_907_r173 (t_0)); .L_Say546; .L_SayX537;
     rtrue;
 ];
 
@@ -32523,7 +32538,7 @@ t_2=LocalParking-->2;
 t_0=LocalParking-->0;
 t_1=LocalParking-->1;
 t_2=LocalParking-->2;
-    say__p=1;ParaContent();  print (PrintShortName) t_2; ParaContent();  print "'"; ParaContent();  print (PrintText) SC_191;  .L_Say547; .L_SayX538;
+    say__p=1;ParaContent();  print (PrintShortName) t_2; ParaContent();  print "'"; ParaContent();  print (PrintText) SC_190;  .L_Say547; .L_SayX538;
     rtrue;
 ];
 
@@ -32547,7 +32562,7 @@ t_2=LocalParking-->2;
 t_0=LocalParking-->0;
 t_1=LocalParking-->1;
 t_2=LocalParking-->2;
-    say__p=1;ParaContent();  print (PrintShortName) t_2; ParaContent();  print "'"; ParaContent();  print (PrintText) SC_191;  .L_Say549; .L_SayX540;
+    say__p=1;ParaContent();  print (PrintShortName) t_2; ParaContent();  print "'"; ParaContent();  print (PrintText) SC_190;  .L_Say549; .L_SayX540;
     rtrue;
 ];
 
@@ -32571,7 +32586,7 @@ t_2=LocalParking-->2;
 t_0=LocalParking-->0;
 t_1=LocalParking-->1;
 t_2=LocalParking-->2;
-    say__p=1;ParaContent();  print (PrintShortName) t_2; ParaContent();  print "'"; ParaContent();  print (PrintText) SC_191;  .L_Say551; .L_SayX542;
+    say__p=1;ParaContent();  print (PrintShortName) t_2; ParaContent();  print "'"; ParaContent();  print (PrintText) SC_190;  .L_Say551; .L_SayX542;
     rtrue;
 ];
 
@@ -32583,7 +32598,7 @@ t_2=LocalParking-->2;
 t_0=LocalParking-->0;
 t_1=LocalParking-->1;
 t_2=LocalParking-->2;
-    say__p=1;ParaContent();  print (PrintShortName) t_2; ParaContent();  print (PrintText) SC_191;  .L_Say552; .L_SayX543;
+    say__p=1;ParaContent();  print (PrintShortName) t_2; ParaContent();  print (PrintText) SC_190;  .L_Say552; .L_SayX543;
     rtrue;
 ];
 
@@ -32593,7 +32608,7 @@ t_2=LocalParking-->2;
     ;
 t_0=LocalParking-->0;
 t_1=LocalParking-->1;
-    say__p=1;ParaContent();  print (PrintText) SC_302; ParaContent(); (PHR_907_r173 (LR_object)); .L_Say553; .L_SayX544;
+    say__p=1;ParaContent();  print (PrintText) SC_300; ParaContent(); (PHR_907_r173 (LR_object)); .L_Say553; .L_SayX544;
     rtrue;
 ];
 
@@ -32603,7 +32618,7 @@ t_1=LocalParking-->1;
     ;
 t_0=LocalParking-->0;
 t_1=LocalParking-->1;
-    say__p=1;ParaContent();  print (PrintText) SC_303; ParaContent(); (PHR_907_r173 (LR_object)); .L_Say554; .L_SayX545;
+    say__p=1;ParaContent();  print (PrintText) SC_301; ParaContent(); (PHR_907_r173 (LR_object)); .L_Say554; .L_SayX545;
     rtrue;
 ];
 
@@ -32631,7 +32646,7 @@ t_2=LocalParking-->2;
 t_3=LocalParking-->3;
 t_4=LocalParking-->4;
     say__p=1;ParaContent();  #ifdef TARGET_ZCODE; @push self; self = 91; @print_unicode self; @pull self;
-	#ifnot; if (unicode_gestalt_ok) glk_put_char_uni(91); else print "?"; #endif; ParaContent();  print (INDEXED_TEXT_TY_Say) (PHR_1024_r266 ((blockv_stack-->(I7BASPL+0)),BlkValueCopy((blockv_stack-->(I7BASPL+1)), t_3),BlkValueCopy((blockv_stack-->(I7BASPL+2)), t_4))); ParaContent();  print (PrintText) SC_107; ParaContent();  #ifdef TARGET_ZCODE; @push self; self = 93; @print_unicode self; @pull self;
+	#ifnot; if (unicode_gestalt_ok) glk_put_char_uni(91); else print "?"; #endif; ParaContent();  print (INDEXED_TEXT_TY_Say) (PHR_1024_r266 ((blockv_stack-->(I7BASPL+0)),BlkValueCopy((blockv_stack-->(I7BASPL+1)), t_3),BlkValueCopy((blockv_stack-->(I7BASPL+2)), t_4))); ParaContent();  print (PrintText) SC_106; ParaContent();  #ifdef TARGET_ZCODE; @push self; self = 93; @print_unicode self; @pull self;
 	#ifnot; if (unicode_gestalt_ok) glk_put_char_uni(93); else print "?"; #endif;  .L_Say555; .L_SayX546;
     rtrue;
 ];
@@ -32687,7 +32702,7 @@ t_7=LocalParking-->7;
 	#ifnot; if (unicode_gestalt_ok) glk_put_char_uni(91); else print "?"; #endif; ParaContent();  print (INDEXED_TEXT_TY_Say) (PHR_1025_r267 ((blockv_stack-->(I7BASPL+0)),BlkValueCopy((blockv_stack-->(I7BASPL+1)), t_6),BlkValueCopy((blockv_stack-->(I7BASPL+2)), t_7))); ParaContent();  #ifdef TARGET_ZCODE; @push self; self = 93; @print_unicode self; @pull self;
 	#ifnot; if (unicode_gestalt_ok) glk_put_char_uni(93); else print "?"; #endif; 
 	if ((((t_2 ==  IT_BlobAccess((Global_Vars-->12), WORD_BLOB) )))) jump L_Say557;
-		ParaContent();  print (PrintText) SC_107; 
+		ParaContent();  print (PrintText) SC_106; 
 	.L_Say557; .L_SayX548;
 		 .L_Say558; .L_SayX549;
     rtrue;
@@ -32713,7 +32728,7 @@ t_6=LocalParking-->6;
 t_7=LocalParking-->7;
     say__p=1;ParaContent();  print (INDEXED_TEXT_TY_Say) t_1; 
 	if ((((t_2 ==  IT_BlobAccess((Global_Vars-->12), WORD_BLOB) )))) jump L_Say559;
-		ParaContent();  print (PrintText) SC_107; 
+		ParaContent();  print (PrintText) SC_106; 
 	.L_Say559; .L_SayX550;
 		 .L_Say560; .L_SayX551;
     rtrue;
@@ -32970,7 +32985,7 @@ t_4=LocalParking-->4;
 t_0=LocalParking-->0;
 t_1=LocalParking-->1;
 t_2=LocalParking-->2;
-    say__p=1;ParaContent();  print (PrintText) SC_304; ParaContent();  print (INDEXED_TEXT_TY_Say) t_2;  .L_Say572; .L_SayX563;
+    say__p=1;ParaContent();  print (PrintText) SC_302; ParaContent();  print (INDEXED_TEXT_TY_Say) t_2;  .L_Say572; .L_SayX563;
     rtrue;
 ];
 
@@ -32982,7 +32997,7 @@ t_2=LocalParking-->2;
 t_0=LocalParking-->0;
 t_1=LocalParking-->1;
 t_2=LocalParking-->2;
-    say__p=1;ParaContent();  print (PrintText) SC_304; ParaContent();  print (INDEXED_TEXT_TY_Say) t_2;  .L_Say573; .L_SayX564;
+    say__p=1;ParaContent();  print (PrintText) SC_302; ParaContent();  print (INDEXED_TEXT_TY_Say) t_2;  .L_Say573; .L_SayX564;
     rtrue;
 ];
 
@@ -33015,7 +33030,7 @@ t_3=LocalParking-->3;
 t_4=LocalParking-->4;
     say__p=1;ParaContent();  print (INDEXED_TEXT_TY_Say) t_3; 
 	if ((((t_4 == 1)))) jump L_Say574;
-		ParaContent();  print (PrintText) SC_107; 
+		ParaContent();  print (PrintText) SC_106; 
 	.L_Say574; .L_SayX565;
 		ParaContent();  print (INDEXED_TEXT_TY_Say)  IT_GetBlob((blockv_stack-->(I7BASPL+0)), t_2, t_4, WORD_BLOB) ;  .L_Say575; .L_SayX566;
     rtrue;
@@ -33035,7 +33050,7 @@ t_3=LocalParking-->3;
 t_4=LocalParking-->4;
     say__p=1;ParaContent();  print (INDEXED_TEXT_TY_Say) t_3; 
 	if (((((Adj_16_t1_v13(t_3)))))) jump L_Say576;
-		ParaContent();  print (PrintText) SC_107; 
+		ParaContent();  print (PrintText) SC_106; 
 	.L_Say576; .L_SayX567;
 		ParaContent();  print (INDEXED_TEXT_TY_Say) t_0;  .L_Say577; .L_SayX568;
     rtrue;
@@ -33068,7 +33083,7 @@ t_1=LocalParking-->1;
 t_2=LocalParking-->2;
 t_3=LocalParking-->3;
 t_4=LocalParking-->4;
-    say__p=1;ParaContent();  print (INDEXED_TEXT_TY_Say) t_3; ParaContent();  print (PrintText) SC_107; ParaContent();  print (INDEXED_TEXT_TY_Say)  IT_GetBlob((blockv_stack-->(I7BASPL+0)), t_2, t_4, WORD_BLOB) ;  .L_Say578; .L_SayX569;
+    say__p=1;ParaContent();  print (INDEXED_TEXT_TY_Say) t_3; ParaContent();  print (PrintText) SC_106; ParaContent();  print (INDEXED_TEXT_TY_Say)  IT_GetBlob((blockv_stack-->(I7BASPL+0)), t_2, t_4, WORD_BLOB) ;  .L_Say578; .L_SayX569;
     rtrue;
 ];
 
@@ -33268,7 +33283,7 @@ Verb 'ta' 'tag' 'hämta' 'plocka'
     * 'av' held  -> Disrobe
     * 'på' noun  -> Touch
     * 'upp' / 'ut' / 'ur' multi  -> Take
-    * 'en' / 'ett' 'gammal' / 'gammalt' / 'sparad' / 'sparat' 'spel' / 'omgång' / 'spelomgång'  -> Restore
+    * 'en' / 'et' 'gammal' / 'gammalt' / 'sparad' / 'sparat' 'spel' / 'omgång' / 'spelomgång'  -> Restore
     * 'på' 'dig' / 'dej' / 'mig' / 'mej' / 'sig' / 'sej' held  -> Wear
     * held 'på' 'dig' / 'dej' / 'mig' / 'mej' / 'sig' / 'sej'  -> Wear
     * 'av' 'dig' / 'dej' / 'mig' / 'mej' / 'sig' / 'sej' held  -> Disrobe
@@ -33385,7 +33400,7 @@ Verb 'öppna' 'packa upp'
     * 'gammal' / 'gammalt' / 'sparad' / 'sparat'  -> Restore
     * noun  -> Open
     * 'gammal' / 'gammalt' / 'sparad' / 'sparat' 'spel' / 'omgång' / 'spelomgång'  -> Restore
-    * 'en' / 'ett' 'gammal' / 'gammalt' / 'sparad' / 'sparat' 'spel' / 'omgång' / 'spelomgång'  -> Restore
+    * 'en' / 'et' 'gammal' / 'gammalt' / 'sparad' / 'sparat' 'spel' / 'omgång' / 'spelomgång'  -> Restore
 ;
 Verb 'stäng'
     *  -> Quit
@@ -33601,7 +33616,7 @@ Verb 'ladda'
     * 'sparning'  -> Restore
     * 'gammal' / 'gammalt' / 'sparad' / 'sparat' 'spel' / 'omgång' / 'spelomgång'  -> Restore
     * 'sparad' 'position'  -> Restore
-    * 'en' / 'ett' 'gammal' / 'gammalt' / 'sparad' / 'sparat' 'spel' / 'omgång' / 'spelomgång'  -> Restore
+    * 'en' / 'et' 'gammal' / 'gammalt' / 'sparad' / 'sparat' 'spel' / 'omgång' / 'spelomgång'  -> Restore
 ;
 Verb 'ny'
     *  -> Restart
@@ -33620,10 +33635,10 @@ Verb 'börja' 'starta'
     * 'ny' / 'nytt'  -> Restart
     * 'om'  -> Restart
     * 'ny' / 'nytt' 'spel' / 'omgång' / 'spelomgång'  -> Restart
-    * 'på' / 'en' / 'ett' 'ny' / 'nytt' 'spel' / 'omgång' / 'spelomgång'  -> Restart
+    * 'på' / 'en' / 'et' 'ny' / 'nytt' 'spel' / 'omgång' / 'spelomgång'  -> Restart
     * 'om' 'från' 'början'  -> Restart
-    * 'om' / 'på' 'på' / 'en' / 'ett' 'ny' / 'nytt' 'spel' / 'omgång' / 'spelomgång'  -> Restart
-    * 'om' 'på' 'en' / 'ett' 'ny' / 'nytt' 'spel' / 'omgång' / 'spelomgång'  -> Restart
+    * 'om' / 'på' 'på' / 'en' / 'et' 'ny' / 'nytt' 'spel' / 'omgång' / 'spelomgång'  -> Restart
+    * 'om' 'på' 'en' / 'et' 'ny' / 'nytt' 'spel' / 'omgång' / 'spelomgång'  -> Restart
 ;
 Verb 'verifiera'
     *  -> Verify
@@ -36012,308 +36027,306 @@ if ((((true) && ((Adj_75_t1_v9(t_0)))))) { (PHR_809_r18 (t_0)); rtrue; }
 Array ConstantListPointers --> 
  0 0;
 
-Constant SC_107 = " ";
-Constant SC_124 = " (inte bara känna på ";
-Constant SC_111 = " eller ";
-Constant SC_121 = " finns ";
-Constant SC_119 = " her";
-Constant SC_142 = " here";
-Constant SC_150 = " is ~";
-Constant SC_135 = " or ";
-Constant SC_116 = " ser du ";
-Constant SC_125 = " själv). Stämmer det?";
-Constant SC_132 = " ta på ";
-Constant SC_138 = " you ";
-Constant SC_151 = "~.";
-Constant SC_130 = "). Stämmer det?";
-Constant SC_112 = ", ";
-Constant SC_134 = ",";
-Constant SC_106 = ".";
-Constant SC_105 = ": ";
-Constant SC_122 = ":";
-Constant SC_148 = "<";
-Constant SC_113 = "> ";
+Constant SC_106 = " ";
+Constant SC_123 = " (inte bara känna på ";
+Constant SC_110 = " eller ";
+Constant SC_120 = " finns ";
+Constant SC_118 = " her";
+Constant SC_141 = " here";
+Constant SC_149 = " is ~";
+Constant SC_134 = " or ";
+Constant SC_115 = " ser du ";
+Constant SC_124 = " själv). Stämmer det?";
+Constant SC_131 = " ta på ";
+Constant SC_137 = " you ";
+Constant SC_150 = "~.";
+Constant SC_129 = "). Stämmer det?";
+Constant SC_111 = ", ";
+Constant SC_133 = ",";
+Constant SC_105 = ".";
+Constant SC_104 = ": ";
+Constant SC_121 = ":";
+Constant SC_147 = "<";
+Constant SC_112 = "> ";
 Constant SC_18 = ">";
-Constant SC_110 = "?";
+Constant SC_109 = "?";
 Constant SC_27 = "AVSLUTA";
-Constant SC_146 = "Beklagar, antingen böjdes ord i dessa meningar på sätt som inte förekommer inom svenskan, eller så är programmet sönder.";
-Constant SC_144 = "Beklagar, du tycks inte ha skrivit in någon text.";
-Constant SC_145 = "Beklagar, programmet stödjer inte meningar med olika antal ord.";
-Constant SC_243 = "De";
-Constant SC_238 = "Dej";
-Constant SC_244 = "Dem";
-Constant SC_213 = "Den";
+Constant SC_145 = "Beklagar, antingen böjdes ord i dessa meningar på sätt som inte förekommer inom svenskan, eller så är programmet sönder.";
+Constant SC_143 = "Beklagar, du tycks inte ha skrivit in någon text.";
+Constant SC_144 = "Beklagar, programmet stödjer inte meningar med olika antal ord.";
+Constant SC_241 = "De";
+Constant SC_236 = "Dej";
+Constant SC_242 = "Dem";
+Constant SC_212 = "Den";
 Constant SC_17 = "Denne efterårsdag summer parken af fuglekvidder. Efterårsvinden tager fat i de flerfarvede blade og bær dem hen ad stien.";
-Constant SC_212 = "Det";
-Constant SC_239 = "Dig";
-Constant SC_242 = "Dom";
-Constant SC_114 = "Du ser ";
-Constant SC_229 = "En";
-Constant SC_228 = "Ett";
-Constant SC_147 = "Förslag: The printed name of ";
-Constant SC_115 = "I ";
-Constant SC_137 = "In ";
+Constant SC_211 = "Det";
+Constant SC_237 = "Dig";
+Constant SC_240 = "Dom";
+Constant SC_113 = "Du ser ";
+Constant SC_227 = "En";
+Constant SC_146 = "Förslag: The printed name of ";
+Constant SC_114 = "I ";
+Constant SC_136 = "In ";
 Constant SC_2 = "Interaktiv fiktion";
-Constant SC_131 = "Jag antar att du vill att ";
-Constant SC_123 = "Jag antar att du vill ta på ";
+Constant SC_130 = "Jag antar att du vill att ";
+Constant SC_122 = "Jag antar att du vill ta på ";
 Constant SC_25 = "LADDA en sparad spelomgång";
 Constant SC_16 = "Lika snygg som vanligt.";
-Constant SC_250 = "Lite";
-Constant SC_249 = "Litet";
-Constant SC_236 = "Mej";
-Constant SC_237 = "Mig";
-Constant SC_259 = "Ned";
-Constant SC_258 = "Ner";
-Constant SC_227 = "Nå";
-Constant SC_269 = "Någon";
-Constant SC_271 = "Något";
-Constant SC_273 = "Några";
-Constant SC_268 = "Nån";
-Constant SC_272 = "Nåra";
-Constant SC_270 = "Nåt";
-Constant SC_120 = "On ";
-Constant SC_117 = "På ";
+Constant SC_248 = "Lite";
+Constant SC_247 = "Litet";
+Constant SC_234 = "Mej";
+Constant SC_235 = "Mig";
+Constant SC_257 = "Ned";
+Constant SC_256 = "Ner";
+Constant SC_226 = "Nå";
+Constant SC_267 = "Någon";
+Constant SC_269 = "Något";
+Constant SC_271 = "Några";
+Constant SC_266 = "Nån";
+Constant SC_270 = "Nåra";
+Constant SC_268 = "Nåt";
+Constant SC_119 = "On ";
+Constant SC_116 = "På ";
 Constant SC_22 = "QUIT";
 Constant SC_19 = "RESTART";
 Constant SC_20 = "RESTORE a saved game";
-Constant SC_285 = "Sedan";
-Constant SC_240 = "Sej";
-Constant SC_284 = "Sen";
-Constant SC_241 = "Sig";
-Constant SC_162 = "Skriv namnet i bestämd form (~den röda lyktan~).";
-Constant SC_143 = "Skriv nu dess obestämda form (~en röd lykta~).";
-Constant SC_221 = "Sådan";
-Constant SC_220 = "Sån";
+Constant SC_283 = "Sedan";
+Constant SC_238 = "Sej";
+Constant SC_282 = "Sen";
+Constant SC_239 = "Sig";
+Constant SC_161 = "Skriv namnet i bestämd form (~den röda lyktan~).";
+Constant SC_142 = "Skriv nu dess obestämda form (~en röd lykta~).";
+Constant SC_220 = "Sådan";
+Constant SC_219 = "Sån";
 Constant SC_3 = "Thomas Lynge";
 Constant SC_23 = "UNDO the last command";
-Constant SC_109 = "Vill du ";
-Constant SC_133 = "Would you like to ";
-Constant SC_136 = "You ";
-Constant SC_304 = "@@94";
+Constant SC_108 = "Vill du ";
+Constant SC_132 = "Would you like to ";
+Constant SC_135 = "You ";
+Constant SC_302 = "@@94";
 Constant SC_33 = "a";
-Constant SC_70 = "a-en";
-Constant SC_140 = "also ";
-Constant SC_206 = "an";
-Constant SC_166 = "ar";
-Constant SC_205 = "at";
-Constant SC_300 = "bænk";
+Constant SC_69 = "a-en";
+Constant SC_139 = "also ";
+Constant SC_205 = "an";
+Constant SC_165 = "ar";
+Constant SC_204 = "at";
+Constant SC_298 = "bænk";
 Constant SC_24 = "börja på en NY spelomgång";
-Constant SC_139 = "can ";
-Constant SC_184 = "cker";
-Constant SC_203 = "d";
-Constant SC_58 = "da";
-Constant SC_233 = "dagar";
-Constant SC_231 = "dagen";
-Constant SC_230 = "dan";
-Constant SC_232 = "dar";
-Constant SC_204 = "dd";
-Constant SC_59 = "dda";
-Constant SC_200 = "de ";
-Constant SC_60 = "de";
-Constant SC_152 = "dej";
-Constant SC_157 = "dem";
-Constant SC_197 = "den ";
+Constant SC_138 = "can ";
+Constant SC_183 = "cker";
+Constant SC_202 = "d";
+Constant SC_57 = "da";
+Constant SC_231 = "dagar";
+Constant SC_229 = "dagen";
+Constant SC_228 = "dan";
+Constant SC_230 = "dar";
+Constant SC_203 = "dd";
+Constant SC_58 = "dda";
+Constant SC_199 = "de ";
+Constant SC_59 = "de";
+Constant SC_151 = "dej";
+Constant SC_156 = "dem";
+Constant SC_196 = "den ";
 Constant SC_31 = "den";
-Constant SC_118 = "dessutom ";
-Constant SC_198 = "det ";
+Constant SC_117 = "dessutom ";
+Constant SC_197 = "det ";
 Constant SC_32 = "det";
-Constant SC_302 = "di";
-Constant SC_153 = "dig";
-Constant SC_199 = "dom ";
-Constant SC_156 = "dom";
-Constant SC_207 = "dra";
-Constant SC_49 = "e";
+Constant SC_300 = "di";
+Constant SC_152 = "dig";
+Constant SC_198 = "dom ";
+Constant SC_155 = "dom";
+Constant SC_206 = "dra";
+Constant SC_48 = "e";
 Constant SC_36 = "el";
-Constant SC_94 = "el-la";
-Constant SC_95 = "el-le";
-Constant SC_77 = "el-len";
-Constant SC_76 = "el-let";
-Constant SC_41 = "elt";
-Constant SC_96 = "elt-la";
+Constant SC_93 = "el-la";
+Constant SC_94 = "el-le";
+Constant SC_76 = "el-len";
+Constant SC_75 = "el-let";
+Constant SC_40 = "elt";
+Constant SC_95 = "elt-la";
 Constant SC_29 = "en";
-Constant SC_86 = "en-a";
-Constant SC_88 = "en-na";
-Constant SC_89 = "en-ne";
-Constant SC_73 = "en-nen";
-Constant SC_72 = "en-net";
-Constant SC_48 = "ena";
+Constant SC_85 = "en-a";
+Constant SC_87 = "en-na";
+Constant SC_88 = "en-ne";
+Constant SC_72 = "en-nen";
+Constant SC_71 = "en-net";
+Constant SC_47 = "ena";
 Constant SC_35 = "er";
-Constant SC_91 = "er-ra";
-Constant SC_92 = "er-re";
-Constant SC_75 = "er-ren";
-Constant SC_74 = "er-ret";
-Constant SC_40 = "ert";
-Constant SC_93 = "ert-ra";
-Constant SC_39 = "et";
-Constant SC_87 = "et-a";
-Constant SC_90 = "et-na";
-Constant SC_30 = "ett";
-Constant SC_193 = "far";
-Constant SC_192 = "fäder";
+Constant SC_90 = "er-ra";
+Constant SC_91 = "er-re";
+Constant SC_74 = "er-ren";
+Constant SC_73 = "er-ret";
+Constant SC_39 = "ert";
+Constant SC_92 = "ert-ra";
+Constant SC_30 = "et";
+Constant SC_86 = "et-a";
+Constant SC_89 = "et-na";
+Constant SC_192 = "far";
+Constant SC_191 = "fäder";
 Constant SC_26 = "få tips på KUL saker att testa i spelet";
-Constant SC_246 = "gett";
-Constant SC_245 = "givit";
-Constant SC_226 = "gon";
-Constant SC_225 = "got";
-Constant SC_224 = "gra";
-Constant SC_128 = "henne";
-Constant SC_129 = "honom";
-Constant SC_171 = "ia";
+Constant SC_244 = "gett";
+Constant SC_243 = "givit";
+Constant SC_225 = "gon";
+Constant SC_224 = "got";
+Constant SC_223 = "gra";
+Constant SC_127 = "henne";
+Constant SC_128 = "honom";
+Constant SC_170 = "ia";
 Constant SC_14 = "in";
-Constant SC_170 = "ina";
-Constant SC_185 = "k";
-Constant SC_126 = "klä på mig";
-Constant SC_108 = "l";
-Constant SC_66 = "la";
-Constant SC_247 = "lade";
-Constant SC_183 = "lar";
-Constant SC_67 = "le";
-Constant SC_57 = "len";
-Constant SC_189 = "ler";
-Constant SC_56 = "let";
-Constant SC_201 = "lilla";
-Constant SC_202 = "lille";
-Constant SC_248 = "lite";
-Constant SC_195 = "liten";
-Constant SC_196 = "litet";
-Constant SC_68 = "lla";
-Constant SC_69 = "lle";
-Constant SC_210 = "m";
-Constant SC_61 = "ma";
-Constant SC_42 = "mal";
-Constant SC_97 = "mal-la";
-Constant SC_98 = "mal-le";
-Constant SC_43 = "malt";
-Constant SC_99 = "malt-la";
-Constant SC_179 = "mar";
-Constant SC_62 = "me";
-Constant SC_234 = "mej";
+Constant SC_169 = "ina";
+Constant SC_184 = "k";
+Constant SC_125 = "klä på mig";
+Constant SC_107 = "l";
+Constant SC_65 = "la";
+Constant SC_245 = "lade";
+Constant SC_182 = "lar";
+Constant SC_66 = "le";
+Constant SC_56 = "len";
+Constant SC_188 = "ler";
+Constant SC_55 = "let";
+Constant SC_200 = "lilla";
+Constant SC_201 = "lille";
+Constant SC_246 = "lite";
+Constant SC_194 = "liten";
+Constant SC_195 = "litet";
+Constant SC_67 = "lla";
+Constant SC_68 = "lle";
+Constant SC_209 = "m";
+Constant SC_60 = "ma";
+Constant SC_41 = "mal";
+Constant SC_96 = "mal-la";
+Constant SC_97 = "mal-le";
+Constant SC_42 = "malt";
+Constant SC_98 = "malt-la";
+Constant SC_178 = "mar";
+Constant SC_61 = "me";
+Constant SC_232 = "mej";
 Constant SC_37 = "mel";
-Constant SC_78 = "mel-len";
-Constant SC_50 = "men";
-Constant SC_186 = "mer";
-Constant SC_51 = "met";
-Constant SC_303 = "mi";
-Constant SC_235 = "mig";
-Constant SC_256 = "morgnar";
-Constant SC_252 = "morgon";
-Constant SC_254 = "morgonen";
-Constant SC_255 = "mornar";
-Constant SC_251 = "morron";
-Constant SC_253 = "morronen";
-Constant SC_46 = "n";
-Constant SC_47 = "na";
-Constant SC_209 = "nan";
-Constant SC_180 = "nar";
-Constant SC_208 = "nat";
-Constant SC_63 = "ne";
-Constant SC_257 = "ned";
-Constant SC_261 = "nedför";
-Constant SC_263 = "nedåt";
-Constant SC_52 = "nen";
-Constant SC_187 = "ner";
-Constant SC_260 = "nerför";
-Constant SC_262 = "neråt";
-Constant SC_53 = "net";
-Constant SC_217 = "nna";
-Constant SC_216 = "nne";
+Constant SC_77 = "mel-len";
+Constant SC_49 = "men";
+Constant SC_185 = "mer";
+Constant SC_50 = "met";
+Constant SC_301 = "mi";
+Constant SC_233 = "mig";
+Constant SC_254 = "morgnar";
+Constant SC_250 = "morgon";
+Constant SC_252 = "morgonen";
+Constant SC_253 = "mornar";
+Constant SC_249 = "morron";
+Constant SC_251 = "morronen";
+Constant SC_45 = "n";
+Constant SC_46 = "na";
+Constant SC_208 = "nan";
+Constant SC_179 = "nar";
+Constant SC_207 = "nat";
+Constant SC_62 = "ne";
+Constant SC_255 = "ned";
+Constant SC_259 = "nedför";
+Constant SC_261 = "nedåt";
+Constant SC_51 = "nen";
+Constant SC_186 = "ner";
+Constant SC_258 = "nerför";
+Constant SC_260 = "neråt";
+Constant SC_52 = "net";
+Constant SC_216 = "nna";
+Constant SC_215 = "nne";
 Constant SC_6 = "nordost";
 Constant SC_7 = "nordväst";
 Constant SC_4 = "norr";
-Constant SC_223 = "nå";
-Constant SC_265 = "någon";
-Constant SC_275 = "någonsin";
-Constant SC_277 = "någonstans";
-Constant SC_279 = "någonting";
-Constant SC_281 = "någonvart";
-Constant SC_155 = "något";
-Constant SC_267 = "några";
-Constant SC_264 = "nån";
-Constant SC_274 = "nånsin";
-Constant SC_276 = "nånstans";
-Constant SC_278 = "nånting";
-Constant SC_280 = "nånvart";
-Constant SC_266 = "nåra";
-Constant SC_154 = "nåt";
-Constant SC_175 = "o";
-Constant SC_149 = "objektet";
-Constant SC_211 = "om";
-Constant SC_168 = "on";
-Constant SC_165 = "or";
-Constant SC_222 = "ot";
-Constant SC_167 = "r";
-Constant SC_64 = "ra";
-Constant SC_182 = "rar";
-Constant SC_65 = "re";
-Constant SC_55 = "ren";
-Constant SC_190 = "rer";
-Constant SC_54 = "ret";
-Constant SC_181 = "ron";
-Constant SC_178 = "ror";
-Constant SC_191 = "s";
-Constant SC_104 = "s$|x$|z$";
-Constant SC_296 = "sa";
-Constant SC_297 = "sade";
-Constant SC_283 = "sedan";
-Constant SC_141 = "see ";
+Constant SC_222 = "nå";
+Constant SC_263 = "någon";
+Constant SC_273 = "någonsin";
+Constant SC_275 = "någonstans";
+Constant SC_277 = "någonting";
+Constant SC_279 = "någonvart";
+Constant SC_154 = "något";
+Constant SC_265 = "några";
+Constant SC_262 = "nån";
+Constant SC_272 = "nånsin";
+Constant SC_274 = "nånstans";
+Constant SC_276 = "nånting";
+Constant SC_278 = "nånvart";
+Constant SC_264 = "nåra";
+Constant SC_153 = "nåt";
+Constant SC_174 = "o";
+Constant SC_148 = "objektet";
+Constant SC_210 = "om";
+Constant SC_167 = "on";
+Constant SC_164 = "or";
+Constant SC_221 = "ot";
+Constant SC_166 = "r";
+Constant SC_63 = "ra";
+Constant SC_181 = "rar";
+Constant SC_64 = "re";
+Constant SC_54 = "ren";
+Constant SC_189 = "rer";
+Constant SC_53 = "ret";
+Constant SC_180 = "ron";
+Constant SC_177 = "ror";
+Constant SC_190 = "s";
+Constant SC_103 = "s$|x$|z$";
+Constant SC_294 = "sa";
+Constant SC_295 = "sade";
+Constant SC_281 = "sedan";
+Constant SC_140 = "see ";
 Constant SC_21 = "see some suggestions for AMUSING things to do";
-Constant SC_160 = "sej";
-Constant SC_282 = "sen";
-Constant SC_161 = "sig";
-Constant SC_159 = "ska";
-Constant SC_158 = "skall";
-Constant SC_194 = "små";
-Constant SC_214 = "ssa";
+Constant SC_159 = "sej";
+Constant SC_280 = "sen";
+Constant SC_160 = "sig";
+Constant SC_158 = "ska";
+Constant SC_157 = "skall";
+Constant SC_193 = "små";
+Constant SC_213 = "ssa";
 Constant SC_9 = "sydost";
 Constant SC_10 = "sydväst";
-Constant SC_293 = "säg";
-Constant SC_291 = "säga";
-Constant SC_295 = "säger";
-Constant SC_292 = "säj";
-Constant SC_290 = "säja";
-Constant SC_294 = "säjer";
-Constant SC_219 = "sådan";
-Constant SC_289 = "sådana";
-Constant SC_287 = "sådant";
-Constant SC_218 = "sån";
-Constant SC_288 = "såna";
-Constant SC_286 = "sånt";
+Constant SC_291 = "säg";
+Constant SC_289 = "säga";
+Constant SC_293 = "säger";
+Constant SC_290 = "säj";
+Constant SC_288 = "säja";
+Constant SC_292 = "säjer";
+Constant SC_218 = "sådan";
+Constant SC_287 = "sådana";
+Constant SC_285 = "sådant";
+Constant SC_217 = "sån";
+Constant SC_286 = "såna";
+Constant SC_284 = "sånt";
 Constant SC_8 = "söder";
 Constant SC_34 = "t";
-Constant SC_71 = "t-a";
-Constant SC_80 = "t-da";
-Constant SC_83 = "t-de";
-Constant SC_84 = "t-ma";
-Constant SC_85 = "t-na";
-Constant SC_127 = "ta av";
-Constant SC_172 = "ta";
-Constant SC_301 = "tempeltræ";
-Constant SC_44 = "ten";
-Constant SC_100 = "ten-lla";
-Constant SC_101 = "ten-lle";
-Constant SC_188 = "ter";
-Constant SC_45 = "tet";
-Constant SC_102 = "tet-lla";
+Constant SC_70 = "t-a";
+Constant SC_79 = "t-da";
+Constant SC_82 = "t-de";
+Constant SC_83 = "t-ma";
+Constant SC_84 = "t-na";
+Constant SC_126 = "ta av";
+Constant SC_171 = "ta";
+Constant SC_299 = "tempeltræ";
+Constant SC_43 = "ten";
+Constant SC_99 = "ten-lla";
+Constant SC_100 = "ten-lle";
+Constant SC_187 = "ter";
+Constant SC_44 = "tet";
+Constant SC_101 = "tet-lla";
 Constant SC_5 = "the";
 Constant SC_38 = "tt";
-Constant SC_79 = "tt-a";
-Constant SC_81 = "tt-da";
-Constant SC_82 = "tt-dda";
-Constant SC_215 = "tta";
-Constant SC_176 = "u";
-Constant SC_169 = "um";
+Constant SC_78 = "tt-a";
+Constant SC_80 = "tt-da";
+Constant SC_81 = "tt-dda";
+Constant SC_214 = "tta";
+Constant SC_175 = "u";
+Constant SC_168 = "um";
 Constant SC_13 = "upp";
 Constant SC_15 = "ut";
-Constant SC_299 = "varandra";
-Constant SC_298 = "varann";
+Constant SC_297 = "varandra";
+Constant SC_296 = "varann";
 Constant SC_12 = "väster";
-Constant SC_103 = "your";
+Constant SC_102 = "your";
 Constant SC_28 = "ÅNGRA det sista draget";
-Constant SC_173 = "ä";
-Constant SC_177 = "å";
-Constant SC_164 = "år";
-Constant SC_174 = "ö";
-Constant SC_163 = "öre";
+Constant SC_172 = "ä";
+Constant SC_176 = "å";
+Constant SC_163 = "år";
+Constant SC_173 = "ö";
+Constant SC_162 = "öre";
 Constant SC_11 = "öster";
 
 #ifndef p0_specification; Constant p0_specification = 0; #endif;

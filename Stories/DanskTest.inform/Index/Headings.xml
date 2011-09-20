@@ -872,749 +872,749 @@
     </dict>
     <key>124</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>6</integer>
+        <key>Line</key><integer>7</integer>
         <key>Title</key><string>Volume - Localization of Inform 7</string>
         <key>Level</key><integer>1</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
     <key>125</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>8</integer>
+        <key>Line</key><integer>9</integer>
         <key>Title</key><string>Book - Danish Standard Rules</string>
         <key>Level</key><integer>2</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>126</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>10</integer>
+        <key>Line</key><integer>11</integer>
         <key>Title</key><string>Part - Preamble</string>
         <key>Level</key><integer>3</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>127</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>13</integer>
+        <key>Line</key><integer>14</integer>
         <key>Title</key><string>Section - Use options</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>4</integer>
     </dict>
     <key>128</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>38</integer>
+        <key>Line</key><integer>39</integer>
         <key>Title</key><string>Part - The Physical World Model</string>
         <key>Level</key><integer>3</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>129</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>41</integer>
+        <key>Line</key><integer>42</integer>
         <key>Title</key><string>Section - Primitive kinds</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>4</integer>
     </dict>
     <key>130</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>57</integer>
+        <key>Line</key><integer>58</integer>
         <key>Title</key><string>Section - Things</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>4</integer>
     </dict>
     <key>131</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>85</integer>
+        <key>Line</key><integer>86</integer>
         <key>Title</key><string>Section - Directions</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>4</integer>
     </dict>
     <key>132</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>142</integer>
+        <key>Line</key><integer>143</integer>
         <key>Title</key><string>Section - People (in place of Section SR1/11 - People in Standard Rules by Graham Nelson)</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>4</integer>
     </dict>
     <key>133</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>171</integer>
+        <key>Line</key><integer>172</integer>
         <key>Title</key><string>Part - Variables and Rulebooks</string>
         <key>Level</key><integer>3</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>134</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>174</integer>
+        <key>Line</key><integer>175</integer>
         <key>Title</key><string>Section - Used when counting things</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>4</integer>
     </dict>
     <key>135</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>183</integer>
+        <key>Line</key><integer>184</integer>
         <key>Title</key><string>Section - Used when declining words</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>4</integer>
     </dict>
     <key>136</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>201</integer>
+        <key>Line</key><integer>202</integer>
         <key>Title</key><string>Section - Unindexed Standard Rules variables - Unindexed</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>4</integer>
     </dict>
     <key>137</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>212</integer>
+        <key>Line</key><integer>213</integer>
         <key>Title</key><string>Section - The Standard Rules</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>4</integer>
     </dict>
     <key>138</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>220</integer>
+        <key>Line</key><integer>221</integer>
         <key>Title</key><string>Part - Activities</string>
         <key>Level</key><integer>3</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>139</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>223</integer>
+        <key>Line</key><integer>224</integer>
         <key>Title</key><string>Section - Definitions</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>4</integer>
     </dict>
     <key>140</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>234</integer>
+        <key>Line</key><integer>235</integer>
         <key>Title</key><string>Section - Final Question</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>4</integer>
     </dict>
     <key>141</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>276</integer>
+        <key>Line</key><integer>277</integer>
         <key>Title</key><string>Section - Final question options</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>4</integer>
     </dict>
     <key>142</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>288</integer>
+        <key>Line</key><integer>289</integer>
         <key>Title</key><string>Section - Locale descriptions</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>4</integer>
     </dict>
     <key>143</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>365</integer>
+        <key>Line</key><integer>366</integer>
         <key>Title</key><string>Part - Actions</string>
         <key>Level</key><integer>3</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>144</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>370</integer>
+        <key>Line</key><integer>371</integer>
         <key>Title</key><string>Section - Pre-parsing rules</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>4</integer>
     </dict>
     <key>145</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>386</integer>
+        <key>Line</key><integer>387</integer>
         <key>Title</key><string>Section - Post-parsing rules</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>4</integer>
     </dict>
     <key>146</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>455</integer>
+        <key>Line</key><integer>456</integer>
         <key>Title</key><string>Section - Standard actions concerning the actor's vision</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>4</integer>
     </dict>
     <key>147</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>486</integer>
+        <key>Line</key><integer>487</integer>
         <key>Title</key><string>Section - Grammar</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>4</integer>
     </dict>
     <key>148</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>850</integer>
+        <key>Line</key><integer>851</integer>
         <key>Title</key><string>Part - Phrase Definitions</string>
         <key>Level</key><integer>3</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>149</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>853</integer>
+        <key>Line</key><integer>854</integer>
         <key>Title</key><string>Chapter - Numbers</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>4</integer>
     </dict>
     <key>150</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>855</integer>
+        <key>Line</key><integer>856</integer>
         <key>Title</key><string>Section - Counting things</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>5</integer>
     </dict>
     <key>151</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>889</integer>
+        <key>Line</key><integer>890</integer>
         <key>Title</key><string>Section - Plural inflections</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>5</integer>
     </dict>
     <key>152</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>1043</integer>
+        <key>Line</key><integer>1044</integer>
         <key>Title</key><string>Chapter - Names with articles</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>4</integer>
     </dict>
     <key>153</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>1045</integer>
+        <key>Line</key><integer>1046</integer>
         <key>Title</key><string>Section - Uncapitalisable names</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>5</integer>
     </dict>
     <key>154</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>1058</integer>
+        <key>Line</key><integer>1059</integer>
         <key>Title</key><string>Section - Suppressing the definite article</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>5</integer>
     </dict>
     <key>155</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>1073</integer>
+        <key>Line</key><integer>1074</integer>
         <key>Title</key><string>Chapter - Inflections inside printed names</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>4</integer>
     </dict>
     <key>156</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>1076</integer>
+        <key>Line</key><integer>1077</integer>
         <key>Title</key><string>Section - Deciding whether in definite or indefinite mode</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>5</integer>
     </dict>
     <key>157</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>1087</integer>
+        <key>Line</key><integer>1088</integer>
         <key>Title</key><string>Section - Definite and indefinite articles</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>5</integer>
     </dict>
     <key>158</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>1102</integer>
+        <key>Line</key><integer>1103</integer>
         <key>Title</key><string>Section - Definite inflections</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>5</integer>
     </dict>
     <key>159</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>1305</integer>
+        <key>Line</key><integer>1306</integer>
         <key>Title</key><string>Chapter - Inflections outside printed names</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>4</integer>
     </dict>
     <key>160</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>1309</integer>
+        <key>Line</key><integer>1310</integer>
         <key>Title</key><string>Section - Strong inflections of adjectives, participles and pronouns</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>5</integer>
     </dict>
     <key>161</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>1514</integer>
+        <key>Line</key><integer>1515</integer>
         <key>Title</key><string>Section - Weak inflection of adjectives</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>5</integer>
     </dict>
     <key>162</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>1525</integer>
+        <key>Line</key><integer>1526</integer>
         <key>Title</key><string>Section - Adjectival inflections of pronouns</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>5</integer>
     </dict>
     <key>163</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>1867</integer>
+        <key>Line</key><integer>1868</integer>
         <key>Title</key><string>Section - Adjectival inflections of articles</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>5</integer>
     </dict>
     <key>164</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>1935</integer>
+        <key>Line</key><integer>1936</integer>
         <key>Title</key><string>Chapter - Spelling Variants</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>4</integer>
     </dict>
     <key>165</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>2089</integer>
+        <key>Line</key><integer>2090</integer>
         <key>Title</key><string>Section - Understanding the printed name of an object</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>5</integer>
     </dict>
     <key>166</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>2108</integer>
+        <key>Line</key><integer>2109</integer>
         <key>Title</key><string>Book - Swedish Template Layer</string>
         <key>Level</key><integer>2</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>167</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>2110</integer>
+        <key>Line</key><integer>2111</integer>
         <key>Title</key><string>Chapter - Output</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>168</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>2112</integer>
+        <key>Line</key><integer>2113</integer>
         <key>Title</key><string>Section - Other Configuration</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>4</integer>
     </dict>
     <key>169</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>2130</integer>
+        <key>Line</key><integer>2131</integer>
         <key>Title</key><string>Section - Global Variables</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>4</integer>
     </dict>
     <key>170</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>2141</integer>
+        <key>Line</key><integer>2142</integer>
         <key>Title</key><string>Section - Grammar</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>4</integer>
     </dict>
     <key>171</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>2160</integer>
+        <key>Line</key><integer>2161</integer>
         <key>Title</key><string>Chapter - Definitions</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>172</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>2162</integer>
+        <key>Line</key><integer>2163</integer>
         <key>Title</key><string>Section - Powers of Two</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>4</integer>
     </dict>
     <key>173</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>2206</integer>
+        <key>Line</key><integer>2207</integer>
         <key>Title</key><string>Section - Template Attributes</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>4</integer>
     </dict>
     <key>174</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>2215</integer>
+        <key>Line</key><integer>2216</integer>
         <key>Title</key><string>Chapter - Parser</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>175</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>2217</integer>
+        <key>Line</key><integer>2218</integer>
         <key>Title</key><string>Section - Descriptors</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>4</integer>
     </dict>
     <key>176</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>2257</integer>
+        <key>Line</key><integer>2258</integer>
         <key>Title</key><string>Section - Print Command</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>4</integer>
     </dict>
     <key>177</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>2322</integer>
+        <key>Line</key><integer>2323</integer>
         <key>Title</key><string>Section - Refers</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>4</integer>
     </dict>
     <key>178</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>2369</integer>
+        <key>Line</key><integer>2370</integer>
         <key>Title</key><string>Section - Extended TryNumber</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>4</integer>
     </dict>
     <key>179</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>2429</integer>
+        <key>Line</key><integer>2430</integer>
         <key>Title</key><string>Section - Gender</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>4</integer>
     </dict>
     <key>180</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>2468</integer>
+        <key>Line</key><integer>2469</integer>
         <key>Title</key><string>Chapter - ListWriter</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>181</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>2470</integer>
+        <key>Line</key><integer>2471</integer>
         <key>Title</key><string>Section - Write After Entry</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>4</integer>
     </dict>
     <key>182</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>2593</integer>
+        <key>Line</key><integer>2594</integer>
         <key>Title</key><string>Chapter - OutOfWorld</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>183</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>2595</integer>
+        <key>Line</key><integer>2596</integer>
         <key>Title</key><string>Section - Announce Pronoun Meanings Rule</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>4</integer>
     </dict>
     <key>184</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>2629</integer>
+        <key>Line</key><integer>2630</integer>
         <key>Title</key><string>Chapter - Light</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>185</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>2631</integer>
+        <key>Line</key><integer>2632</integer>
         <key>Title</key><string>Section - Darkness</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>4</integer>
     </dict>
     <key>186</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>2639</integer>
+        <key>Line</key><integer>2640</integer>
         <key>Title</key><string>Chapter - Language</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>187</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>2641</integer>
+        <key>Line</key><integer>2642</integer>
         <key>Title</key><string>Section - Vocabulary</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>4</integer>
     </dict>
     <key>188</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>2719</integer>
+        <key>Line</key><integer>2720</integer>
         <key>Title</key><string>Section - Pronouns</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>4</integer>
     </dict>
     <key>189</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>2747</integer>
+        <key>Line</key><integer>2748</integer>
         <key>Title</key><string>Section - Descriptors</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>4</integer>
     </dict>
     <key>190</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>2795</integer>
+        <key>Line</key><integer>2796</integer>
         <key>Title</key><string>Section - Numbers</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>4</integer>
     </dict>
     <key>191</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>2899</integer>
+        <key>Line</key><integer>2900</integer>
         <key>Title</key><string>Section - Time</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>4</integer>
     </dict>
     <key>192</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>2911</integer>
+        <key>Line</key><integer>2912</integer>
         <key>Title</key><string>Section - Directions</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>4</integer>
     </dict>
     <key>193</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>2917</integer>
+        <key>Line</key><integer>2918</integer>
         <key>Title</key><string>Section - Translation</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>4</integer>
     </dict>
     <key>194</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>2929</integer>
+        <key>Line</key><integer>2930</integer>
         <key>Title</key><string>Section - Articles</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>4</integer>
     </dict>
     <key>195</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>2970</integer>
+        <key>Line</key><integer>2971</integer>
         <key>Title</key><string>Section - Commands</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>4</integer>
     </dict>
     <key>196</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>3049</integer>
+        <key>Line</key><integer>3050</integer>
         <key>Title</key><string>Section - Short Texts</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>4</integer>
     </dict>
     <key>197</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>3120</integer>
+        <key>Line</key><integer>3121</integer>
         <key>Title</key><string>Section - Printed Inflections</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>4</integer>
     </dict>
     <key>198</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>3249</integer>
+        <key>Line</key><integer>3250</integer>
         <key>Title</key><string>Section - Long Texts</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>4</integer>
     </dict>
     <key>199</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>3835</integer>
+        <key>Line</key><integer>3836</integer>
         <key>Title</key><string>Section - Printing Mechanism</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>4</integer>
     </dict>
     <key>200</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>3841</integer>
+        <key>Line</key><integer>3842</integer>
         <key>Title</key><string>Chapter - Printing</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>201</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>3843</integer>
+        <key>Line</key><integer>3844</integer>
         <key>Title</key><string>Section - Status Line Utilities</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>4</integer>
     </dict>
     <key>202</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>3869</integer>
+        <key>Line</key><integer>3870</integer>
         <key>Title</key><string>Section - Banner</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>4</integer>
     </dict>
     <key>203</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>3902</integer>
+        <key>Line</key><integer>3903</integer>
         <key>Title</key><string>Section - Standard Name Printing Rule</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>4</integer>
     </dict>
     <key>204</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>3950</integer>
+        <key>Line</key><integer>3951</integer>
         <key>Title</key><string>Section - Object Names II</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>4</integer>
     </dict>
     <key>205</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>4023</integer>
+        <key>Line</key><integer>4024</integer>
         <key>Title</key><string>Section - Object Names III</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>4</integer>
     </dict>
     <key>206</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>4104</integer>
+        <key>Line</key><integer>4105</integer>
         <key>Title</key><string>Chapter - Utilities</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>207</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>4106</integer>
+        <key>Line</key><integer>4107</integer>
         <key>Title</key><string>Section - Saying Phrases</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>4</integer>
     </dict>
     <key>208</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>4117</integer>
+        <key>Line</key><integer>4118</integer>
         <key>Title</key><string>Chapter - Time</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>209</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>4119</integer>
+        <key>Line</key><integer>4120</integer>
         <key>Title</key><string>Section - Digital Printing</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>4</integer>
     </dict>
     <key>210</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>4135</integer>
+        <key>Line</key><integer>4136</integer>
         <key>Title</key><string>Section - Analogue Printing</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>4</integer>
     </dict>
     <key>211</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>4189</integer>
+        <key>Line</key><integer>4190</integer>
         <key>Title</key><string>Section - Understanding</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>4</integer>
     </dict>
     <key>212</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>4366</integer>
+        <key>Line</key><integer>4367</integer>
         <key>Title</key><string>Section - Relative Time Token</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>4</integer>
     </dict>
     <key>213</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>4441</integer>
+        <key>Line</key><integer>4442</integer>
         <key>Title</key><string>Volume - Utility Functions - Not for release</string>
         <key>Level</key><integer>1</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
     <key>214</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>4443</integer>
+        <key>Line</key><integer>4444</integer>
         <key>Title</key><string>Book - Working Out Text Substitutions for Definite Species (by Björn Paulsen)</string>
         <key>Level</key><integer>2</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>215</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>4445</integer>
+        <key>Line</key><integer>4446</integer>
         <key>Title</key><string>Part - Specifics</string>
         <key>Level</key><integer>3</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>216</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>4447</integer>
+        <key>Line</key><integer>4448</integer>
         <key>Title</key><string>Section - Variables</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>4</integer>
     </dict>
     <key>217</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>4454</integer>
+        <key>Line</key><integer>4455</integer>
         <key>Title</key><string>Section - Actions, rules, and relevant phrases</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>4</integer>
     </dict>
     <key>218</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>4548</integer>
+        <key>Line</key><integer>4549</integer>
         <key>Title</key><string>Section - Decide phrases</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>4</integer>
     </dict>
     <key>219</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>4604</integer>
+        <key>Line</key><integer>4605</integer>
         <key>Title</key><string>Section - Tables</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>4</integer>
     </dict>
     <key>220</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>4664</integer>
+        <key>Line</key><integer>4665</integer>
         <key>Title</key><string>Part - General functionality</string>
         <key>Level</key><integer>3</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>221</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>4700</integer>
+        <key>Line</key><integer>4701</integer>
         <key>Title</key><string>Volume - Localization of Built-In Extensions</string>
         <key>Level</key><integer>1</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
     <key>222</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>4702</integer>
+        <key>Line</key><integer>4703</integer>
         <key>Title</key><string>Book - Swedish Basic Help Menu (for use with Basic Help Menu by Emily Short)</string>
         <key>Level</key><integer>2</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>223</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>4704</integer>
+        <key>Line</key><integer>4705</integer>
         <key>Title</key><string>Chapter - Basic Help Menu (in place of Basic Help Menu by Emily Short)</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>224</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>4787</integer>
+        <key>Line</key><integer>4788</integer>
         <key>Title</key><string>Book - Swedish Basic Screen Effects (for use with Basic Screen Effects by Emily Short)</string>
         <key>Level</key><integer>2</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>225</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>4796</integer>
+        <key>Line</key><integer>4797</integer>
         <key>Title</key><string>Book - Swedish Complex Listing (for use with Complex Listing by Emily Short)</string>
         <key>Level</key><integer>2</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>226</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>4827</integer>
+        <key>Line</key><integer>4828</integer>
         <key>Title</key><string>Book - Swedish Locksmith (for use with Locksmith by Emily Short)</string>
         <key>Level</key><integer>2</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>227</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>5048</integer>
+        <key>Line</key><integer>5049</integer>
         <key>Title</key><string>Book - Swedish Menus (for use with Menus by Emily Short)</string>
         <key>Level</key><integer>2</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>228</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>5130</integer>
+        <key>Line</key><integer>5131</integer>
         <key>Title</key><string>Book - Swedish Plurality (for use with Plurality by Emily Short)</string>
         <key>Level</key><integer>2</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>229</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>5132</integer>
+        <key>Line</key><integer>5133</integer>
         <key>Title</key><string>Section - Enumeration (in place of Section 4 - Enumeration in Plurality by Emily Short)</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>230</key><dict>
         <key>Filename</key><string>C:\Users\ThomasL\Documents\Inform\Extensions\thomas lynge\danish.i7x</string>
-        <key>Line</key><integer>5174</integer>
+        <key>Line</key><integer>5175</integer>
         <key>Title</key><string>Book - Swedish Rideable Vehicles (for use with Rideable Vehicles by Graham Nelson)</string>
         <key>Level</key><integer>2</integer>
         <key>Indentation</key><integer>2</integer>
