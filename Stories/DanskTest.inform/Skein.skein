@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Skein rootNode="node-0x029AFA70" xmlns="http://www.logicalshift.org.uk/IF/Skein">
+<Skein rootNode="node-0x02909520" xmlns="http://www.logicalshift.org.uk/IF/Skein">
   <generator>Inform 7 for Windows</generator>
-  <activeNode nodeId="node-0x02D0D410"/>
-  <item nodeId="node-0x029AFA70">
+  <activeNode nodeId="node-0x029106C8"/>
+  <item nodeId="node-0x02909520">
     <command xml:space="preserve">- start -</command>
     <result xml:space="preserve">DanskTest&#x000A;Interaktiv fiktion af Thomas Lynge&#x000A;Release 1 / Serial number 110920 / Inform 7 build 6G60 (I6/v6.32 lib 6/12N) SD&#x000A;&#x000A;Parken&#x000A;Denne efter&#x00E5;rsdag summer parken af fuglekvidder. Efter&#x00E5;rsvinden tager fat i de flerfarvede blade og b&#x00E6;r dem hen ad stien.&#x000A;&#x000A;Du ser en b&#x00E6;nk, et tempeltr&#x00E6; og en gammel dame her.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -10,14 +10,16 @@
     <changed>NO</changed>
     <temporary score="0">NO</temporary>
     <children>
-      <child nodeId="node-0x02D0D1E0"/>
-      <child nodeId="node-0x02D0D250"/>
-      <child nodeId="node-0x02D0D330"/>
-      <child nodeId="node-0x02D0D3A0"/>
-      <child nodeId="node-0x02D0D410"/>
+      <child nodeId="node-0x02909098"/>
+      <child nodeId="node-0x0290F990"/>
+      <child nodeId="node-0x0290FA78"/>
+      <child nodeId="node-0x0290FB18"/>
+      <child nodeId="node-0x0290FBF8"/>
+      <child nodeId="node-0x029106C8"/>
+      <child nodeId="node-0x02910AF8"/>
     </children>
   </item>
-  <item nodeId="node-0x02D0D1E0">
+  <item nodeId="node-0x02909098">
     <command xml:space="preserve">x parken</command>
     <result xml:space="preserve">Inget s&#x00E5;dant f&#x00F6;rem&#x00E5;l syns till.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -25,7 +27,7 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
   </item>
-  <item nodeId="node-0x02D0D250">
+  <item nodeId="node-0x0290F990">
     <command xml:space="preserve">x et tempeltr&#x00E6;</command>
     <result xml:space="preserve">Du ser inget s&#x00E4;rskilt med tempeltr&#x00E6;et.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -33,7 +35,7 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
   </item>
-  <item nodeId="node-0x02D0D330">
+  <item nodeId="node-0x0290FA78">
     <command xml:space="preserve">x tempeltr&#x00E6;</command>
     <result xml:space="preserve">Du ser ikke noget specielt ved tempeltr&#x00E6;et.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -41,7 +43,7 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
   </item>
-  <item nodeId="node-0x02D0D3A0">
+  <item nodeId="node-0x0290FB18">
     <command xml:space="preserve">unders&#x00F8;g</command>
     <result xml:space="preserve">Jag f&#x00F6;rst&#x00E5;r inte det verbet.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -49,9 +51,91 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
   </item>
-  <item nodeId="node-0x02D0D410">
+  <item nodeId="node-0x0290FBF8">
     <command xml:space="preserve">unders&#x00F8;g b&#x00E6;nk</command>
-    <result xml:space="preserve">Jag f&#x00F6;rst&#x00E5;r inte det verbet.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">Du ser ikke noget specielt ved b&#x00E6;nken.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0290FC68"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0290FC68">
+    <command xml:space="preserve">unders&#x00F8;ge b&#x00E6;nken</command>
+    <result xml:space="preserve">Jeg forst&#x00E5;r ikke det udsagnsord.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0290FD78"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0290FD78">
+    <command xml:space="preserve">u b&#x00E6;nken</command>
+    <result xml:space="preserve">Du ser ikke noget specielt ved b&#x00E6;nken.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02910658"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02910658">
+    <command xml:space="preserve">x b&#x00E6;nken</command>
+    <result xml:space="preserve">Du ser ikke noget specielt ved b&#x00E6;nken.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x029106C8">
+    <command xml:space="preserve">tag b&#x00E6;nken</command>
+    <result xml:space="preserve">Taget.&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x029108B0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x029108B0">
+    <command xml:space="preserve">se</command>
+    <result xml:space="preserve">Parken&#x000A;Denne efter&#x00E5;rsdag summer parken af fuglekvidder. Efter&#x00E5;rsvinden tager fat i de flerfarvede blade og b&#x00E6;r dem hen ad stien.&#x000A;&#x000A;Du ser et tempeltr&#x00E6; og en gammel dame her.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02910938"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02910938">
+    <command xml:space="preserve">i</command>
+    <result xml:space="preserve">Du har med dig:&#x000A;  en b&#x00E6;nk&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x02910AF8">
+    <command xml:space="preserve">tghe b&#x00E6;nken</command>
+    <result xml:space="preserve">Jeg forst&#x00E5;r ikke det udsagnsord.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02910A88"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02910A88">
+    <command xml:space="preserve">tag b&#x00E6;nken</command>
+    <result xml:space="preserve">Taget.&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>YES</played>
     <changed>NO</changed>

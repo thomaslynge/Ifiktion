@@ -14,7 +14,7 @@ Phase II ... Semantic analysis Ia
 -----------------------------------------------------
 
 I've also read Standard Rules by Graham Nelson, which is 39455 words long.
-I've also read Danish by Thomas Lynge, which is 26912 words long.
+I've also read Danish by Thomas Lynge, which is 26911 words long.
 Req is <section sr1/11 - people> in <Standard Rules> by <Graham Nelson>
 Req is <basic> in <place of Basic Help Menu> by <Emily Short>
 Req is <section 4 - enumeration> in <Plurality> by <Emily Short>

@@ -3440,7 +3440,7 @@ Array LanguageGNAsToArticles --> 0 0 0 1 2 2 2 2 0 0 0 1 2 2 2 2;
     'i//', 'inv', 'lista', 
     'tillhörigheter', 'tillh':  print "gå igenom dina tillhörigheter";
     'utr', 'utrustning':        print "gå igenom din utrustning";
-    'tag':                      print "ta";
+    'tag':                      print "tag";
     'l//', 't//', 'c//':        print "titta";
     'x//', 'u//':               print "undersøge";
     'z//':                      print "vänta";
@@ -3728,8 +3728,8 @@ Constant COMMA__TX      = ", ";
                 default: print " är ";
             } "er jo allerede her.";
         2:  "Du har ", (denellerdem) x1, " ju inte.";
-        3:  print "(måste ta af ", (the) x1, " först)^"; say__p = 0; return;
-        4:  print "Släpp"; Inflect("t", "t", "ta", x1); ".";
+        3:  print "(måste tag af ", (the) x1, " först)^"; say__p = 0; return;
+        4:  print "Släpp"; Inflect("t", "t", "tag", x1); ".";
         5:  "Det finns inte plats på ", (the) x1, ".";
         6:  "Det finns inte plats i ", (the) x1, ".";
         7:  print (The) actor, " ";
@@ -3759,10 +3759,10 @@ Constant COMMA__TX      = ", ";
                 'ligg':  print_ret "ligga på.";
                 default: print_ret "komma in i.";
             }
-        3:  print "Det går inte att ta "; sig();
+        3:  print "Det går inte att tag "; sig();
             print " in i ", (denellerde) x1, " stäng"; Inflect("d", "t", "da", x1); 
             exc_art == true; print (the) x1; exc_art == false; ".";
-        4:  print "Det går inte att ta "; sig();
+        4:  print "Det går inte att tag "; sig();
             if (x1 has supporter) print " upp på "; else print " in i ";
             naagot(); " som man själv bär på.";
         5:  print "Du tar "; dig();
@@ -3808,7 +3808,7 @@ Constant COMMA__TX      = ", ";
         1:  "Du håller inte i ", (the) x1, " än.";
         2:  "Du bollar et tag med ", (the) x1, " men har inte mycket för det.";
         3:  print (The) x1, " verkar inte så angeläg"; Inflect("en", "et", "na", x1); " om det.";
-        4:  print "Det går nog inte att få ", (the) x1, " att ta emot "; naagot(); " alls.";
+        4:  print "Det går nog inte att få ", (the) x1, " att tag emot "; naagot(); " alls.";
         5:  "Du ger ", (the) x1, " till ", (the) second, ".";
         6:  print (The) actor, " ger "; dig(); print " ", (the) x1, ".^";
         7:  print (The) actor, " ger ", (the) x1, " till ", (the) second, ".^";
@@ -3844,13 +3844,13 @@ Constant COMMA__TX      = ", ";
         28: print "(måste öppna ", (the) x1, " först)^"; say__p = 0; return;
     }
   Insert: switch (n) {
-        1:  print "Man måste ta ", (the) x1, " innan man kan stoppa ", (denellerdem) x1, " i ";
+        1:  print "Man måste tag ", (the) x1, " innan man kan stoppa ", (denellerdem) x1, " i ";
             naagot(); " annat."; !# Used, but what prints it?
         2:  print "Man kan inte ha "; naagot(); " i ", (denellerdem) x1, ".";
         3:  print (The) x1, " är stäng"; Inflect("d", "t", "da", x1); ".";
-        4:  print "Det går inte utan att ta af "; sig(); " ", (denellerdem) x1, " först."; !# Unused?
+        4:  print "Det går inte utan att tag af "; sig(); " ", (denellerdem) x1, " först."; !# Unused?
         5:  print "Det går inte att stoppa in "; naagot(); print " i "; sig(); " självt.";
-        6:  print "(måste ta af ", (denellerdem) x1, " först)^"; say__p = 0; return;
+        6:  print "(måste tag af ", (denellerdem) x1, " först)^"; say__p = 0; return;
         7:  "Det är redan fullt i ", (the) x1, ".";
         8:  "Klart.";
         9:  "Du stoppar ", (the) x1, " i ", (the) second, ".";
@@ -3976,7 +3976,7 @@ Constant COMMA__TX      = ", ";
         23: print "Du vill visst prata med "; naagon(); ", men jag förstår inte vem.";
         24: "Det går inte att tala med ", (the) x1, ".";
         25: print "Vill du prata med "; naagon(); ", skriv bara namn, kommatecken og vad du vill ha sagt: ~Watson, elementärt~ (inte t.ex. ~Watson min vän, elementärt~).";
-        26: "(måste ta ", (the) x1, " först)";
+        26: "(måste tag ", (the) x1, " först)";
         27: "Jag förstod inte den meningen.";
         28: print "Jag hängde inte med efter det där om att ";
         29: "Jag förstod inte räkneordet.";
@@ -4031,8 +4031,8 @@ Constant COMMA__TX      = ", ";
         65: "Du måste ange et indirekt objekt.";
         66: "Du må ikke anvende et indirekte objekt med dette udsagnsord.";
         67: print "Du måste ange "; naagot(); " mer konkret än en riktning.";
-        68: print "(", (The) actor, " måste ta ", (the) x1, " först)^";
-        69: "(måste ta ", (the) x1, " först)";
+        68: print "(", (The) actor, " måste tag ", (the) x1, " först)^";
+        69: "(måste tag ", (the) x1, " först)";
         70: print "Spelet tillåter "; dig(); " inte att ÅNGRA ditt drag.";
         71: print (string) DARKNESS__TX;
         72: print (The) x1, " har viktigare saker för "; sig(); ".";
@@ -4078,7 +4078,7 @@ Constant COMMA__TX      = ", ";
         3:  "Inte åt det hållet, vet du vad.";
     }
   PutOn: switch (n) {
-        1:  print "Du måste ta ", (the) x1, " innan det går att ";
+        1:  print "Du måste tag ", (the) x1, " innan det går att ";
             switch (verb_word) {
                 'sätt':  print "sätta ";
                 'ställ': print "ställa ";
@@ -4100,7 +4100,7 @@ Constant COMMA__TX      = ", ";
                 default: print "placera ";
             } naagot(); " på ", (the) x1, ".";
         4:  "Så akrobatisk är du inte.";
-        5:  print "(måste ta af ", (denellerdem) x1, " först)^"; say__p = 0; return;
+        5:  print "(måste tag af ", (denellerdem) x1, " först)^"; say__p = 0; return;
         6:  "Det är fullt på ", (the) x1, ".";
         7:  "Klart.";
         8:  print "Du ";
@@ -4201,7 +4201,8 @@ Constant COMMA__TX      = ", ";
         4:  print (The) actor, " sätter på ", (the) x1, ".^";
     }
   Take: switch (n) {
-        1:  print "Tag"; Inflect("en", "et", "na", x1); ".";
+        1:  print "Taget"; ".";
+        !1:  print "Tag"; Inflect("en", "et", "na", x1); ".";
         2:  print "Du tar "; dig(); " i kragen.";
         3:  "Jag tror inte ", (the) x1, " skulle uppskatta det.";
         4:  print "Du måste ";
@@ -4218,7 +4219,7 @@ Constant COMMA__TX      = ", ";
         13: print "(måste stoppa ", (the) x1, " i ", (the) x2,
             " för att få plats med allt)^"; say__p = 0; return;
         14: "Du når inte till ", (the) x1, ".";
-        15: "Det går inte att ta med sig ", (the) x1, ".";
+        15: "Det går inte att tag med sig ", (the) x1, ".";
         16: print (The) actor, " tar ", (the) x1, ".^";
         }
   Taste:    "Det smakar ingenting oväntat.";
@@ -4265,7 +4266,7 @@ Constant COMMA__TX      = ", ";
     }
   WaveHands:"Du vinkar. Du känner dig löjlig.";
   Wear: switch (n) {
-        1:  print (cDenellerDem) x1, " går väl inte att ta på "; sig(); "!";
+        1:  print (cDenellerDem) x1, " går väl inte att tag på "; sig(); "!";
         2:  "Du håller inte i ", (denellerdem) x1, " än!";
         3:  print "Du har redan på "; dig(); print_ret " ", (denellerdem) x1, "!";
         4:  print "Du tar på "; dig(); print_ret " ", (the) x1, ".";
@@ -10176,7 +10177,7 @@ Array Global_Vars -->
 Array T0_final_question_options table  tab_0_0 tab_0_1 tab_0_2 tab_0_3 tab_0_4;
 Array tab_0_0 table $0064 0  (SC_19)  (SC_20)  (SC_21)  (SC_22)  (SC_23) ;
 Array tab_0_1 table $0465 1  (0)  (0)  (1)  (0)  (0) ;
-Array tab_0_2 table $2066 2  (Consult_Grammar_195)  (Consult_Grammar_196)  (Consult_Grammar_197)  (Consult_Grammar_198)  (Consult_Grammar_199) ;
+Array tab_0_2 table $2066 2  (Consult_Grammar_196)  (Consult_Grammar_197)  (Consult_Grammar_198)  (Consult_Grammar_199)  (Consult_Grammar_200) ;
 Array tab_0_3 table $0067 3  (IMMEDIATELY_RESTART_VM_R)  (IMMEDIATELY_RESTORE_SAVED_R)  TABLE_NOVALUE (IMMEDIATELY_QUIT_R)  (IMMEDIATELY_UNDO_R) ;
 Array tab_0_4 table $0068 4  TABLE_NOVALUE TABLE_NOVALUE (V26_amusing_a_victorious_pla)  TABLE_NOVALUE TABLE_NOVALUE;
 Array T1_locale_priorities table  tab_1_0 tab_1_1;
@@ -10185,7 +10186,7 @@ Array tab_1_1 table $446a 5  TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOV
 Array T2_swedish_final_question_op table  tab_2_0 tab_2_1 tab_2_2 tab_2_3 tab_2_4;
 Array tab_2_0 table $0064 6  (SC_24)  (SC_25)  (SC_26)  (SC_27)  (SC_28) ;
 Array tab_2_1 table $0465 7  (0)  (0)  (1)  (0)  (0) ;
-Array tab_2_2 table $2066 8  (Consult_Grammar_200)  (Consult_Grammar_201)  (Consult_Grammar_202)  (Consult_Grammar_203)  (Consult_Grammar_204) ;
+Array tab_2_2 table $2066 8  (Consult_Grammar_201)  (Consult_Grammar_202)  (Consult_Grammar_203)  (Consult_Grammar_204)  (Consult_Grammar_205) ;
 Array tab_2_3 table $0067 9  (IMMEDIATELY_RESTART_VM_R)  (IMMEDIATELY_RESTORE_SAVED_R)  TABLE_NOVALUE (IMMEDIATELY_QUIT_R)  (IMMEDIATELY_UNDO_R) ;
 Array tab_2_4 table $0068 10  TABLE_NOVALUE TABLE_NOVALUE (V26_amusing_a_victorious_pla)  TABLE_NOVALUE TABLE_NOVALUE;
 Array T3_swedish_substitutions table  tab_3_0 tab_3_1 tab_3_2;
@@ -17679,13 +17680,13 @@ self = noun;
 ! ----------------------------------------------------------------------------------------------------
 ! Rules in rulebook: Swedish pre-parsing (B365_swedish_pre_parsing)
 ! ----------------------------------------------------------------------------------------------------
-! Rule 1/2 ! A Swedish pre-parsing rule ( this is the disambiguate 'ta på sig' rule ):
+! Rule 1/2 ! A Swedish pre-parsing rule ( this is the disambiguate 'tag på sig' rule ):
 !   === which is equally specific with ===
-! Rule 2/2 ! A Swedish pre-parsing rule ( this is the 'ta af mig' rule ):
+! Rule 2/2 ! A Swedish pre-parsing rule ( this is the 'tag af mig' rule ):
 ! ----------------------------------------------------------------------------------------------------
 ! No specific request
 ! From "Danish" by Thomas Lynge
-! A Swedish pre-parsing rule ( this is the disambiguate 'ta på sig' rule ):
+! A Swedish pre-parsing rule ( this is the disambiguate 'tag på sig' rule ):
 [ R_749 ;blockv_stack-->(blockv_sp+0) = BlkValueCreate(INDEXED_TEXT_TY,0,INDEXED_TEXT_TY);
     blockv_sp = blockv_sp + 1;
     blockv_stack-->(blockv_sp++) = R_SHELL_4(blockv_sp-1);
@@ -17695,10 +17696,10 @@ self = noun;
 ];
 [ R_SHELL_4 I7BASPL ;
       ! phrase 1
-      ! [1: if the player's command matches ~ta/tag på dig/dej/mig/mej/sig/sej~ begin]
-       if (( (SnippetMatches(players_command, Consult_Grammar_205)) ))  {
+      ! [1: if the player's command matches ~tag/tag på dig/dej/mig/mej/sig/sej~ begin]
+       if (( (SnippetMatches(players_command, Consult_Grammar_206)) ))  {
          ! phrase 2
-         ! [2: say ~Jag antar att du vill ta på [dig] [något] (inte bara känna på [dig] själv). Stämmer det?~]
+         ! [2: say ~Jag antar att du vill tag på [dig] [något] (inte bara känna på [dig] själv). Stämmer det?~]
          say__p=1;ParaContent();  print (PrintText) SC_122; ParaContent(); (PHR_962_r19 ());ParaContent();  print (PrintText) SC_106; ParaContent(); (PHR_983_r20 ());ParaContent();  print (PrintText) SC_123; ParaContent(); (PHR_962_r19 ());ParaContent();  print (PrintText) SC_124;  new_line; .L_Say47; .L_SayX47;
          ! phrase 3
          ! [3: if player consents begin]
@@ -17725,7 +17726,7 @@ self = noun;
 ];
 ! No specific request
 ! From "Danish" by Thomas Lynge
-! A Swedish pre-parsing rule ( this is the 'ta af mig' rule ):
+! A Swedish pre-parsing rule ( this is the 'tag af mig' rule ):
 [ R_750 ;blockv_stack-->(blockv_sp+0) = BlkValueCreate(INDEXED_TEXT_TY,0,INDEXED_TEXT_TY);
     blockv_sp = blockv_sp + 1;
     blockv_stack-->(blockv_sp++) = R_SHELL_5(blockv_sp-1);
@@ -17735,10 +17736,10 @@ self = noun;
 ];
 [ R_SHELL_5 I7BASPL ;
       ! phrase 1
-      ! [1: if the player's command matches ~ta/tag af dig/dej/mig/mej/sig/sej~ begin]
-       if (( (SnippetMatches(players_command, Consult_Grammar_206)) ))  {
+      ! [1: if the player's command matches ~tag/tag af dig/dej/mig/mej/sig/sej~ begin]
+       if (( (SnippetMatches(players_command, Consult_Grammar_207)) ))  {
          ! phrase 2
-         ! [2: change the text of the player's command to ~ta af~]
+         ! [2: change the text of the player's command to ~tag af~]
           SetPlayersCommand(BlkValueCast((blockv_stack-->(I7BASPL+0)),INDEXED_TEXT_TY,TEXT_TY,SC_126)); 
          ! phrase 3
          ! [3: rule fails]
@@ -17754,17 +17755,17 @@ self = noun;
 ! ----------------------------------------------------------------------------------------------------
 ! Rules in rulebook: Post-parsing (B366_post_parsing)
 ! ----------------------------------------------------------------------------------------------------
-! Rule 1/9 ! Post-parsing touching something when the noun is not worn ( this is the disambiguate 'ta på' rule ):
+! Rule 1/9 ! Post-parsing touching something when the noun is not worn ( this is the disambiguate 'tag på' rule ):
 !   >>> I - Number of aspects constrained >>>
 ! Rule 2/9 ! Post-parsing putting the player on ( this is the understand 'ställ mig på' as entering rather than putting myself on rule ):
 !   >>> III.3.2 - Action/What/Thing Acted On >>>
-! Rule 3/9 ! Post-parsing asking someone ( called Teufelsdröckh ) to try touching something ( this is the disambiguate 'Person ta på något' rule ):
+! Rule 3/9 ! Post-parsing asking someone ( called Teufelsdröckh ) to try touching something ( this is the disambiguate 'Person tag på något' rule ):
 !   === which is equally specific with ===
 ! Rule 4/9 ! Post-parsing asking someone ( called Teufelsdröckh ) to try wearing something ( this is the don't understand 'Person klä på mig' as 'Person klä på dig' rule ):
 !   === which is equally specific with ===
 ! Rule 5/9 ! Post-parsing asking someone ( called Teufelsdröckh ) to try taking off something ( this is the don't understand 'Person klä af mig' as 'Person klä af dig' rule ):
 !   >>> III.3.3 - Action/What/Actor Performing Action >>>
-! Rule 6/9 ! Post-parsing an actor taking off something ( this is the disambiguate 'ta af' rule ):
+! Rule 6/9 ! Post-parsing an actor taking off something ( this is the disambiguate 'tag af' rule ):
 !   >>> III.3.2 - Action/What/Thing Acted On >>>
 ! Rule 7/9 ! Post-parsing asking someone ( called Houdini ) to try exiting ( this is the don't understand 'Person res mig' as 'Person res dig' rule ):
 !   === which is equally specific with ===
@@ -17774,19 +17775,19 @@ self = noun;
 ! ----------------------------------------------------------------------------------------------------
 ! No specific request
 ! From "Danish" by Thomas Lynge
-! Post-parsing touching something when the noun is not worn ( this is the disambiguate 'ta på' rule ):
+! Post-parsing touching something when the noun is not worn ( this is the disambiguate 'tag på' rule ):
 [ R_756 ;
    if ((action ==##Touch) &&  (actor==player) && ((noun ofclass K2_thing)) && (self=actor,true) && (((~~(((Adj_0_t1_v9(noun)))))))) { ! Runs only when pattern matches
 self = noun;
    if (debug_rules) DB_Rule(R_756, 756);
       ! phrase 1
-      ! [1: if the player's command includes ~ta/tag på~ begin]
-       if (( (matched_text=SnippetIncludes(Consult_Grammar_207,players_command)) ))  {
+      ! [1: if the player's command includes ~tag/tag på~ begin]
+       if (( (matched_text=SnippetIncludes(Consult_Grammar_208,players_command)) ))  {
          ! phrase 2
          ! [2: if the noun is wearable begin]
           if ((((Adj_48_t1_v9(noun)))))  {
             ! phrase 3
-            ! [3: say ~Jag antar att du vill ta på [dig] [the noun] (inte bara känna på [if the noun is plural-named][dem][otherwise if the noun is female and the noun is a person]henne[otherwise if the noun is male and the noun is a person]honom[otherwise if the noun is neuter]det[otherwise]den[end if]). Stämmer det?~]
+            ! [3: say ~Jag antar att du vill tag på [dig] [the noun] (inte bara känna på [if the noun is plural-named][dem][otherwise if the noun is female and the noun is a person]henne[otherwise if the noun is male and the noun is a person]honom[otherwise if the noun is neuter]det[otherwise]den[end if]). Stämmer det?~]
             say__p=1;ParaContent();  print (PrintText) SC_122; ParaContent(); (PHR_962_r19 ());ParaContent();  print (PrintText) SC_106; ParaContent();  print (the) noun; ParaContent();  print (PrintText) SC_123; 
 	if (~~(((((Adj_31_t1_v9(noun))))))) jump L_Say48;
 		ParaContent(); (PHR_968_r21 ());ParaContent(); 
@@ -17834,7 +17835,7 @@ self = noun;
    if (debug_rules) DB_Rule(R_751, 751);
       ! phrase 1
       ! [1: if the player's command includes ~lägg/sätt/ställ dig/dej/mig/mej/sig/sej~ begin]
-       if (( (matched_text=SnippetIncludes(Consult_Grammar_208,players_command)) ))  {
+       if (( (matched_text=SnippetIncludes(Consult_Grammar_209,players_command)) ))  {
          ! phrase 2
          ! [2: try the player entering the second noun]
           TryAction(0, player, ##Enter, second, 0);; 
@@ -17851,7 +17852,7 @@ self = noun;
 ];
 ! No specific request
 ! From "Danish" by Thomas Lynge
-! Post-parsing asking someone ( called Teufelsdröckh ) to try touching something ( this is the disambiguate 'Person ta på något' rule ):
+! Post-parsing asking someone ( called Teufelsdröckh ) to try touching something ( this is the disambiguate 'Person tag på något' rule ):
 [ R_757 
     t_0 ! Local variable e.g. 'Teufelsdröckh' = person
     ;
@@ -17862,10 +17863,10 @@ self = noun;
       ! [1: if the noun is wearable begin]
        if ((((Adj_48_t1_v9(noun)))))  {
          ! phrase 2
-         ! [2: if the player's command includes ~ta/tag på~ begin]
-          if (( (matched_text=SnippetIncludes(Consult_Grammar_209,players_command)) ))  {
+         ! [2: if the player's command includes ~tag/tag på~ begin]
+          if (( (matched_text=SnippetIncludes(Consult_Grammar_210,players_command)) ))  {
             ! phrase 3
-            ! [3: say ~Jag antar att du vill att [the actor] [ska] ta på [sig] [the noun] (inte bara känna på [if the noun is plural-named][dem][otherwise if the noun is female and the noun is a person]henne[otherwise if the noun is male and the noun is a person]honom[otherwise if the noun is neuter]det[otherwise]den[end if]). Stämmer det?~]
+            ! [3: say ~Jag antar att du vill att [the actor] [ska] tag på [sig] [the noun] (inte bara känna på [if the noun is plural-named][dem][otherwise if the noun is female and the noun is a person]henne[otherwise if the noun is male and the noun is a person]honom[otherwise if the noun is neuter]det[otherwise]den[end if]). Stämmer det?~]
             say__p=1;ParaContent();  print (PrintText) SC_130; ParaContent();  print (the) actor; ParaContent();  print (PrintText) SC_106; ParaContent(); (PHR_994_r22 ());ParaContent();  print (PrintText) SC_131; ParaContent(); (PHR_963_r23 ());ParaContent();  print (PrintText) SC_106; ParaContent();  print (the) noun; ParaContent();  print (PrintText) SC_123; 
 	if (~~(((((Adj_31_t1_v9(noun))))))) jump L_Say54;
 		ParaContent(); (PHR_968_r21 ());ParaContent(); 
@@ -17914,8 +17915,8 @@ self = noun;
 self = noun;
    if (debug_rules) DB_Rule(R_758, 758);
       ! phrase 1
-      ! [1: if the player's command includes ~klä på/i mig/mej~ or the player's command includes ~klä mig/mej i~ or the player's command includes ~ta/tag på mig/mej~ begin]
-       if ((( (matched_text=SnippetIncludes(Consult_Grammar_210,players_command)) )) || ((( (matched_text=SnippetIncludes(Consult_Grammar_211,players_command)) )) || (( (matched_text=SnippetIncludes(Consult_Grammar_212,players_command)) ))))  {
+      ! [1: if the player's command includes ~klä på/i mig/mej~ or the player's command includes ~klä mig/mej i~ or the player's command includes ~tag/tag på mig/mej~ begin]
+       if ((( (matched_text=SnippetIncludes(Consult_Grammar_211,players_command)) )) || ((( (matched_text=SnippetIncludes(Consult_Grammar_212,players_command)) )) || (( (matched_text=SnippetIncludes(Consult_Grammar_213,players_command)) ))))  {
          ! phrase 2
          ! [2: try asking teufelsdröckh about the matched text instead]
           TryAction(0, player, ##Ask, t_0, matched_text);;  rtrue;
@@ -17940,8 +17941,8 @@ self = noun;
 self = noun;
    if (debug_rules) DB_Rule(R_759, 759);
       ! phrase 1
-      ! [1: if the player's command includes ~klä af mig/mej~ or the player's command includes ~ta/tag af mig/mej~ begin]
-       if ((( (matched_text=SnippetIncludes(Consult_Grammar_213,players_command)) )) || (( (matched_text=SnippetIncludes(Consult_Grammar_214,players_command)) )))  {
+      ! [1: if the player's command includes ~klä af mig/mej~ or the player's command includes ~tag/tag af mig/mej~ begin]
+       if ((( (matched_text=SnippetIncludes(Consult_Grammar_214,players_command)) )) || (( (matched_text=SnippetIncludes(Consult_Grammar_215,players_command)) )))  {
          ! phrase 2
          ! [2: try asking teufelsdröckh about the matched text]
           TryAction(0, player, ##Ask, t_0, matched_text);; 
@@ -17958,14 +17959,14 @@ self = noun;
 ];
 ! No specific request
 ! From "Danish" by Thomas Lynge
-! Post-parsing an actor taking off something ( this is the disambiguate 'ta af' rule ):
+! Post-parsing an actor taking off something ( this is the disambiguate 'tag af' rule ):
 [ R_755 ;
    if ((action ==##Disrobe) && (act_requester==nothing) && ((noun ofclass K2_thing))) { ! Runs only when pattern matches
 self = noun;
    if (debug_rules) DB_Rule(R_755, 755);
       ! phrase 1
-      ! [1: if the player's command includes ~ta/tag af~ and the player's command does not include ~ta/tag af dig/dej/mig/mej/sig/sej~ begin]
-       if ((( (matched_text=SnippetIncludes(Consult_Grammar_215,players_command)) )) && (( (SnippetIncludes(Consult_Grammar_216,players_command)==0) )))  {
+      ! [1: if the player's command includes ~tag/tag af~ and the player's command does not include ~tag/tag af dig/dej/mig/mej/sig/sej~ begin]
+       if ((( (matched_text=SnippetIncludes(Consult_Grammar_216,players_command)) )) && (( (SnippetIncludes(Consult_Grammar_217,players_command)==0) )))  {
          ! phrase 2
          ! [2: if the noun is not wearable , try the actor taking the noun instead]
           if (((~~(((Adj_48_t1_v9(noun))))))) {  TryAction(0, actor, ##Take, noun, 0);;   rtrue; }
@@ -17988,7 +17989,7 @@ self = noun;
    if (debug_rules) DB_Rule(R_752, 752);
       ! phrase 1
       ! [1: if the player's command includes ~res mig/mej~ begin]
-       if (( (matched_text=SnippetIncludes(Consult_Grammar_217,players_command)) ))  {
+       if (( (matched_text=SnippetIncludes(Consult_Grammar_218,players_command)) ))  {
          ! phrase 2
          ! [2: try asking houdini about the matched text instead]
           TryAction(0, player, ##Ask, t_0, matched_text);;  rtrue;
@@ -18014,7 +18015,7 @@ self = noun;
    if (debug_rules) DB_Rule(R_753, 753);
       ! phrase 1
       ! [1: if the player's command includes ~res mig/mej~ begin]
-       if (( (matched_text=SnippetIncludes(Consult_Grammar_218,players_command)) ))  {
+       if (( (matched_text=SnippetIncludes(Consult_Grammar_219,players_command)) ))  {
          ! phrase 2
          ! [2: try asking houdini about the matched text instead]
           TryAction(0, player, ##Ask, t_0, matched_text);;  rtrue;
@@ -18040,7 +18041,7 @@ self = noun;
    if (debug_rules) DB_Rule(R_754, 754);
       ! phrase 1
       ! [1: if the player's command includes ~titta/se/kolla mig/mej om/omkring~ begin]
-       if (( (matched_text=SnippetIncludes(Consult_Grammar_219,players_command)) ))  {
+       if (( (matched_text=SnippetIncludes(Consult_Grammar_220,players_command)) ))  {
          ! phrase 2
          ! [2: try asking argus about the matched text instead]
           TryAction(0, player, ##Ask, t_0, matched_text);;  rtrue;
@@ -25232,15 +25233,15 @@ Array RulebookNames -->
 		if (R == R_746) { print "Swedish respond to final question rule"; return; } ! 269, case 1
 		if (R == R_747) { print "Swedish you-can-also-see rule"; return; } ! 270, case 1
 		if (R == R_748) { print "Swedish describe what's on scenery supporters in room descriptions rule"; return; } ! 271, case 1
-		if (R == R_749) { print "disambiguate 'ta på sig' rule"; return; } ! 272, case 1
-		if (R == R_750) { print "'ta af mig' rule"; return; } ! 273, case 1
+		if (R == R_749) { print "disambiguate 'tag på sig' rule"; return; } ! 272, case 1
+		if (R == R_750) { print "'tag af mig' rule"; return; } ! 273, case 1
 		if (R == R_751) { print "understand 'ställ mig på' as entering rather than putting myself on rule"; return; } ! 274, case 1
 		if (R == R_752) { print "don't understand 'Person res mig' as 'Person res dig' rule"; return; } ! 275, case 1
 		if (R == R_753) { print "don't understand 'Person res mig upp ur' as 'Person res dig upp ur' rule"; return; } ! 276, case 1
 		if (R == R_754) { print "don't understand 'Person se mig om' as 'Person se dig om' rule"; return; } ! 277, case 1
-		if (R == R_755) { print "disambiguate 'ta af' rule"; return; } ! 278, case 1
-		if (R == R_756) { print "disambiguate 'ta på' rule"; return; } ! 279, case 1
-		if (R == R_757) { print "disambiguate 'Person ta på något' rule"; return; } ! 280, case 1
+		if (R == R_755) { print "disambiguate 'tag af' rule"; return; } ! 278, case 1
+		if (R == R_756) { print "disambiguate 'tag på' rule"; return; } ! 279, case 1
+		if (R == R_757) { print "disambiguate 'Person tag på något' rule"; return; } ! 280, case 1
 		if (R == R_758) { print "don't understand 'Person klä på mig' as 'Person klä på dig' rule"; return; } ! 281, case 1
 		if (R == R_759) { print "don't understand 'Person klä af mig' as 'Person klä af dig' rule"; return; } ! 282, case 1
 		if (R == R_760) { print "Swedish room description heading rule"; return; } ! 283, case 1
@@ -28662,10 +28663,10 @@ Verb meta 'tree'
 ];
 ! Request 48: phrase nothing -> nothing
 ! From "Danish" by Thomas Lynge
-! To say ta:
+! To say tag:
 [ PHR_781_r48 ;
       ! phrase 1
-      ! [1: if the number-just-said is not 1 , say ~ta~]
+      ! [1: if the number-just-said is not 1 , say ~tag~]
        if (((~~((say__n == 1))))) { say__p=1;ParaContent();  print (PrintText) SC_171;  .L_Say137; .L_SayX129;  }
    rfalse;
 ];
@@ -33272,18 +33273,11 @@ Verb 'inventera' 'i//' 'inv' 'lista' 'tillhörigheter' 'tillh' 'utrustning' 'utr'
     *  -> Inv
     * 'tillhörigheter' / 'utrustning'  -> Inv
 ;
-Verb 'ta' 'tag' 'hämta' 'plocka'
-    *  -> Restore
-    * 'spel' / 'spelet' / 'omgång' / 'omgången' / 'spelomgång' / 'spelomgången'  -> Restore
-    * 'gammal' / 'gammalt' / 'sparad' / 'sparat'  -> Restore
-    * 'sparning'  -> Restore
+Verb 'tag' 'hent' 'pluk'
     * multi  -> Take
-    * 'gammal' / 'gammalt' / 'sparad' / 'sparat' 'spel' / 'omgång' / 'spelomgång'  -> Restore
-    * 'sparad' 'position'  -> Restore
     * 'af' held  -> Disrobe
     * 'på' noun  -> Touch
     * 'upp' / 'ut' / 'ur' multi  -> Take
-    * 'en' / 'et' 'gammal' / 'gammalt' / 'sparad' / 'sparat' 'spel' / 'omgång' / 'spelomgång'  -> Restore
     * 'på' 'dig' / 'dej' / 'mig' / 'mej' / 'sig' / 'sej' held  -> Wear
     * held 'på' 'dig' / 'dej' / 'mig' / 'mej' / 'sig' / 'sej'  -> Wear
     * 'af' 'dig' / 'dej' / 'mig' / 'mej' / 'sig' / 'sej' held  -> Disrobe
@@ -33608,6 +33602,15 @@ Verb 'gammal'
 Verb 'gammalt'
     *  -> Restore
     * 'spel'  -> Restore
+;
+Verb 'hämta'
+    *  -> Restore
+    * 'spel' / 'spelet' / 'omgång' / 'omgången' / 'spelomgång' / 'spelomgången'  -> Restore
+    * 'gammal' / 'gammalt' / 'sparad' / 'sparat'  -> Restore
+    * 'sparning'  -> Restore
+    * 'gammal' / 'gammalt' / 'sparad' / 'sparat' 'spel' / 'omgång' / 'spelomgång'  -> Restore
+    * 'sparad' 'position'  -> Restore
+    * 'en' / 'et' 'gammal' / 'gammalt' / 'sparad' / 'sparat' 'spel' / 'omgång' / 'spelomgång'  -> Restore
 ;
 Verb 'ladda'
     *  -> Restore
@@ -34651,7 +34654,7 @@ Verb 'förslag'
     DetectPluralWord(original_wn, n);
     return n;
 ];
-[ Consult_Grammar_195
+[ Consult_Grammar_196
     range_from  ! call parameter: word number of snippet start
     range_words  ! call parameter: snippet length
     original_wn  ! first word of text parsed
@@ -34666,7 +34669,7 @@ Verb 'förslag'
     return GPR_FAIL;
 ];
 
-[ Consult_Grammar_196
+[ Consult_Grammar_197
     range_from  ! call parameter: word number of snippet start
     range_words  ! call parameter: snippet length
     original_wn  ! first word of text parsed
@@ -34681,7 +34684,7 @@ Verb 'förslag'
     return GPR_FAIL;
 ];
 
-[ Consult_Grammar_197
+[ Consult_Grammar_198
     range_from  ! call parameter: word number of snippet start
     range_words  ! call parameter: snippet length
     original_wn  ! first word of text parsed
@@ -34696,7 +34699,7 @@ Verb 'förslag'
     return GPR_FAIL;
 ];
 
-[ Consult_Grammar_198
+[ Consult_Grammar_199
     range_from  ! call parameter: word number of snippet start
     range_words  ! call parameter: snippet length
     original_wn  ! first word of text parsed
@@ -34711,7 +34714,7 @@ Verb 'förslag'
     return GPR_FAIL;
 ];
 
-[ Consult_Grammar_199
+[ Consult_Grammar_200
     range_from  ! call parameter: word number of snippet start
     range_words  ! call parameter: snippet length
     original_wn  ! first word of text parsed
@@ -34726,7 +34729,7 @@ Verb 'förslag'
     return GPR_FAIL;
 ];
 
-[ Consult_Grammar_200
+[ Consult_Grammar_201
     range_from  ! call parameter: word number of snippet start
     range_words  ! call parameter: snippet length
     original_wn  ! first word of text parsed
@@ -34741,7 +34744,7 @@ Verb 'förslag'
     return GPR_FAIL;
 ];
 
-[ Consult_Grammar_201
+[ Consult_Grammar_202
     range_from  ! call parameter: word number of snippet start
     range_words  ! call parameter: snippet length
     original_wn  ! first word of text parsed
@@ -34756,7 +34759,7 @@ Verb 'förslag'
     return GPR_FAIL;
 ];
 
-[ Consult_Grammar_202
+[ Consult_Grammar_203
     range_from  ! call parameter: word number of snippet start
     range_words  ! call parameter: snippet length
     original_wn  ! first word of text parsed
@@ -34771,7 +34774,7 @@ Verb 'förslag'
     return GPR_FAIL;
 ];
 
-[ Consult_Grammar_203
+[ Consult_Grammar_204
     range_from  ! call parameter: word number of snippet start
     range_words  ! call parameter: snippet length
     original_wn  ! first word of text parsed
@@ -34786,7 +34789,7 @@ Verb 'förslag'
     return GPR_FAIL;
 ];
 
-[ Consult_Grammar_204
+[ Consult_Grammar_205
     range_from  ! call parameter: word number of snippet start
     range_words  ! call parameter: snippet length
     original_wn  ! first word of text parsed
@@ -34801,7 +34804,7 @@ Verb 'förslag'
     return GPR_FAIL;
 ];
 
-[ Consult_Grammar_205
+[ Consult_Grammar_206
     range_from  ! call parameter: word number of snippet start
     range_words  ! call parameter: snippet length
     original_wn  ! first word of text parsed
@@ -34812,7 +34815,7 @@ Verb 'förslag'
     wn = range_from; original_wn = wn; rv = GPR_PREPOSITION;
         group_wn = wn;
         .group_360_1_1; wn = group_wn;
-        if (NextWordStopped() ~= 'ta') jump group_360_1_2;
+        if (NextWordStopped() ~= 'tag') jump group_360_1_2;
         jump group_360_1_end;
         .group_360_1_2; wn = group_wn;
         if (NextWordStopped() ~= 'tag') jump Fail_1;
@@ -34842,7 +34845,7 @@ Verb 'förslag'
     return GPR_FAIL;
 ];
 
-[ Consult_Grammar_206
+[ Consult_Grammar_207
     range_from  ! call parameter: word number of snippet start
     range_words  ! call parameter: snippet length
     original_wn  ! first word of text parsed
@@ -34853,7 +34856,7 @@ Verb 'förslag'
     wn = range_from; original_wn = wn; rv = GPR_PREPOSITION;
         group_wn = wn;
         .group_361_1_1; wn = group_wn;
-        if (NextWordStopped() ~= 'ta') jump group_361_1_2;
+        if (NextWordStopped() ~= 'tag') jump group_361_1_2;
         jump group_361_1_end;
         .group_361_1_2; wn = group_wn;
         if (NextWordStopped() ~= 'tag') jump Fail_1;
@@ -34883,7 +34886,7 @@ Verb 'förslag'
     return GPR_FAIL;
 ];
 
-[ Consult_Grammar_207
+[ Consult_Grammar_208
     range_from  ! call parameter: word number of snippet start
     range_words  ! call parameter: snippet length
     original_wn  ! first word of text parsed
@@ -34894,7 +34897,7 @@ Verb 'förslag'
     wn = range_from; original_wn = wn; rv = GPR_PREPOSITION;
         group_wn = wn;
         .group_362_1_1; wn = group_wn;
-        if (NextWordStopped() ~= 'ta') jump group_362_1_2;
+        if (NextWordStopped() ~= 'tag') jump group_362_1_2;
         jump group_362_1_end;
         .group_362_1_2; wn = group_wn;
         if (NextWordStopped() ~= 'tag') jump Fail_1;
@@ -34905,7 +34908,7 @@ Verb 'förslag'
     return GPR_FAIL;
 ];
 
-[ Consult_Grammar_208
+[ Consult_Grammar_209
     range_from  ! call parameter: word number of snippet start
     range_words  ! call parameter: snippet length
     original_wn  ! first word of text parsed
@@ -34948,7 +34951,7 @@ Verb 'förslag'
     return GPR_FAIL;
 ];
 
-[ Consult_Grammar_209
+[ Consult_Grammar_210
     range_from  ! call parameter: word number of snippet start
     range_words  ! call parameter: snippet length
     original_wn  ! first word of text parsed
@@ -34959,7 +34962,7 @@ Verb 'förslag'
     wn = range_from; original_wn = wn; rv = GPR_PREPOSITION;
         group_wn = wn;
         .group_364_1_1; wn = group_wn;
-        if (NextWordStopped() ~= 'ta') jump group_364_1_2;
+        if (NextWordStopped() ~= 'tag') jump group_364_1_2;
         jump group_364_1_end;
         .group_364_1_2; wn = group_wn;
         if (NextWordStopped() ~= 'tag') jump Fail_1;
@@ -34970,7 +34973,7 @@ Verb 'förslag'
     return GPR_FAIL;
 ];
 
-[ Consult_Grammar_210
+[ Consult_Grammar_211
     range_from  ! call parameter: word number of snippet start
     range_words  ! call parameter: snippet length
     original_wn  ! first word of text parsed
@@ -34999,7 +35002,7 @@ Verb 'förslag'
     return GPR_FAIL;
 ];
 
-[ Consult_Grammar_211
+[ Consult_Grammar_212
     range_from  ! call parameter: word number of snippet start
     range_words  ! call parameter: snippet length
     original_wn  ! first word of text parsed
@@ -35022,7 +35025,7 @@ Verb 'förslag'
     return GPR_FAIL;
 ];
 
-[ Consult_Grammar_212
+[ Consult_Grammar_213
     range_from  ! call parameter: word number of snippet start
     range_words  ! call parameter: snippet length
     original_wn  ! first word of text parsed
@@ -35033,7 +35036,7 @@ Verb 'förslag'
     wn = range_from; original_wn = wn; rv = GPR_PREPOSITION;
         group_wn = wn;
         .group_367_1_1; wn = group_wn;
-        if (NextWordStopped() ~= 'ta') jump group_367_1_2;
+        if (NextWordStopped() ~= 'tag') jump group_367_1_2;
         jump group_367_1_end;
         .group_367_1_2; wn = group_wn;
         if (NextWordStopped() ~= 'tag') jump Fail_1;
@@ -35051,7 +35054,7 @@ Verb 'förslag'
     return GPR_FAIL;
 ];
 
-[ Consult_Grammar_213
+[ Consult_Grammar_214
     range_from  ! call parameter: word number of snippet start
     range_words  ! call parameter: snippet length
     original_wn  ! first word of text parsed
@@ -35074,7 +35077,7 @@ Verb 'förslag'
     return GPR_FAIL;
 ];
 
-[ Consult_Grammar_214
+[ Consult_Grammar_215
     range_from  ! call parameter: word number of snippet start
     range_words  ! call parameter: snippet length
     original_wn  ! first word of text parsed
@@ -35085,7 +35088,7 @@ Verb 'förslag'
     wn = range_from; original_wn = wn; rv = GPR_PREPOSITION;
         group_wn = wn;
         .group_369_1_1; wn = group_wn;
-        if (NextWordStopped() ~= 'ta') jump group_369_1_2;
+        if (NextWordStopped() ~= 'tag') jump group_369_1_2;
         jump group_369_1_end;
         .group_369_1_2; wn = group_wn;
         if (NextWordStopped() ~= 'tag') jump Fail_1;
@@ -35103,28 +35106,6 @@ Verb 'förslag'
     return GPR_FAIL;
 ];
 
-[ Consult_Grammar_215
-    range_from  ! call parameter: word number of snippet start
-    range_words  ! call parameter: snippet length
-    original_wn  ! first word of text parsed
-    group_wn  ! first word matched against A/B/C/... disjunction
-    w  ! for use by individual grammar lines
-    rv  ! for use by individual grammar lines
-    ;
-    wn = range_from; original_wn = wn; rv = GPR_PREPOSITION;
-        group_wn = wn;
-        .group_370_1_1; wn = group_wn;
-        if (NextWordStopped() ~= 'ta') jump group_370_1_2;
-        jump group_370_1_end;
-        .group_370_1_2; wn = group_wn;
-        if (NextWordStopped() ~= 'tag') jump Fail_1;
-        .group_370_1_end;
-        if (NextWordStopped() ~= 'af') jump Fail_1;
-        if ((range_words==0) || (wn-range_from==range_words)) return rv;
-        .Fail_1; rv = GPR_PREPOSITION; wn = original_wn;
-    return GPR_FAIL;
-];
-
 [ Consult_Grammar_216
     range_from  ! call parameter: word number of snippet start
     range_words  ! call parameter: snippet length
@@ -35135,8 +35116,30 @@ Verb 'förslag'
     ;
     wn = range_from; original_wn = wn; rv = GPR_PREPOSITION;
         group_wn = wn;
+        .group_370_1_1; wn = group_wn;
+        if (NextWordStopped() ~= 'tag') jump group_370_1_2;
+        jump group_370_1_end;
+        .group_370_1_2; wn = group_wn;
+        if (NextWordStopped() ~= 'tag') jump Fail_1;
+        .group_370_1_end;
+        if (NextWordStopped() ~= 'af') jump Fail_1;
+        if ((range_words==0) || (wn-range_from==range_words)) return rv;
+        .Fail_1; rv = GPR_PREPOSITION; wn = original_wn;
+    return GPR_FAIL;
+];
+
+[ Consult_Grammar_217
+    range_from  ! call parameter: word number of snippet start
+    range_words  ! call parameter: snippet length
+    original_wn  ! first word of text parsed
+    group_wn  ! first word matched against A/B/C/... disjunction
+    w  ! for use by individual grammar lines
+    rv  ! for use by individual grammar lines
+    ;
+    wn = range_from; original_wn = wn; rv = GPR_PREPOSITION;
+        group_wn = wn;
         .group_371_1_1; wn = group_wn;
-        if (NextWordStopped() ~= 'ta') jump group_371_1_2;
+        if (NextWordStopped() ~= 'tag') jump group_371_1_2;
         jump group_371_1_end;
         .group_371_1_2; wn = group_wn;
         if (NextWordStopped() ~= 'tag') jump Fail_1;
@@ -35166,7 +35169,7 @@ Verb 'förslag'
     return GPR_FAIL;
 ];
 
-[ Consult_Grammar_217
+[ Consult_Grammar_218
     range_from  ! call parameter: word number of snippet start
     range_words  ! call parameter: snippet length
     original_wn  ! first word of text parsed
@@ -35188,7 +35191,7 @@ Verb 'förslag'
     return GPR_FAIL;
 ];
 
-[ Consult_Grammar_218
+[ Consult_Grammar_219
     range_from  ! call parameter: word number of snippet start
     range_words  ! call parameter: snippet length
     original_wn  ! first word of text parsed
@@ -35210,7 +35213,7 @@ Verb 'förslag'
     return GPR_FAIL;
 ];
 
-[ Consult_Grammar_219
+[ Consult_Grammar_220
     range_from  ! call parameter: word number of snippet start
     range_words  ! call parameter: snippet length
     original_wn  ! first word of text parsed
@@ -36037,7 +36040,7 @@ Constant SC_149 = " is ~";
 Constant SC_134 = " or ";
 Constant SC_115 = " ser du ";
 Constant SC_124 = " själv). Stämmer det?";
-Constant SC_131 = " ta på ";
+Constant SC_131 = " tag på ";
 Constant SC_137 = " you ";
 Constant SC_150 = "~.";
 Constant SC_129 = "). Stämmer det?";
@@ -36069,7 +36072,7 @@ Constant SC_114 = "I ";
 Constant SC_136 = "In ";
 Constant SC_2 = "Interaktiv fiktion";
 Constant SC_130 = "Jag antar att du vill att ";
-Constant SC_122 = "Jag antar att du vill ta på ";
+Constant SC_122 = "Jag antar att du vill tag på ";
 Constant SC_25 = "LADDA en sparad spelomgång";
 Constant SC_16 = "Lika snygg som vanligt.";
 Constant SC_248 = "Lite";
@@ -36298,8 +36301,8 @@ Constant SC_79 = "t-da";
 Constant SC_82 = "t-de";
 Constant SC_83 = "t-ma";
 Constant SC_84 = "t-na";
-Constant SC_126 = "ta af";
-Constant SC_171 = "ta";
+Constant SC_126 = "tag af";
+Constant SC_171 = "tag";
 Constant SC_299 = "tempeltræ";
 Constant SC_43 = "ten";
 Constant SC_99 = "ten-lla";

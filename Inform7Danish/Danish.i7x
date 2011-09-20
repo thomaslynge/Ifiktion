@@ -370,17 +370,17 @@ Part - Actions
 
 Section - Pre-parsing rules
 
-A Swedish pre-parsing rule (this is the disambiguate 'ta på sig' rule):
-	if the player's command matches "ta/tag på dig/dej/mig/mej/sig/sej":
-		say "Jag antar att du vill ta på [dig] [något] (inte bara känna på [dig] själv). Stämmer det?";
+A Swedish pre-parsing rule (this is the disambiguate 'tag på sig' rule):
+	if the player's command matches "tag/tag på dig/dej/mig/mej/sig/sej":
+		say "Jag antar att du vill tag på [dig] [något] (inte bara känna på [dig] själv). Stämmer det?";
 		if player consents:
 			change the text of the player's command to "klä på mig";
 		otherwise:
 			try touching yourself instead.
 
-A Swedish pre-parsing rule (this is the 'ta af mig' rule):
-	if the player's command matches "ta/tag af dig/dej/mig/mej/sig/sej":
-		change the text of the player's command to "ta af";
+A Swedish pre-parsing rule (this is the 'tag af mig' rule):
+	if the player's command matches "tag/tag af dig/dej/mig/mej/sig/sej":
+		change the text of the player's command to "tag af";
 		rule fails.
 
 
@@ -411,33 +411,33 @@ Post-parsing asking someone (called Argus) to try looking (this is the don't und
 		try asking Argus about the matched text instead;
 		rule fails.
 
-Post-parsing an actor taking off something (this is the disambiguate 'ta af' rule):
-	if the player's command includes "ta/tag af" and the player's command does not include "ta/tag af dig/dej/mig/mej/sig/sej":
+Post-parsing an actor taking off something (this is the disambiguate 'tag af' rule):
+	if the player's command includes "tag/tag af" and the player's command does not include "tag/tag af dig/dej/mig/mej/sig/sej":
 		if the noun is not wearable, try the actor taking the noun instead.
 
-Post-parsing touching something when the noun is not worn (this is the disambiguate 'ta på' rule):
-	if the player's command includes "ta/tag på":
+Post-parsing touching something when the noun is not worn (this is the disambiguate 'tag på' rule):
+	if the player's command includes "tag/tag på":
 		if the noun is wearable:
-			 say "Jag antar att du vill ta på [dig] [the noun] (inte bara känna på [if the noun is plural-named][dem][otherwise if the noun is female and the noun is a person]henne[otherwise if the noun is male and the noun is a person]honom[otherwise if the noun is neuter]det[otherwise]den[end if]). Stämmer det?";
+			 say "Jag antar att du vill tag på [dig] [the noun] (inte bara känna på [if the noun is plural-named][dem][otherwise if the noun is female and the noun is a person]henne[otherwise if the noun is male and the noun is a person]honom[otherwise if the noun is neuter]det[otherwise]den[end if]). Stämmer det?";
 			if player consents:
 				try wearing the noun;
 				rule fails.
 
-Post-parsing asking someone (called Teufelsdröckh) to try touching something (this is the disambiguate 'Person ta på något' rule):
+Post-parsing asking someone (called Teufelsdröckh) to try touching something (this is the disambiguate 'Person tag på något' rule):
 	if the noun is wearable:
-		if the player's command includes "ta/tag på":
-			say "Jag antar att du vill att [the actor] [ska] ta på [sig] [the noun] (inte bara känna på [if the noun is plural-named][dem][otherwise if the noun is female and the noun is a person]henne[otherwise if the noun is male and the noun is a person]honom[otherwise if the noun is neuter]det[otherwise]den[end if]). Stämmer det?";
+		if the player's command includes "tag/tag på":
+			say "Jag antar att du vill att [the actor] [ska] tag på [sig] [the noun] (inte bara känna på [if the noun is plural-named][dem][otherwise if the noun is female and the noun is a person]henne[otherwise if the noun is male and the noun is a person]honom[otherwise if the noun is neuter]det[otherwise]den[end if]). Stämmer det?";
 			if player consents:
 				try asking Teufelsdröckh to try wearing the noun;
 				rule fails.
 
 Post-parsing asking someone (called Teufelsdröckh) to try wearing something (this is the don't understand 'Person klä på mig' as 'Person klä på dig' rule):
-	if the player's command includes "klä på/i mig/mej" or the player's command includes "klä mig/mej i" or the player's command includes "ta/tag på mig/mej":
+	if the player's command includes "klä på/i mig/mej" or the player's command includes "klä mig/mej i" or the player's command includes "tag/tag på mig/mej":
 		try asking Teufelsdröckh about the matched text instead;
 		rule fails.
 
 Post-parsing asking someone (called Teufelsdröckh) to try taking off something (this is the don't understand 'Person klä af mig' as 'Person klä af dig' rule):
-	if the player's command includes "klä af mig/mej" or the player's command includes "ta/tag af mig/mej":
+	if the player's command includes "klä af mig/mej" or the player's command includes "tag/tag af mig/mej":
 		try asking Teufelsdröckh about the matched text;
 		rule fails.
 
@@ -542,15 +542,15 @@ Understand "inventera" or "inventera tillhörigheter/utrustning" as taking inven
 Understand the commands "i", "inv", "lista", "tillhörigheter", "tillh", "utrustning" and "utr" as "inventera".
 ["Take inventory" is hard to translate well. Fortunately, Fredrik Ramsberg, the translator of Inform 6 into Swedish, has already solved it: "lista tillhörigheter". We understand "inventera" as taking inventory, since players used to English games may try it. And we understand "lista" as a synonym of "inventera" rather than the other way around, since it is more likely that a Swedish author wants to create a new action that responds to the command "lista" than one that responds to the command "inventera".]
 
-Understand "ta [things]" as taking.
-Understand "ta upp/ut/ur [things]" as taking.
-Understand "ta [things inside] från/ifrån/ur [something]" as removing it from. 
-Understand "ta bort/upp/ut/ur [things inside] från/ifrån/ur [something]" or "ta [things inside] upp/ut/ur från/ifrån/ur [something]" as removing it from. 
-Understand "ta på dig/dej/mig/mej/sig/sej [something preferably held]" or "ta [something preferably held] på dig/dej/mig/mej/sig/sej" as wearing.
-Understand "ta af dig/dej/mig/mej/sig/sej [something preferably held]" or "ta [something preferably held] af dig/dej/mig/mej/sig/sej" as taking off.
-Understand "ta af [something preferably held]" as taking off.
-Understand "ta på [something]" as touching.
-Understand the commands "tag", "hämta" and "plocka" as "ta".
+Understand "tag [things]" as taking.
+Understand "tag upp/ut/ur [things]" as taking.
+Understand "tag [things inside] från/ifrån/ur [something]" as removing it from. 
+Understand "tag bort/upp/ut/ur [things inside] från/ifrån/ur [something]" or "tag [things inside] upp/ut/ur från/ifrån/ur [something]" as removing it from. 
+Understand "tag på dig/dej/mig/mej/sig/sej [something preferably held]" or "tag [something preferably held] på dig/dej/mig/mej/sig/sej" as wearing.
+Understand "tag af dig/dej/mig/mej/sig/sej [something preferably held]" or "tag [something preferably held] af dig/dej/mig/mej/sig/sej" as taking off.
+Understand "tag af [something preferably held]" as taking off.
+Understand "tag på [something]" as touching.
+Understand the commands "hent" and "pluk" as "tag".
 [Note that "dig" or "dej" should be the first pronoun listed in understand tokens for reflexive verbs, or we may receive inappropriate parser errors.]
 
 Understand "kasta [things preferably held]" or "kasta bort [things preferably held]" as dropping.
@@ -938,8 +938,8 @@ To say e-ia: [real|e/real|ia]
 	if the number-just-said is not 1, say "ia";
 	otherwise say "e".
 
-To say ta: [schema/schema|ta]
-	if the number-just-said is not 1, say "ta".
+To say tag: [schema/schema|tag]
+	if the number-just-said is not 1, say "tag".
 
 
 [Umlauts]					
@@ -2980,7 +2980,7 @@ Include (-
     'i//', 'inv', 'lista', 
     'tillhörigheter', 'tillh':  print "gå igenom dina tillhörigheter";
     'utr', 'utrustning':        print "gå igenom din utrustning";
-    'tag':                      print "ta";
+    'tag':                      print "tag";
     'l//', 't//', 'c//':        print "titta";
     'x//', 'u//':               print "undersøge";
     'z//':                      print "vänta";
@@ -3286,8 +3286,8 @@ Include (-
                 default: print " är ";
             } "er jo allerede her.";
         2:  "Du har ", (denellerdem) x1, " ju inte.";
-        3:  print "(måste ta af ", (the) x1, " först)^"; say__p = 0; return;
-        4:  print "Släpp"; Inflect("t", "t", "ta", x1); ".";
+        3:  print "(måste tag af ", (the) x1, " först)^"; say__p = 0; return;
+        4:  print "Släpp"; Inflect("t", "t", "tag", x1); ".";
         5:  "Det finns inte plats på ", (the) x1, ".";
         6:  "Det finns inte plats i ", (the) x1, ".";
         7:  print (The) actor, " ";
@@ -3317,10 +3317,10 @@ Include (-
                 'ligg':  print_ret "ligga på.";
                 default: print_ret "komma in i.";
             }
-        3:  print "Det går inte att ta "; sig();
+        3:  print "Det går inte att tag "; sig();
             print " in i ", (denellerde) x1, " stäng"; Inflect("d", "t", "da", x1); 
             exc_art == true; print (the) x1; exc_art == false; ".";
-        4:  print "Det går inte att ta "; sig();
+        4:  print "Det går inte att tag "; sig();
             if (x1 has supporter) print " upp på "; else print " in i ";
             naagot(); " som man själv bär på.";
         5:  print "Du tar "; dig();
@@ -3366,7 +3366,7 @@ Include (-
         1:  "Du håller inte i ", (the) x1, " än.";
         2:  "Du bollar et tag med ", (the) x1, " men har inte mycket för det.";
         3:  print (The) x1, " verkar inte så angeläg"; Inflect("en", "et", "na", x1); " om det.";
-        4:  print "Det går nog inte att få ", (the) x1, " att ta emot "; naagot(); " alls.";
+        4:  print "Det går nog inte att få ", (the) x1, " att tag emot "; naagot(); " alls.";
         5:  "Du ger ", (the) x1, " till ", (the) second, ".";
         6:  print (The) actor, " ger "; dig(); print " ", (the) x1, ".^";
         7:  print (The) actor, " ger ", (the) x1, " till ", (the) second, ".^";
@@ -3402,13 +3402,13 @@ Include (-
         28: print "(måste öppna ", (the) x1, " först)^"; say__p = 0; return;
     }
   Insert: switch (n) {
-        1:  print "Man måste ta ", (the) x1, " innan man kan stoppa ", (denellerdem) x1, " i ";
+        1:  print "Man måste tag ", (the) x1, " innan man kan stoppa ", (denellerdem) x1, " i ";
             naagot(); " annat."; !# Used, but what prints it?
         2:  print "Man kan inte ha "; naagot(); " i ", (denellerdem) x1, ".";
         3:  print (The) x1, " är stäng"; Inflect("d", "t", "da", x1); ".";
-        4:  print "Det går inte utan att ta af "; sig(); " ", (denellerdem) x1, " först."; !# Unused?
+        4:  print "Det går inte utan att tag af "; sig(); " ", (denellerdem) x1, " först."; !# Unused?
         5:  print "Det går inte att stoppa in "; naagot(); print " i "; sig(); " självt.";
-        6:  print "(måste ta af ", (denellerdem) x1, " först)^"; say__p = 0; return;
+        6:  print "(måste tag af ", (denellerdem) x1, " först)^"; say__p = 0; return;
         7:  "Det är redan fullt i ", (the) x1, ".";
         8:  "Klart.";
         9:  "Du stoppar ", (the) x1, " i ", (the) second, ".";
@@ -3534,7 +3534,7 @@ Include (-
         23: print "Du vill visst prata med "; naagon(); ", men jag förstår inte vem.";
         24: "Det går inte att tala med ", (the) x1, ".";
         25: print "Vill du prata med "; naagon(); ", skriv bara namn, kommatecken og vad du vill ha sagt: ~Watson, elementärt~ (inte t.ex. ~Watson min vän, elementärt~).";
-        26: "(måste ta ", (the) x1, " först)";
+        26: "(måste tag ", (the) x1, " först)";
         27: "Jag förstod inte den meningen.";
         28: print "Jag hängde inte med efter det där om att ";
         29: "Jag förstod inte räkneordet.";
@@ -3589,8 +3589,8 @@ Include (-
         65: "Du måste ange et indirekt objekt.";
         66: "Du må ikke anvende et indirekte objekt med dette udsagnsord.";
         67: print "Du måste ange "; naagot(); " mer konkret än en riktning.";
-        68: print "(", (The) actor, " måste ta ", (the) x1, " först)^";
-        69: "(måste ta ", (the) x1, " först)";
+        68: print "(", (The) actor, " måste tag ", (the) x1, " först)^";
+        69: "(måste tag ", (the) x1, " först)";
         70: print "Spelet tillåter "; dig(); " inte att ÅNGRA ditt drag.";
         71: print (string) DARKNESS__TX;
         72: print (The) x1, " har viktigare saker för "; sig(); ".";
@@ -3636,7 +3636,7 @@ Include (-
         3:  "Inte åt det hållet, vet du vad.";
     }
   PutOn: switch (n) {
-        1:  print "Du måste ta ", (the) x1, " innan det går att ";
+        1:  print "Du måste tag ", (the) x1, " innan det går att ";
             switch (verb_word) {
                 'sätt':  print "sätta ";
                 'ställ': print "ställa ";
@@ -3658,7 +3658,7 @@ Include (-
                 default: print "placera ";
             } naagot(); " på ", (the) x1, ".";
         4:  "Så akrobatisk är du inte.";
-        5:  print "(måste ta af ", (denellerdem) x1, " först)^"; say__p = 0; return;
+        5:  print "(måste tag af ", (denellerdem) x1, " först)^"; say__p = 0; return;
         6:  "Det är fullt på ", (the) x1, ".";
         7:  "Klart.";
         8:  print "Du ";
@@ -3759,7 +3759,8 @@ Include (-
         4:  print (The) actor, " sätter på ", (the) x1, ".^";
     }
   Take: switch (n) {
-        1:  print "Tag"; Inflect("en", "et", "na", x1); ".";
+        1:  print "Taget"; ".";
+        !1:  print "Tag"; Inflect("en", "et", "na", x1); ".";
         2:  print "Du tar "; dig(); " i kragen.";
         3:  "Jag tror inte ", (the) x1, " skulle uppskatta det.";
         4:  print "Du måste ";
@@ -3776,7 +3777,7 @@ Include (-
         13: print "(måste stoppa ", (the) x1, " i ", (the) x2,
             " för att få plats med allt)^"; say__p = 0; return;
         14: "Du når inte till ", (the) x1, ".";
-        15: "Det går inte att ta med sig ", (the) x1, ".";
+        15: "Det går inte att tag med sig ", (the) x1, ".";
         16: print (The) actor, " tar ", (the) x1, ".^";
         }
   Taste:    "Det smakar ingenting oväntat.";
@@ -3823,7 +3824,7 @@ Include (-
     }
   WaveHands:"Du vinkar. Du känner dig löjlig.";
   Wear: switch (n) {
-        1:  print (cDenellerDem) x1, " går väl inte att ta på "; sig(); "!";
+        1:  print (cDenellerDem) x1, " går väl inte att tag på "; sig(); "!";
         2:  "Du håller inte i ", (denellerdem) x1, " än!";
         3:  print "Du har redan på "; dig(); print_ret " ", (denellerdem) x1, "!";
         4:  print "Du tar på "; dig(); print_ret " ", (the) x1, ".";
@@ -4712,10 +4713,10 @@ title	subtable	description	toggle
 Table of Instruction Options
 title	subtable	description	toggle
 "Om interaktiv fiktion"	a table-name	"Detta spel är et exempel på interaktiv fiktion. I interaktiv fiktion (även kallat IF) spelar du huvudpersonen i en berättelse. Det du skriver på datorn bestämmer vad huvudpersonen gör og vad som händer i berättelsen. I somliga IF-spel ingår [lite] grafik, men [de] är undantag: illustrationerna till spelet står vanligen din egen fantasi för. Å andra sidan kan du försöka [dig] på att göra nästan vad som helst: i många andra dataspel kan du bara skjuta, röra [dig] åt olika håll og undersøge saker genom att klicka på dem med musen, men i IF är oftast betydligt fler handlingar möjliga."	a rule
-"Vad är '[command prompt]' till för?"	a table-name	"[command prompt]-tecknet betyder: 'Okej, vad vill du göra den här gången?'  Här skriver du dina instruktioner till huvudpersonen -- oftast et verb i imperativ, eventuellt med prepositioner og  objekt.: till exempel TITTA, TA FISKEN, TITTA PÅ FISKEN eller TA PÅ FISKEN."	a rule
-"Hur man börjar"	--	"Det första man [ska] göra i et spel är att bekanta [sig] med omgivningarna og ta reda på vad spelet går ut på. Prologen kan innehålla ledtrådar, så läs den noggrant. Det är också bra att ta en titt på platsen där du befinner [dig] i. Åt vilka håll kan du gå? Vilka föremål finns där du är? Är det något af föremålen som verkar intressant, bör du undersøge [dem].[paragraph break]Du kan också titta närmare på [dig] själv (undersøg [if the dej spelling option is active or the informal spelling option is active]MEJ[otherwise]MIG[end if]) för att se om du kan få reda på [något] mer om personen du spelar. Kommandot TILLHÖRIGHETER talar om vad du har med [dig] för saker.[paragraph break]När du har koll på läget, kan du börja utforska spelvärlden. Gå från plats till plats, og utforska alla ställen du kan hitta."	--
-"Rum og riktningar"	--	"Du befinner [dig] alltid på en viss plats eller i et visst rum. När du kommer till en ny plats beskriver spelet vad du ser där. På så sätt får du reda på två viktiga saker: dels vilka saker som finns där og som du kan försöka göra [något] med eller plocka upp og ta med [dig], dels vilka vägar kan du kan ta när du vill fortsätta därifrån. Vill du läsa beskrivningen af platsen igen, är det bara att skriva TITTA. [paragraph break]Vill du gå [någon] annanstans, berättar du det för spelet genom att tala om vilken riktning du vill gå i: t.ex. GÅ NORRUT eller GÅ ÅT SYDVÄST. För enkelhets skull behöver du inte skriva GÅ og du kan också förkorta väderstrecken. Alltså räcker det att skriva NORR, SÖDER, ÖSTER, VÄSTER, NORDOST, SYDOST, NORDVÄST, SYDVÄST (eller förkortat N, S, Ö, V, NO, SO, NV, og SV.[paragraph break]På sina håll går det också att gå UPP, NED, IN og UT."	--
-"Föremål"	--	"I spelet kommer det att finnas diverse föremål du kan göra saker med. Framför allt kan du TA saker og SLÄPPA [dem] igen (när du tröttnat på dem). TILLHÖRIGHETER eller UTRUSTNING (förkortat TILLH og UTR) räknar upp alla de saker du för tillfället bär runt på.[paragraph break]Oftast finns det [något] du kan göra med dessa saker: att ÖPPNA, STÄNGA, TA PÅ [if the dej spelling option is active or the informal spelling option is active]MEJ[otherwise]MIG[end if], ÄTA, LÅSA og LÅSA UPP saker hör till det vanligaste.[paragraph break]Även om författaren skrivit att et visst föremål finns i rummet, händer det ibland hända att spelet inte verkar fatta det när du försöker göra [något] med det föremålet. I så fall nämnde författaren föremålet bara för att ge en stämningsfull beskrivning af rummet, og du kan utgå från att du inte behöver det föremålet till [någon]ting."	--
+"Vad är '[command prompt]' till för?"	a table-name	"[command prompt]-tecknet betyder: 'Okej, vad vill du göra den här gången?'  Här skriver du dina instruktioner till huvudpersonen -- oftast et verb i imperativ, eventuellt med prepositioner og  objekt.: till exempel TITTA, tag FISKEN, TITTA PÅ FISKEN eller tag PÅ FISKEN."	a rule
+"Hur man börjar"	--	"Det första man [ska] göra i et spel är att bekanta [sig] med omgivningarna og tag reda på vad spelet går ut på. Prologen kan innehålla ledtrådar, så läs den noggrant. Det är också bra att tag en titt på platsen där du befinner [dig] i. Åt vilka håll kan du gå? Vilka föremål finns där du är? Är det något af föremålen som verkar intressant, bör du undersøge [dem].[paragraph break]Du kan också titta närmare på [dig] själv (undersøg [if the dej spelling option is active or the informal spelling option is active]MEJ[otherwise]MIG[end if]) för att se om du kan få reda på [något] mer om personen du spelar. Kommandot TILLHÖRIGHETER talar om vad du har med [dig] för saker.[paragraph break]När du har koll på läget, kan du börja utforska spelvärlden. Gå från plats till plats, og utforska alla ställen du kan hitta."	--
+"Rum og riktningar"	--	"Du befinner [dig] alltid på en viss plats eller i et visst rum. När du kommer till en ny plats beskriver spelet vad du ser där. På så sätt får du reda på två viktiga saker: dels vilka saker som finns där og som du kan försöka göra [något] med eller plocka upp og tag med [dig], dels vilka vägar kan du kan tag när du vill fortsätta därifrån. Vill du läsa beskrivningen af platsen igen, är det bara att skriva TITTA. [paragraph break]Vill du gå [någon] annanstans, berättar du det för spelet genom att tala om vilken riktning du vill gå i: t.ex. GÅ NORRUT eller GÅ ÅT SYDVÄST. För enkelhets skull behöver du inte skriva GÅ og du kan också förkorta väderstrecken. Alltså räcker det att skriva NORR, SÖDER, ÖSTER, VÄSTER, NORDOST, SYDOST, NORDVÄST, SYDVÄST (eller förkortat N, S, Ö, V, NO, SO, NV, og SV.[paragraph break]På sina håll går det också att gå UPP, NED, IN og UT."	--
+"Föremål"	--	"I spelet kommer det att finnas diverse föremål du kan göra saker med. Framför allt kan du tag saker og SLÄPPA [dem] igen (när du tröttnat på dem). TILLHÖRIGHETER eller UTRUSTNING (förkortat TILLH og UTR) räknar upp alla de saker du för tillfället bär runt på.[paragraph break]Oftast finns det [något] du kan göra med dessa saker: att ÖPPNA, STÄNGA, tag PÅ [if the dej spelling option is active or the informal spelling option is active]MEJ[otherwise]MIG[end if], ÄTA, LÅSA og LÅSA UPP saker hör till det vanligaste.[paragraph break]Även om författaren skrivit att et visst föremål finns i rummet, händer det ibland hända att spelet inte verkar fatta det när du försöker göra [något] med det föremålet. I så fall nämnde författaren föremålet bara för att ge en stämningsfull beskrivning af rummet, og du kan utgå från att du inte behöver det föremålet till [någon]ting."	--
 "Spara og avsluta etc."	--	"Det finns några saker som inte huvudpersonen i berättelsen kan göra utan som du själv gör med spelet, som att spara en spelomgång eller avsluta programmet. Det gör du med direktiven:[paragraph break]SPARA, som sparar en kopia af spelvärlden som den ser ut precis för ögonblicket.[line break]LADDA, som hämtar en sparad spelomgång og låter [dig] fortsätta på den. Du kan spara hur många spelomgångar som helst.[line break]BÖRJA OM,  som låter [dig] börja om speloet från början.[line break]AVSLUTA, som avslutar spelet."	--
 "Hur spelvärlden är uppbyggd"	Table of IF Elements	--	--
 "Har du kört fast?"	Table of Stuckness Advice	--	--
@@ -4976,7 +4977,7 @@ This is the Swedish noun autotaking rule:
 			try the person asked trying taking the noun;
 	otherwise:
 		if the player is the person asked:
-			say "(måste ta [the noun] först)";
+			say "(måste tag [the noun] först)";
 			silently try taking the noun;
 		otherwise:
 			try the person asked trying taking the noun.
@@ -4989,7 +4990,7 @@ This is the Swedish second noun autotaking rule:
 			try the person asked trying taking the second noun;
 	otherwise:
 		if the player is the person asked:
-			say "(måste ta [the second noun] först)";
+			say "(måste tag [the second noun] först)";
 			silently try taking the second noun;
 		otherwise:
 			try the person asked trying taking the second noun.
@@ -5396,7 +5397,7 @@ ii) När man ger föremål namn som "1100-talshelgon[et]s reliker" eller "[den ]
 
 Section: Say-fraser för mer komplicerade böjningar i bestämd form
 
-I många fall bildas bestämd form inte genom att man helt enkelt klistrar på en ändelse på orden, utan man måste kanske först ta bort en ändelse i den obestämda formen eller ändra stavningen af ordstammen. Jämför t.ex."et urgamMALT, alvsmiTT svärd" og "det urgamLA, alvsmiDDA svärdet". Även för dylika fall finns det "say-phrases" som underlättar. I stället för
+I många fall bildas bestämd form inte genom att man helt enkelt klistrar på en ändelse på orden, utan man måste kanske först tag bort en ändelse i den obestämda formen eller ändra stavningen af ordstammen. Jämför t.ex."et urgamMALT, alvsmiTT svärd" og "det urgamLA, alvsmiDDA svärdet". Även för dylika fall finns det "say-phrases" som underlättar. I stället för
 	The printed name of the svärd is "[if definite]det urgamla, alvsmidda svärdet[otherwise]urgammalt, alvsmitt svärd".
 
 kan du skriva
@@ -5900,7 +5901,7 @@ Grundmönster för pluralböjningar:
 	"[um-a]" (fakt|um/fakt|a)
 	"[en-ina]" (exam|en/exam|ina)
 	"[e-ia]" (real|e/real|ia)
-	"[ta]" (schema/schema|ta)
+	"[tag]" (schema/schema|tag)
 
 Omljud i pluralböjningar:
 	"[a-ä]" (man/män)
@@ -6176,7 +6177,7 @@ Example: * En alldaglig historia - En demonstration af de vanligaste textsubstit
 		now the mojäng is exposed;
 		say "Vid närmare betraktande visar det [sig] vara en helt vanlig grej."
 	
-	Test me with "x grej / x mojängen / ta den mystiska / x den mystiska mojängen / släpp grejen / x den vanliga / x mojäng". 
+	Test me with "x grej / x mojängen / tag den mystiska / x den mystiska mojängen / släpp grejen / x den vanliga / x mojäng". 
 
 
 Example: ** Borta på vinden - En demonstration af lite obskyrare textsubstitutioner i Swedish (og exempel på olika stavningar i spelarkommandon).
@@ -6205,7 +6206,7 @@ Example: ** Borta på vinden - En demonstration af lite obskyrare textsubstituti
 	
 	The description of a thing is usually "[Den-Det for the item described] återfunna [the item described without definite article] väcker många minnen till liv."
 	
-	Test me with "tag fotot / undersøg det / släpp foto / ta upp dockan / x docka / lägg undan den / plocka upp pottekulorna / u pottekulor / ställ ner dem / hämta gummistövlarna / titta på dom / sätt ned gummistövlar"
+	Test me with "tag fotot / undersøg det / släpp foto / tag upp dockan / x docka / lägg undan den / plocka upp pottekulorna / u pottekulor / ställ ner dem / hämta gummistövlarna / titta på dom / sätt ned gummistövlar"
 
 
 Example: **** Den mörka manteln - Roger Firths "The Cloak of Darkness" i översättning af Björn Paulsen efter Graham Nelsons og Emily Shorts version för Inform 7.
