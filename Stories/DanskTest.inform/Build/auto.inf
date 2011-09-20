@@ -3182,8 +3182,8 @@ Constant ALL3__WD       = 'allting';
 Constant ALL4__WD       = 'båda';
 Constant ALL5__WD       = 'bägge';
 
-Constant AND1__WD       = 'och';
-Constant AND2__WD       = 'och';
+Constant AND1__WD       = 'og';
+Constant AND2__WD       = 'og';
 Constant AND3__WD       = '&';
 
 Constant BUT1__WD       = 'utom';
@@ -3203,10 +3203,10 @@ Constant ONESELF2__WD   = 'sej';
 Constant ONESELF3__WD   = 'dem';
 Constant ONESELF4__WD   = 'dom';
 
-Constant OF1__WD        = 'av';
+Constant OF1__WD        = 'af';
 Constant OF2__WD        = 'utav';
 Constant OF3__WD        = 'bland';
-Constant OF4__WD        = 'av';
+Constant OF4__WD        = 'af';
 
 Constant OTHER1__WD     = 'annan';
 Constant OTHER2__WD     = 'annat';
@@ -3442,9 +3442,9 @@ Array LanguageGNAsToArticles --> 0 0 0 1 2 2 2 2 0 0 0 1 2 2 2 2;
     'utr', 'utrustning':        print "gå igenom din utrustning";
     'tag':                      print "ta";
     'l//', 't//', 'c//':        print "titta";
-    'x//', 'u//':               print "undersöka";
+    'x//', 'u//':               print "undersøge";
     'z//':                      print "vänta";
-    'undersök':                 print "undersöka";
+    'undersøg':                 print "undersøge";
     'giv':                      print "ge";
     'attackera':                print "attackera";
     'förstör':                  print "förstöra";
@@ -3554,13 +3554,13 @@ Global ARE2__TX         = "finns ";
 Global IS3__TX          = "finns";
 Global ARE3__TX         = "finns";
 
-Constant AND__TX        = " och ";
+Constant AND__TX        = " og ";
 #ifdef I7_SERIAL_COMMA;
-Constant LISTAND__TX    = " och ";     !# The serial comma option should
-Constant LISTAND2__TX   = " och ";     !#  have no effect in Swedish. 
+Constant LISTAND__TX    = " og ";     !# The serial comma option should
+Constant LISTAND2__TX   = " og ";     !#  have no effect in Swedish. 
 #ifnot;
-Constant LISTAND__TX    = " och ";
-Constant LISTAND2__TX   = " och ";
+Constant LISTAND__TX    = " og ";
+Constant LISTAND2__TX   = " og ";
 #endif; ! I7_SERIAL_COMMA
 
 ! Constant WHOM__TX       = "whom ";   !# Swedish doesn't make any distinction
@@ -3715,8 +3715,8 @@ Constant COMMA__TX      = ", ";
     Cut:    "Det skulle inte tjäna mycket till.";
     Disrobe: switch (n) {
         1:  print "Du har ", (denellerdem) x1, " ju inte på "; dig(); ".";
-        2:  print "Du tar av "; dig(); " ", (the) x1, ".";
-        3:  print (The) actor, " tar av "; sig(); print " ", (the) x1, ".^";
+        2:  print "Du tar af "; dig(); " ", (the) x1, ".";
+        3:  print (The) actor, " tar af "; sig(); print " ", (the) x1, ".^";
     }
     Drink:  "Her er ikke noget drikbart.";
     Drop: switch (n) {
@@ -3728,7 +3728,7 @@ Constant COMMA__TX      = ", ";
                 default: print " är ";
             } "er jo allerede her.";
         2:  "Du har ", (denellerdem) x1, " ju inte.";
-        3:  print "(måste ta av ", (the) x1, " först)^"; say__p = 0; return;
+        3:  print "(måste ta af ", (the) x1, " först)^"; say__p = 0; return;
         4:  print "Släpp"; Inflect("t", "t", "ta", x1); ".";
         5:  "Det finns inte plats på ", (the) x1, ".";
         6:  "Det finns inte plats i ", (the) x1, ".";
@@ -3769,7 +3769,7 @@ Constant COMMA__TX      = ", ";
             if (x1 has supporter) print " upp på "; else print " in i ";
             print_ret (the) x1, ".";
         6:  print "(måste ";
-            if (x1 has supporter) print "av "; else print "ur ";
+            if (x1 has supporter) print "af "; else print "ur ";
             print (the) x1; print " först)^"; say__p = 0; return;
         7:  ! say__p = 0;
             if (x1 has supporter) "(måste upp på ", (the) x1, " först)";
@@ -3783,10 +3783,10 @@ Constant COMMA__TX      = ", ";
   Examine: switch (n) {
         1:  style bold; print "Mörker"; style roman; 
             print ", "; style underline; print "subs."; style roman;
-            "  Avsaknad av för synsinnets funktion erforderligt ljus.";   !# Unused?
+            "  Avsaknad af för synsinnets funktion erforderligt ljus.";   !# Unused?
         2:  "Du ser ikke noget specielt ved ", (the) x1, ".";
         3:  print (The) x1, " är för tillfället ";
-            if (x1 has on) "på."; else "av.";
+            if (x1 has on) "på."; else "af.";
         4:  print (The) actor, " tittar på ", (the) x1, ".^";
         5:  "Det syns ingenting oväntat åt det hållet.";
     }
@@ -3795,12 +3795,12 @@ Constant COMMA__TX      = ", ";
         2:  print "Det går inte att komma ut ur ", (denellerde) x1, " stäng"; Inflect("d", "t", "da", x1); 
             exc_art == true; print (the) x1; exc_art == false; ".";
         3:  print "Du tar "; dig();
-            if (x1 has supporter) print " av "; else print " ur ";
+            if (x1 has supporter) print " af "; else print " ur ";
             print_ret (the) x1, ".";
         4:  print "Men du befinner "; dig(); print " ju inte "; 
             if (x1 has supporter) print "på "; else print "i ";
             print_ret (the) x1, ".";
-        5:  print (The) actor, " tar "; sig(); print " av ", (the) x1, ".^";
+        5:  print (The) actor, " tar "; sig(); print " af ", (the) x1, ".^";
         6:  print (The) actor, " tar "; sig(); print " ur ", (the) x1, ".^";
     }
   GetOff:   print "Men du befinner "; dig(); " ju inte på ", (the) x1, " för tillfället.";
@@ -3819,8 +3819,8 @@ Constant COMMA__TX      = ", ";
         2:  print_ret (string) CANTGO__TX;   ! "You can't go that way."
         6:  "Det går inte, för ", (the) x1, " leder igenstans.";
         7:  "Du måste tala om åt vilket håll.";
-        8:  print (The) actor, " beger "; sig(); print " av upp";
-        9:  print (The) actor, " beger "; sig(); print " av "; ned();
+        8:  print (The) actor, " beger "; sig(); print " af upp";
+        9:  print (The) actor, " beger "; sig(); print " af "; ned();
         10: print (The) actor, " beger "; sig(); print (name) x1, "ut";
         11: print (The) actor, " kommer "; print ned();
         12: print (The) actor, " kommer upp";
@@ -3835,12 +3835,12 @@ Constant COMMA__TX      = ", ";
         21: print "i ", (the) x1;
         22: print ", skjutande ", (the) x1, " framför "; 
             if (actor ~= player) sig(); else dig(); 
-            print " och "; dig(); print " med "; denellerdem(x1);
+            print " og "; dig(); print " med "; denellerdem(x1);
         23: print ", skjutande ", (the) x1, " framför "; if (actor ~= player) sig(); else dig();
         24: print ", skjutande ", (the) x1, " med "; if (actor ~= player) sig(); else dig(); " bort";
         25: print ", skjutande ", (the) x1, " med "; if (actor ~= player) sig(); else dig(); " hit";
-        26: print ", och du följer med";
-        27: print "(måste av  ", (the) x1, " först)^"; say__p = 0; return;
+        26: print ", og du följer med";
+        27: print "(måste af  ", (the) x1, " först)^"; say__p = 0; return;
         28: print "(måste öppna ", (the) x1, " först)^"; say__p = 0; return;
     }
   Insert: switch (n) {
@@ -3848,9 +3848,9 @@ Constant COMMA__TX      = ", ";
             naagot(); " annat."; !# Used, but what prints it?
         2:  print "Man kan inte ha "; naagot(); " i ", (denellerdem) x1, ".";
         3:  print (The) x1, " är stäng"; Inflect("d", "t", "da", x1); ".";
-        4:  print "Det går inte utan att ta av "; sig(); " ", (denellerdem) x1, " först."; !# Unused?
+        4:  print "Det går inte utan att ta af "; sig(); " ", (denellerdem) x1, " först."; !# Unused?
         5:  print "Det går inte att stoppa in "; naagot(); print " i "; sig(); " självt.";
-        6:  print "(måste ta av ", (denellerdem) x1, " först)^"; say__p = 0; return;
+        6:  print "(måste ta af ", (denellerdem) x1, " först)^"; say__p = 0; return;
         7:  "Det är redan fullt i ", (the) x1, ".";
         8:  "Klart.";
         9:  "Du stoppar ", (the) x1, " i ", (the) second, ".";
@@ -3871,15 +3871,15 @@ Constant COMMA__TX      = ", ";
         2:  print " (stäng"; Inflect("d", "t", "da", x1); print ")";
         4:  print " (tom"; Inflect("", "t", "ma", x1); print ")";
         6:  print " (stäng"; Inflect("d", "t", "da", x1);
-            print " och tom"; Inflect("", "t", "ma", x1); print ")";
+            print " og tom"; Inflect("", "t", "ma", x1); print ")";
         3:  print " (stäng"; Inflect("d", "t", "da", x1); 
             print " men som ger ljus)";
         5:  print " (tom"; Inflect("", "t", "ma", x1); 
             print " men som ger ljus)";
         7:  print " (stäng"; Inflect("d", "t", "da", x1); 
-            print " och tom"; Inflect("", "t", "ma", x1); 
+            print " og tom"; Inflect("", "t", "ma", x1); 
             print " men som ger ljus)";
-        8:  print " (som ger ljus och du har på "; dig();
+        8:  print " (som ger ljus og du har på "; dig();
         9:  print " (som ger ljus";
         10: print " (som du har på "; dig();
         11: print " (";
@@ -3888,8 +3888,8 @@ Constant COMMA__TX      = ", ";
             print " men tom"; Inflect("", "t", "ma", x1);
         14: print "stäng"; Inflect("d", "t", "da", x1);
         15: print "stäng"; Inflect("d", "t", "da", x1); 
-            print " och låst"; Inflect("", "", "a", x1);
-        16: print " och tom"; Inflect("", "t", "ma", x1);
+            print " og låst"; Inflect("", "", "a", x1);
+        16: print " og tom"; Inflect("", "t", "ma", x1);
         17: print " (tom"; Inflect(")", "t)", "ma)", x1);
         18: print " som innehåller ";
         19: print " (på ";
@@ -3897,9 +3897,9 @@ Constant COMMA__TX      = ", ";
         21: print " (i ";
         22: print ", inuti ";
     }
-  LMode1:   " är nu i ~ibland~-läge, vilket innebär att du får en fullständig beskrivning av en plats bara första gången du kommer dit (sedan står det bara var du är).";
-  LMode2:   " är nu i ~alltid~-läge, vilket innebär att du alltid får en fullständig beskrivning av en plats (även om du redan varit där).";
-  LMode3:   " är nu i ~aldrig~-läge, vilket innebär att du aldrig får en fullständig beskrivning av en plats (ens om det är första gången du är där).";
+  LMode1:   " är nu i ~ibland~-läge, vilket innebär att du får en fullständig beskrivning af en plats bara första gången du kommer dit (sedan står det bara var du är).";
+  LMode2:   " är nu i ~alltid~-läge, vilket innebär att du alltid får en fullständig beskrivning af en plats (även om du redan varit där).";
+  LMode3:   " är nu i ~aldrig~-läge, vilket innebär att du aldrig får en fullständig beskrivning af en plats (ens om det är första gången du är där).";
   Lock: switch (n) {
         1:  print_ret (cDenellerDe) x1, " verkar inte gå att låsa över huvud taget.";
         2:  print (cDenellerDe) x1, " är redan låst"; Inflect("", "", "a", x1); ".";
@@ -3958,7 +3958,7 @@ Constant COMMA__TX      = ", ";
             #Ifnot; ! TARGET_GLULX
         7:  "[Du kan inte ~ångra~ fler drag nu.]";
             #Endif; ! TARGET_
-        8:  "Var god välj et av svaralternativen ovan.";
+        8:  "Var god välj et af svaralternativen ovan.";
         9:  "Der er nu bælgmørkt her!";
         10: "Ursäkta?";
         11: print "[Det går inte att ~ångra~ "; naagot(); " du inte ens gjort!]";
@@ -3967,7 +3967,7 @@ Constant COMMA__TX      = ", ";
         14: "Tyvärr går inte det att rätta.";
         15: "Ingen orsak.";
         16: "Man kan bara rätta et enda ord med et ~Oj~.";
-        17: "Det är kolmörkt, och du ser inte et skvatt.";
+        17: "Det är kolmörkt, og du ser inte et skvatt.";
         18: print dig();
         19: "Lika snygg som vanligt.";    !# Unused?
         20: "Vill du upprepa en instruktion som ~Groda, hoppa~, skriver du bara ~igen~, inte ~groda, igen~.";
@@ -3975,7 +3975,7 @@ Constant COMMA__TX      = ", ";
         22: "Du kan inte inleda med et kommatecken.";
         23: print "Du vill visst prata med "; naagon(); ", men jag förstår inte vem.";
         24: "Det går inte att tala med ", (the) x1, ".";
-        25: print "Vill du prata med "; naagon(); ", skriv bara namn, kommatecken och vad du vill ha sagt: ~Watson, elementärt~ (inte t.ex. ~Watson min vän, elementärt~).";
+        25: print "Vill du prata med "; naagon(); ", skriv bara namn, kommatecken og vad du vill ha sagt: ~Watson, elementärt~ (inte t.ex. ~Watson min vän, elementärt~).";
         26: "(måste ta ", (the) x1, " först)";
         27: "Jag förstod inte den meningen.";
         28: print "Jag hängde inte med efter det där om att ";
@@ -3988,7 +3988,7 @@ Constant COMMA__TX      = ", ";
         35: "Jag förstod inte vad ~", (address) pronoun_word, "~ syftar på.";
         36: "You excepted something not included anyway!";    !# Unused?
         37: print "Det kan man bara göra med "; naagot(); " levande.";
-        38: "Jag förstår inte det verbet.";
+        38: "Jeg forstår ikke det udsagnsord.";
         39: "That's not something you need to refer to in the course of this game.";    !# Unused?
         40: "Du ser inte till ~", (address) pronoun_word, "~ (", (the) pronoun_obj,
             ") för tillfället.";
@@ -4004,7 +4004,7 @@ Constant COMMA__TX      = ", ";
         44: "Ingenting är tillgängligt!";
         45: print "Menar du ";
         46: print "Menar du ";
-        47: "Tyvärr måste du bestämma dig för et enda av alternativen i det här läget. Vilket tar du?";
+        47: "Tyvärr måste du bestämma dig för et enda af alternativen i det här läget. Vilket tar du?";
         48: print "Vem ville du ";
             if (actor ~= player) print "att ", (the) actor, " skulle ";
             PrintCommand(); print "?^";
@@ -4014,7 +4014,7 @@ Constant COMMA__TX      = ", ";
         50: print "Poängställningen gick just ";
             if (x1 > 0) print "upp"; else { x1 = -x1; ned(); }
             print " med ", (number) x1, " poäng";
-        51: "(På grund av den dramatiska händelseutvecklingen slutfördes inte alla dina instruktioner.)";
+        51: "(På grund af den dramatiska händelseutvecklingen slutfördes inte alla dina instruktioner.)";
         52: "^Type a number from 1 to ", x1, ", 0 to redisplay or press ENTER.";    !# Unused?
         53: "^[Please press SPACE.]";    !# Unused?
         54: "[Comment recorded.]";       !# Unused?
@@ -4100,7 +4100,7 @@ Constant COMMA__TX      = ", ";
                 default: print "placera ";
             } naagot(); " på ", (the) x1, ".";
         4:  "Så akrobatisk är du inte.";
-        5:  print "(måste ta av ", (denellerdem) x1, " först)^"; say__p = 0; return;
+        5:  print "(måste ta af ", (denellerdem) x1, " först)^"; say__p = 0; return;
         6:  "Det är fullt på ", (the) x1, ".";
         7:  "Klart.";
         8:  print "Du ";
@@ -4143,20 +4143,20 @@ Constant COMMA__TX      = ", ";
     }
   Score: switch (n) {
         1:  if (deadflag) print "I hela spelet fick du "; else print "Hittills har du fått ";
-            print score, " poäng av ", MAX_SCORE, " möjliga på ", turns, " drag";
+            print score, " poäng af ", MAX_SCORE, " möjliga på ", turns, " drag";
             return;
         2:  "Det räknas inga poäng i den här berättelsen.";
-        3:  print ", vilket ger dig rang av ";
+        3:  print ", vilket ger dig rang af ";
     }
   ScriptOff: switch (n) {
-        1:  "Det pågick ingen avskrift av spelomgången.";
+        1:  "Det pågick ingen avskrift af spelomgången.";
         2:  "^Här slutar avskriften.";
-        3:  "Det gick inte att avbryta avskriften av spelomgången.";
+        3:  "Det gick inte att avbryta avskriften af spelomgången.";
     }
   ScriptOn: switch (n) {
-        1:  "Avskrift av spelomgången pågår redan.";
-        2:  "Här börjar en avskrift av";
-        3:  "Det gick inte att påbörja en avskrift av spelomgången.";
+        1:  "Avskrift af spelomgången pågår redan.";
+        2:  "Här börjar en avskrift af";
+        3:  "Det gick inte att påbörja en avskrift af spelomgången.";
     }
   Search: switch (n) {
         1:  "But it's dark.";    !# Unused?
@@ -4189,13 +4189,13 @@ Constant COMMA__TX      = ", ";
   Strong:   print "et "; saadan();"t språk anstår inte en äkta äventyrare.";
   Swing:    "Det finns inget som passar att ", (string) verb_word, " her.";
   SwitchOff: switch (n) {
-        1:  "Det går varken att stänga av eller sätta på ", (denellerdem) x1, ".";
-        2:  print_ret (cDenellerDe) x1, " är redan av.";
-        3:  "Du stänger av ", (the) x1, ".";
-        4:  print (The) actor, " stänger av ", (the) x1, ".^";
+        1:  "Det går varken att stänga af eller sätta på ", (denellerdem) x1, ".";
+        2:  print_ret (cDenellerDe) x1, " är redan af.";
+        3:  "Du stänger af ", (the) x1, ".";
+        4:  print (The) actor, " stänger af ", (the) x1, ".^";
     }
   SwitchOn: switch (n) {
-        1:  "Det går varken att sätta på eller stänga av ", (denellerdem) x1, ".";
+        1:  "Det går varken att sätta på eller stänga af ", (denellerdem) x1, ".";
         2:  print_ret (cDenellerDe) x1, " är redan på.";
         3:  print_ret (The) actor, " sätter på ", (the) x1, ".";
         4:  print (The) actor, " sätter på ", (the) x1, ".^";
@@ -4205,11 +4205,11 @@ Constant COMMA__TX      = ", ";
         2:  print "Du tar "; dig(); " i kragen.";
         3:  "Jag tror inte ", (the) x1, " skulle uppskatta det.";
         4:  print "Du måste ";
-            if (x1 has supporter) print "av "; else print "ur ";
+            if (x1 has supporter) print "af "; else print "ur ";
             print_ret (the) x1, " först.";
         5:  "Du har ", (denellerdem) x1, " redan.";
         6:  print_ret (cDenellerDe) noun, " tillhör nog ", (the) x1, ".";
-        7:  print_ret (cDenellerDe) noun, " är nog en del av ", (the) x1, ".";
+        7:  print_ret (cDenellerDe) noun, " är nog en del af ", (the) x1, ".";
         8:  print (CDenellerDe) x1, " är inte åtkomlig"; Inflect("", "t", "a", x1); ".";
         9:  print (The) x1, " är inte öpp"; Inflect("en", "et", "na", x1); ".";
         10: print_ret (cDenellerDe) x1, " är där ", (denellerde) x1, " är.";
@@ -4260,7 +4260,7 @@ Constant COMMA__TX      = ", ";
   WakeOther:"Det "; ska(); " väl ändå inte behövas?";
   Wave: switch (n) {
         1:  "Men du håller ju inte i ", (denellerdem) x1, ".";
-        2:  "Du ser rätt fånig ut, där du står och viftar med ", (the) x1, ".";
+        2:  "Du ser rätt fånig ut, där du står og viftar med ", (the) x1, ".";
         3:  print (The) actor, " viftar med ", (the) x1, ".^";
     }
   WaveHands:"Du vinkar. Du känner dig löjlig.";
@@ -10332,7 +10332,7 @@ Array ActionData table
   ##NotifyOn  $$00100000  OBJECT_TY OBJECT_TY  0 20077
   ##NotifyOff  $$00100000  OBJECT_TY OBJECT_TY  0 20078
   ##Pronouns  $$00100000  OBJECT_TY OBJECT_TY  0 20079
-  ##A80_beg_r_objektnamn_rakt_av  $$00000000  OBJECT_TY OBJECT_TY  0 20080
+  ##A80_beg_r_objektnamn_rakt_af  $$00000000  OBJECT_TY OBJECT_TY  0 20080
   ##A81_beg_r_objektnamn  $$00001001  OBJECT_TY OBJECT_TY  0 20081
 ;
 Constant AD_RECORDS = 82;
@@ -10464,7 +10464,7 @@ Constant AD_RECORDS = 82;
         ##NotifyOn: print "switching score notification on"; 
         ##NotifyOff: print "switching score notification off"; 
         ##Pronouns: print "requesting the pronoun meanings"; 
-        ##A80_beg_r_objektnamn_rakt_av: print "begär objektnamn rakt av"; 
+        ##A80_beg_r_objektnamn_rakt_af: print "begär objektnamn rakt af"; 
         ##A81_beg_r_objektnamn: print "begär objektnamn"; if (for_say ~= 2) { print " "; DA_Name(n); }
     }
 ];
@@ -10480,7 +10480,7 @@ Array ActionCoding -->
     ##Mild ##Swing ##Rub ##SetTo ##WaveHands ##Buy ##Sing ##Climb
     ##Sleep ##Quit ##Save ##Restore ##Restart ##Verify ##ScriptOn ##ScriptOff
     ##Version ##Score ##LMode3 ##LMode2 ##LMode1 ##NotifyOn ##NotifyOff ##Pronouns
-    ##A80_beg_r_objektnamn_rakt_av ##A81_beg_r_objektnamn;
+    ##A80_beg_r_objektnamn_rakt_af ##A81_beg_r_objektnamn;
 
 
 Array ActionHappened --> 0 0 0 0 0 0;
@@ -10566,7 +10566,7 @@ Array ActionHappened --> 0 0 0 0 0 0;
 [ NotifyOnSub; return GenericVerbSub(356,357,358); ];
 [ NotifyOffSub; return GenericVerbSub(359,360,361); ];
 [ PronounsSub; return GenericVerbSub(362,363,364); ];
-[ A80_beg_r_objektnamn_rakt_avSub; return GenericVerbSub(370,371,372); ];
+[ A80_beg_r_objektnamn_rakt_afSub; return GenericVerbSub(370,371,372); ];
 [ A81_beg_r_objektnamnSub; return GenericVerbSub(373,374,375); ];
 
 [ MistakeActionSub;
@@ -17681,7 +17681,7 @@ self = noun;
 ! ----------------------------------------------------------------------------------------------------
 ! Rule 1/2 ! A Swedish pre-parsing rule ( this is the disambiguate 'ta på sig' rule ):
 !   === which is equally specific with ===
-! Rule 2/2 ! A Swedish pre-parsing rule ( this is the 'ta av mig' rule ):
+! Rule 2/2 ! A Swedish pre-parsing rule ( this is the 'ta af mig' rule ):
 ! ----------------------------------------------------------------------------------------------------
 ! No specific request
 ! From "Danish" by Thomas Lynge
@@ -17725,7 +17725,7 @@ self = noun;
 ];
 ! No specific request
 ! From "Danish" by Thomas Lynge
-! A Swedish pre-parsing rule ( this is the 'ta av mig' rule ):
+! A Swedish pre-parsing rule ( this is the 'ta af mig' rule ):
 [ R_750 ;blockv_stack-->(blockv_sp+0) = BlkValueCreate(INDEXED_TEXT_TY,0,INDEXED_TEXT_TY);
     blockv_sp = blockv_sp + 1;
     blockv_stack-->(blockv_sp++) = R_SHELL_5(blockv_sp-1);
@@ -17735,10 +17735,10 @@ self = noun;
 ];
 [ R_SHELL_5 I7BASPL ;
       ! phrase 1
-      ! [1: if the player's command matches ~ta/tag av dig/dej/mig/mej/sig/sej~ begin]
+      ! [1: if the player's command matches ~ta/tag af dig/dej/mig/mej/sig/sej~ begin]
        if (( (SnippetMatches(players_command, Consult_Grammar_206)) ))  {
          ! phrase 2
-         ! [2: change the text of the player's command to ~ta av~]
+         ! [2: change the text of the player's command to ~ta af~]
           SetPlayersCommand(BlkValueCast((blockv_stack-->(I7BASPL+0)),INDEXED_TEXT_TY,TEXT_TY,SC_126)); 
          ! phrase 3
          ! [3: rule fails]
@@ -17762,9 +17762,9 @@ self = noun;
 !   === which is equally specific with ===
 ! Rule 4/9 ! Post-parsing asking someone ( called Teufelsdröckh ) to try wearing something ( this is the don't understand 'Person klä på mig' as 'Person klä på dig' rule ):
 !   === which is equally specific with ===
-! Rule 5/9 ! Post-parsing asking someone ( called Teufelsdröckh ) to try taking off something ( this is the don't understand 'Person klä av mig' as 'Person klä av dig' rule ):
+! Rule 5/9 ! Post-parsing asking someone ( called Teufelsdröckh ) to try taking off something ( this is the don't understand 'Person klä af mig' as 'Person klä af dig' rule ):
 !   >>> III.3.3 - Action/What/Actor Performing Action >>>
-! Rule 6/9 ! Post-parsing an actor taking off something ( this is the disambiguate 'ta av' rule ):
+! Rule 6/9 ! Post-parsing an actor taking off something ( this is the disambiguate 'ta af' rule ):
 !   >>> III.3.2 - Action/What/Thing Acted On >>>
 ! Rule 7/9 ! Post-parsing asking someone ( called Houdini ) to try exiting ( this is the don't understand 'Person res mig' as 'Person res dig' rule ):
 !   === which is equally specific with ===
@@ -17932,7 +17932,7 @@ self = noun;
 ];
 ! No specific request
 ! From "Danish" by Thomas Lynge
-! Post-parsing asking someone ( called Teufelsdröckh ) to try taking off something ( this is the don't understand 'Person klä av mig' as 'Person klä av dig' rule ):
+! Post-parsing asking someone ( called Teufelsdröckh ) to try taking off something ( this is the don't understand 'Person klä af mig' as 'Person klä af dig' rule ):
 [ R_759 
     t_0 ! Local variable e.g. 'Teufelsdröckh' = person
     ;
@@ -17940,7 +17940,7 @@ self = noun;
 self = noun;
    if (debug_rules) DB_Rule(R_759, 759);
       ! phrase 1
-      ! [1: if the player's command includes ~klä av mig/mej~ or the player's command includes ~ta/tag av mig/mej~ begin]
+      ! [1: if the player's command includes ~klä af mig/mej~ or the player's command includes ~ta/tag af mig/mej~ begin]
        if ((( (matched_text=SnippetIncludes(Consult_Grammar_213,players_command)) )) || (( (matched_text=SnippetIncludes(Consult_Grammar_214,players_command)) )))  {
          ! phrase 2
          ! [2: try asking teufelsdröckh about the matched text]
@@ -17958,13 +17958,13 @@ self = noun;
 ];
 ! No specific request
 ! From "Danish" by Thomas Lynge
-! Post-parsing an actor taking off something ( this is the disambiguate 'ta av' rule ):
+! Post-parsing an actor taking off something ( this is the disambiguate 'ta af' rule ):
 [ R_755 ;
    if ((action ==##Disrobe) && (act_requester==nothing) && ((noun ofclass K2_thing))) { ! Runs only when pattern matches
 self = noun;
    if (debug_rules) DB_Rule(R_755, 755);
       ! phrase 1
-      ! [1: if the player's command includes ~ta/tag av~ and the player's command does not include ~ta/tag av dig/dej/mig/mej/sig/sej~ begin]
+      ! [1: if the player's command includes ~ta/tag af~ and the player's command does not include ~ta/tag af dig/dej/mig/mej/sig/sej~ begin]
        if ((( (matched_text=SnippetIncludes(Consult_Grammar_215,players_command)) )) && (( (SnippetIncludes(Consult_Grammar_216,players_command)==0) )))  {
          ! phrase 2
          ! [2: if the noun is not wearable , try the actor taking the noun instead]
@@ -18089,13 +18089,13 @@ self = noun;
 ! ----------------------------------------------------------------------------------------------------
 
 ! ----------------------------------------------------------------------------------------------------
-! Rules in rulebook: carry out Begär objektnamn rakt av (B371_carry_out_beg_r_objektn)
+! Rules in rulebook: carry out Begär objektnamn rakt af (B371_carry_out_beg_r_objektn)
 ! ----------------------------------------------------------------------------------------------------
-! Rule 1/1 ! Carry out begär objektnamn rakt av:
+! Rule 1/1 ! Carry out begär objektnamn rakt af:
 ! ----------------------------------------------------------------------------------------------------
 ! No specific request
 ! From "Danish" by Thomas Lynge
-! Carry out begär objektnamn rakt av:
+! Carry out begär objektnamn rakt af:
 [ R_1009 ;
    if (actor == player) {
    if (debug_rules) DB_Rule(R_1009, 1009);
@@ -18109,13 +18109,13 @@ self = noun;
 ! ----------------------------------------------------------------------------------------------------
 
 ! ----------------------------------------------------------------------------------------------------
-! Rules in rulebook: report Begär objektnamn rakt av (B372_report_beg_r_objektnamn)
+! Rules in rulebook: report Begär objektnamn rakt af (B372_report_beg_r_objektnamn)
 ! ----------------------------------------------------------------------------------------------------
-! Rule 1/1 ! Report begär objektnamn rakt av:
+! Rule 1/1 ! Report begär objektnamn rakt af:
 ! ----------------------------------------------------------------------------------------------------
 ! No specific request
 ! From "Danish" by Thomas Lynge
-! Report begär objektnamn rakt av:
+! Report begär objektnamn rakt af:
 [ R_1019 ;
    if (actor == player) {
    if (debug_rules) DB_Rule(R_1019, 1019);
@@ -22768,7 +22768,7 @@ print (The) visibility_ceiling;
 		new_line;
 		print (string) Headline;
 		#ifdef Story_Author;
-		print " av ", (string) Story_Author;
+		print " af ", (string) Story_Author;
 		#endif; ! Story_Author
 		new_line;
 		VM_Describe_Release();
@@ -24944,9 +24944,9 @@ Array RulebookNames -->
     "before Translating to Informese rulebook" ! 367
     "for Translating to Informese rulebook" ! 368
     "after Translating to Informese rulebook" ! 369
-    "check Begär objektnamn rakt av rulebook" ! 370
-    "carry out Begär objektnamn rakt av rulebook" ! 371
-    "report Begär objektnamn rakt av rulebook" ! 372
+    "check Begär objektnamn rakt af rulebook" ! 370
+    "carry out Begär objektnamn rakt af rulebook" ! 371
+    "report Begär objektnamn rakt af rulebook" ! 372
     "check Begär objektnamn rulebook" ! 373
     "carry out Begär objektnamn rulebook" ! 374
     "report Begär objektnamn rulebook" ! 375
@@ -25233,16 +25233,16 @@ Array RulebookNames -->
 		if (R == R_747) { print "Swedish you-can-also-see rule"; return; } ! 270, case 1
 		if (R == R_748) { print "Swedish describe what's on scenery supporters in room descriptions rule"; return; } ! 271, case 1
 		if (R == R_749) { print "disambiguate 'ta på sig' rule"; return; } ! 272, case 1
-		if (R == R_750) { print "'ta av mig' rule"; return; } ! 273, case 1
+		if (R == R_750) { print "'ta af mig' rule"; return; } ! 273, case 1
 		if (R == R_751) { print "understand 'ställ mig på' as entering rather than putting myself on rule"; return; } ! 274, case 1
 		if (R == R_752) { print "don't understand 'Person res mig' as 'Person res dig' rule"; return; } ! 275, case 1
 		if (R == R_753) { print "don't understand 'Person res mig upp ur' as 'Person res dig upp ur' rule"; return; } ! 276, case 1
 		if (R == R_754) { print "don't understand 'Person se mig om' as 'Person se dig om' rule"; return; } ! 277, case 1
-		if (R == R_755) { print "disambiguate 'ta av' rule"; return; } ! 278, case 1
+		if (R == R_755) { print "disambiguate 'ta af' rule"; return; } ! 278, case 1
 		if (R == R_756) { print "disambiguate 'ta på' rule"; return; } ! 279, case 1
 		if (R == R_757) { print "disambiguate 'Person ta på något' rule"; return; } ! 280, case 1
 		if (R == R_758) { print "don't understand 'Person klä på mig' as 'Person klä på dig' rule"; return; } ! 281, case 1
-		if (R == R_759) { print "don't understand 'Person klä av mig' as 'Person klä av dig' rule"; return; } ! 282, case 1
+		if (R == R_759) { print "don't understand 'Person klä af mig' as 'Person klä af dig' rule"; return; } ! 282, case 1
 		if (R == R_760) { print "Swedish room description heading rule"; return; } ! 283, case 1
 		if (R == LITTLE_USED_DO_NOTHING_R) { print "little-used do nothing rule"; return; } ! 311, case 1
 		if (R == VIRTUAL_MACHINE_STARTUP_R) { print "virtual machine startup rule"; return; } ! 312, case 1
@@ -25308,10 +25308,10 @@ Array RulebookNames -->
 		if (R == R_743) { print "After translating to Informese"; return; } ! 721, case 2
 		if (R == R_744) { print "After translating to Informese"; return; } ! 722, case 2
 		if (R == R_1008) { print "Carry out begär objektnamn"; return; } ! 723, case 2
-		if (R == R_1009) { print "Carry out begär objektnamn rakt av"; return; } ! 724, case 2
+		if (R == R_1009) { print "Carry out begär objektnamn rakt af"; return; } ! 724, case 2
 		if (R == R_1010) { print "After reading a command"; return; } ! 725, case 2
 		if (R == R_1018) { print "Report begär objektnamn"; return; } ! 726, case 2
-		if (R == R_1019) { print "Report begär objektnamn rakt av"; return; } ! 727, case 2
+		if (R == R_1019) { print "Report begär objektnamn rakt af"; return; } ! 727, case 2
 		if (R == R_1020) { print "Instead of looking while name request is going on"; return; } ! 728, case 2
 		if (R == R_8) { print "start in the correct scenes rule"; return; } ! 729, case 1
 		if (R == POSITION_PLAYER_IN_MODEL_R) { print "position player in model world rule"; return; } ! 730, case 1
@@ -26904,8 +26904,8 @@ Array CheckTableEntryIsNonBlank_LU
           hr = mn; mn = 0; 
           parsed_number = HoursMinsWordToTime(hr, mn, second_word); 
           return GPR_NUMBER;
-      !# "nitton och trettio", "sjutton noll noll", "nio noll tre" etc.
-      'och', 'noll': 
+      !# "nitton og trettio", "sjutton noll noll", "nio noll tre" etc.
+      'og', 'noll': 
           hr = mn; mn = I7_ExtendedTryNumber(wn); 
           if (NextWordStopped() == 'noll') mn = 0; 
           second_word = '24timmars'; 
@@ -27007,8 +27007,8 @@ Array CheckTableEntryIsNonBlank_LU
       'halv', 'halva', 'halvtimme', 'halvtimma', 'halvtimmar': mult = HALF_HOUR; 
       'timmar', 'timme', 'timmar': mult = ONE_HOUR; 
 
-  !# "en och en halv (timme)", "två och en kvarts (timme)", "tre och tre kvarts (timme)", etc.
-      'och':
+  !# "en og en halv (timme)", "två og en kvarts (timme)", "tre og tre kvarts (timme)", etc.
+      'og':
           second_word = NextWordStopped();
           switch (second_word){
               'en':
@@ -27030,10 +27030,10 @@ Array CheckTableEntryIsNonBlank_LU
   .Trekvart1;
   parsed_number = (mn*mult)+offhour;
 
-!# "(två) timmar", "(tre kvarts) timme", "(en och en halv) timme", "(fem) timmar och tjugotre minuter", "(två) timmar och tre kvart", etc.
+!# "(två) timmar", "(tre kvarts) timme", "(en og en halv) timme", "(fem) timmar og tjugotre minuter", "(två) timmar og tre kvart", etc.
   if (mult == QUARTER_HOUR or HALF_HOUR or ONE_HOUR) { 
       if (NextWordStopped() ~= 'timme' or 'timma' or 'timmar') wn--;
-      if (NextWordStopped() ~= 'och') wn--;
+      if (NextWordStopped() ~= 'og') wn--;
       if (NextWordStopped() == 'trekvart') { mn = 3; mult = QUARTER_HOUR; jump Trekvart2; } else wn--;
       mn=I7_ExtendedTryNumber(wn);
       if (mn ~= -1000) { !# We have a number
@@ -33258,15 +33258,15 @@ Verb 'notify'
 ;
 Verb 'gå' 'åk' 'fly' 'stig'
     *  -> Go
-    * 'ut' / 'av' / 'ned' / 'ner' / 'upp' / 'ur' / 'härifrån' / 'därifrån'  -> Exit
+    * 'ut' / 'af' / 'ned' / 'ner' / 'upp' / 'ur' / 'härifrån' / 'därifrån'  -> Exit
     * noun=Noun_Filter_0  -> Go
     * noun  -> Enter
     * 'igenom' 'tillhörigheter' / 'utrustning'  -> Inv
     * 'i//' / 'in' / 'på' / 'genom' / 'över' noun  -> Enter
-    * 'av' / 'från' / 'ifrån' noun  -> GetOff
+    * 'af' / 'från' / 'ifrån' noun  -> GetOff
     * 'igenom' 'min' / 'din' / 'sin' / 'mina' / 'dina' / 'sina' 'utrustning' / 'tillhörigheter'  -> Inv
     * 'in' / 'upp' / 'ned' / 'ner' 'i//' / 'på' / 'genom' / 'över' noun  -> Enter
-    * 'av' / 'ned' / 'ner' 'från' / 'ifrån' noun  -> GetOff
+    * 'af' / 'ned' / 'ner' 'från' / 'ifrån' noun  -> GetOff
 ;
 Verb 'inventera' 'i//' 'inv' 'lista' 'tillhörigheter' 'tillh' 'utrustning' 'utr'
     *  -> Inv
@@ -33280,14 +33280,14 @@ Verb 'ta' 'tag' 'hämta' 'plocka'
     * multi  -> Take
     * 'gammal' / 'gammalt' / 'sparad' / 'sparat' 'spel' / 'omgång' / 'spelomgång'  -> Restore
     * 'sparad' 'position'  -> Restore
-    * 'av' held  -> Disrobe
+    * 'af' held  -> Disrobe
     * 'på' noun  -> Touch
     * 'upp' / 'ut' / 'ur' multi  -> Take
     * 'en' / 'et' 'gammal' / 'gammalt' / 'sparad' / 'sparat' 'spel' / 'omgång' / 'spelomgång'  -> Restore
     * 'på' 'dig' / 'dej' / 'mig' / 'mej' / 'sig' / 'sej' held  -> Wear
     * held 'på' 'dig' / 'dej' / 'mig' / 'mej' / 'sig' / 'sej'  -> Wear
-    * 'av' 'dig' / 'dej' / 'mig' / 'mej' / 'sig' / 'sej' held  -> Disrobe
-    * held 'av' 'dig' / 'dej' / 'mig' / 'mej' / 'sig' / 'sej'  -> Disrobe
+    * 'af' 'dig' / 'dej' / 'mig' / 'mej' / 'sig' / 'sej' held  -> Disrobe
+    * held 'af' 'dig' / 'dej' / 'mig' / 'mej' / 'sig' / 'sej'  -> Disrobe
     * multiinside 'från' / 'ifrån' / 'ur' noun  -> Remove
     * 'bort' / 'upp' / 'ut' / 'ur' multiinside 'från' / 'ifrån' / 'ur' noun  -> Remove
     * multiinside 'upp' / 'ut' / 'ur' 'från' / 'ifrån' / 'ur' noun  -> Remove
@@ -33374,7 +33374,7 @@ Verb 'titta' 'l//' 't//' 'se' 'c//' 'kolla'
     * 'i//' noun 'efter' topic  -> Consult
     * 'efter' topic 'i//' noun  -> Consult reverse
 ;
-Verb 'undersök' 'x//' 'u//'
+Verb 'undersøg' 'x//' 'u//'
     * noun  -> Examine
 ;
 Verb 'läs'
@@ -33392,7 +33392,7 @@ Verb 'lås'
 ;
 Verb 'knäpp'
     * 'på' noun  -> SwitchOn
-    * 'av' noun  -> SwitchOff
+    * 'af' noun  -> SwitchOff
 ;
 Verb 'öppna' 'packa upp'
     *  -> Restore
@@ -33406,12 +33406,12 @@ Verb 'stäng'
     *  -> Quit
     * 'spel' / 'spelet' / 'omgång' / 'omgången' / 'spelomgång' / 'spelomgången'  -> Quit
     * noun  -> Close
-    * 'av' noun  -> SwitchOff
+    * 'af' noun  -> SwitchOff
 ;
 Verb 'klä'
     * 'på' / 'i//' 'dig' / 'dej' / 'mig' / 'mej' / 'sig' / 'sej' held  -> Wear
     * 'dig' / 'dej' / 'mig' / 'mejsig' / 'sej' 'i//' held  -> Wear
-    * 'av' 'dig' / 'dej' / 'mig' / 'mejsig' / 'sej' held  -> Disrobe
+    * 'af' 'dig' / 'dej' / 'mig' / 'mejsig' / 'sej' held  -> Disrobe
 ;
 Verb 'ge' 'giv' 'skänk' 'betala'
     * creature held  -> Give reverse
@@ -33431,9 +33431,9 @@ Verb 'slå' 'anfall' 'angrip' 'attackera' 'krossa' 'förstör' 'spräck' 'bryt' 'knä
     * noun  -> Attack
     * 'på' noun=Noun_Filter_2  -> SwitchOn
     * 'på' noun=Noun_Filter_3  -> SwitchOn
-    * 'av' noun=Noun_Filter_4  -> SwitchOff
-    * 'av' noun=Noun_Filter_5  -> SwitchOff
-    * 'på' / 'till' / 'in' / 'ut' / 'av' / 'sönder' / 'ihjäl' noun  -> Attack
+    * 'af' noun=Noun_Filter_4  -> SwitchOff
+    * 'af' noun=Noun_Filter_5  -> SwitchOff
+    * 'på' / 'till' / 'in' / 'ut' / 'af' / 'sönder' / 'ihjäl' noun  -> Attack
     * 'i//' noun 'efter' / 'upp' topic  -> Consult
     * 'upp' / 'efter' topic 'i//' noun  -> Consult reverse
 ;
@@ -33456,12 +33456,12 @@ Verb 'berätta' 'förklara'
 ;
 Verb 'fråga' 'undra'
     * creature 'om' / 'efter' topic  -> Ask
-    * 'om' / 'efter' topic 'av' / 'hos' / 'från' creature  -> Ask reverse
+    * 'om' / 'efter' topic 'af' / 'hos' / 'från' creature  -> Ask reverse
     * creature topic  -> Ask
 ;
 Verb 'be'
     * creature 'om' noun  -> AskFor
-    * 'om' noun 'av' / 'hos' / 'från' creature  -> AskFor reverse
+    * 'om' noun 'af' / 'hos' / 'från' creature  -> AskFor reverse
 ;
 Verb 'vänta' 'z//'
     *  -> Wait
@@ -33535,7 +33535,7 @@ Verb 'smaka'
 ;
 Verb 'skär' 'klipp' 'hugg' 'klyv'
     * noun  -> Cut
-    * 'av' / 'itu' / 'isär' / 'sönder' / 'upp' / 'i//' noun  -> Cut
+    * 'af' / 'itu' / 'isär' / 'sönder' / 'upp' / 'i//' noun  -> Cut
 ;
 Verb 'hoppa'
     *  -> Jump
@@ -33647,7 +33647,7 @@ Verb 'verifiera'
 Verb 'avskrift' 'utskrift'
     *  -> ScriptOn
     * 'på'  -> ScriptOn
-    * 'av'  -> ScriptOff
+    * 'af'  -> ScriptOff
 ;
 Verb 'ingen'
     * 'avskrift'  -> ScriptOff
@@ -33720,23 +33720,23 @@ Verb 'varsko'
 Verb 'meddelande'
     *  -> NotifyOn
     * 'på'  -> NotifyOn
-    * 'av'  -> NotifyOff
+    * 'af'  -> NotifyOff
 ;
 Verb 'meddelanden'
     *  -> NotifyOn
     * 'på'  -> NotifyOn
-    * 'av'  -> NotifyOff
+    * 'af'  -> NotifyOff
 ;
 Verb 'pronomen' 'pronomina' 'substantiv'
     *  -> Pronouns
 ;
 Verb 'objekt'
-    *  -> A80_beg_r_objektnamn_rakt_av
+    *  -> A80_beg_r_objektnamn_rakt_af
     * scope=Scope_Filter_8  -> A81_beg_r_objektnamn
     * scope=Scope_Filter_9  -> A81_beg_r_objektnamn
 ;
 Verb 'förslag'
-    *  -> A80_beg_r_objektnamn_rakt_av
+    *  -> A80_beg_r_objektnamn_rakt_af
     * scope=Scope_Filter_10  -> A81_beg_r_objektnamn
     * scope=Scope_Filter_11  -> A81_beg_r_objektnamn
 ;
@@ -34858,7 +34858,7 @@ Verb 'förslag'
         .group_361_1_2; wn = group_wn;
         if (NextWordStopped() ~= 'tag') jump Fail_1;
         .group_361_1_end;
-        if (NextWordStopped() ~= 'av') jump Fail_1;
+        if (NextWordStopped() ~= 'af') jump Fail_1;
         group_wn = wn;
         .group_361_2_1; wn = group_wn;
         if (NextWordStopped() ~= 'dig') jump group_361_2_2;
@@ -35061,7 +35061,7 @@ Verb 'förslag'
     ;
     wn = range_from; original_wn = wn; rv = GPR_PREPOSITION;
         if (NextWordStopped() ~= 'klä') jump Fail_1;
-        if (NextWordStopped() ~= 'av') jump Fail_1;
+        if (NextWordStopped() ~= 'af') jump Fail_1;
         group_wn = wn;
         .group_368_1_1; wn = group_wn;
         if (NextWordStopped() ~= 'mig') jump group_368_1_2;
@@ -35090,7 +35090,7 @@ Verb 'förslag'
         .group_369_1_2; wn = group_wn;
         if (NextWordStopped() ~= 'tag') jump Fail_1;
         .group_369_1_end;
-        if (NextWordStopped() ~= 'av') jump Fail_1;
+        if (NextWordStopped() ~= 'af') jump Fail_1;
         group_wn = wn;
         .group_369_2_1; wn = group_wn;
         if (NextWordStopped() ~= 'mig') jump group_369_2_2;
@@ -35119,7 +35119,7 @@ Verb 'förslag'
         .group_370_1_2; wn = group_wn;
         if (NextWordStopped() ~= 'tag') jump Fail_1;
         .group_370_1_end;
-        if (NextWordStopped() ~= 'av') jump Fail_1;
+        if (NextWordStopped() ~= 'af') jump Fail_1;
         if ((range_words==0) || (wn-range_from==range_words)) return rv;
         .Fail_1; rv = GPR_PREPOSITION; wn = original_wn;
     return GPR_FAIL;
@@ -35141,7 +35141,7 @@ Verb 'förslag'
         .group_371_1_2; wn = group_wn;
         if (NextWordStopped() ~= 'tag') jump Fail_1;
         .group_371_1_end;
-        if (NextWordStopped() ~= 'av') jump Fail_1;
+        if (NextWordStopped() ~= 'af') jump Fail_1;
         group_wn = wn;
         .group_371_2_1; wn = group_wn;
         if (NextWordStopped() ~= 'dig') jump group_371_2_2;
@@ -36298,7 +36298,7 @@ Constant SC_79 = "t-da";
 Constant SC_82 = "t-de";
 Constant SC_83 = "t-ma";
 Constant SC_84 = "t-na";
-Constant SC_126 = "ta av";
+Constant SC_126 = "ta af";
 Constant SC_171 = "ta";
 Constant SC_299 = "tempeltræ";
 Constant SC_43 = "ten";

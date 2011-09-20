@@ -378,9 +378,9 @@ A Swedish pre-parsing rule (this is the disambiguate 'ta på sig' rule):
 		otherwise:
 			try touching yourself instead.
 
-A Swedish pre-parsing rule (this is the 'ta av mig' rule):
-	if the player's command matches "ta/tag av dig/dej/mig/mej/sig/sej":
-		change the text of the player's command to "ta av";
+A Swedish pre-parsing rule (this is the 'ta af mig' rule):
+	if the player's command matches "ta/tag af dig/dej/mig/mej/sig/sej":
+		change the text of the player's command to "ta af";
 		rule fails.
 
 
@@ -411,8 +411,8 @@ Post-parsing asking someone (called Argus) to try looking (this is the don't und
 		try asking Argus about the matched text instead;
 		rule fails.
 
-Post-parsing an actor taking off something (this is the disambiguate 'ta av' rule):
-	if the player's command includes "ta/tag av" and the player's command does not include "ta/tag av dig/dej/mig/mej/sig/sej":
+Post-parsing an actor taking off something (this is the disambiguate 'ta af' rule):
+	if the player's command includes "ta/tag af" and the player's command does not include "ta/tag af dig/dej/mig/mej/sig/sej":
 		if the noun is not wearable, try the actor taking the noun instead.
 
 Post-parsing touching something when the noun is not worn (this is the disambiguate 'ta på' rule):
@@ -436,8 +436,8 @@ Post-parsing asking someone (called Teufelsdröckh) to try wearing something (th
 		try asking Teufelsdröckh about the matched text instead;
 		rule fails.
 
-Post-parsing asking someone (called Teufelsdröckh) to try taking off something (this is the don't understand 'Person klä av mig' as 'Person klä av dig' rule):
-	if the player's command includes "klä av mig/mej" or the player's command includes "ta/tag av mig/mej":
+Post-parsing asking someone (called Teufelsdröckh) to try taking off something (this is the don't understand 'Person klä af mig' as 'Person klä af dig' rule):
+	if the player's command includes "klä af mig/mej" or the player's command includes "ta/tag af mig/mej":
 		try asking Teufelsdröckh about the matched text;
 		rule fails.
 
@@ -486,7 +486,7 @@ The Swedish room description heading rule is listed instead of the room descript
 
 Section - Grammar
 
-[We keep the English commands for out of world actions: these are either very entrenched (even Swedish players would expect to be able to type "q" to quit) or they are impossible to guess anyway (like "superbrief" or "notify"). We do provide a Swedish set of commands for these actions as well, though. We also keep ingrained abbreviations of English commands ("i", "inv", "l", "x", "y" and "z") with exception of direction (at the very least we need "se" for looking in Swedish -- and while we're at it we shall use "u" for the long word "undersök" rather than for the much shorter "upp"). For the sake of readibility, however, the English abbreviations that we keep are defined anew together with the Swedish commands.]
+[We keep the English commands for out of world actions: these are either very entrenched (even Swedish players would expect to be able to type "q" to quit) or they are impossible to guess anyway (like "superbrief" or "notify"). We do provide a Swedish set of commands for these actions as well, though. We also keep ingrained abbreviations of English commands ("i", "inv", "l", "x", "y" and "z") with exception of direction (at the very least we need "se" for looking in Swedish -- and while we're at it we shall use "u" for the long word "undersøg" rather than for the much shorter "upp"). For the sake of readibility, however, the English abbreviations that we keep are defined anew together with the Swedish commands.]
 
 [lA/sr4§187 - SR4/10 ]
 Understand the commands "take", "carry", "hold", "get" and "pick" as something new.
@@ -547,8 +547,8 @@ Understand "ta upp/ut/ur [things]" as taking.
 Understand "ta [things inside] från/ifrån/ur [something]" as removing it from. 
 Understand "ta bort/upp/ut/ur [things inside] från/ifrån/ur [something]" or "ta [things inside] upp/ut/ur från/ifrån/ur [something]" as removing it from. 
 Understand "ta på dig/dej/mig/mej/sig/sej [something preferably held]" or "ta [something preferably held] på dig/dej/mig/mej/sig/sej" as wearing.
-Understand "ta av dig/dej/mig/mej/sig/sej [something preferably held]" or "ta [something preferably held] av dig/dej/mig/mej/sig/sej" as taking off.
-Understand "ta av [something preferably held]" as taking off.
+Understand "ta af dig/dej/mig/mej/sig/sej [something preferably held]" or "ta [something preferably held] af dig/dej/mig/mej/sig/sej" as taking off.
+Understand "ta af [something preferably held]" as taking off.
 Understand "ta på [something]" as touching.
 Understand the commands "tag", "hämta" and "plocka" as "ta".
 [Note that "dig" or "dej" should be the first pronoun listed in understand tokens for reflexive verbs, or we may receive inappropriate parser errors.]
@@ -586,8 +586,8 @@ Understand "gå" as going.
 Understand "gå [direction]" as going.
 Understand "gå [something]" as entering.
 Understand "gå i/in/på/genom/över [something]" or "gå in/upp/ned/ner i/på/genom/över [something]" as entering.
-Understand "gå ut/av/ned/ner/upp/ur/härifrån/därifrån" as exiting.
-Understand "gå av/från/ifrån [something]" or "gå av/ned/ner från/ifrån [something]" as getting off.
+Understand "gå ut/af/ned/ner/upp/ur/härifrån/därifrån" as exiting.
+Understand "gå af/från/ifrån [something]" or "gå af/ned/ner från/ifrån [something]" as getting off.
 Understand the commands "åk", "fly" and "stig" as "gå".
 
 Understand "ut" as exiting.  
@@ -615,8 +615,8 @@ Understand "titta efter [text] i [something]" as consulting it about (with nouns
 Understand "titta i [something] efter [text]" as consulting it about.
 Understand the command "l", "t", "se", "c" and "kolla" as "titta".
 
-Understand "undersök [something]" as examining.
-Understand the commands "x" and "u" as "undersök".
+Understand "undersøg [something]" as examining.
+Understand the commands "x" and "u" as "undersøg".
 
 Understand "läs [something]" as examining.
 Understand "läs i/ur/från [something]" as examining.
@@ -630,7 +630,7 @@ Understand "lås [something] med [something preferably held]" as locking it with
 Understand "lås upp [something] med [something preferably held]" as unlocking it with.
 
 Understand "knäpp på [something]" as switching on.
-Understand "knäpp av [something]" as switching off.
+Understand "knäpp af [something]" as switching off.
 
 Understand "sätt på [something]" as switching on.
 [Understand the command "ställ på" as something new.[???]]
@@ -638,12 +638,12 @@ Understand "sätt på [something]" as switching on.
 Understand "öppna [something]" as opening.
 Understand the command "packa upp" as "öppna".
 
-Understand "stäng av [something]" as switching off.
+Understand "stäng af [something]" as switching off.
 Understand "stäng [something]" as closing.
 
 Understand "klä på/i dig/dej/mig/mej/sig/sej [something preferably held]" as wearing.
 Understand "klä dig/dej/mig/mejsig/sej i [something preferably held]" as wearing.
-Understand "klä av dig/dej/mig/mejsig/sej [something preferably held]" as taking off.
+Understand "klä af dig/dej/mig/mejsig/sej [something preferably held]" as taking off.
 
 Understand "ge [something preferably held] till [someone]" or "ge bort [something preferably held] till [someone]" as giving it to.
 Understand "ge [someone] [something preferably held]" as giving it to (with nouns reversed).
@@ -658,9 +658,9 @@ Understand "slå i [something] efter/upp [text]" as consulting it about.
 Understand "slå upp/efter [text] i [something]" as consulting it about (with nouns reversed).
 Understand "slå på [something switched on]" as switching on.
 Understand "slå på [something switched off]" as switching on.
-Understand "slå av [something switched on]" as switching off.
-Understand "slå av [something switched off]" as switching off.
-Understand "slå [something]" or "slå på/till/in/ut/av/sönder/ihjäl [something]" as attacking.
+Understand "slå af [something switched on]" as switching off.
+Understand "slå af [something switched off]" as switching off.
+Understand "slå [something]" or "slå på/till/in/ut/af/sönder/ihjäl [something]" as attacking.
 Understand the commands "anfall", "angrip", "attackera", "krossa", "förstör", "spräck", "bryt", "knäck", "sparka", "misshandla", "döda" and "mörda" as "slå".
 
 Understand "kyss [someone]" as kissing.
@@ -675,11 +675,11 @@ Understand "berätta [text] för [someone]" or "berätta om/att [text] för [som
 Understand the command "förklara" as "berätta".
 
 Understand "fråga [someone] om/efter [text]" or "fråga [someone] [text]" as asking it about.
-Understand "fråga om/efter [text] av/hos/från [someone]" as asking it about (with nouns reversed).
+Understand "fråga om/efter [text] af/hos/från [someone]" as asking it about (with nouns reversed).
 Understand the command "undra" as "fråga".
 
 Understand "be [someone] om [something]" as asking it for.
-Understand "be om [something] av/hos/från [someone]" as asking it for (with nouns reversed).
+Understand "be om [something] af/hos/från [someone]" as asking it for (with nouns reversed).
 
 Understand "vänta" as waiting.
 Understand the command "z" as "vänta".
@@ -729,7 +729,7 @@ Understand the command "hör" as "lyssna".
 
 Understand "smaka [something]" or "smaka på [something]" as tasting.
 
-Understand "skär [something]" or "skär av/itu/isär/sönder/upp/i [something]" as cutting.
+Understand "skär [something]" or "skär af/itu/isär/sönder/upp/i [something]" as cutting.
 Understand the commands "klipp", "hugg" and "klyv" as "skär".
 
 Understand "hoppa" as jumping.
@@ -746,7 +746,7 @@ Understand "ursäkta" as saying sorry.
 Understand the command "förlåt" as "ursäkta".
 
 Understand "tusan" as swearing mildly.
-Understand the commands "attan", "jäklar", "jädrar" och "shit" as "tusan". 
+Understand the commands "attan", "jäklar", "jädrar" og "shit" as "tusan". 
 
 Understand "fan" as swearing obscenely.
 Understand the commands "helvete" and "jävlar" as "fan".
@@ -809,7 +809,7 @@ Understand the command "starta" as "börja".
 Understand "verifiera" or "verifiera fil" as verifying the story file.
 
 Understand "avskrift" or "avskrift på" as switching the story transcript on.
-Understand "avskrift av" as switching the story transcript off.
+Understand "avskrift af" as switching the story transcript off.
 Understand the command "utskrift" as "avskrift".
 
 Understand "ingen avskrift" as switching the story transcript off.
@@ -842,7 +842,7 @@ Understand "varsko" or "varsko poängändringar" or "varsko om poängändringar"
 Understand "varsko inte" or "varsko inte poängändringar" or "varsko inte om poängändringar" as switching score notification off.
 
 Understand "meddelande", "meddelanden", "meddelande på" or "meddelanden på" as switching score notification on. []
-Understand "meddelande av" or "meddelanden av" as switching score notification off. []
+Understand "meddelande af" or "meddelanden af" as switching score notification off. []
 
 Understand "pronomen" or "visa pronomen" as requesting the pronoun meanings.
 Understand the commands "pronomina" and "substantiv" as "pronomen".
@@ -2661,8 +2661,8 @@ Constant ALL3__WD       = 'allting';
 Constant ALL4__WD       = 'båda';
 Constant ALL5__WD       = 'bägge';
 
-Constant AND1__WD       = 'och';
-Constant AND2__WD       = 'och';
+Constant AND1__WD       = 'og';
+Constant AND2__WD       = 'og';
 Constant AND3__WD       = '&';
 
 Constant BUT1__WD       = 'utom';
@@ -2682,10 +2682,10 @@ Constant ONESELF2__WD   = 'sej';
 Constant ONESELF3__WD   = 'dem';
 Constant ONESELF4__WD   = 'dom';
 
-Constant OF1__WD        = 'av';
+Constant OF1__WD        = 'af';
 Constant OF2__WD        = 'utav';
 Constant OF3__WD        = 'bland';
-Constant OF4__WD        = 'av';
+Constant OF4__WD        = 'af';
 
 Constant OTHER1__WD     = 'annan';
 Constant OTHER2__WD     = 'annat';
@@ -2982,9 +2982,9 @@ Include (-
     'utr', 'utrustning':        print "gå igenom din utrustning";
     'tag':                      print "ta";
     'l//', 't//', 'c//':        print "titta";
-    'x//', 'u//':               print "undersöka";
+    'x//', 'u//':               print "undersøge";
     'z//':                      print "vänta";
-    'undersök':                 print "undersöka";
+    'undersøg':                 print "undersøge";
     'giv':                      print "ge";
     'attackera':                print "attackera";
     'förstör':                  print "förstöra";
@@ -3100,13 +3100,13 @@ Global ARE2__TX         = "finns ";
 Global IS3__TX          = "finns";
 Global ARE3__TX         = "finns";
 
-Constant AND__TX        = " och ";
+Constant AND__TX        = " og ";
 #ifdef I7_SERIAL_COMMA;
-Constant LISTAND__TX    = " och ";     !# The serial comma option should
-Constant LISTAND2__TX   = " och ";     !#  have no effect in Swedish. 
+Constant LISTAND__TX    = " og ";     !# The serial comma option should
+Constant LISTAND2__TX   = " og ";     !#  have no effect in Swedish. 
 #ifnot;
-Constant LISTAND__TX    = " och ";
-Constant LISTAND2__TX   = " och ";
+Constant LISTAND__TX    = " og ";
+Constant LISTAND2__TX   = " og ";
 #endif; ! I7_SERIAL_COMMA
 
 ! Constant WHOM__TX       = "whom ";   !# Swedish doesn't make any distinction
@@ -3273,8 +3273,8 @@ Include (-
     Cut:    "Det skulle inte tjäna mycket till.";
     Disrobe: switch (n) {
         1:  print "Du har ", (denellerdem) x1, " ju inte på "; dig(); ".";
-        2:  print "Du tar av "; dig(); " ", (the) x1, ".";
-        3:  print (The) actor, " tar av "; sig(); print " ", (the) x1, ".^";
+        2:  print "Du tar af "; dig(); " ", (the) x1, ".";
+        3:  print (The) actor, " tar af "; sig(); print " ", (the) x1, ".^";
     }
     Drink:  "Her er ikke noget drikbart.";
     Drop: switch (n) {
@@ -3286,7 +3286,7 @@ Include (-
                 default: print " är ";
             } "er jo allerede her.";
         2:  "Du har ", (denellerdem) x1, " ju inte.";
-        3:  print "(måste ta av ", (the) x1, " först)^"; say__p = 0; return;
+        3:  print "(måste ta af ", (the) x1, " först)^"; say__p = 0; return;
         4:  print "Släpp"; Inflect("t", "t", "ta", x1); ".";
         5:  "Det finns inte plats på ", (the) x1, ".";
         6:  "Det finns inte plats i ", (the) x1, ".";
@@ -3327,7 +3327,7 @@ Include (-
             if (x1 has supporter) print " upp på "; else print " in i ";
             print_ret (the) x1, ".";
         6:  print "(måste ";
-            if (x1 has supporter) print "av "; else print "ur ";
+            if (x1 has supporter) print "af "; else print "ur ";
             print (the) x1; print " först)^"; say__p = 0; return;
         7:  ! say__p = 0;
             if (x1 has supporter) "(måste upp på ", (the) x1, " först)";
@@ -3341,10 +3341,10 @@ Include (-
   Examine: switch (n) {
         1:  style bold; print "Mörker"; style roman; 
             print ", "; style underline; print "subs."; style roman;
-            "  Avsaknad av för synsinnets funktion erforderligt ljus.";   !# Unused?
+            "  Avsaknad af för synsinnets funktion erforderligt ljus.";   !# Unused?
         2:  "Du ser ikke noget specielt ved ", (the) x1, ".";
         3:  print (The) x1, " är för tillfället ";
-            if (x1 has on) "på."; else "av.";
+            if (x1 has on) "på."; else "af.";
         4:  print (The) actor, " tittar på ", (the) x1, ".^";
         5:  "Det syns ingenting oväntat åt det hållet.";
     }
@@ -3353,12 +3353,12 @@ Include (-
         2:  print "Det går inte att komma ut ur ", (denellerde) x1, " stäng"; Inflect("d", "t", "da", x1); 
             exc_art == true; print (the) x1; exc_art == false; ".";
         3:  print "Du tar "; dig();
-            if (x1 has supporter) print " av "; else print " ur ";
+            if (x1 has supporter) print " af "; else print " ur ";
             print_ret (the) x1, ".";
         4:  print "Men du befinner "; dig(); print " ju inte "; 
             if (x1 has supporter) print "på "; else print "i ";
             print_ret (the) x1, ".";
-        5:  print (The) actor, " tar "; sig(); print " av ", (the) x1, ".^";
+        5:  print (The) actor, " tar "; sig(); print " af ", (the) x1, ".^";
         6:  print (The) actor, " tar "; sig(); print " ur ", (the) x1, ".^";
     }
   GetOff:   print "Men du befinner "; dig(); " ju inte på ", (the) x1, " för tillfället.";
@@ -3377,8 +3377,8 @@ Include (-
         2:  print_ret (string) CANTGO__TX;   ! "You can't go that way."
         6:  "Det går inte, för ", (the) x1, " leder igenstans.";
         7:  "Du måste tala om åt vilket håll.";
-        8:  print (The) actor, " beger "; sig(); print " av upp";
-        9:  print (The) actor, " beger "; sig(); print " av "; ned();
+        8:  print (The) actor, " beger "; sig(); print " af upp";
+        9:  print (The) actor, " beger "; sig(); print " af "; ned();
         10: print (The) actor, " beger "; sig(); print (name) x1, "ut";
         11: print (The) actor, " kommer "; print ned();
         12: print (The) actor, " kommer upp";
@@ -3393,12 +3393,12 @@ Include (-
         21: print "i ", (the) x1;
         22: print ", skjutande ", (the) x1, " framför "; 
             if (actor ~= player) sig(); else dig(); 
-            print " och "; dig(); print " med "; denellerdem(x1);
+            print " og "; dig(); print " med "; denellerdem(x1);
         23: print ", skjutande ", (the) x1, " framför "; if (actor ~= player) sig(); else dig();
         24: print ", skjutande ", (the) x1, " med "; if (actor ~= player) sig(); else dig(); " bort";
         25: print ", skjutande ", (the) x1, " med "; if (actor ~= player) sig(); else dig(); " hit";
-        26: print ", och du följer med";
-        27: print "(måste av  ", (the) x1, " först)^"; say__p = 0; return;
+        26: print ", og du följer med";
+        27: print "(måste af  ", (the) x1, " först)^"; say__p = 0; return;
         28: print "(måste öppna ", (the) x1, " först)^"; say__p = 0; return;
     }
   Insert: switch (n) {
@@ -3406,9 +3406,9 @@ Include (-
             naagot(); " annat."; !# Used, but what prints it?
         2:  print "Man kan inte ha "; naagot(); " i ", (denellerdem) x1, ".";
         3:  print (The) x1, " är stäng"; Inflect("d", "t", "da", x1); ".";
-        4:  print "Det går inte utan att ta av "; sig(); " ", (denellerdem) x1, " först."; !# Unused?
+        4:  print "Det går inte utan att ta af "; sig(); " ", (denellerdem) x1, " först."; !# Unused?
         5:  print "Det går inte att stoppa in "; naagot(); print " i "; sig(); " självt.";
-        6:  print "(måste ta av ", (denellerdem) x1, " först)^"; say__p = 0; return;
+        6:  print "(måste ta af ", (denellerdem) x1, " först)^"; say__p = 0; return;
         7:  "Det är redan fullt i ", (the) x1, ".";
         8:  "Klart.";
         9:  "Du stoppar ", (the) x1, " i ", (the) second, ".";
@@ -3429,15 +3429,15 @@ Include (-
         2:  print " (stäng"; Inflect("d", "t", "da", x1); print ")";
         4:  print " (tom"; Inflect("", "t", "ma", x1); print ")";
         6:  print " (stäng"; Inflect("d", "t", "da", x1);
-            print " och tom"; Inflect("", "t", "ma", x1); print ")";
+            print " og tom"; Inflect("", "t", "ma", x1); print ")";
         3:  print " (stäng"; Inflect("d", "t", "da", x1); 
             print " men som ger ljus)";
         5:  print " (tom"; Inflect("", "t", "ma", x1); 
             print " men som ger ljus)";
         7:  print " (stäng"; Inflect("d", "t", "da", x1); 
-            print " och tom"; Inflect("", "t", "ma", x1); 
+            print " og tom"; Inflect("", "t", "ma", x1); 
             print " men som ger ljus)";
-        8:  print " (som ger ljus och du har på "; dig();
+        8:  print " (som ger ljus og du har på "; dig();
         9:  print " (som ger ljus";
         10: print " (som du har på "; dig();
         11: print " (";
@@ -3446,8 +3446,8 @@ Include (-
             print " men tom"; Inflect("", "t", "ma", x1);
         14: print "stäng"; Inflect("d", "t", "da", x1);
         15: print "stäng"; Inflect("d", "t", "da", x1); 
-            print " och låst"; Inflect("", "", "a", x1);
-        16: print " och tom"; Inflect("", "t", "ma", x1);
+            print " og låst"; Inflect("", "", "a", x1);
+        16: print " og tom"; Inflect("", "t", "ma", x1);
         17: print " (tom"; Inflect(")", "t)", "ma)", x1);
         18: print " som innehåller ";
         19: print " (på ";
@@ -3455,9 +3455,9 @@ Include (-
         21: print " (i ";
         22: print ", inuti ";
     }
-  LMode1:   " är nu i ~ibland~-läge, vilket innebär att du får en fullständig beskrivning av en plats bara första gången du kommer dit (sedan står det bara var du är).";
-  LMode2:   " är nu i ~alltid~-läge, vilket innebär att du alltid får en fullständig beskrivning av en plats (även om du redan varit där).";
-  LMode3:   " är nu i ~aldrig~-läge, vilket innebär att du aldrig får en fullständig beskrivning av en plats (ens om det är första gången du är där).";
+  LMode1:   " är nu i ~ibland~-läge, vilket innebär att du får en fullständig beskrivning af en plats bara första gången du kommer dit (sedan står det bara var du är).";
+  LMode2:   " är nu i ~alltid~-läge, vilket innebär att du alltid får en fullständig beskrivning af en plats (även om du redan varit där).";
+  LMode3:   " är nu i ~aldrig~-läge, vilket innebär att du aldrig får en fullständig beskrivning af en plats (ens om det är första gången du är där).";
   Lock: switch (n) {
         1:  print_ret (cDenellerDe) x1, " verkar inte gå att låsa över huvud taget.";
         2:  print (cDenellerDe) x1, " är redan låst"; Inflect("", "", "a", x1); ".";
@@ -3516,7 +3516,7 @@ Include (-
             #Ifnot; ! TARGET_GLULX
         7:  "[Du kan inte ~ångra~ fler drag nu.]";
             #Endif; ! TARGET_
-        8:  "Var god välj et av svaralternativen ovan.";
+        8:  "Var god välj et af svaralternativen ovan.";
         9:  "Der er nu bælgmørkt her!";
         10: "Ursäkta?";
         11: print "[Det går inte att ~ångra~ "; naagot(); " du inte ens gjort!]";
@@ -3525,7 +3525,7 @@ Include (-
         14: "Tyvärr går inte det att rätta.";
         15: "Ingen orsak.";
         16: "Man kan bara rätta et enda ord med et ~Oj~.";
-        17: "Det är kolmörkt, och du ser inte et skvatt.";
+        17: "Det är kolmörkt, og du ser inte et skvatt.";
         18: print dig();
         19: "Lika snygg som vanligt.";    !# Unused?
         20: "Vill du upprepa en instruktion som ~Groda, hoppa~, skriver du bara ~igen~, inte ~groda, igen~.";
@@ -3533,7 +3533,7 @@ Include (-
         22: "Du kan inte inleda med et kommatecken.";
         23: print "Du vill visst prata med "; naagon(); ", men jag förstår inte vem.";
         24: "Det går inte att tala med ", (the) x1, ".";
-        25: print "Vill du prata med "; naagon(); ", skriv bara namn, kommatecken och vad du vill ha sagt: ~Watson, elementärt~ (inte t.ex. ~Watson min vän, elementärt~).";
+        25: print "Vill du prata med "; naagon(); ", skriv bara namn, kommatecken og vad du vill ha sagt: ~Watson, elementärt~ (inte t.ex. ~Watson min vän, elementärt~).";
         26: "(måste ta ", (the) x1, " först)";
         27: "Jag förstod inte den meningen.";
         28: print "Jag hängde inte med efter det där om att ";
@@ -3546,7 +3546,7 @@ Include (-
         35: "Jag förstod inte vad ~", (address) pronoun_word, "~ syftar på.";
         36: "You excepted something not included anyway!";    !# Unused?
         37: print "Det kan man bara göra med "; naagot(); " levande.";
-        38: "Jag förstår inte det verbet.";
+        38: "Jeg forstår ikke det udsagnsord.";
         39: "That's not something you need to refer to in the course of this game.";    !# Unused?
         40: "Du ser inte till ~", (address) pronoun_word, "~ (", (the) pronoun_obj,
             ") för tillfället.";
@@ -3562,7 +3562,7 @@ Include (-
         44: "Ingenting är tillgängligt!";
         45: print "Menar du ";
         46: print "Menar du ";
-        47: "Tyvärr måste du bestämma dig för et enda av alternativen i det här läget. Vilket tar du?";
+        47: "Tyvärr måste du bestämma dig för et enda af alternativen i det här läget. Vilket tar du?";
         48: print "Vem ville du ";
             if (actor ~= player) print "att ", (the) actor, " skulle ";
             PrintCommand(); print "?^";
@@ -3572,7 +3572,7 @@ Include (-
         50: print "Poängställningen gick just ";
             if (x1 > 0) print "upp"; else { x1 = -x1; ned(); }
             print " med ", (number) x1, " poäng";
-        51: "(På grund av den dramatiska händelseutvecklingen slutfördes inte alla dina instruktioner.)";
+        51: "(På grund af den dramatiska händelseutvecklingen slutfördes inte alla dina instruktioner.)";
         52: "^Type a number from 1 to ", x1, ", 0 to redisplay or press ENTER.";    !# Unused?
         53: "^[Please press SPACE.]";    !# Unused?
         54: "[Comment recorded.]";       !# Unused?
@@ -3658,7 +3658,7 @@ Include (-
                 default: print "placera ";
             } naagot(); " på ", (the) x1, ".";
         4:  "Så akrobatisk är du inte.";
-        5:  print "(måste ta av ", (denellerdem) x1, " först)^"; say__p = 0; return;
+        5:  print "(måste ta af ", (denellerdem) x1, " först)^"; say__p = 0; return;
         6:  "Det är fullt på ", (the) x1, ".";
         7:  "Klart.";
         8:  print "Du ";
@@ -3701,20 +3701,20 @@ Include (-
     }
   Score: switch (n) {
         1:  if (deadflag) print "I hela spelet fick du "; else print "Hittills har du fått ";
-            print score, " poäng av ", MAX_SCORE, " möjliga på ", turns, " drag";
+            print score, " poäng af ", MAX_SCORE, " möjliga på ", turns, " drag";
             return;
         2:  "Det räknas inga poäng i den här berättelsen.";
-        3:  print ", vilket ger dig rang av ";
+        3:  print ", vilket ger dig rang af ";
     }
   ScriptOff: switch (n) {
-        1:  "Det pågick ingen avskrift av spelomgången.";
+        1:  "Det pågick ingen avskrift af spelomgången.";
         2:  "^Här slutar avskriften.";
-        3:  "Det gick inte att avbryta avskriften av spelomgången.";
+        3:  "Det gick inte att avbryta avskriften af spelomgången.";
     }
   ScriptOn: switch (n) {
-        1:  "Avskrift av spelomgången pågår redan.";
-        2:  "Här börjar en avskrift av";
-        3:  "Det gick inte att påbörja en avskrift av spelomgången.";
+        1:  "Avskrift af spelomgången pågår redan.";
+        2:  "Här börjar en avskrift af";
+        3:  "Det gick inte att påbörja en avskrift af spelomgången.";
     }
   Search: switch (n) {
         1:  "But it's dark.";    !# Unused?
@@ -3747,13 +3747,13 @@ Include (-
   Strong:   print "et "; saadan();"t språk anstår inte en äkta äventyrare.";
   Swing:    "Det finns inget som passar att ", (string) verb_word, " her.";
   SwitchOff: switch (n) {
-        1:  "Det går varken att stänga av eller sätta på ", (denellerdem) x1, ".";
-        2:  print_ret (cDenellerDe) x1, " är redan av.";
-        3:  "Du stänger av ", (the) x1, ".";
-        4:  print (The) actor, " stänger av ", (the) x1, ".^";
+        1:  "Det går varken att stänga af eller sätta på ", (denellerdem) x1, ".";
+        2:  print_ret (cDenellerDe) x1, " är redan af.";
+        3:  "Du stänger af ", (the) x1, ".";
+        4:  print (The) actor, " stänger af ", (the) x1, ".^";
     }
   SwitchOn: switch (n) {
-        1:  "Det går varken att sätta på eller stänga av ", (denellerdem) x1, ".";
+        1:  "Det går varken att sätta på eller stänga af ", (denellerdem) x1, ".";
         2:  print_ret (cDenellerDe) x1, " är redan på.";
         3:  print_ret (The) actor, " sätter på ", (the) x1, ".";
         4:  print (The) actor, " sätter på ", (the) x1, ".^";
@@ -3763,11 +3763,11 @@ Include (-
         2:  print "Du tar "; dig(); " i kragen.";
         3:  "Jag tror inte ", (the) x1, " skulle uppskatta det.";
         4:  print "Du måste ";
-            if (x1 has supporter) print "av "; else print "ur ";
+            if (x1 has supporter) print "af "; else print "ur ";
             print_ret (the) x1, " först.";
         5:  "Du har ", (denellerdem) x1, " redan.";
         6:  print_ret (cDenellerDe) noun, " tillhör nog ", (the) x1, ".";
-        7:  print_ret (cDenellerDe) noun, " är nog en del av ", (the) x1, ".";
+        7:  print_ret (cDenellerDe) noun, " är nog en del af ", (the) x1, ".";
         8:  print (CDenellerDe) x1, " är inte åtkomlig"; Inflect("", "t", "a", x1); ".";
         9:  print (The) x1, " är inte öpp"; Inflect("en", "et", "na", x1); ".";
         10: print_ret (cDenellerDe) x1, " är där ", (denellerde) x1, " är.";
@@ -3818,7 +3818,7 @@ Include (-
   WakeOther:"Det "; ska(); " väl ändå inte behövas?";
   Wave: switch (n) {
         1:  "Men du håller ju inte i ", (denellerdem) x1, ".";
-        2:  "Du ser rätt fånig ut, där du står och viftar med ", (the) x1, ".";
+        2:  "Du ser rätt fånig ut, där du står og viftar med ", (the) x1, ".";
         3:  print (The) actor, " viftar med ", (the) x1, ".^";
     }
   WaveHands:"Du vinkar. Du känner dig löjlig.";
@@ -3880,7 +3880,7 @@ Include (-
 		new_line;
 		print (string) Headline;
 		#ifdef Story_Author;
-		print " av ", (string) Story_Author;
+		print " af ", (string) Story_Author;
 		#endif; ! Story_Author
 		new_line;
 		VM_Describe_Release();
@@ -4280,8 +4280,8 @@ Include (-
           hr = mn; mn = 0; 
           parsed_number = HoursMinsWordToTime(hr, mn, second_word); 
           return GPR_NUMBER;
-      !# "nitton och trettio", "sjutton noll noll", "nio noll tre" etc.
-      'och', 'noll': 
+      !# "nitton og trettio", "sjutton noll noll", "nio noll tre" etc.
+      'og', 'noll': 
           hr = mn; mn = I7_ExtendedTryNumber(wn); 
           if (NextWordStopped() == 'noll') mn = 0; 
           second_word = '24timmars'; 
@@ -4391,8 +4391,8 @@ Include (-
       'halv', 'halva', 'halvtimme', 'halvtimma', 'halvtimmar': mult = HALF_HOUR; 
       'timmar', 'timme', 'timmar': mult = ONE_HOUR; 
 
-  !# "en och en halv (timme)", "två och en kvarts (timme)", "tre och tre kvarts (timme)", etc.
-      'och':
+  !# "en og en halv (timme)", "två og en kvarts (timme)", "tre og tre kvarts (timme)", etc.
+      'og':
           second_word = NextWordStopped();
           switch (second_word){
               'en':
@@ -4414,10 +4414,10 @@ Include (-
   .Trekvart1;
   parsed_number = (mn*mult)+offhour;
 
-!# "(två) timmar", "(tre kvarts) timme", "(en och en halv) timme", "(fem) timmar och tjugotre minuter", "(två) timmar och tre kvart", etc.
+!# "(två) timmar", "(tre kvarts) timme", "(en og en halv) timme", "(fem) timmar og tjugotre minuter", "(två) timmar og tre kvart", etc.
   if (mult == QUARTER_HOUR or HALF_HOUR or ONE_HOUR) { 
       if (NextWordStopped() ~= 'timme' or 'timma' or 'timmar') wn--;
-      if (NextWordStopped() ~= 'och') wn--;
+      if (NextWordStopped() ~= 'og') wn--;
       if (NextWordStopped() == 'trekvart') { mn = 3; mult = QUARTER_HOUR; jump Trekvart2; } else wn--;
       mn=I7_ExtendedTryNumber(wn);
       if (mn ~= -1000) { !# We have a number
@@ -4464,8 +4464,8 @@ To end name request:
 	now presenteraResultat is false;
 	now avsettObjekt is nothing.
 
-Begär objektnamn rakt av is an action applying to nothing.
-Understand "objekt" or "förslag" as begär objektnamn rakt av.
+Begär objektnamn rakt af is an action applying to nothing.
+Understand "objekt" or "förslag" as begär objektnamn rakt af.
 Begär objektnamn is an action applying to one thing.
 Understand "objekt [any thing]" or "förslag [any thing]" as begär objektnamn.
 Understand "objekt [any room]" or "förslag [any room]" as begär objektnamn.
@@ -4474,7 +4474,7 @@ Carry out begär objektnamn:
 	now begärBestämd is true;
 	now avsettObjekt is the noun.
 
-Carry out begär objektnamn rakt av:
+Carry out begär objektnamn rakt af:
 	now begärBestämd is true.
 
 After reading a command:
@@ -4502,7 +4502,7 @@ To say förslagSuffix:
 	say "'.";
 
 Report begär objektnamn: say begärBestämdForm.
-Report begär objektnamn rakt av: say begärBestämdForm.
+Report begär objektnamn rakt af: say begärBestämdForm.
 
 Instead of looking while name request is going on:
 	if begärObestämd is false:
@@ -4711,28 +4711,28 @@ title	subtable	description	toggle
 
 Table of Instruction Options
 title	subtable	description	toggle
-"Om interaktiv fiktion"	a table-name	"Detta spel är et exempel på interaktiv fiktion. I interaktiv fiktion (även kallat IF) spelar du huvudpersonen i en berättelse. Det du skriver på datorn bestämmer vad huvudpersonen gör och vad som händer i berättelsen. I somliga IF-spel ingår [lite] grafik, men [de] är undantag: illustrationerna till spelet står vanligen din egen fantasi för. Å andra sidan kan du försöka [dig] på att göra nästan vad som helst: i många andra dataspel kan du bara skjuta, röra [dig] åt olika håll och undersöka saker genom att klicka på dem med musen, men i IF är oftast betydligt fler handlingar möjliga."	a rule
-"Vad är '[command prompt]' till för?"	a table-name	"[command prompt]-tecknet betyder: 'Okej, vad vill du göra den här gången?'  Här skriver du dina instruktioner till huvudpersonen -- oftast et verb i imperativ, eventuellt med prepositioner och  objekt.: till exempel TITTA, TA FISKEN, TITTA PÅ FISKEN eller TA PÅ FISKEN."	a rule
-"Hur man börjar"	--	"Det första man [ska] göra i et spel är att bekanta [sig] med omgivningarna och ta reda på vad spelet går ut på. Prologen kan innehålla ledtrådar, så läs den noggrant. Det är också bra att ta en titt på platsen där du befinner [dig] i. Åt vilka håll kan du gå? Vilka föremål finns där du är? Är det något av föremålen som verkar intressant, bör du UNDERSÖKA [dem].[paragraph break]Du kan också titta närmare på [dig] själv (UNDERSÖK [if the dej spelling option is active or the informal spelling option is active]MEJ[otherwise]MIG[end if]) för att se om du kan få reda på [något] mer om personen du spelar. Kommandot TILLHÖRIGHETER talar om vad du har med [dig] för saker.[paragraph break]När du har koll på läget, kan du börja utforska spelvärlden. Gå från plats till plats, och utforska alla ställen du kan hitta."	--
-"Rum och riktningar"	--	"Du befinner [dig] alltid på en viss plats eller i et visst rum. När du kommer till en ny plats beskriver spelet vad du ser där. På så sätt får du reda på två viktiga saker: dels vilka saker som finns där och som du kan försöka göra [något] med eller plocka upp och ta med [dig], dels vilka vägar kan du kan ta när du vill fortsätta därifrån. Vill du läsa beskrivningen av platsen igen, är det bara att skriva TITTA. [paragraph break]Vill du gå [någon] annanstans, berättar du det för spelet genom att tala om vilken riktning du vill gå i: t.ex. GÅ NORRUT eller GÅ ÅT SYDVÄST. För enkelhets skull behöver du inte skriva GÅ och du kan också förkorta väderstrecken. Alltså räcker det att skriva NORR, SÖDER, ÖSTER, VÄSTER, NORDOST, SYDOST, NORDVÄST, SYDVÄST (eller förkortat N, S, Ö, V, NO, SO, NV, och SV.[paragraph break]På sina håll går det också att gå UPP, NED, IN och UT."	--
-"Föremål"	--	"I spelet kommer det att finnas diverse föremål du kan göra saker med. Framför allt kan du TA saker och SLÄPPA [dem] igen (när du tröttnat på dem). TILLHÖRIGHETER eller UTRUSTNING (förkortat TILLH och UTR) räknar upp alla de saker du för tillfället bär runt på.[paragraph break]Oftast finns det [något] du kan göra med dessa saker: att ÖPPNA, STÄNGA, TA PÅ [if the dej spelling option is active or the informal spelling option is active]MEJ[otherwise]MIG[end if], ÄTA, LÅSA och LÅSA UPP saker hör till det vanligaste.[paragraph break]Även om författaren skrivit att et visst föremål finns i rummet, händer det ibland hända att spelet inte verkar fatta det när du försöker göra [något] med det föremålet. I så fall nämnde författaren föremålet bara för att ge en stämningsfull beskrivning av rummet, och du kan utgå från att du inte behöver det föremålet till [någon]ting."	--
-"Spara och avsluta etc."	--	"Det finns några saker som inte huvudpersonen i berättelsen kan göra utan som du själv gör med spelet, som att spara en spelomgång eller avsluta programmet. Det gör du med direktiven:[paragraph break]SPARA, som sparar en kopia av spelvärlden som den ser ut precis för ögonblicket.[line break]LADDA, som hämtar en sparad spelomgång och låter [dig] fortsätta på den. Du kan spara hur många spelomgångar som helst.[line break]BÖRJA OM,  som låter [dig] börja om speloet från början.[line break]AVSLUTA, som avslutar spelet."	--
+"Om interaktiv fiktion"	a table-name	"Detta spel är et exempel på interaktiv fiktion. I interaktiv fiktion (även kallat IF) spelar du huvudpersonen i en berättelse. Det du skriver på datorn bestämmer vad huvudpersonen gör og vad som händer i berättelsen. I somliga IF-spel ingår [lite] grafik, men [de] är undantag: illustrationerna till spelet står vanligen din egen fantasi för. Å andra sidan kan du försöka [dig] på att göra nästan vad som helst: i många andra dataspel kan du bara skjuta, röra [dig] åt olika håll og undersøge saker genom att klicka på dem med musen, men i IF är oftast betydligt fler handlingar möjliga."	a rule
+"Vad är '[command prompt]' till för?"	a table-name	"[command prompt]-tecknet betyder: 'Okej, vad vill du göra den här gången?'  Här skriver du dina instruktioner till huvudpersonen -- oftast et verb i imperativ, eventuellt med prepositioner og  objekt.: till exempel TITTA, TA FISKEN, TITTA PÅ FISKEN eller TA PÅ FISKEN."	a rule
+"Hur man börjar"	--	"Det första man [ska] göra i et spel är att bekanta [sig] med omgivningarna og ta reda på vad spelet går ut på. Prologen kan innehålla ledtrådar, så läs den noggrant. Det är också bra att ta en titt på platsen där du befinner [dig] i. Åt vilka håll kan du gå? Vilka föremål finns där du är? Är det något af föremålen som verkar intressant, bör du undersøge [dem].[paragraph break]Du kan också titta närmare på [dig] själv (undersøg [if the dej spelling option is active or the informal spelling option is active]MEJ[otherwise]MIG[end if]) för att se om du kan få reda på [något] mer om personen du spelar. Kommandot TILLHÖRIGHETER talar om vad du har med [dig] för saker.[paragraph break]När du har koll på läget, kan du börja utforska spelvärlden. Gå från plats till plats, og utforska alla ställen du kan hitta."	--
+"Rum og riktningar"	--	"Du befinner [dig] alltid på en viss plats eller i et visst rum. När du kommer till en ny plats beskriver spelet vad du ser där. På så sätt får du reda på två viktiga saker: dels vilka saker som finns där og som du kan försöka göra [något] med eller plocka upp og ta med [dig], dels vilka vägar kan du kan ta när du vill fortsätta därifrån. Vill du läsa beskrivningen af platsen igen, är det bara att skriva TITTA. [paragraph break]Vill du gå [någon] annanstans, berättar du det för spelet genom att tala om vilken riktning du vill gå i: t.ex. GÅ NORRUT eller GÅ ÅT SYDVÄST. För enkelhets skull behöver du inte skriva GÅ og du kan också förkorta väderstrecken. Alltså räcker det att skriva NORR, SÖDER, ÖSTER, VÄSTER, NORDOST, SYDOST, NORDVÄST, SYDVÄST (eller förkortat N, S, Ö, V, NO, SO, NV, og SV.[paragraph break]På sina håll går det också att gå UPP, NED, IN og UT."	--
+"Föremål"	--	"I spelet kommer det att finnas diverse föremål du kan göra saker med. Framför allt kan du TA saker og SLÄPPA [dem] igen (när du tröttnat på dem). TILLHÖRIGHETER eller UTRUSTNING (förkortat TILLH og UTR) räknar upp alla de saker du för tillfället bär runt på.[paragraph break]Oftast finns det [något] du kan göra med dessa saker: att ÖPPNA, STÄNGA, TA PÅ [if the dej spelling option is active or the informal spelling option is active]MEJ[otherwise]MIG[end if], ÄTA, LÅSA og LÅSA UPP saker hör till det vanligaste.[paragraph break]Även om författaren skrivit att et visst föremål finns i rummet, händer det ibland hända att spelet inte verkar fatta det när du försöker göra [något] med det föremålet. I så fall nämnde författaren föremålet bara för att ge en stämningsfull beskrivning af rummet, og du kan utgå från att du inte behöver det föremålet till [någon]ting."	--
+"Spara og avsluta etc."	--	"Det finns några saker som inte huvudpersonen i berättelsen kan göra utan som du själv gör med spelet, som att spara en spelomgång eller avsluta programmet. Det gör du med direktiven:[paragraph break]SPARA, som sparar en kopia af spelvärlden som den ser ut precis för ögonblicket.[line break]LADDA, som hämtar en sparad spelomgång og låter [dig] fortsätta på den. Du kan spara hur många spelomgångar som helst.[line break]BÖRJA OM,  som låter [dig] börja om speloet från början.[line break]AVSLUTA, som avslutar spelet."	--
 "Hur spelvärlden är uppbyggd"	Table of IF Elements	--	--
 "Har du kört fast?"	Table of Stuckness Advice	--	--
 
 Table of Stuckness Advice
 title	subtable	description	toggle
-"Utforska"	--	"Undersök allt du hittar och alla sakerna du bär med [dig]. Öppna alla dörrar och gå in genom [dem]. Kika i alla stängda behållare. Testa allt som går att göra på varje ställe.[paragraph break]Använd alla sinnen: känn, lukta, lyssna och smaka på saker som skulle kunna kännas, lukta, låta eller smaka på särskilda sätt.[paragraph break]Var grundlig. Kommer du inte på vad du ska göra, så försök att öppna fönster, titta under sängar o.s.v. I en del spel är viktiga saker väl gömda."
-"Läs noggrant"	--	"Läs om stycken. Titta en gång till på saker du redan tittat på. Ibland får man nya idéer av det.[paragraph break]Leta efter ledtrådar i texten. Sakers om beskrivs ingående är antagaligen viktigare än saker som nämn i förbigående. Greja med de sakerna. Om en maskin har delar, titta på delarna och försök göra [något] med dem.  Lägg också märke till vilka verb som nämns i texten. Försök använda samma verb själv. Ofta behövs det speciella verb för speciella handlingar i et speciellt spel -- som trollformler eller andra ovanliga kommandon. De skadar aldrig att pröva [något], om det omnämns i texten.[paragraph break]Kolla hela bildskärmen. Finns det några extra fönster förutom huvudfönstret? Vad händer i de fönstren? Håll et öga på statusraden, om det finns en [sådan] -- där kan det stå var du är, hur många poäng du har, vad klockan är i spelvärlden, vilken kondition din figur är i eller annan viktig information. Om statusraden till exempel talar om vilken kondition figuren du spelar är i, kan du vara säker på att det kan vara viktigt att veta förr eller senare."
-"Var påhittig"	--	"Formulera om [dig]. Om spelet inte verkar fatta vad du vill göra, försök säga samma sak med andra ord.[paragraph break]Pröva på olika sätt. Ibland när [något] inte funkar, kan man få ovanliga responser från spelet. Det är ofta et tecken på att man är på rätt spår, fast man inte lyckats lista ut precis hur man gör än. När du trycker bara på den röda knappen, gnisslar det inifrån väggen, så kanske öppnar man lönndörren genom att trycka först p den blå knappen och [sedan] på den röda.[paragraph break]Tänk på vad det är för slags historia som berättas. Vad man [ska] göra och varför kan bero på ifall man spelar et mysterium, en kärleksberättelse eller en thriller. Vad försöker du göra, och hur brukar huvudpersonerna i sådana berättelser lösa den sortens saker? Vad kan man vänta [sig] att en deckare, hjältinnan i en kärlekshistoria eller en hemlig agent skulle göra i en [sådan] situation?"
-"Samarbeta"	--	"Spela ihop med [någon]. Två huvuden är klokare än et. Om det ändå inte går, kan du försöka mejla författaren eller ännu hellre be om ledtrådar på rec.games.int-fiction eller intfiction.org.  Skriv vad det är för spel du behöver hjälp med, och inled med flera tomma rader (så du inte råkar avslöja vad som händer i spelet för folk som inte redan spelat det). Förklara sedan ditt problem så klart och tydligt som möjligt. Det finns säkert [någon] som vet hur man kommer vidare."	--
+"Utforska"	--	"undersøg allt du hittar og alla sakerna du bär med [dig]. Öppna alla dörrar og gå in genom [dem]. Kika i alla stängda behållare. Testa allt som går att göra på varje ställe.[paragraph break]Använd alla sinnen: känn, lukta, lyssna og smaka på saker som skulle kunna kännas, lukta, låta eller smaka på särskilda sätt.[paragraph break]Var grundlig. Kommer du inte på vad du ska göra, så försök att öppna fönster, titta under sängar o.s.v. I en del spel är viktiga saker väl gömda."
+"Läs noggrant"	--	"Läs om stycken. Titta en gång till på saker du redan tittat på. Ibland får man nya idéer af det.[paragraph break]Leta efter ledtrådar i texten. Sakers om beskrivs ingående är antagaligen viktigare än saker som nämn i förbigående. Greja med de sakerna. Om en maskin har delar, titta på delarna og försök göra [något] med dem.  Lägg också märke till vilka verb som nämns i texten. Försök använda samma verb själv. Ofta behövs det speciella verb för speciella handlingar i et speciellt spel -- som trollformler eller andra ovanliga kommandon. De skadar aldrig att pröva [något], om det omnämns i texten.[paragraph break]Kolla hela bildskärmen. Finns det några extra fönster förutom huvudfönstret? Vad händer i de fönstren? Håll et öga på statusraden, om det finns en [sådan] -- där kan det stå var du är, hur många poäng du har, vad klockan är i spelvärlden, vilken kondition din figur är i eller annan viktig information. Om statusraden till exempel talar om vilken kondition figuren du spelar är i, kan du vara säker på att det kan vara viktigt att veta förr eller senare."
+"Var påhittig"	--	"Formulera om [dig]. Om spelet inte verkar fatta vad du vill göra, försök säga samma sak med andra ord.[paragraph break]Pröva på olika sätt. Ibland när [något] inte funkar, kan man få ovanliga responser från spelet. Det är ofta et tecken på att man är på rätt spår, fast man inte lyckats lista ut precis hur man gör än. När du trycker bara på den röda knappen, gnisslar det inifrån väggen, så kanske öppnar man lönndörren genom att trycka först p den blå knappen og [sedan] på den röda.[paragraph break]Tänk på vad det är för slags historia som berättas. Vad man [ska] göra og varför kan bero på ifall man spelar et mysterium, en kärleksberättelse eller en thriller. Vad försöker du göra, og hur brukar huvudpersonerna i sådana berättelser lösa den sortens saker? Vad kan man vänta [sig] att en deckare, hjältinnan i en kärlekshistoria eller en hemlig agent skulle göra i en [sådan] situation?"
+"Samarbeta"	--	"Spela ihop med [någon]. Två huvuden är klokare än et. Om det ändå inte går, kan du försöka mejla författaren eller ännu hellre be om ledtrådar på rec.games.int-fiction eller intfiction.org.  Skriv vad det är för spel du behöver hjälp med, og inled med flera tomma rader (så du inte råkar avslöja vad som händer i spelet för folk som inte redan spelat det). Förklara sedan ditt problem så klart og tydligt som möjligt. Det finns säkert [någon] som vet hur man kommer vidare."	--
 
 Table of IF Elements
 title	subtable	description	toggle
 "Vad du når"	--	"Vanligen har du tillgång till allting du kan se på den plats där du befinner [dig]. Det går att flytta [sig] från en plats till en annan; men du behöver oftast inte flytta på [dig] i rummet där du är. Kommandon som >GÅ TILL BORDET behövs sällan eller aldrig. Men berättar författaren att att [någon]ting ligga högt upp eller utom räckhåll, kan det ibland vara nöädvändigt att ställa [sig] på en stol eller dylikt för att nå. Den sortens handlingar brukar dock bara vara viktiga om texten i spelet antyder det."	--
 "Saker i eller på [någon]ting"	--	"Vlika saker som ligger i eller på vilka andra saker brukar IF-spel ofta ha noga koll på. Många gåtor i spelen har att göra med var saker är -- om spelaren bär omkring på [dem], om [de] ligger på marken eller på et bord eller i et skrin o.s.v."	--
-"Vad du kan göra"	--	"De flesta handlingar du kan utföra i en IF-värld är enkla och konkreta. >GÅ VÄSTERUT och >ÖPPNA DÖRR fungerar nästan säkert. >ÅK BORT eller >BYGG et BORD fungerar antagligen inte. Kommandon som >ÅK TILL HOTELLET ligger på gränsen: de funkar i en del spel, men inte i de flesta. I allmänhet är det så att abstrakta handlingar eller handlingar i flera led behöver delas upp i en serie enklare och konkretare handlingar för att spelet [ska] förstå dina kommandon. "	--
-"Andra figurer"	--	"De fiktiva personer du möter i et spel är ibland rätt begränsade. Å andra sidan finns det också spel som framför allt går ut på att interagera med andra figurer i IF-världen. Man får snart en känsla för figurerna i spelet: ger [de] vettiga svar på många olika frågor, kommer [de] ihåg saker man berättat för [dem], rör [de] [sig] på egen hand i spelvärlden o.dyl., så kan de vara viktiga. Ger [de] mest standardsvar och verkar [de] inte vara det som författaren lagt [ned] mesta jobbet på, så är de antagligen bara där för att ge [lite] stämning åt spelet eller för att [de] behövs för att lösa [något] bestämt problem. Figurer i spel med många problem måste ofta mutas, hotas eller smickras till att hjälpa spelaren med [något] -- avslöja [något], ge spelaren [något], släppa in spelaren [någon]stans och så vidare."	--
+"Vad du kan göra"	--	"De flesta handlingar du kan utföra i en IF-värld är enkla og konkreta. >GÅ VÄSTERUT og >ÖPPNA DÖRR fungerar nästan säkert. >ÅK BORT eller >BYGG et BORD fungerar antagligen inte. Kommandon som >ÅK TILL HOTELLET ligger på gränsen: de funkar i en del spel, men inte i de flesta. I allmänhet är det så att abstrakta handlingar eller handlingar i flera led behöver delas upp i en serie enklare og konkretare handlingar för att spelet [ska] förstå dina kommandon. "	--
+"Andra figurer"	--	"De fiktiva personer du möter i et spel är ibland rätt begränsade. Å andra sidan finns det också spel som framför allt går ut på att interagera med andra figurer i IF-världen. Man får snart en känsla för figurerna i spelet: ger [de] vettiga svar på många olika frågor, kommer [de] ihåg saker man berättat för [dem], rör [de] [sig] på egen hand i spelvärlden o.dyl., så kan de vara viktiga. Ger [de] mest standardsvar og verkar [de] inte vara det som författaren lagt [ned] mesta jobbet på, så är de antagligen bara där för att ge [lite] stämning åt spelet eller för att [de] behövs för att lösa [något] bestämt problem. Figurer i spel med många problem måste ofta mutas, hotas eller smickras till att hjälpa spelaren med [något] -- avslöja [något], ge spelaren [något], släppa in spelaren [någon]stans og så vidare."	--
 
 Table of Setting Options
 title	subtable	description	toggle
@@ -4810,17 +4810,17 @@ To say prepared list:
 	now current articulation style is bare.
 
 First delimiter is ", ". 
-Second delimiter is ", och ". 
-Alternate second delimiter is " och ".
+Second delimiter is ", og ". 
+Alternate second delimiter is " og ".
 
 Table of List Style Assignments (amended)
 list style	first delimiter	second delimiter	alternate second delimiter	indefinite name phrase	definite name phrase
-sequential	", "	"[if the serial comma option is active],[end if] och "	" och "	"[a current listed object]"	"[the current listed object]"
+sequential	", "	"[if the serial comma option is active],[end if] og "	" og "	"[a current listed object]"	"[the current listed object]"
 disjunctive	", "	"[if the serial comma option is active],[end if] eller "	" eller "	"[a current listed object]"	"[the current listed object]"
-semi-colon	"; "	"; "	" och "	"[a current listed object]"	"[the current listed object]"
-comma	", "	", "	" och "	"[a current listed object]"	"[the current listed object]"
-null	" "	" "	" och "	"[current listed object]"	"[current listed object]"
-hyperconnective	" och "	" och "	" och "	"[a current listed object]"	"[the current listed object]"
+semi-colon	"; "	"; "	" og "	"[a current listed object]"	"[the current listed object]"
+comma	", "	", "	" og "	"[a current listed object]"	"[the current listed object]"
+null	" "	" "	" og "	"[current listed object]"	"[current listed object]"
+hyperconnective	" og "	" og "	" og "	"[a current listed object]"	"[the current listed object]"
 fragmentary	". "	". "	". "	"[A current listed object]"	"[The current listed object]" 
 enumerated	"; "	"; "	"; "	"([current enumeration]) [a current listed object]"	"([current enumeration]) [the current listed object]"
 
@@ -5215,17 +5215,17 @@ Check an actor dismounting (this is the can't dismount when not mounted rule):
 
 Report an actor dismounting (this is the standard report dismounting rule):
 	if the actor is the player:
-		say "Du sitter av från [the noun].[line break][run paragraph on]";
+		say "Du sitter af från [the noun].[line break][run paragraph on]";
 		produce a room description with going spacing conventions;
 	otherwise:
-		say "[The actor] sitter av från [the noun]."
+		say "[The actor] sitter af från [the noun]."
 	
 Unsuccessful attempt by someone trying dismounting (this is the dismounting excuses rule):
 	if the reason the action failed is the can't dismount when not mounted rule,
 		say "[The person asked] varken åker eller rider på [något] för tillfället.";
 	otherwise make no decision.
 
-Understand "sitt av --/från" as dismounting.
+Understand "sitt af --/från" as dismounting.
 
 
 
@@ -5238,9 +5238,9 @@ Danish ends here.
 
 Chapter: Sammanfattning (Läs mig först!)
 
-Extensionen Swedish låter dig i huvudsak använda en rad ändelser för att böja svenska substantiv och adjektiv. En kort sammanfattning av den viktigaste funktionaliteten följer här.
+Extensionen Swedish låter dig i huvudsak använda en rad ändelser för att böja svenska substantiv og adjektiv. En kort sammanfattning af den viktigaste funktionaliteten följer här.
 
-När du anger et "printed name" för någonting, gör du det på et sätt som tillåter Swedish att lista ut både dess obestämda och dess bestämda form:
+När du anger et "printed name" för någonting, gör du det på et sätt som tillåter Swedish att lista ut både dess obestämda og dess bestämda form:
 
 (et badkar / badkarET)
 	The printed name of the badkar is "badkar[et]". 
@@ -5260,7 +5260,7 @@ Objekt antas normalt vara reale (den-ord); vill du att et objekt ska vara neutru
 	A badkar is an enterable container in the badrum. The badkar is neuter. The printed name of the badkar is "badkar[et]".
 	The akvarium is an open unopenable transparent neuter container. The printed name of the akvarium is "akvari[um-et]".
 
-För en mer ingående redogörelse och hanteringen av diverse specialfall, se nedan. (För de riktigt fina detaljerna, se de fylliga kommentarerna i källtexten till Swedish.)
+För en mer ingående redogörelse og hanteringen af diverse specialfall, se nedan. (För de riktigt fina detaljerna, se de fylliga kommentarerna i källtexten till Swedish.)
 
 OBS! 
 
@@ -5269,30 +5269,30 @@ Swedish bör inkluderas EFTER de inbyggda extensioner (Built-In Extensions) som 
 
 Chapter: Om
 
-Den följande dokumentationen för Swedish förutsätter grundläggande bekantskap med Inform 7.För hur man programmerar i Inform 7 i allmänhet hänvisas till den inbyggda dokumentationen (d.v.s. "Writing with Inform" och "The Recipe Book") samt till "The Rules Chart", Jim Aikins "Inform 7 Handbook", Ron Newcombs "Inform 7 for Programmers" och Jeff Nymans "Descriptions and Locales", som alla finns att ladda ner från Informs hemsida -- i likhet med de oumbärliga Appendix A (Standard Rules) och B (I6 Templates), d.v.s. de program på Inform 7 respektive Inform 6 som utgör stommen och kärnan i Inform 7 och som denna extension är en översättning av de relevanta delarna av.
+Den följande dokumentationen för Swedish förutsätter grundläggande bekantskap med Inform 7.För hur man programmerar i Inform 7 i allmänhet hänvisas till den inbyggda dokumentationen (d.v.s. "Writing with Inform" og "The Recipe Book") samt till "The Rules Chart", Jim Aikins "Inform 7 Handbook", Ron Newcombs "Inform 7 for Programmers" og Jeff Nymans "Descriptions and Locales", som alla finns att ladda ner från Informs hemsida -- i likhet med de oumbärliga Appendix A (Standard Rules) og B (I6 Templates), d.v.s. de program på Inform 7 respektive Inform 6 som utgör stommen og kärnan i Inform 7 og som denna extension är en översättning af de relevanta delarna af.
 
-För övrigt är Mark-Oliver Reisers "Inform 7 Cheat Sheet" bra att ha till hands medan man skriver (sök på nätet -- i juli 2011 fanns den här: <http://user.cs.tu-berlin.de/~moreiser/inform/>). Dessutom har Aaron A. Reed gett ut en bok i ämnet: "Writing Interactive Fiction with Inform 7" (köp av Amazon eller beställ till närmsta folkbibliotek). Och så har vi forumet på intfiction.org att fråga ut.
+För övrigt är Mark-Oliver Reisers "Inform 7 Cheat Sheet" bra att ha till hands medan man skriver (sök på nätet -- i juli 2011 fanns den här: <http://user.cs.tu-berlin.de/~moreiser/inform/>). Dessutom har Aaron A. Reed gett ut en bok i ämnet: "Writing Interactive Fiction with Inform 7" (köp af Amazon eller beställ till närmsta folkbibliotek). og så har vi forumet på intfiction.org att fråga ut.
 
-Föredrar du et mer traditionellt programmeringsspråk rekommenderas varmt "Swedish Inform", som är Fredrik Ramsbergs översättning av Inform 6-biblioteket till svenska (här: <http://microheaven.com/svenska/skriva.shtml>; eller här: <http://www.ifarchive.org/indexes/if-archiveXinfocomXcompilersXinform6XlibraryXtranslations.html>).
+Föredrar du et mer traditionellt programmeringsspråk rekommenderas varmt "Swedish Inform", som är Fredrik Ramsbergs översättning af Inform 6-biblioteket till svenska (här: <http://microheaven.com/svenska/skriva.shtml>; eller här: <http://www.ifarchive.org/indexes/if-archiveXinfocomXcompilersXinform6XlibraryXtranslations.html>).
 
-Version 1 av Swedish fungerar med Inform 7 builds 6E59, 6E72, 6F95 och 6G60. 
+Version 1 af Swedish fungerar med Inform 7 builds 6E59, 6E72, 6F95 og 6G60. 
 
 Räkna med att du inte kommer att kunna kompilera dina spel till z5.
 
-Tack till Björn Paulsen (som också skrev hjälpfunktionen som presenteras nedan), Fredrik Ramsberg, "Beelsebu" och Martin Norbäck för betatestning, goda råd och annat stöd.
+Tack till Björn Paulsen (som också skrev hjälpfunktionen som presenteras nedan), Fredrik Ramsberg, "Beelsebu" og Martin Norbäck för betatestning, goda råd og annat stöd.
 
-Buggar och dylikt rapporteras lämpligen till <felix.larsson.IF@gmail.com>.
+Buggar og dylikt rapporteras lämpligen till <felix.larsson.IF@gmail.com>.
 
 
 Chapter: Det svenska alfabetet
 
-Inform 7 klarar både à, é, å, ä och ö med flera icke-engelska bokstäver direkt i källtexten ("source text"), såväl inom som utom citattecken. Du kan alltså utan vidare skriva: 
+Inform 7 klarar både à, é, å, ä og ö med flera icke-engelska bokstäver direkt i källtexten ("source text"), såväl inom som utom citattecken. Du kan alltså utan vidare skriva: 
 	The ängen is a room. "Solen skiner högsommarvarmt över ängen. Längre norrut glimmar det från den stora ån." 
-	Kråkan is an animal in ängen. "En kråka hoppar hit och dit på en stenhäll som går i dagen mitt på ängen." 
-	The å is north of ängen. "En bred å rinner längs norra änden av ängen. I ån är en ö."
-	An ö is in the å."På ön står en ko och vinkar med hornen."
+	Kråkan is an animal in ängen. "En kråka hoppar hit og dit på en stenhäll som går i dagen mitt på ängen." 
+	The å is north of ängen. "En bred å rinner längs norra änden af ängen. I ån är en ö."
+	An ö is in the å."På ön står en ko og vinkar med hornen."
 
-Och vips står Kråkan på ängen, och därborta är en å med en ö i. 
+og vips står Kråkan på ängen, og därborta är en å med en ö i. 
 
 OBS!
 
@@ -5303,62 +5303,62 @@ Chapter: Swedish ihop med andra extensioner
 
 Swedish översätter alla de så kallade "Built-In Extensions" (inbyggda extensioner) som kommer med programmet Inform. 
 
-För att använda dig av "Rideable Vehicles", "Locksmith", "Basic Help Menu" eller någon av de andra inbyggda extensionerna, behöver du därför inte ladda ner särskilda svenska versioner av dessa. Det räcker att skriva "Include Locksmith by Emily Short" etc., precis som du skulle ha gjort om du skrivit i engelska Inform.
+För att använda dig af "Rideable Vehicles", "Locksmith", "Basic Help Menu" eller någon af de andra inbyggda extensionerna, behöver du därför inte ladda ner särskilda svenska versioner af dessa. Det räcker att skriva "Include Locksmith by Emily Short" etc., precis som du skulle ha gjort om du skrivit i engelska Inform.
 
 OBS!
 
-i) För att källtexten i Swedish ska kunna göra de ändringar i de inbyggda extensoinerna som krävs för översättningen, måste du inkludera alla inbyggda extensioner du vill använda INNAN du inkluderar Swedish. Skriv alltså FÖRST "Include Locksmith by Emily Short" o.s.v. och SEDAN "Include Swedish by Felix Larsson".
+i) För att källtexten i Swedish ska kunna göra de ändringar i de inbyggda extensoinerna som krävs för översättningen, måste du inkludera alla inbyggda extensioner du vill använda INNAN du inkluderar Swedish. Skriv alltså FÖRST "Include Locksmith by Emily Short" o.s.v. og SEDAN "Include Swedish by Felix Larsson".
 
-ii) Det finns två skäl till att använda Emily Shorts "Plurality" även på svenska: dels för att hantera det Short kallar ”ambiguous plurals”, d.v.s. objekt som kan vara både singularis och pluralis, exempelvis et par strumpor (som spelaren/läsaren kan vilja kalla både "det" eller "dem") eller en skock får (som spelaren/läsaren kan vilja kalla både "den" eller "dem"), dels för att utnyttja den extra kontroll som extensionen ger över vad pronomina syftar på i spelet. Men Swedish behåller bara denna funktionalitet och avlägsnar all övrig funktionalitet ur "Plurality".
+ii) Det finns två skäl till att använda Emily Shorts "Plurality" även på svenska: dels för att hantera det Short kallar ”ambiguous plurals”, d.v.s. objekt som kan vara både singularis og pluralis, exempelvis et par strumpor (som spelaren/läsaren kan vilja kalla både "det" eller "dem") eller en skock får (som spelaren/läsaren kan vilja kalla både "den" eller "dem"), dels för att utnyttja den extra kontroll som extensionen ger över vad pronomina syftar på i spelet. Men Swedish behåller bara denna funktionalitet og avlägsnar all övrig funktionalitet ur "Plurality".
 
-iii) Swedish innehåller bara översättningar av Informs INBYGGDA extensioner (the Built-In Extensions). Övriga extensioner till Inform kräver separata översättningar i de fall de inte kan användas rakt av. Det är inte säkert att andra extensioner än de inbyggda bör eller behöver inkluderas före Swedish.
+iii) Swedish innehåller bara översättningar af Informs INBYGGDA extensioner (the Built-In Extensions). Övriga extensioner till Inform kräver separata översättningar i de fall de inte kan användas rakt af. Det är inte säkert att andra extensioner än de inbyggda bör eller behöver inkluderas före Swedish.
 
 
-Chapter: Genus och den obestämda artikeln
+Chapter: Genus og den obestämda artikeln
 
 På svenska heter den obestämda artikeln antingen "en" eller "et". Det beror på vilket genus det är på ordet som artikeln hör ihop med: är huvudordet neutrum heter artikeln "et" (som i "et textspel"); är huvudordet reale, maskulinum eller femininum heter artikeln "en" (som i "en mässingslykta", "en överstepräst", "en trollpacka").
 
 Inform lägger i många sammanhang automatiskt till den obestämda artikeln när den skriver ut namnet på något, men Inform kan inte automatiskt lista ut om artikeln ska vara "en" eller "et". Det måste du som författare tala om för spelet.
 
-Med Swedish antar Inform att saker är reale (på engelska "common-gendered") och ger dem den obestämda artikeln "en", såvida inte författaren uttryckligen anger något annat.
+Med Swedish antar Inform att saker är reale (på engelska "common-gendered") og ger dem den obestämda artikeln "en", såvida inte författaren uttryckligen anger något annat.
 
-För att göra et föremål som du skapar till neutrum, så att det automatiskt får den obestämda artikeln "et" och så att spelare kan syfta på det med pronominet "det" (som i >SLÄPP DET), måste du tala om för Inform att föremålet är neutrum (på engelska "neuter"). Det kan du göra antingen samtidigt som du skapar föremålet eller i efterhand:
+För att göra et föremål som du skapar till neutrum, så att det automatiskt får den obestämda artikeln "et" og så att spelare kan syfta på det med pronominet "det" (som i >SLÄPP DET), måste du tala om för Inform att föremålet är neutrum (på engelska "neuter"). Det kan du göra antingen samtidigt som du skapar föremålet eller i efterhand:
 	The svärd is a neuter in vapenförrådet.
 	A badkar is an enterable container in the badrum. The badkar is neuter.
 	The akvarium is an open unopenable transparent neuter container.
 
-Ord som du definierar som pluralis (genom att använda något av nyckelorden "some" eller "plural-named", som i "Some dvärgar are in the gruva" eller "The frimärken are plural-named") kommer att få ordet "några" som obestämd artikel.
+Ord som du definierar som pluralis (genom att använda något af nyckelorden "some" eller "plural-named", som i "Some dvärgar are in the gruva" eller "The frimärken are plural-named") kommer att få ordet "några" som obestämd artikel.
 
-För vissa ord (de så kallade massorden, "non-counts") passar varken "en", "et" eller "några" som obestämd artikel. "Du ser också en sand, et vatten och några bling-bling här" är inte bra. Vill du kan du i sådana fall definiera en egen obestämd artikel: 
+För vissa ord (de så kallade massorden, "non-counts") passar varken "en", "et" eller "några" som obestämd artikel. "Du ser också en sand, et vatten og några bling-bling här" är inte bra. Vill du kan du i sådana fall definiera en egen obestämd artikel: 
 	The indefinite article of sand is "en massa". The indefinite article of vatten is "lite". The indefinite article of bling-bling is "en del".
 
 ger
-	"Du ser också en massa sand, lite vatten och en del bling-bling här." 
+	"Du ser också en massa sand, lite vatten og en del bling-bling här." 
 
 Men du kan också se till att et föremål inte får någon obestämd artikel över huvud taget. Det gör du så här:
 	Sand is non-count. Vatten is non-count. Bling-bling is non-count.
 
 Detta ger
-	"Du ser också sand, vatten och bling-bling här." 
+	"Du ser också sand, vatten og bling-bling här." 
 	
 Den bestämda artikeln fungerar annorlunda. Se nedan.
 
 OBS!
 
-i) Med Swedish kan även rum ("rooms") och regioner ("regions") vara antingen neutrum ("neuter") eller reale ("common-gendered").
+i) Med Swedish kan även rum ("rooms") og regioner ("regions") vara antingen neutrum ("neuter") eller reale ("common-gendered").
 
-ii) Om du ger föremålen i spelet alternativa "printed names" där de olika namnen har olika genus – säg att du vill kalla något för "et fågelfä" innan spelaren har tittat på den i sin tubkikare och "en kråka" därefter –, se till att du också (om möjligt) ändrar föremålets genus samtidigt som dess namn.
+ii) Om du ger föremålen i spelet alternativa "printed names" där de olika namnen har olika genus – säg att du vill kalla något för "et fågelfä" innan spelaren har tittat på den i sin tubkikare og "en kråka" därefter –, se till att du också (om möjligt) ändrar föremålets genus samtidigt som dess namn.
 
 
-Chapter: Bestämd och obestämd form i output
+Chapter: Bestämd og obestämd form i output
 
-Section: Att ange bestämd och obestämd form i "printed name"
+Section: Att ange bestämd og obestämd form i "printed name"
 
-Att bilda bestämd form av ord på svenska är en krånglig historia: i engelska lägger man helt enkelt till et "the" framför frasen som ska stå i bestämd form; på svenska däremot böjs substantiv i bestämd form med ändelser och på olika sätt beroende på om substantivet är neutrum eller ej, om det är i pluralis eller singularis och vilken s.k. deklination det tillhör (dessutom kommer stavning och uttal till och komplicerar det hela ännu mer), medan adjektiv däremot får svag böjning som bara tar hänsyn till om huvudordet är maskulinum eller ej, och till sist ska en fras i bestämd form ändå ha en bestämda artikel (antingen "den", "det" eller "de"), men bara om frasen börjar med et adjektiv snarare än et substantiv.
+Att bilda bestämd form af ord på svenska är en krånglig historia: i engelska lägger man helt enkelt till et "the" framför frasen som ska stå i bestämd form; på svenska däremot böjs substantiv i bestämd form med ändelser og på olika sätt beroende på om substantivet är neutrum eller ej, om det är i pluralis eller singularis og vilken s.k. deklination det tillhör (dessutom kommer stavning og uttal till og komplicerar det hela ännu mer), medan adjektiv däremot får svag böjning som bara tar hänsyn till om huvudordet är maskulinum eller ej, og till sist ska en fras i bestämd form ändå ha en bestämda artikel (antingen "den", "det" eller "de"), men bara om frasen börjar med et adjektiv snarare än et substantiv.
 
-Summan av kardemumman är att du måste tala om för Inform vad saker och ting ("objects") som du skapar heter i både bestämd och obestämd form. Du anger detta i objektets "printed name". När du använder Swedish, bör du alltså alltid ge alla saker ("things") i spelet et "printed name". (Med undantag förstås för sådana ting som av någon anledning inte behöver både bestämd och obestämd form: t.ex. egennamn som "Nisse" eller sådant som "din vänstra gummistövel". ) 
+Summan af kardemumman är att du måste tala om för Inform vad saker og ting ("objects") som du skapar heter i både bestämd og obestämd form. Du anger detta i objektets "printed name". När du använder Swedish, bör du alltså alltid ge alla saker ("things") i spelet et "printed name". (Med undantag förstås för sådana ting som af någon anledning inte behöver både bestämd og obestämd form: t.ex. egennamn som "Nisse" eller sådant som "din vänstra gummistövel". ) 
 
-I nödfall är det alltid möjligt att skilja mellan bestämd och obestämd form av et "printed name" genom att använda sig av villkorsatser av formen: "if definite <bestämd form> otherwise <obestämd form> end if" (alternativt "if indefinite <obestämd form> otherwise <bestämd form> end if").
+I nödfall är det alltid möjligt att skilja mellan bestämd og obestämd form af et "printed name" genom att använda sig af villkorsatser af formen: "if definite <bestämd form> otherwise <obestämd form> end if" (alternativt "if indefinite <obestämd form> otherwise <bestämd form> end if").
 	A svärd is in drakens håla. The printed name of the svärd is "[if definite]det urgamla, alvsmidda svärdet[otherwise]urgammalt, alvsmitt svärd".
 	A mus is in drakens håla. The printed name of the mus is "[if definite]den lilla musen[otherwise]liten mus".
 	A drake is an animal in drakens håla. The printed name of the drake is "[if definite]draken[otherwise]drake".
@@ -5371,7 +5371,7 @@ OBS!
 Du måste ange vilken BESTÄMD artikel föremålet har (om det har någon alls – varken Sankt Göran eller draken har någon), men du får INTE ange någon OBESTÄMD artikel i dess "printed name". (Swedish väljer automatiskt obestämd artikel -- "en", "et" eller "några/nåra". Vid behov ändras detta som i engelska Inform -- se Writing with Inform avsnittet Articles and Proper Names).
 
 
-Section: Say-fraser för bestämd artikel och för ändelser i bestämd form
+Section: Say-fraser för bestämd artikel og för ändelser i bestämd form
 
 För att underlätta för användaren definierar extensionen Swedish en uppsjö "say-phrases" som är tänkta att användas i det här sammanhanget. I stället för 
 	The printed name of the skön jungfru is "[if definite]den sköna jungfrun[otherwise]skön jungfru". 
@@ -5379,7 +5379,7 @@ För att underlätta för användaren definierar extensionen Swedish en uppsjö 
 räcker det därför att skriva
 	The printed name of the skön jungfru is "[den ]skön[a] jungfru[n]".
 
-Bestämda artiklar och de delar av orden som bara ingår i deras bestämda form sätts helt enkelt inom klammer. (För att vara mer exakt: "[den ]skön[a] jungfru[n]" definieras som "[if definite]den [end if]skön[if definite]a[end if] jungfru[if definite]n[end if]".)
+Bestämda artiklar og de delar af orden som bara ingår i deras bestämda form sätts helt enkelt inom klammer. (För att vara mer exakt: "[den ]skön[a] jungfru[n]" definieras som "[if definite]den [end if]skön[if definite]a[end if] jungfru[if definite]n[end if]".)
 
 Ändelsen för bestämd form behöver inte komma sist i et ord. Det går utmärkt att skriva
 	The printed name of the reliker is "1100-talshelgon[et]s reliker".
@@ -5387,38 +5387,38 @@ Bestämda artiklar och de delar av orden som bara ingår i deras bestämda form 
 
 OBS!
 
-i) Mind the gap! De bestämda artiklarna ("[den ]", "[det ]", "[de ]") innehåller et avslutande mellanslag. Skriv alltså "[den ]röd[a] gubbe[n]" UTAN mellanslag mellan "[den ]" och "röd". (Skriver du i stället "[den] röd[a] gubben", kommer det att bli et mellanslag för mycket i det färdiga spelet).
+i) Mind the gap! De bestämda artiklarna ("[den ]", "[det ]", "[de ]") innehåller et avslutande mellanslag. Skriv alltså "[den ]röd[a] gubbe[n]" UTAN mellanslag mellan "[den ]" og "röd". (Skriver du i stället "[den] röd[a] gubben", kommer det att bli et mellanslag för mycket i det färdiga spelet).
 
-ii) När man ger föremål namn som "1100-talshelgon[et]s reliker" eller "[den ]ökänd[e] anfader[n]s kaparbrev" är det lätt hänt att genus och/eller numerus kommer i konflikt med varandra. "Reliker" är pluralis, så vi bör skapa dem med en fras i stil med "some reliker are in the krypta"; et "kaparbrev" är neutrum, så vi bör tala om för Inform att "the kaparbrev is neuter". Men då kommer Inform att i obestämd form felaktigt kalla dessa saker för "NÅGRA 1100-talshelgons reliker" och "et ökänd anfaders kaparbrev" i stället för "et 1100-talshelgons reliker" och "EN ökänd anfaders kaparbrev". Lösningen är att för hand ange vilken "indefinite article" objektet har. Så här:
+ii) När man ger föremål namn som "1100-talshelgon[et]s reliker" eller "[den ]ökänd[e] anfader[n]s kaparbrev" är det lätt hänt att genus og/eller numerus kommer i konflikt med varandra. "Reliker" är pluralis, så vi bör skapa dem med en fras i stil med "some reliker are in the krypta"; et "kaparbrev" är neutrum, så vi bör tala om för Inform att "the kaparbrev is neuter". Men då kommer Inform att i obestämd form felaktigt kalla dessa saker för "NÅGRA 1100-talshelgons reliker" og "et ökänd anfaders kaparbrev" i stället för "et 1100-talshelgons reliker" og "EN ökänd anfaders kaparbrev". Lösningen är att för hand ange vilken "indefinite article" objektet har. Så här:
 	Some reliker are in skogen. The printed name of the reliker is "1100-talshelgon[et]s reliker". The indefinite article of the reliker is "et".
 	A kaparbrev is in skogen. The printed name of the kaparbrev is "[den ]ökänd[e] anfader[n]s kaparbrev". The kaparbrev is neuter. The indefinite article of the kaparbrev is "en".
 
 
 Section: Say-fraser för mer komplicerade böjningar i bestämd form
 
-I många fall bildas bestämd form inte genom att man helt enkelt klistrar på en ändelse på orden, utan man måste kanske först ta bort en ändelse i den obestämda formen eller ändra stavningen av ordstammen. Jämför t.ex."et urgamMALT, alvsmiTT svärd" och "det urgamLA, alvsmiDDA svärdet". Även för dylika fall finns det "say-phrases" som underlättar. I stället för
+I många fall bildas bestämd form inte genom att man helt enkelt klistrar på en ändelse på orden, utan man måste kanske först ta bort en ändelse i den obestämda formen eller ändra stavningen af ordstammen. Jämför t.ex."et urgamMALT, alvsmiTT svärd" og "det urgamLA, alvsmiDDA svärdet". Även för dylika fall finns det "say-phrases" som underlättar. I stället för
 	The printed name of the svärd is "[if definite]det urgamla, alvsmidda svärdet[otherwise]urgammalt, alvsmitt svärd".
 
 kan du skriva
 	The printed name of the svärd is "[det ]urgam[malt-la], alvsmi[tt-dda] svärd[et]".
 
-I dessa fall visar texten inom klammer alltså hur ordet slutar i både obestämd och bestämd form. FÖRST kommer slutet på ordet i obestämd form; SEDAN et bindestreck; SIST slutet på ordet i bestämd form.
+I dessa fall visar texten inom klammer alltså hur ordet slutar i både obestämd og bestämd form. FÖRST kommer slutet på ordet i obestämd form; SEDAN et bindestreck; SIST slutet på ordet i bestämd form.
 
 Fler exempel på samma sak:
 	"[det ]oändlig[t-a] äventyr[et]"‚
 	"[den ]blå him[mel-len]";
 	"[det ]tom[t-ma] akvari[um-et]".
 
-(Och mer exakt igen: "[det ]tom[t-ma] akvari[um-et]" definieras som "[if definite]det [end if]tom[if definite]ma[otherwise]t[end if] akvari[if definite]et[otherwise]um[end if]".)
+(og mer exakt igen: "[det ]tom[t-ma] akvari[um-et]" definieras som "[if definite]det [end if]tom[if definite]ma[otherwise]t[end if] akvari[if definite]et[otherwise]um[end if]".)
 
-Swedish definierar "say-phrases" för praktiskt taget alla böjningar av svenska ord i bestämd form (till och med "li[ten-lla]" och "li[tet-lla]"!).
+Swedish definierar "say-phrases" för praktiskt taget alla böjningar af svenska ord i bestämd form (till og med "li[ten-lla]" og "li[tet-lla]"!).
 
 
 Section: Hjälpreda för att bestämma textsubstitutionen
 
 Som författare kan du få hjälp att välja rätt textsubstitution för objektets "printed" name om du skriver kommandot "FÖRSLAG" eller "OBJEKT".
 
-Du kommer då att ombes skriva in det önskade namnet på et föremål i dels bestämd, dels obestämd form, varpå programmet räknar ut vilken av de befintliga textsubstitutionerna som ger önskat resultat. 
+Du kommer då att ombes skriva in det önskade namnet på et föremål i dels bestämd, dels obestämd form, varpå programmet räknar ut vilken af de befintliga textsubstitutionerna som ger önskat resultat. 
 
 Så här (författarens input återges med stora bokstäver):
 	
@@ -5433,14 +5433,14 @@ Så här (författarens input återges med stora bokstäver):
 
 Denna funktion är not-for-release, så när du väl släppt spelet kommer inte dina spelare att kunna använda kommandona "FÖRSLAG" eller "OBJEKT".
 
-Idén och programmet till hjälpredan är Björn Paulsens.
+Idén og programmet till hjälpredan är Björn Paulsens.
 
 
-Section: Say-fraserna "without definite article" och "weakly inflected"
+Section: Say-fraserna "without definite article" og "weakly inflected"
 
 Det finns dock et par tillfällen då de former du angett i "printed name" båda vore direkt felaktiga.
 
-a)Det ena av dessa tillfällen är när namnet innehåller et adjektiv och ska fogas in i en fras som redan börjar med et adjektiv i bestämd form, som här:
+a)Det ena af dessa tillfällen är när namnet innehåller et adjektiv og ska fogas in i en fras som redan börjar med et adjektiv i bestämd form, som här:
 	Instead of exiting when the location is a locked closed container, say "Du får inte upp de[n-t-] låst[--a] [noun? a noun? the noun?]".
 
 Antag att du befinner dig i en behållare ("container") som heter "[den] egyptisk[a] sarkofag[en]". Ska vi använda "[noun]", "[a noun]" eller "[the noun]" här?
@@ -5467,33 +5467,33 @@ Lösningen i Swedish är att använda say-frasen "[<objektet> without definite a
 ger den rätta raden:
 	Du får inte upp den låsta egyptiska sarkofagen. 
 
-b) Det andra tillfället då et "printed name" inte passar är då namnet innehåller et adjektiv och ska fogas in i en fras som börjar med en genitiv eller et possessivt pronomen, som här:
+b) Det andra tillfället då et "printed name" inte passar är då namnet innehåller et adjektiv og ska fogas in i en fras som börjar med en genitiv eller et possessivt pronomen, som här:
 	After examining something not held by the player, say "Men titta! Det är ju di[n-tt-na] [noun? a noun? the noun?], som varit borta så länge."
 
 Antag nu att spelaren undersöker något som heter "[den ]röd[a] strumpa[n]". Varken "Det är ju din röd strumpa, som varit borta så länge" eller "Det är ju din en röd strumpa, som varit borta så länge" eller "Det är ju din den röda strumpan, som varit borta så länge" är riktigt.
 
-Vad vi skulle vilja ha är "Det är ju din röda strumpa", där substantivet står i obestämd form men adjektivet i bestämd! Eller, rättare sagt, där substantivet står i obestämd form och adjektivet har så kallad svag böjning (vilket svenska adjektiv får i bestämd form). Men Informs parser skiljer inte mellan adjektiv och substantiv.
+Vad vi skulle vilja ha är "Det är ju din röda strumpa", där substantivet står i obestämd form men adjektivet i bestämd! Eller, rättare sagt, där substantivet står i obestämd form og adjektivet har så kallad svag böjning (vilket svenska adjektiv får i bestämd form). Men Informs parser skiljer inte mellan adjektiv og substantiv.
 
 Lösningen i Swedish är att använda say-frasen "[<object> weakly inflected]". ("Weakly inflected" är tänkt att översätta 'med svag böjning'.)
 
 	After examining something not held by the player, say "Men titta! Det är ju di[n-tt-na] [noun weakly inflected], som varit borta så länge." 
 
 ger:
-	> UNDERSÖK STRUMPA
+	> undersøg STRUMPA
 	"Men titta! Det är ju din röda strumpa som varit borta så länge."
 
-et problem återstår nu. Vi vill att detta ska fungera smidigt för textsubstitutionen "[a]" (som i "röd[a]"), vilken oftast kommer att används för adjektivets svaga böjning (och bestämda form). Det finns dock en del substantiv som markerar bestämd form i pluralis med just ändelsen -a, t.ex. äpplen/äpplena, kalhyggen/kalhyggena. Om du nu ger et objekt namnet ("printed name") "[de ]förgiftade äpplen[a]", så kommer du att få:
-	> UNDERSÖK ÄPPLEN
+et problem återstår nu. Vi vill att detta ska fungera smidigt för textsubstitutionen "[a]" (som i "röd[a]"), vilken oftast kommer att används för adjektivets svaga böjning (og bestämda form). Det finns dock en del substantiv som markerar bestämd form i pluralis med just ändelsen -a, t.ex. äpplen/äpplena, kalhyggen/kalhyggena. Om du nu ger et objekt namnet ("printed name") "[de ]förgiftade äpplen[a]", så kommer du att få:
+	> undersøg ÄPPLEN
 	"Men titta! Det är ju dina förgiftade äpplena som varit borta så länge."
 
 Det problemet löser Swedish genom att införa en särskild textsubstitution "[-a]", som bara ska användas efter et substantiv som slutar på -n i pluralis som exempelvis "äpplen[-a]", "kilon[-a]", "grässtrån[-a]". Ge äpplena namnet "[de ]förgiftade äpplen[-a]", så hanterar "[<objekt> weakly inflected]" det hela rätt.
-	> UNDERSÖK ÄPPLEN
+	> undersøg ÄPPLEN
 	"Men titta! Det är ju dina förgiftade äpplen som varit borta så länge."
 
  
-Chapter: Bestämd och obestämd form i input
+Chapter: Bestämd og obestämd form i input
 
-I den svenska översättningen av Inform 7 behöver nästan varje objekt et "printed name" som anger den bestämda formen av objektets namn. Det vore därför bekvämt om den svenska översättningen av Inform 7 (till skillnad från det engelska originalet) automatiskt tolkade orden i et objekts "printed name" som namn på objektet.
+I den svenska översättningen af Inform 7 behöver nästan varje objekt et "printed name" som anger den bestämda formen af objektets namn. Det vore därför bekvämt om den svenska översättningen af Inform 7 (till skillnad från det engelska originalet) automatiskt tolkade orden i et objekts "printed name" som namn på objektet.
 
 Swedish åstadkommer detta genom att ge objekt ("objects") en särskild tvåvärd egenskap: et objekt kan vara antingen "understood by its printed name" eller "not understood by its printed name". Defaultvärdet är att et objekt är "understood by its proper name".
 
@@ -5501,27 +5501,27 @@ Antag att du i vanlig ordning ger et objekt et "printed name":
 	A Panthera leo is a neuter animal in savannen.
 	The printed name of the Panthera leo is "[det ]ilsk[et-na] lejon[et]".
 
-En spelare kommer då automatiskt att kunna använda orden "ilsket", "ilskna", "lejon" och/eller "lejonet" för att syfta på objektet Panthera leo. Ingen åtskillnad görs härvidlag mellan versaler och gemena bokstäver. Spelet kommer automatiskt att förstå kommandon som "X LEJONET". 
+En spelare kommer då automatiskt att kunna använda orden "ilsket", "ilskna", "lejon" og/eller "lejonet" för att syfta på objektet Panthera leo. Ingen åtskillnad görs härvidlag mellan versaler og gemena bokstäver. Spelet kommer automatiskt att förstå kommandon som "X LEJONET". 
 
-(Dessutom tolkar spelet givetvis i det här exemplet även orden "Panthera" och "leo" som namn på objektet Panthera leo.)
+(Dessutom tolkar spelet givetvis i det här exemplet även orden "Panthera" og "leo" som namn på objektet Panthera leo.)
 
 Om du inte vill att spelet ska förstå et visst objekts "printed name", kan du enkelt förhindra det genom att lägga till följande rad:
 	The <objekt> is not understood by its printed name.
 
 Lägger du alltså till raden "The Panthera leo is not understood by its printed name", så kommer spelaren inte längre att kunna syfta på lejonet med orden "ilsket", "ilskna", "lejon" eller "lejonet".
 
-Vill du att spelet inte ska förstå några eller bara några få "printed names" ändrar du defaultvärdet genom att i källtexten skriva "An object is usually not understood by its printed name", och du kan sedan tala om för et objekt vars "printed name" du trots allt vill att spelet ska förstå att just det objektet "is understood by its printed name" (t.ex. att "The Panthera leo is understood by its printed name").
+Vill du att spelet inte ska förstå några eller bara några få "printed names" ändrar du defaultvärdet genom att i källtexten skriva "An object is usually not understood by its printed name", og du kan sedan tala om för et objekt vars "printed name" du trots allt vill att spelet ska förstå att just det objektet "is understood by its printed name" (t.ex. att "The Panthera leo is understood by its printed name").
 
 Spelet respekterar de villkor som är inbakade i et "printed name". Antag att du har et printed name som ser ut så här:
 	The printed name of the smörgås is "[if half eaten][den ]halvät[en-na] macka[n][otherwise][den ]nybredd[a] smörgås[en]"
 
-Då kommer spelet bara att förstå namnen "nybredd", "nybredda" och "smörgåsen" så länge smörgåsen inte är "half eaten"; så fort smörgåsen blir "half eaten" så kommer spelet att sluta förknippa smörgåsen med de orden och i stället börja att förknippa den med orden "halväten", "halvätna", "macka" och "mackan".
+Då kommer spelet bara att förstå namnen "nybredd", "nybredda" og "smörgåsen" så länge smörgåsen inte är "half eaten"; så fort smörgåsen blir "half eaten" så kommer spelet att sluta förknippa smörgåsen med de orden og i stället börja att förknippa den med orden "halväten", "halvätna", "macka" og "mackan".
 
 OBS!
 
-i) Var noga med att ange både bestämd och obestämd form av ord när du hittar på synonymer till et objekt.
+i) Var noga med att ange både bestämd og obestämd form af ord när du hittar på synonymer till et objekt.
 
-Att den svenska översättningen av Inform automatiskt förstår ord i et objekts "printed name", betyder nämligen INTE att Inform automatiskt förstår bestämda former av ord, om dessa former inte angetts just i objektets "printed name".
+Att den svenska översättningen af Inform automatiskt förstår ord i et objekts "printed name", betyder nämligen INTE att Inform automatiskt förstår bestämda former af ord, om dessa former inte angetts just i objektets "printed name".
 
 Antag att du har skrivit följande:
 	An ilsket lejon is a neuter animal in savannen.
@@ -5529,44 +5529,44 @@ Antag att du har skrivit följande:
 	Understand "hotfullt" and "kattdjur" as the ilsket lejon.
 
 I det här fallet kommer Inform automatiskt att förstå att följande ord syftar på objektet:
-	"ilsket" -- eftersom det ordet ingår i objektets "name" (och dessutom i dess "printed name"),
-	"lejon" -- eftersom även det ordet ingår i objektets "name" (och dessutom i dess "printed name"),
+	"ilsket" -- eftersom det ordet ingår i objektets "name" (og dessutom i dess "printed name"),
+	"lejon" -- eftersom även det ordet ingår i objektets "name" (og dessutom i dess "printed name"),
 	"ilskna" -- eftersom det ordet ingår i objektets "printed name",
 	"rytande" -- eftersom även det ordet ingår i objektets "printed name",
 	"lejonet" -- eftersom också det ordet ingår i objektets "printed name",
-	"hotfullt" -- eftersom det ordet är angett som synonym till objektet och
+	"hotfullt" -- eftersom det ordet är angett som synonym till objektet og
 	"kattdjur" -- eftersom det ordet också är angett som synonym till objektet.
 
 Däremot kommer Inform i detta fall INTE att förstå att ord som "hotfulla" eller "kattdjuret" syftar på det ilskna lejonet. För att få inform att förstå dessa ord måste de uttryckligen anges i "understand"-satsen, exempelvis så här:
 	Understand "hotfullt/hotfulla" and "kattdjur/kattdjuret" as the ilsket lejon.
 
-ii) Denna funktionalitet medför ibland att spelet behöver utföra rätt många beräkningar på indexerad text. På processorer med låg prestanda kan det leda till att spelet går märkbart långsamt när du testar det inuti Inform-programmet. Det är osannolikt att detta märks i det färdiga spelet, när det spelas med en vanlig IF-tolk (Gargoyle, WindowsFrotz, WindowsGit, Zoom etc.). Men skulle det ställa till problem, kan funktionaliteten stängas av med raden "An object is usually not understood by its printed name" eller "An object is never understood by its printed name". Glöm då inte att med understand-satser ange objektens namn i bestämd form som synonymer till namnet i stället.
+ii) Denna funktionalitet medför ibland att spelet behöver utföra rätt många beräkningar på indexerad text. På processorer med låg prestanda kan det leda till att spelet går märkbart långsamt när du testar det inuti Inform-programmet. Det är osannolikt att detta märks i det färdiga spelet, när det spelas med en vanlig IF-tolk (Gargoyle, WindowsFrotz, WindowsGit, Zoom etc.). Men skulle det ställa till problem, kan funktionaliteten stängas af med raden "An object is usually not understood by its printed name" eller "An object is never understood by its printed name". Glöm då inte att med understand-satser ange objektens namn i bestämd form som synonymer till namnet i stället.
 
-iii) Gör du automatiskt et visst slags sak (kind of thing) till en del av alla saker av et visst annat slag, t.ex. genom att skriva:
+iii) Gör du automatiskt et visst slags sak (kind of thing) till en del af alla saker af et visst annat slag, t.ex. genom att skriva:
 	A näsa is a kind of thing.
 	A näsa is part of every person.
 
-så kommer dessa saker automatiskt att få namn som "din näsa" eller "Pomperipossas näsa". Men för att spelet ska förstå när spelaren kallar dem "min näsa" och "Pomperipossas näsa" måste en sådan sak vara "understood by its printed name".
+så kommer dessa saker automatiskt att få namn som "din näsa" eller "Pomperipossas näsa". Men för att spelet ska förstå när spelaren kallar dem "min näsa" og "Pomperipossas näsa" måste en sådan sak vara "understood by its printed name".
 
 
-Chapter: Böjningen av adjektiv, particip, pronomen och artiklar som inte ingår i namn
+Chapter: Böjningen af adjektiv, particip, pronomen og artiklar som inte ingår i namn
 
-Section: Att ange reale-, neutrum- och pluralböjningar av adjektiv, particip, pronomen och artiklar.
+Section: Att ange reale-, neutrum- og pluralböjningar af adjektiv, particip, pronomen og artiklar.
 
-Adjektiv (som "grön", "egyptisk" och "urgammal"),  perfekt particip (som "upphittad" och "tagen"),  en del pronomen (som "min" och "någon") och artiklarna ("en" och "den") böjs efter sitt huvudord (ordet de beskriver): diN mössa blir stulEN; diTT paraply blir stulET; diNA hänglsen blir stulNA.
+Adjektiv (som "grön", "egyptisk" og "urgammal"),  perfekt particip (som "upphittad" og "tagen"),  en del pronomen (som "min" og "någon") og artiklarna ("en" og "den") böjs efter sitt huvudord (ordet de beskriver): diN mössa blir stulEN; diTT paraply blir stulET; diNA hänglsen blir stulNA.
 
 Om man vet vilket huvudord adjektivet etc. har, vet man också hur det ska böjas; men när man skriver interaktiv fiktion vet man inte alltid det i förväg. Exempel: Om en spelare tar något ska han eller hon få lite olika meddelanden beroende på vad han/hon tar: tar han/hon upp gaffeln, ska det stå "Tagen"; tar han/hon upp et papper, ska det stå "Taget"; tar han/hon upp några pottekulor, ska det stå "Tagna". Ordet "tagen" ska alltså böjas efter vad det är man tar, vad det än är. 
 
-För att Inform ska kunna göra det måste du tala om för spelet hur ordet ska böjas och vilket huvudord det ska böjas efter.
+För att Inform ska kunna göra det måste du tala om för spelet hur ordet ska böjas og vilket huvudord det ska böjas efter.
 
-I nödfall kan man alltid göra det med villkorsatser av formen: "if <huvudordet> is plural-named <pluralböjning> otherwise if <huvudordet> is neuter <neutrumböjning> otherwise <realeböjning> end if".
+I nödfall kan man alltid göra det med villkorsatser af formen: "if <huvudordet> is plural-named <pluralböjning> otherwise if <huvudordet> is neuter <neutrumböjning> otherwise <realeböjning> end if".
 	Report taking something: say "[if the noun is plural-named]Tagna[otherwise if the noun is neuter]Taget[otherwise]Tagen[end if]."
 	Report taking something: say "Tag[if the noun is plural-named]na[otherwise if the noun is neuter]et[otherwise]en[end if]."
 
 Men återigen finns det normalt sett enklare sätt. Se nästa avsnitt!
 
 
-Section. Say-fraser för stark böjning av adjektiv, particip och pronomen
+Section. Say-fraser för stark böjning af adjektiv, particip og pronomen
 
 För att underlätta för användaren definierar extensionen Swedish en uppsjö "say-phrases" som är tänkta att användas i det här sammanhanget. I stället för 
 	Report taking something: say "[if the noun is plural-named]Tagna[otherwise if the noun is neuter]Taget[otherwise]Tagen[end if]."
@@ -5574,30 +5574,30 @@ För att underlätta för användaren definierar extensionen Swedish en uppsjö 
 räcker det därför att skriva
 	Report taking something: say "Tag[en-et-na for the noun]."
 
-Böjningsändelserna och huvudordet sätts alltså inom klammer. (För att vara mer exakt: "Tag[en-et-na for the noun]" definieras som "Tag[if the noun is plural-named]na[otherwise if the noun is neuter]et[otherwise]en[end if]".)
+Böjningsändelserna og huvudordet sätts alltså inom klammer. (För att vara mer exakt: "Tag[en-et-na for the noun]" definieras som "Tag[if the noun is plural-named]na[otherwise if the noun is neuter]et[otherwise]en[end if]".)
 
 Sådana say-fraser har formen "<reale-neutrum-pluralis> for <någonting>".
 
-FÖRST anges alltså hur adjektivet etc. böjs i reale (en tag-en sak); SEDAN följer bindestreck; DÄREFTER anges hur ordet böjs i neutrum (et tag-et ting); SEDAN följer ännu et bindestreck; SIST AV BÖJNINGARNA anges hur ordet böjs i pluralis (några tag-na föremål); EFTER ordet "for" anger man AVSLUTNINGSVIS vilket huvudordet är.
+FÖRST anges alltså hur adjektivet etc. böjs i reale (en tag-en sak); SEDAN följer bindestreck; DÄREFTER anges hur ordet böjs i neutrum (et tag-et ting); SEDAN följer ännu et bindestreck; SIST af BÖJNINGARNA anges hur ordet böjs i pluralis (några tag-na föremål); EFTER ordet "for" anger man AVSLUTNINGSVIS vilket huvudordet är.
 	"jaga[d-t-de for the second noun]"
 	"bortglöm[d-t-da for a random thing held by the player]"
 	"Di[n-tt-na for stolen thing] [stolen thing weakly inflected] har blivit stul[en-et-na for the stolen thing]."
 	"De[nna-tta-ssa for the found thing] [the found thing without definite article] har varit försvunn[en-et-a for the found thing] hur länge som helst."
 
-Swedish definierar "say-phrases" för praktiskt taget alla starka böjningar av svenska adjektiv etc. i reale, neutrum och pluralis (till och med "li[ten-tet-lla]"!).
+Swedish definierar "say-phrases" för praktiskt taget alla starka böjningar af svenska adjektiv etc. i reale, neutrum og pluralis (till og med "li[ten-tet-lla]"!).
 
 OBS!
 
-i) Huvudordet kan anges med hjälp av vilka variabler eller konstanter som helst.
+i) Huvudordet kan anges med hjälp af vilka variabler eller konstanter som helst.
 
 ii) Det spelar ingen som helst roll ifall du använder bestämd, obestämd eller ingen artikel i denna fras: "tag[en-et-na for the second noun]", "tag[en-et-na for a second noun]", "tag[en-et-na for second noun]" ger alla exakt samma resultat.
 
 
-Section: Say-fraser för böjningen av adjektiv, particip och pronomen med underförstått huvudord
+Section: Say-fraser för böjningen af adjektiv, particip og pronomen med underförstått huvudord
 
 Det blir fort tröttsamt att för varje adjektiv skriva ut vilket dess huvudord är. Swedish låter dig därför hoppa över detta i många sammanhang.
 
-Om du redan angett att et adjektiv ska böjas efter et bestämt objekt, behöver du inte sedan tala om att nästa adjektiv ska böjas efter samma objekt. Swedish minns vilket det senaste huvudordet var och förutsätter att det även fortsättningsvis är huvudordet för alla adjektiv som inte ingår i något "printed name", fram till dess du som författare anger et nytt huvudord eller spelaren/läsaren skriver et nytt kommando och därmed påbörjar et nytt drag. (Mer exakt: Objektet som adjektiven böjs efter sparas i den globala variabeln "endophoric reference".)
+Om du redan angett att et adjektiv ska böjas efter et bestämt objekt, behöver du inte sedan tala om att nästa adjektiv ska böjas efter samma objekt. Swedish minns vilket det senaste huvudordet var og förutsätter att det även fortsättningsvis är huvudordet för alla adjektiv som inte ingår i något "printed name", fram till dess du som författare anger et nytt huvudord eller spelaren/läsaren skriver et nytt kommando og därmed påbörjar et nytt drag. (Mer exakt: Objektet som adjektiven böjs efter sparas i den globala variabeln "endophoric reference".)
 
 I stället för
 	"Di[n-tt-na for stolen thing] kära [stolen thing weakly inflected] har blivit stul[en-et-na for the stolen thing]."
@@ -5617,68 +5617,68 @@ räcker det alltså att skriva
 	"Di[n-tt-na] [noun weakly inflected] har blivit stul[en-et-na]."
 	"De[nna-tta-ssa] [the noun without definite article] har varit försvunn[en-et-a] hur länge som helst."
 
-Och i stället för
+og i stället för
 	Report taking: say "Tag[en-et-na for the noun]."
 
 räcker det med
 	Report taking: say "Tag[en-et-na]".
 
-Say-phrases på formen "[<reale-neutrum-pluralis>]" betyder alltså generellt sett "[<reale-neutrum-pluralis> for <huvudord>]". Och om  inget annat huvudord har angetts, så betyder därmed "[<reale-neutrum-pluralis>]" detsamma som "[<reale-neutrum-pluralis> for the noun]"
+Say-phrases på formen "[<reale-neutrum-pluralis>]" betyder alltså generellt sett "[<reale-neutrum-pluralis> for <huvudord>]". og om  inget annat huvudord har angetts, så betyder därmed "[<reale-neutrum-pluralis>]" detsamma som "[<reale-neutrum-pluralis> for the noun]"
 
 
-Section: Say-fraser för adjektiv, particip och pronomen som saknar böjningsändelser i reale, neutrum eller pluralis
+Section: Say-fraser för adjektiv, particip og pronomen som saknar böjningsändelser i reale, neutrum eller pluralis
 
-Många ord saknar böjningsändelser i reale eller neutrum eller pluralis. Det gäller t.ex.  arg/argt/arga, släppt/släppt/släppta, blå/blått/blå och många andra. Om en böjningsändelse saknas markerar du det genom att inte skriva någonting på den plats där böjningsändelsen saknas:
-	"Du anfalls av [en-et for attacking monster] arg[-t-a] [attacking monster]. De[n-t-] är blå[-tt-] av ilska."
+Många ord saknar böjningsändelser i reale eller neutrum eller pluralis. Det gäller t.ex.  arg/argt/arga, släppt/släppt/släppta, blå/blått/blå og många andra. Om en böjningsändelse saknas markerar du det genom att inte skriva någonting på den plats där böjningsändelsen saknas:
+	"Du anfalls af [en-et for attacking monster] arg[-t-a] [attacking monster]. De[n-t-] är blå[-tt-] af ilska."
 	Report dropping: say "Släppt[--a]"
 
 
-Section: Bestämd och obestämd artikel som inte ingår i något "printed name"
+Section: Bestämd og obestämd artikel som inte ingår i något "printed name"
 
-Adjektiv som inte ingår i et "printed name" föregås ofta av bestämd eller obestämd artikel, och även artiklarna måste böjas efter samma huvudord som adjektiven. Det gör du med say-fraserna "[en-et for <något>]" eller "[En-et for <något>]" och "[den-det for <något>]" eller "[Den-Det for <något>]".
-	"Du anfalls av [en-et for attacking monster] arg[-t-a] [attacking monster]."
+Adjektiv som inte ingår i et "printed name" föregås ofta af bestämd eller obestämd artikel, og även artiklarna måste böjas efter samma huvudord som adjektiven. Det gör du med say-fraserna "[en-et for <något>]" eller "[En-et for <något>]" og "[den-det for <något>]" eller "[Den-Det for <något>]".
+	"Du anfalls af [en-et for attacking monster] arg[-t-a] [attacking monster]."
 	"[En-et for attacking monster] arg[-t-a] [attacking monster] anfaller dig!"
 	"Du flyr för [den-det for the attacking monster] anfallande [the attacking monster without definite article]."
 	"[Den-Det for the attacking monster] anfallande [the attacking monster without definite article] driver dig på flykten."
 
-Dessa say-fraser böjer artiklarna i pluralis, neutrum och reale, allt efter som huvudordet är "plural-named", "neuter" eller "common-gendered". Fraserna "[en-et for <något>]" och "[den-det for <något>]" ger artikeln liten begynnelsebokstav; fraserna "[En-et for <något>]" och "[Den-Det for <något>]" ger artikeln stor begynnelsebokstav.
+Dessa say-fraser böjer artiklarna i pluralis, neutrum og reale, allt efter som huvudordet är "plural-named", "neuter" eller "common-gendered". Fraserna "[en-et for <något>]" og "[den-det for <något>]" ger artikeln liten begynnelsebokstav; fraserna "[En-et for <något>]" og "[Den-Det for <något>]" ger artikeln stor begynnelsebokstav.
 
-Som vanligt betyder kortformerna "[en-et]", "[En-et]", "[den-det]" och "[Den-Det]" detsamma som "[en-et for <huvudordet>]", "[En-et for <huvudordet>]", "[den-det for <huvudordet>]" respektive "[Den-Det for <huvudordet>]". Och som vanligt gäller att om inget annat angetts är det det "the noun" som är huvudordet.
+Som vanligt betyder kortformerna "[en-et]", "[En-et]", "[den-det]" og "[Den-Det]" detsamma som "[en-et for <huvudordet>]", "[En-et for <huvudordet>]", "[den-det for <huvudordet>]" respektive "[Den-Det for <huvudordet>]". og som vanligt gäller att om inget annat angetts är det det "the noun" som är huvudordet.
 
 OBS!
 
-Fraserna "[en-et for <et föremål>]" och "[En-et for <et föremål>]" skriver ingenting, om du angett att föremålet i fråga är "non-count". Är föremålet "not non-count", och du uttryckligen har angett en "indefinite article" för föremålet, så används denna. I övriga fall används "en", "et" och "några" i reale, neutrum respektive pluralis.
+Fraserna "[en-et for <et föremål>]" og "[En-et for <et föremål>]" skriver ingenting, om du angett att föremålet i fråga är "non-count". Är föremålet "not non-count", og du uttryckligen har angett en "indefinite article" för föremålet, så används denna. I övriga fall används "en", "et" og "några" i reale, neutrum respektive pluralis.
 
 
-Section: Say-fraser för svag böjning av adjektiv
+Section: Say-fraser för svag böjning af adjektiv
 
-Hittills har det bara varit tal om s.k. stark böjning av adjektiv etc; det är den böjningen som gör skillnad på ändelser i reale, neutrum och pluralis (den-ord, det-ord och de-ord).
+Hittills har det bara varit tal om s.k. stark böjning af adjektiv etc; det är den böjningen som gör skillnad på ändelser i reale, neutrum og pluralis (den-ord, det-ord og de-ord).
 
-Vid vissa tillfällen behöver vi dock i stället använda s.k. svag böjning av adjektiven, och den svaga böjningen gör bara skillnad på maskulinum och femininum (han-ord och hon-ord). (Detta är samma tillfällen då det finns anledning att använda sig av say-fraserna "[<föremålet> without definite article]" eller "[<föremål> weakly inflected]".)
+Vid vissa tillfällen behöver vi dock i stället använda s.k. svag böjning af adjektiven, og den svaga böjningen gör bara skillnad på maskulinum og femininum (han-ord og hon-ord). (Detta är samma tillfällen då det finns anledning att använda sig af say-fraserna "[<föremålet> without definite article]" eller "[<föremål> weakly inflected]".)
 
-Antag att spelaren kan försöka reta upp olika varelser ("persons") i spelet och att vi vill kunna säga både "Du lyckas inte reta upp den kolugnA sjuksköterskan", "Du lyckas inte reta upp det kolugnA statsrådet", "Du lyckas inte reta upp de kolugnA AIK-supportrarna" och "Du lyckas inte reta upp den kolugnE trapistmunken". I Swedish gör vi det med say-frasen "[a-e for <objekt>]":
+Antag att spelaren kan försöka reta upp olika varelser ("persons") i spelet og att vi vill kunna säga både "Du lyckas inte reta upp den kolugnA sjuksköterskan", "Du lyckas inte reta upp det kolugnA statsrådet", "Du lyckas inte reta upp de kolugnA AIK-supportrarna" og "Du lyckas inte reta upp den kolugnE trapistmunken". I Swedish gör vi det med say-frasen "[a-e for <objekt>]":
 	Check provoking someone: say "Du lyckas inte reta upp [den-det for the noun] kolugn[a-e] [the noun without definite article]."
 
-Och som vanligt, om huvudordet är "the noun", behöver det inte anges:
+og som vanligt, om huvudordet är "the noun", behöver det inte anges:
 	Check provoking someone: say "Du lyckas inte reta upp [den-det] kolugn[a-e] [the noun without definite article]."
 
 OBS!
 
-i) Med undantag för "[a-e]" har de adjektivböjningar som inte ingår i et "printed name" alltid två bindestreck, även när en eller flera av böjningsformerna inte markeras av någon ändelse som i "[-t-a]", "[n-t-]", "[--a]" och "[-tt-]".
+i) Med undantag för "[a-e]" har de adjektivböjningar som inte ingår i et "printed name" alltid två bindestreck, även när en eller flera af böjningsformerna inte markeras af någon ändelse som i "[-t-a]", "[n-t-]", "[--a]" og "[-tt-]".
 
 ii) Förväxla inte "[-a]" (pluraländelsen i bestämd form som i "kalhyggen-a") med "[--a]" (som i "låst / låst / låst-a").
 
 [
-Chapter: Say-fraser för personliga och possessiva pronomen 
+Chapter: Say-fraser för personliga og possessiva pronomen 
 
 I vissa fall vill man kunna referera med et personligt pronomen till et variabelt objekt som man inte vet någonting om på förhand, inte om det är singulärt eller pluralt, inte om det är neutrum, reale, femininum eller maskulinum, inte om det är identiskt med spelfiguren eller ej. Swedish definierar textsubstitutioner även för detta ändamål. 
 
 (Eller är åtminstone tänkt att göra det till slut)
 ]
  
-Chapter: Egennamn och förkortningar med liten begynnelsebokstav
+Chapter: Egennamn og förkortningar med liten begynnelsebokstav
 
-Några få ord, i första hand egennamn och vetenskapliga förkortningar som "af Chapman", "von Linné", "bin Ladin", ”el-Alamein”, "pH", "kg" stavas med liten bokstav i början även om de skulle inleda en mening. I Swedish anger man detta genom att tala om att et objekt är "uncapitalisable":
+Några få ord, i första hand egennamn og vetenskapliga förkortningar som "af Chapman", "von Linné", "bin Ladin", ”el-Alamein”, "pH", "kg" stavas med liten bokstav i början även om de skulle inleda en mening. I Swedish anger man detta genom att tala om att et objekt är "uncapitalisable":
 	von Anka is a man in Pengabingen. von Anka is uncapitalisable.
 
 OBS!
@@ -5688,43 +5688,43 @@ Swedish använder formen "uncapitalisable" med S (inte med z) –som et slags hy
 
 Chapter: Namn på rum
 
-I engelska Inform är det kutym att man skriver namnen på rummen med stor bokstav: "The Lab is a room" eller "Kitchen is a room", och spelet skriver sedan ut namnet på rummet man kommer till utan bestämd eller obestämd artikel, men behåller stor bokstav för namnet på rummet var det än skrivs ut. Detta går dåligt ihop med svenska skrivregler. 
+I engelska Inform är det kutym att man skriver namnen på rummen med stor bokstav: "The Lab is a room" eller "Kitchen is a room", og spelet skriver sedan ut namnet på rummet man kommer till utan bestämd eller obestämd artikel, men behåller stor bokstav för namnet på rummet var det än skrivs ut. Detta går dåligt ihop med svenska skrivregler. 
 
-Swedish förutsätter därför att namn på rum behandlas som namn på vilka föremål som helst. Det finns alltså möjlighet att stava namn på rum med liten bokstav, om man vill skriva ut rummets namn med hjälp av textsubstitutionen "[location]" under spelets gång.
+Swedish förutsätter därför att namn på rum behandlas som namn på vilka föremål som helst. Det finns alltså möjlighet att stava namn på rum med liten bokstav, om man vill skriva ut rummets namn med hjälp af textsubstitutionen "[location]" under spelets gång.
 	The köket is a neuter room. The printed name of köket is "kök[et]"
 	The balsal is a room. The printed name of the balsal is "[den ]stor[a] balsal[en]".
 	Kungsgatan is a room.
 	von Ankas pengabinge is a room. von Ankas pengabinge is uncapitalisable.
 
-När man kommer till et rum skrivs namnet på rummet ut i bestämd form och med stor bokstav. ("Köket", "Den stora balsalen", "Kungsgatan"). Samtidigt kan textsubstitutioner ("grammar tokens") som "[location]", "[a location]", "[A location]", "[the location]", "[The location]" användas med väntat resultat. 
+När man kommer till et rum skrivs namnet på rummet ut i bestämd form og med stor bokstav. ("Köket", "Den stora balsalen", "Kungsgatan"). Samtidigt kan textsubstitutioner ("grammar tokens") som "[location]", "[a location]", "[A location]", "[the location]", "[The location]" användas med väntat resultat. 
 
 
-Chapter: Räkneord och pluralböjningar
+Chapter: Räkneord og pluralböjningar
 
-Section: Att ange om du räknar något och i så fall vad
+Section: Att ange om du räknar något og i så fall vad
 
-Inform 7 låter dig skriva ut tal med ord i stället för med siffror med hjälp av say-frasen "[<antal> in words]". 
+Inform 7 låter dig skriva ut tal med ord i stället för med siffror med hjälp af say-frasen "[<antal> in words]". 
 
-I svenska kompliceras detta av att svenskan har två uppsättningar räkneord: dels de som används för att räkna saker, dels de som används som namn på saker. Om man räknar rum, heter det "slottet har hundratjugoEN rum"; om man använder samma räkneord som namn på rum, heter det "jag bor i rum hundratjugoETT". 
+I svenska kompliceras detta af att svenskan har två uppsättningar räkneord: dels de som används för att räkna saker, dels de som används som namn på saker. Om man räknar rum, heter det "slottet har hundratjugoEN rum"; om man använder samma räkneord som namn på rum, heter det "jag bor i rum hundratjugoETT". 
 
 Ordet "en" används alltså när man räknar saker, medan ordet "et" används när man inte gör det. ("21 + 31" heter "tjugoETT plus trettioETT" för här används orden som namn på matematiska tal.)
 
-Det finns dock et viktigt undantag från regeln: även när man räknar antalet saker, så heter det förstås "et rum", "et monster" och "et textspel". I själva verket heter det, när man har en enda sak att räkna, ibland "et" och ibland "en" ("det finns EN sak i rummet" men "det finns et föremål i rummet"), trots att det alltid heter "en" när man har flera saker att räkna ("det finns tjugoen saker i rummet" och "det finns tjugoen föremål i rummet"). I singularis spelar det alltså roll om det man räknar är neutrum (et-ord) eller reale (en-ord), i pluralis gör det det inte.
+Det finns dock et viktigt undantag från regeln: även när man räknar antalet saker, så heter det förstås "et rum", "et monster" og "et textspel". I själva verket heter det, när man har en enda sak att räkna, ibland "et" og ibland "en" ("det finns EN sak i rummet" men "det finns et föremål i rummet"), trots att det alltid heter "en" när man har flera saker att räkna ("det finns tjugoen saker i rummet" og "det finns tjugoen föremål i rummet"). I singularis spelar det alltså roll om det man räknar är neutrum (et-ord) eller reale (en-ord), i pluralis gör det det inte.
 
 För att Inform ska hålla ordning på det här måste du tala om för spelet dels om du använder räkneorden för att räkna något, dels vad det i så fall är du räknar. Det gör du med say-fraserna "[<antal> in words counting neuters]". "[<antal> in words counting common gender]", "[<antal> in words counting nothing]". 
 	"Den senaste månaden har vi avverkat [a random number between 0 and 32000 in words counting neuters] träd."
 	"Jaha, du ska tydligen bo i rum [a random number between 17 and 170 in words counting nothing]."
 
-Om du inte anger annat kommer Swedish att förutsätta att du räknar något och att det du räknar är reale ("counting common gender").
+Om du inte anger annat kommer Swedish att förutsätta att du räknar något og att det du räknar är reale ("counting common gender").
 
 OBS!
 
-et mindre viktigt undantag från regeln ovan är ören och år: det heter alltid "-et" när man räknar ören  och år: "Hon var tjugoett år gammal", "Då för tiden kostade smöret femtioett öre kilot." Japp, det går utmärkt att skriva "[<antal> in words counting öre]", "[<antal> in words counting ören]" "[<antal> in words counting år]" eller "[<antal> in words counting ålder]", så blir det rätt. (Mer exakt: "counting öre/ören/år/ålder" är likvärdigt med "counting nothing".)
+et mindre viktigt undantag från regeln ovan är ören og år: det heter alltid "-et" när man räknar ören  og år: "Hon var tjugoett år gammal", "Då för tiden kostade smöret femtioett öre kilot." Japp, det går utmärkt att skriva "[<antal> in words counting öre]", "[<antal> in words counting ören]" "[<antal> in words counting år]" eller "[<antal> in words counting ålder]", så blir det rätt. (Mer exakt: "counting öre/ören/år/ålder" är likvärdigt med "counting nothing".)
 
 
 Section: Pluralböjningar
 
-Efter att ha sagt et tal (vare sig i ord eller siffror) behöver man kunna skilja på singularis- och pluralisformen av det man räknar.
+Efter att ha sagt et tal (vare sig i ord eller siffror) behöver man kunna skilja på singularis- og pluralisformen af det man räknar.
 	"Den senaste året har vi producerat [a random number between 0 and 32000 in words counting neuters] [if the number-just-said is 1]kalhygge[otherwise]kalhyggen[end if]."
 
 För att underlätta för författaren definierar Swedish say-fraser även för pluralböjningar. Lägg till ändelsen inom klammer i analogi med hur Swedish hanterar andra böjningar.
@@ -5732,7 +5732,7 @@ För att underlätta för författaren definierar Swedish say-fraser även för 
 	"Du märker genast att det finns åtminstone [the number of secret police in the location in words counting common gender] civilklädd[a] polis[er] i rummet."
 	"I rummet lokaliserar du genast [the number of secret police in the location minus one in words counting common gender] kolleg[a-er]."
 
-Vi får problem med pluralformen av ord som "äpple" och "kalhygge". Det går inte skriva "äpple[n]" och "kalhygge[n]", eftersom textsubstitutionen "[n]" redan är upptagen. Den står ju för ändelse i bestämd form (som i "stubbe[n]" och "gubbe[n]"). I stället använder vi för pluraländelsen -n textsubstitutionen "[-n]". Skriv alltså
+Vi får problem med pluralformen af ord som "äpple" og "kalhygge". Det går inte skriva "äpple[n]" og "kalhygge[n]", eftersom textsubstitutionen "[n]" redan är upptagen. Den står ju för ändelse i bestämd form (som i "stubbe[n]" og "gubbe[n]"). I stället använder vi för pluraländelsen -n textsubstitutionen "[-n]". Skriv alltså
 	"Den senaste året har vi producerat [a random number between 0 and 32000 in words counting neuters] kalhygge[-n]."
 
 
@@ -5744,13 +5744,13 @@ Swedish definierar de flesta pluraländelser som förekommer i svenska. Även de
 
 OBS!
 
-De enda oregelbundna pluralformer som Swedish definierar är "[far-fäder]", "[liten-små]" och "[litet-små]". I andra fall blir du tvungen att skriva saker i stil med:
+De enda oregelbundna pluralformer som Swedish definierar är "[far-fäder]", "[liten-små]" og "[litet-små]". I andra fall blir du tvungen att skriva saker i stil med:
 	"en tunnelbana med [a random number between 1 and 12 in words] [if the number-just-said is 1]butler[otherwise]statligt subventionerade kammartjänare[end if]"
 
 
-Chapter - Klockslag, tidsrymder och antal
+Chapter - Klockslag, tidsrymder og antal
 
-Spel där spelaren behöver ange et klockslag eller en tidsrymd i sina kommandon är inte så vanliga, men Inform har stöd för detta, och för en författare kan det vara bra att veta vilka format för att ange klockslag och tidsrymder på svenska som Inform tillåter spelaren att använda.
+Spel där spelaren behöver ange et klockslag eller en tidsrymd i sina kommandon är inte så vanliga, men Inform har stöd för detta, og för en författare kan det vara bra att veta vilka format för att ange klockslag og tidsrymder på svenska som Inform tillåter spelaren att använda.
 
 Svaret är att Swedish är tänkt att förstå de flesta sätt att uttrycka tid.
 
@@ -5760,7 +5760,7 @@ Klockslag kan bland annat uttryckas på följande vis:
 	"sjutton nollnoll"
 	"sjutton noll noll"
 	"sjutton noll fem"
-	"sjutton och tjugotre"
+	"sjutton og tjugotre"
 	"tjugotre minuter över fem"
 	"sju minuter i halv sex på morgonen" 
 	"klockan tjugo över fem på morronen"
@@ -5774,36 +5774,36 @@ Klockslag kan bland annat uttryckas på följande vis:
 Tidsrymder kan bland annat uttryckas på följande vis:
 	"5 minuter"
 	"17 timmar"
-	"tjugotre timmar och fyrtiotvå minuter"
+	"tjugotre timmar og fyrtiotvå minuter"
 	"tre kvart"
 	"trekvart"
 	"tre kvarts timme"
-	"två timmar och tre kvart"
+	"två timmar og tre kvart"
 	"en halvtimme"
 	"en halv timme"
-	"en och en halv timma"
+	"en og en halv timma"
 	(et cetera)
 
-För detta ändamål har även Informs förståelse av tal skrivna med bokstäver utökats. Swedish förstår tal skrivna med bokstäver från et till sextio. 
+För detta ändamål har även Informs förståelse af tal skrivna med bokstäver utökats. Swedish förstår tal skrivna med bokstäver från et till sextio. 
 
 OBS!
 
-i) I vanliga fall tolkar Inform en punkt i spelarens kommando som slut på kommandot, men Swedish gör et undantag när det gäller just klockslag. I det sammanhanget antar Swedish att det rör sig om et skiljetecken mellan timmar och minuter.
+i) I vanliga fall tolkar Inform en punkt i spelarens kommando som slut på kommandot, men Swedish gör et undantag när det gäller just klockslag. I det sammanhanget antar Swedish att det rör sig om et skiljetecken mellan timmar og minuter.
 
-Det är bara i inmatningen från spelaren som Swedish förstår att en punkt skiljer timmar från minuter! I källtexten, när du skriver spelet, måste du använda kolon och am/pm. SPELAREN kan alltså skriva "vänta till 12.30", men FÖRFATTAREN måste skriva t.ex. "now the time of day is 12:30 PM". 
+Det är bara i inmatningen från spelaren som Swedish förstår att en punkt skiljer timmar från minuter! I källtexten, när du skriver spelet, måste du använda kolon og am/pm. SPELAREN kan alltså skriva "vänta till 12.30", men FÖRFATTAREN måste skriva t.ex. "now the time of day is 12:30 PM". 
 
 ii) Ordet "noll" förstår Inform bara i klockslag. I andra fall förstår Inform visserligen siffran "0" men inte ordet "noll".
 
 
-Chapter:  Use options och textsubstitutioner för ord med alternativa stavningar
+Chapter:  Use options og textsubstitutioner för ord med alternativa stavningar
 
 Section: Use options för alternativa stavningar
 
-Det finns alternativa stavningar av et antal vanliga svenska ord: dig/dej; de/dom; någon/nån; ska/skall; lite/litet. Somliga av dessa förekommer i meddelanden som översättningen av Inform skriver ut (framför allt som standardresponser på olika kommandon som t.ex. "Du har redan på DIG DEM").
+Det finns alternativa stavningar af et antal vanliga svenska ord: dig/dej; de/dom; någon/nån; ska/skall; lite/litet. Somliga af dessa förekommer i meddelanden som översättningen af Inform skriver ut (framför allt som standardresponser på olika kommandon som t.ex. "Du har redan på DIG DEM").
 
 Författaren kan genom "use options" välja hur extensionen ska stava följande ord: mig, dig, sig (mej, dej, sej); de, dem (dom); gett (givit); lade (la); lite (litet); ned, nedför, nedåt (ner, nerför, neråt); någon, något, några, någonsin, någonstans, någonting, någonvart (nån, nåt, nåra, nånsin, nånstans, nånting, nånvart); sade (sa); sedan (sen); ska (skall); sådan, sådant, sådana (sån, sånt, såna); säga, säg, säger (säja, säj, säjer); varandra (varann).
 
-Det förvalda stavningen av alla dessa ord är de som INTE står inom parantes ovan. Om författaren inte använder någon use option kommer Swedish alltså att skriva "dig", "dem", "någon", "ned", "ska" o.s.v. (De förvalda stavningarna är de som anges som huvudvarianten av respektive ord i 13:e upplagan av Svenska Akademiens Ordlista.)
+Det förvalda stavningen af alla dessa ord är de som INTE står inom parantes ovan. Om författaren inte använder någon use option kommer Swedish alltså att skriva "dig", "dem", "någon", "ned", "ska" o.s.v. (De förvalda stavningarna är de som anges som huvudvarianten af respektive ord i 13:e upplagan af Svenska Akademiens Ordlista.)
 
 Följande use options med följande effekter på stavningen är tillgängliga:
 	"Use dan spelling" ändrar dagen, dagar till dan, dar.
@@ -5822,40 +5822,40 @@ Följande use options med följande effekter på stavningen är tillgängliga:
 	"Use säja spelling" ändrar säga, säg, säger till säja, säj, säjer.
 	"Use varann spelling" ändrar varandra till varann.
 
-Det finns också två use options som kombinerar flera av dessa:
-	"Use formal spelling" kombinerar "use givit spelling", "use litet spelling" och "use skall spelling" och  får samma effekt som om du angett alla tre var för sig.
-	"Use informal spelling" kombinerar "use dan spelling", "use dej spelling", "use dom spelling", "use la spelling", "use morron spelling", "use nån spelling", "use sa spelling", "use sen spelling", "use sån spelling", "use säja spelling" och "use varann spelling" och får samma effekt som om du angett alla elva var för sig.
+Det finns också två use options som kombinerar flera af dessa:
+	"Use formal spelling" kombinerar "use givit spelling", "use litet spelling" og "use skall spelling" og  får samma effekt som om du angett alla tre var för sig.
+	"Use informal spelling" kombinerar "use dan spelling", "use dej spelling", "use dom spelling", "use la spelling", "use morron spelling", "use nån spelling", "use sa spelling", "use sen spelling", "use sån spelling", "use säja spelling" og "use varann spelling" og får samma effekt som om du angett alla elva var för sig.
 
 OBS!
 
 Stavningsalternativen "ned/ner" har här inte klassats som vare sig formell eller informell. Föredrar du stavningen "ner" måste detta därför anges separat. Det kan likaså ifrågasättas om stavningen "skall" verkligen är mer formell än stavningen "ska".
 
 
-Section: Textsubstitutioner som påverkas av use options.
+Section: Textsubstitutioner som påverkas af use options.
 
-För alla dessa ord finns textsubstitutioner som påverkas av ovanstående use options. Exempel på sådana textsubstitutioner är "[mig]", "[dig]", "[sig]", "[någon]", "[något]", "[några]", "[någonstans]", "[ned]", "[nedför]", "[de]", "[dem]" o.s.v. Dessa är egentligen bara användbara, om du skulle skriva en extension till Swedish. Men i sådana fall kan du alltså skriva t.ex.
+För alla dessa ord finns textsubstitutioner som påverkas af ovanstående use options. Exempel på sådana textsubstitutioner är "[mig]", "[dig]", "[sig]", "[någon]", "[något]", "[några]", "[någonstans]", "[ned]", "[nedför]", "[de]", "[dem]" o.s.v. Dessa är egentligen bara användbara, om du skulle skriva en extension till Swedish. Men i sådana fall kan du alltså skriva t.ex.
 	Report looking while in the void: say "Du ser [dig] omkring men ser ingenting [någonstans]."
 
-Användaren av din extension kan därefter anpassa stavningen av denna textsträng med hjälp av use options.
+Användaren af din extension kan därefter anpassa stavningen af denna textsträng med hjälp af use options.
 
-Somliga av textsubstitutionerna finns med stor begynnelsebokstav. Så medan "[några]" ger resultatet "några" eller "nåra", så ger "[Några]" resultatet "Några" eller "Nåra". För en lista på vilka textsubstitutioner som skiljer mellan stor och liten begynnelsebokstav, se kapitlet nedan med listan över alla say-fraser som Swedish definierar.
+Somliga af textsubstitutionerna finns med stor begynnelsebokstav. Så medan "[några]" ger resultatet "några" eller "nåra", så ger "[Några]" resultatet "Några" eller "Nåra". För en lista på vilka textsubstitutioner som skiljer mellan stor og liten begynnelsebokstav, se kapitlet nedan med listan över alla say-fraser som Swedish definierar.
 
 OBS!
 
 i) Textsubstitutionerna använder ordens förvalda stavning "[dig]", "[någon]", "[dem]", "[sådan]" o.s.v. med undantag för "[de-dom]".
 
-ii) Skilj på "[de-dom]" och "[de]"! Båda resulterar i stavningen "dom", om användaren väljer "dom spelling", och i stavningen "de" annars. Men de används i olika sammanhang: "[de]" ska bara användas för den bestämda artikeln inuti et "printed name" för et objekt som är "plural-named" (skriv t.ex.: The printed name of the graverande fakta is "[de ]graverande fakta"); "[de-dom]" ska användas i alla andra fall (d.v.s. när "de/dom" fungerar som personligt eller demonstrativt pronomen eller när en bestämd artikel i pluralis inte ska skrivas ut som en del av et objekts namn (skriv t.ex.: "Du tittar storögt på [de-dom] jättelika svampar som växer överallt här").
+ii) Skilj på "[de-dom]" og "[de]"! Båda resulterar i stavningen "dom", om användaren väljer "dom spelling", og i stavningen "de" annars. Men de används i olika sammanhang: "[de]" ska bara användas för den bestämda artikeln inuti et "printed name" för et objekt som är "plural-named" (skriv t.ex.: The printed name of the graverande fakta is "[de ]graverande fakta"); "[de-dom]" ska användas i alla andra fall (d.v.s. när "de/dom" fungerar som personligt eller demonstrativt pronomen eller när en bestämd artikel i pluralis inte ska skrivas ut som en del af et objekts namn (skriv t.ex.: "Du tittar storögt på [de-dom] jättelika svampar som växer överallt här").
 
 
-Section: Speciella say-fraser för böjningen av vissa pronomen
+Section: Speciella say-fraser för böjningen af vissa pronomen
 
-Förutom de vanliga "adjektiviska" böjningarna av pronomen definierar Swedish några specialfall. I synnerhet gäller detta pronomen som i en eller annan böjningsform kan stavas på alternativa sätt.
+Förutom de vanliga "adjektiviska" böjningarna af pronomen definierar Swedish några specialfall. I synnerhet gäller detta pronomen som i en eller annan böjningsform kan stavas på alternativa sätt.
 
-Skriver man "de[n-t-]" och "de[n-t-m]" kan resultaten bara bli "den", "det" eller "de" respektive "den", "det" eller "dem"; skriver man "d[en-et-om]" kan resultaten bara bli "den", "det" eller "dom". Men ibland kan man vilja överlåta till en annan användare att välja stavningsalternativ med hjälp av en "use option" som "use dom spelling". Därför definierar Swedish även textsubstitutionerna "[den-t-]" och "[den-t-m]" som resultar i "den", "det", "de" eller "dom" respektive "den", "det", "dem" eller "dom", beroende på om författaren väljer "use dom spelling" eller ej. 
+Skriver man "de[n-t-]" og "de[n-t-m]" kan resultaten bara bli "den", "det" eller "de" respektive "den", "det" eller "dem"; skriver man "d[en-et-om]" kan resultaten bara bli "den", "det" eller "dom". Men ibland kan man vilja överlåta till en annan användare att välja stavningsalternativ med hjälp af en "use option" som "use dom spelling". Därför definierar Swedish även textsubstitutionerna "[den-t-]" og "[den-t-m]" som resultar i "den", "det", "de" eller "dom" respektive "den", "det", "dem" eller "dom", beroende på om författaren väljer "use dom spelling" eller ej. 
 
-Motsvarande gäller för textsubstitutionerna "[sådan-t-a]" och "[någon-ot-ra]", som kan resultera i antingen "sådan/sådant/sådana" eller "sån/sånt/såna" respektive "någon/något/några" eller "nån/nåt/nåra".
+Motsvarande gäller för textsubstitutionerna "[sådan-t-a]" og "[någon-ot-ra]", som kan resultera i antingen "sådan/sådant/sådana" eller "sån/sånt/såna" respektive "någon/något/några" eller "nån/nåt/nåra".
 
-De textsubstitutioner av böjningsformer som påverkas av use options för stavningsvarianter känns igen genom att hela ordet, inte bara ändelsen, ingår i say-frasen.
+De textsubstitutioner af böjningsformer som påverkas af use options för stavningsvarianter känns igen genom att hela ordet, inte bara ändelsen, ingår i say-frasen.
 
 Alla dessa fyra say-fraser kompletteras med varianter med stor begynnelsebokstav: "[Den-t-]", "[Den-t-m]", "[Sådan-t-a]", "[Någon-ot-ra]". 
 
@@ -5863,13 +5863,13 @@ Naturligtvis finns samtliga dessa även på formen "[den-t- for the noun]", "[De
 
 OBS!
 
-Swedish definierar dessutom (redundant) fraserna "[den-det-de]", "[Den-Det-De]", "[den-det-dem]" och "[Den-Det-Dem]". Dessa är inget annat än varianter av  "[den-t-]" o.s.v. 
+Swedish definierar dessutom (redundant) fraserna "[den-det-de]", "[Den-Det-De]", "[den-det-dem]" og "[Den-Det-Dem]". Dessa är inget annat än varianter af  "[den-t-]" o.s.v. 
 
 Chapter: Lista över say-fraser
 
-Här följer en komplett lista över alla say-fraser och textsubstitutioner som Swedish definierar. (Saknar du någon böjningsform så rapportera det gärna till <felix.larsson.IF@gmail.com>.)
+Här följer en komplett lista över alla say-fraser og textsubstitutioner som Swedish definierar. (Saknar du någon böjningsform så rapportera det gärna till <felix.larsson.IF@gmail.com>.)
 
-Ord inom vinkelparentes ("<>") ersätts med et värde av angivet slag; snedstreck ("/") betecknar alternativa ordalydelser; två bindestreck ("--") före eller efter snedstreck betecknar att et ord helt kan utelämnas : "[<antal> in words counting common gender/genders>]" betyder alltså att du som författare kan inleda frasen med vilka siffror eller konstanter eller variabler som helst som anger et antal och avsluta den med antingen "gender" eller "genders"; medan "[<objektet> without the/-- definite article]" betyder att du kan inleda frasen med vilka namn, konstanter eller variabler som helst som anger et bestämt objekt och att det inte spelar någon roll om du skriver et "the" eller inte. 
+Ord inom vinkelparentes ("<>") ersätts med et värde af angivet slag; snedstreck ("/") betecknar alternativa ordalydelser; två bindestreck ("--") före eller efter snedstreck betecknar att et ord helt kan utelämnas : "[<antal> in words counting common gender/genders>]" betyder alltså att du som författare kan inleda frasen med vilka siffror eller konstanter eller variabler som helst som anger et antal og avsluta den med antingen "gender" eller "genders"; medan "[<objektet> without the/-- definite article]" betyder att du kan inleda frasen med vilka namn, konstanter eller variabler som helst som anger et bestämt objekt og att det inte spelar någon roll om du skriver et "the" eller inte. 
 
 
 Section: Fraser för att räkna saker
@@ -5908,7 +5908,7 @@ Omljud i pluralböjningar:
 	"[u-ö]" (lus/löss)
 	"[å-ä]" (gås/gäss)
 
-Eufoniska och ortografiska varianter av pluralböjningar:
+Eufoniska og ortografiska varianter af pluralböjningar:
 	"[er-ror]" (åd|er/åd|ror)
 	"[mar]" (dröm/dröm|mar)
 	"[nar]" (man/man|nar)
@@ -5940,13 +5940,13 @@ Section:  Fraser för att hoppa över bestämd artikel när man skriver adjektiv
 	"[<objekt> weakly inflected]"
 
 
-Section: Fraser för att ange bestämd och obestämd form i et objekts "printed name"  
+Section: Fraser för att ange bestämd og obestämd form i et objekts "printed name"  
 
-För att skilja mellan bestämd och obestämd form:
+För att skilja mellan bestämd og obestämd form:
 	"[if definite]"
 	"[if indefinite]"
 
-Bestämda och obestämda artikeln:
+Bestämda og obestämda artikeln:
 	"[den ]" (ger "den " med avslutande mellanslag) (Ska bara användas som obestämde artikel! inte som pronomen!)
 	"[det ]" (ger "det " med avslutande mellanslag) (Ska bara användas som obestämde artikel! inte som pronomen!) 
 	"[de ]" (ger, beroende på vilken use option som är vald,  "de " eller "dom " med avslutande mellanslag) (Ska bara användas som obestämde artikel! inte som pronomen!)
@@ -5964,7 +5964,7 @@ Grundmönster för bestämda böjningsformer:
 	"[e]" (snorkig/snorkig|e, jagad/jagad|e)
 	"[t-a]" (viktig|t/viktig|a)
 
-Eufoniska och ortografiska varianter av bestämda böjningsformer (huvudsakligen substantiv):
+Eufoniska og ortografiska varianter af bestämda böjningsformer (huvudsakligen substantiv):
 	"[men]" (dröm/dröm|men)
 	"[met]" (rum/rum|met)
 	"[nen]" (man/man|nen)
@@ -5977,7 +5977,7 @@ Eufoniska och ortografiska varianter av bestämda böjningsformer (huvudsakligen
 	"[el-len]" (äck|el/äck|len)
 	"[mel-len]" (him|mel/him|len)
 
-Eufoniska och ortografiska varianter av bestämda böjningsformer (huvudsakligen adjektiv):
+Eufoniska og ortografiska varianter af bestämda böjningsformer (huvudsakligen adjektiv):
 	"[tt-a]" (fri|tt/fri|a)
 	"[tt]" (blå|tt/blå)
 	"[t-da]" (bestäm|t/bestäm|da)
@@ -6010,9 +6010,9 @@ Eufoniska och ortografiska varianter av bestämda böjningsformer (huvudsakligen
 	"[litet-lilla]" (litet/lilla)
 
 
-Section: Fraser för att ange bestämd och obestämd form utanför et objekts "printed name"
+Section: Fraser för att ange bestämd og obestämd form utanför et objekts "printed name"
 
-Starka böjningsformer av adjektiv:
+Starka böjningsformer af adjektiv:
 	"[-t-a for <objekt>]" (oätlig/oätlig|t/oätlig|a, vit/vit|t/vit|a, vår/vår|t/vår|a)
 	"[-t-a]"
 	"[-t-ma for <objekt>]" (tom/tom|t/tom|ma)
@@ -6050,11 +6050,11 @@ Starka böjningsformer av adjektiv:
 	"[d-t-de for <objekt>]" (jaga|d/jaga|t/jaga|de)
 	"[d-t-de]"
 
-Svag böjning av adjektiv:
+Svag böjning af adjektiv:
 	"[a-e for <object>]"
 	"[a-e]"
 
-Genus- och pluralböjning av pronomen:
+Genus- og pluralböjning af pronomen:
 	"[n-tt-na for <objekt]" (mi|n/mi|tt/mi|na)
 	"[n-tt-na]"
 	"[an-at-a for <object>]" (vår|an/vår|at/vår|a) (Talspråklig böjningsform)
@@ -6067,7 +6067,7 @@ Genus- och pluralböjning av pronomen:
 	"[n-t-m]"
 	"[en-et-om for <objekt>]" (d|en/d|et/d|om)
 	"[en-et-om]"
-	"[den-t- for <objekt>]" (den/det/de eller den/det/dom) (Synnerligen användbar textsubstitution! Här i nominativ. Ska bara användas för pronomenen "den", "det" och "de" ("dom") -- inte för bestämda artikeln! Se listan över genus- och pluralböjning för bestämd och obestämd artikel nedan.)
+	"[den-t- for <objekt>]" (den/det/de eller den/det/dom) (Synnerligen användbar textsubstitution! Här i nominativ. Ska bara användas för pronomenen "den", "det" og "de" ("dom") -- inte för bestämda artikeln! Se listan över genus- og pluralböjning för bestämd og obestämd artikel nedan.)
 	"[den-t-]"
 	"[den-det-de for <objekt>]" (Samma som ovan.)
 	"[den-det-de]"
@@ -6098,8 +6098,8 @@ Genus- och pluralböjning av pronomen:
 	"[Någon-ot-ra for <objekt>]" (Någon/Något/Några eller Nån/Nåt/Nåra)
 	"[Någon-ot-ra]"
 
-Genus- och pluralböjning av bestämd och obestämd artikel:
-	"[den-det for <objekt>]" (den/det/de eller den/det/dom) (Ska bara användas för bestämda artikeln -- inte för pronomenen "den", "det" och "de" ("dom")! Se listan över genus- och pluralböjning för pronomen ovan.)
+Genus- og pluralböjning af bestämd og obestämd artikel:
+	"[den-det for <objekt>]" (den/det/de eller den/det/dom) (Ska bara användas för bestämda artikeln -- inte för pronomenen "den", "det" og "de" ("dom")! Se listan över genus- og pluralböjning för pronomen ovan.)
 	"[den-det]"
 	"[Den-Det for <objekt>]" (Den/Det/De eller Den/Det/Dom) (Samma som ovan fast med versal begynnelsebokstav)
 	"[Den-Det]"
@@ -6160,7 +6160,7 @@ Section: Alternativa stavningar
 	"[varandra]" (varandra eller varann)
 
 
-Example: * En alldaglig historia - En demonstration av de vanligaste textsubstitutionerna i Swedish (med en grunka som byter namn).
+Example: * En alldaglig historia - En demonstration af de vanligaste textsubstitutionerna i Swedish (med en grunka som byter namn).
 
 	*: "En alldaglig historia" 
 
@@ -6179,13 +6179,13 @@ Example: * En alldaglig historia - En demonstration av de vanligaste textsubstit
 	Test me with "x grej / x mojängen / ta den mystiska / x den mystiska mojängen / släpp grejen / x den vanliga / x mojäng". 
 
 
-Example: ** Borta på vinden - En demonstration av lite obskyrare textsubstitutioner i Swedish (och exempel på olika stavningar i spelarkommandon).
+Example: ** Borta på vinden - En demonstration af lite obskyrare textsubstitutioner i Swedish (og exempel på olika stavningar i spelarkommandon).
 
 	*: "Borta på vinden" 
 
 	Include Swedish by Felix Larsson.
 
-	The vinden is a room. "Vinden är full av bråte. Bland [a random number between 0 and 32000 in words counting common gender] saker och [a random number between 0 and 32000 in words counting neuters] ting ligger här till exempel:"
+	The vinden is a room. "Vinden är full af bråte. Bland [a random number between 0 and 32000 in words counting common gender] saker og [a random number between 0 and 32000 in words counting neuters] ting ligger här till exempel:"
 	
 	A foto is a neuter in vinden. The printed name of the foto is "[det ]svart-vit[t-a] foto[t] på din morfarsmor".
 	
@@ -6193,7 +6193,7 @@ Example: ** Borta på vinden - En demonstration av lite obskyrare textsubstituti
 	
 	Some pottekulor are in vinden. The printed name is "pottekulor[na]". The pottekulor are plural-named.
 	
-	Some gummistövlar are in vinden. The printed name is "[de ]lila och rosa gummistövlar[na] i storlek 24". The gummistövlar are plural-named. The indefinite article of the gummistövlar is "et par".
+	Some gummistövlar are in vinden. The printed name is "[de ]lila og rosa gummistövlar[na] i storlek 24". The gummistövlar are plural-named. The indefinite article of the gummistövlar is "et par".
 	
 	After taking something:
 		say "Du plockar upp di[n-tt-na for the noun] halvt bortglömda [noun weakly inflected]."
@@ -6205,10 +6205,10 @@ Example: ** Borta på vinden - En demonstration av lite obskyrare textsubstituti
 	
 	The description of a thing is usually "[Den-Det for the item described] återfunna [the item described without definite article] väcker många minnen till liv."
 	
-	Test me with "tag fotot / undersök det / släpp foto / ta upp dockan / x docka / lägg undan den / plocka upp pottekulorna / u pottekulor / ställ ner dem / hämta gummistövlarna / titta på dom / sätt ned gummistövlar"
+	Test me with "tag fotot / undersøg det / släpp foto / ta upp dockan / x docka / lägg undan den / plocka upp pottekulorna / u pottekulor / ställ ner dem / hämta gummistövlarna / titta på dom / sätt ned gummistövlar"
 
 
-Example: **** Den mörka manteln - Roger Firths "The Cloak of Darkness" i översättning av Björn Paulsen efter Graham Nelsons och Emily Shorts version för Inform 7.
+Example: **** Den mörka manteln - Roger Firths "The Cloak of Darkness" i översättning af Björn Paulsen efter Graham Nelsons og Emily Shorts version för Inform 7.
 
 	*: "Den mörka manteln" 
 
@@ -6218,20 +6218,20 @@ Example: **** Den mörka manteln - Roger Firths "The Cloak of Darkness" i övers
 	The maximum score is 2.
 	
 	
-	The Operahusets foajé is a room. "Denna rymliga sal är vackert dekorerad i rött och guld med glittrande kristallkronor. Ingången från gatan ligger norrut, och dörröppningar går söder- och västerut."
+	The Operahusets foajé is a room. "Denna rymliga sal är vackert dekorerad i rött og guld med glittrande kristallkronor. Ingången från gatan ligger norrut, og dörröppningar går söder- og västerut."
 	
-	Instead of trying going north in the foajé, say "Du kom precis, och dessutom tycks vädret utanför bara bli sämre."
+	Instead of trying going north in the foajé, say "Du kom precis, og dessutom tycks vädret utanför bara bli sämre."
 	
 	
-	The garderob is west of the foajé. "I det här lilla rummet måste mängder av krokar ha suttit, men nu återstår bara en. Utgången är en dörr som leder österut." The printed name is "garderob[en]".
+	The garderob is west of the foajé. "I det här lilla rummet måste mängder af krokar ha suttit, men nu återstår bara en. Utgången är en dörr som leder österut." The printed name is "garderob[en]".
 	
-	In the garderob is a supporter called the liten krok av mässing. The krok is scenery.
+	In the garderob is a supporter called the liten krok af mässing. The krok is scenery.
 	The description of the krok is "Bara en liten mässingskrok [if something is on the krok]som har [list of things on the krok] hängande från sig[otherwise]som sitter fastskruvad i väggen[end if]." The printed name of the krok is "[den ]li[ten-lla] mässingskrok[en]".
 	
 	Understand "mässings" or "kroken" or "pigg/piggen" as the krok.
 	
 	
-	Bar is south of the foajé. Bar is dark. "Baren är tom, och förvånansvärt sparsmakad efter den påkostade foajén. Någon tycks ha skrivit et meddelande i sågspånet på golvet."
+	Bar is south of the foajé. Bar is dark. "Baren är tom, og förvånansvärt sparsmakad efter den påkostade foajén. Någon tycks ha skrivit et meddelande i sågspånet på golvet."
 	The printed name of the bar is "foajéns bar".
 	
 	The skrivna meddelande is scenery in the bar. The printed name is "[det ]skriv[et-na] meddelande[t]". Understand "golv/golvet" or "sågspån/sågspånet" as the meddelande.
@@ -6244,7 +6244,7 @@ Example: **** Den mörka manteln - Roger Firths "The Cloak of Darkness" i övers
 		end the story finally.
 	
 	Instead of examining the trampled meddelande:
-		say "Meddelandet är upptrampat och svårt att läsa. Du kan precis uttyda orden...";
+		say "Meddelandet är upptrampat og svårt att läsa. Du kan precis uttyda orden...";
 		end the story saying "Du har förlorat.".
 	
 	Instead of doing something other than going in the bar when in darkness:
@@ -6256,8 +6256,8 @@ Example: **** Den mörka manteln - Roger Firths "The Cloak of Darkness" i övers
 		say "Att famla runt i mörkret vore ingen bra idé!"
 	
 	
-	The player wears the mörk mantel av sammet. The mantel can be hung or unhung.
-	The description of the mantel is "En stilig sammetsfodrad sidenmantel, och något fuktig av regnet. Tyget är så mörkt att det nästan verka suga åt sig ljus."
+	The player wears the mörk mantel af sammet. The mantel can be hung or unhung.
+	The description of the mantel is "En stilig sammetsfodrad sidenmantel, og något fuktig af regnet. Tyget är så mörkt att det nästan verka suga åt sig ljus."
 	Understand "mörka" or "sammets" or "manteln" or "siden" or "sidenmanteln" as the mantel.
 	The printed name of the mantel is "sammetsmantel[n]".
 	
@@ -6279,7 +6279,7 @@ Example: **** Den mörka manteln - Roger Firths "The Cloak of Darkness" i övers
 	
 	
 	When play begins:
-		say "[paragraph break]Genom novembernattens piskande regn glimmar Operahusets lyktor inbjudande. Det är underligt få människor på gatorna, men å andra sidan, kan man vänta sig mer av et simpelt demo-spel?"
+		say "[paragraph break]Genom novembernattens piskande regn glimmar Operahusets lyktor inbjudande. Det är underligt få människor på gatorna, men å andra sidan, kan man vänta sig mer af et simpelt demo-spel?"
 	
 	
 	Understand "häng [other things] på/i/från [something]" as putting it on.
