@@ -3268,7 +3268,7 @@ Array LanguageDescriptors table
     'denna'       $$1110000011100000    POSSESS_PK      0
     'detta'       $$0001000000010000    POSSESS_PK      0
     'dessa'       $$0000111100001111    POSSESS_PK      0
-    'här'         $$1111111111111111    POSSESS_PK      0
+    'her'         $$1111111111111111    POSSESS_PK      0
     'där'         $$1111111111111111    POSSESS_PK      1
     'hans'        $$1111111111111111    POSSESS_PK      'honom'
     'hennes'      $$1111111111111111    POSSESS_PK      'henne'
@@ -3699,7 +3699,7 @@ Constant COMMA__TX      = ", ";
 !    Ask:  see Answer
     Attack: "Våld är inte lösningen nu.";
     Burn:   "Det är inte värt risken.";
-    Buy:    "Här finns inget som är till salu.";
+    Buy:    "Her findes intet der er tilsalg.";
     Climb:  "Det tror jag inte ", (denellerde) actor, " skulle ha så mycket för.";
     Close: switch (n) {
         1:  print_ret (cDenellerDe) x1, " går varken att stänga eller öppna.";
@@ -3718,7 +3718,7 @@ Constant COMMA__TX      = ", ";
         2:  print "Du tar av "; dig(); " ", (the) x1, ".";
         3:  print (The) actor, " tar av "; sig(); print " ", (the) x1, ".^";
     }
-    Drink:  "Här finns inget som går att dricka.";
+    Drink:  "Her er ikke noget drikbart.";
     Drop: switch (n) {
         1:  print (The) x1;
             switch (verb_word) {
@@ -3726,7 +3726,7 @@ Constant COMMA__TX      = ", ";
                 'sätt':  print " står ";
                 'lägg':  print " ligger ";
                 default: print " är ";
-            } "ju redan här.";
+            } "er jo allerede her.";
         2:  "Du har ", (denellerdem) x1, " ju inte.";
         3:  print "(måste ta av ", (the) x1, " först)^"; say__p = 0; return;
         4:  print "Släpp"; Inflect("t", "t", "ta", x1); ".";
@@ -3959,7 +3959,7 @@ Constant COMMA__TX      = ", ";
         7:  "[Du kan inte ~ångra~ fler drag nu.]";
             #Endif; ! TARGET_
         8:  "Var god välj ett av svaralternativen ovan.";
-        9:  "Det är nu becksvart här!";
+        9:  "Der er nu bælgmørkt her!";
         10: "Ursäkta?";
         11: print "[Det går inte att ~ångra~ "; naagot(); " du inte ens gjort!]";
         12: "[Can't ~undo~ twice in succession. Sorry!]";    !# Unused?
@@ -4023,13 +4023,13 @@ Constant COMMA__TX      = ", ";
         57: print "?^";
         58: print (The) actor, " kan inte göra det.^";
         59: "Du måste ange ett direkt objekt.";
-        60: "Du får inte använda ett direkt objekt med det här verbet.";
+        60: "Du må ikke anvende et direkte objekt med dette udsagnsord.";
         61: "Objektet för handlingen måste vara ett föremål.";
         62: "Objektet för handlingen får inte vara ett föremål.";
         63: "Du måste ange ett föremål som indirekt objekt för handlingen.";
         64: "Du får inte ange ett föremål som indirekt objekt för handlingen.";
         65: "Du måste ange ett indirekt objekt.";
-        66: "Du får inte använda ett indirekt objekt med det här verbet.";
+        66: "Du må ikke anvende et indirekte objekt med dette udsagnsord.";
         67: print "Du måste ange "; naagot(); " mer konkret än en riktning.";
         68: print "(", (The) actor, " måste ta ", (the) x1, " först)^";
         69: "(måste ta ", (the) x1, " först)";
@@ -4187,7 +4187,7 @@ Constant COMMA__TX      = ", ";
         3:  print (The) actor, " klämmer på ", (the) x1, ".^";
     }
   Strong:   print "Ett "; saadan();"t språk anstår inte en äkta äventyrare.";
-  Swing:    "Det finns inget som passar att ", (string) verb_word, " här.";
+  Swing:    "Det finns inget som passar att ", (string) verb_word, " her.";
   SwitchOff: switch (n) {
         1:  "Det går varken att stänga av eller sätta på ", (denellerdem) x1, ".";
         2:  print_ret (cDenellerDe) x1, " är redan av.";
@@ -12103,7 +12103,7 @@ self = noun;
 			TERSE_BIT+CONCEAL_BIT);
 		@pull subst__v;  .L_Say26; .L_SayX26;  }
                ! phrase 44
-               ! [44: if the domain is the location , say ~ här~]
+               ! [44: if the domain is the location , say ~ her~]
                 if (((t_0 == real_location))) { say__p=1;ParaContent();  print (PrintText) SC_119;  .L_Say27; .L_SayX27;  }
                ! phrase 45
                ! [45: say ~.[paragraph break]~]
@@ -36016,8 +36016,8 @@ Constant SC_107 = " ";
 Constant SC_124 = " (inte bara känna på ";
 Constant SC_111 = " eller ";
 Constant SC_121 = " finns ";
+Constant SC_119 = " her";
 Constant SC_142 = " here";
-Constant SC_119 = " här";
 Constant SC_150 = " is ~";
 Constant SC_135 = " or ";
 Constant SC_116 = " ser du ";
