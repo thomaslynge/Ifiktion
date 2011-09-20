@@ -1,11 +1,11 @@
-Version 1/110920 of Danish by Thomas Lynge begins here.
+Version 1/110725 of Swedish by Felix Larsson begins here.
 
-"Lader dig skrive og spille Inform7 spil på dansk."
+"Låter dig skriva spel/berättelser att spelas/läsas på svenska."
 
 
 Volume - Localization of Inform 7
 
-Book - Danish Standard Rules
+Book - Swedish Standard Rules
 
 Part - Preamble 
 [A/sr0 - SR0]
@@ -5228,7 +5228,7 @@ Understand "sitt av --/från" as dismounting.
 
 
 
-Danish ends here.
+Swedish ends here.
 
 
 
